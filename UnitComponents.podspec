@@ -14,7 +14,7 @@ Pod::Spec.new do |s|
 
   s.platform         = :ios
   s.homepage         = 'https://guides.unit.co/white-label-ui'
-  s.license          = { :type => 'MIT', :file => 'LICENSE' }
+  s.license          = { :type => 'Mozilla', :file => 'LICENSE' }
   s.author           = { 'Alon Shprung' => 'alonshp1@gmail.com' }
 
   s.ios.deployment_target = '11.0'
