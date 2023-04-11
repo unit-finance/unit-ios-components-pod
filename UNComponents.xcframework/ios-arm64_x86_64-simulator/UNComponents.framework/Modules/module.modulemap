@@ -1,0 +1,11 @@
+framework module UNComponents {
+  umbrella header "UNComponents.h"
+
+  export *
+  module * { export * }
+}
+
+module UNComponents.Swift {
+  header "UNComponents-Swift.h"
+  requires objc
+}

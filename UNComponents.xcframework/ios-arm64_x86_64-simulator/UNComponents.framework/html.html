@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <script>
+        window.UnitMobileSDK = true
+    </script>
+    
+    <UN_SCRIPT>
+    
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=0">
+</html>
+
+<body style="margin: 0;">
+    <COMPONENT>
+
+    <script>
+        const postMessageToSDK = (message) => {
+            if ('UNWebView' in window) {
+              window['UNWebView'].postMessage(`${JSON.stringify(message)}`)
+            }
+        }
+        
+        const postHeight = () => {
+            setTimeout(() => {
+              const height = window.document.documentElement.getBoundingClientRect().height
+              postMessageToSDK({ type: "page", action: "height", details: height })
+            })
+          }
+        
+        window.addEventListener('DOMContentLoaded', e => {
+            postMessageToSDK({ type: "page", action: "loaded" })
+        });
+        
+        window.addEventListener("unitOnLoad", (e) => {
+              postHeight();
+              postMessageToSDK({ type: "unit", action: "unitOnLoad", details: e.detail })
+            });
+        
+        window.addEventListener("unitPaymentCreated", (e) => {
+            const response = e.detail
+              response.then((data) => {
+                postMessageToSDK({ type: "unit", action: "unitPaymentCreated", details: data.data })
+                console.log({ type: "unit", action: "unitPaymentCreated", details: data.data })
+              }).catch((e) => {
+                console.log(e)
+              })
+          });
+        
+        window.addEventListener("unitRequestRendering", (e) => {
+            postMessageToSDK({ type: "unit", action: 'unitRequestRendering', details: e.detail })
+        });
+        
+        window.addEventListener("unitRequestRefresh", (e) => {
+            postMessageToSDK({ type: "unit", action: 'unitRequestRefresh', details: e.detail })
+        });
+        
+        window.addEventListener("unitRequestOpenLink", (e) => {
+            postMessageToSDK({ type: "unit", action: "unitRequestOpenLink", details: e.detail.href })
+        });
+        
+        window.addEventListener("unitRequestCloseFlow", (e) => {
+            postMessageToSDK({ type: "unit", action: 'unitRequestCloseFlow', details: e.detail })
+        });
+        
+        window.addEventListener("unitCardStatusChanged", (e) => {
+            const response = e.detail
+            response.then((data) => {
+                console.log( JSON.stringify(data.data))
+                postMessageToSDK({ type: "card", action: "unitCardStatusChanged", details:  { data: JSON.stringify(data.data) }})
+            }).catch((e) => {
+                console.log(e)
+            })
+        });
+        
+        
+        const dispatchRenderingEvent = (details) => {
+            const event = new CustomEvent("unitRequestRendering",{ detail: JSON.parse(details) })
+            window.dispatchEvent(event)
+        }
+
+        const dispatchRefreshEvent = (details) => {
+            const event = new CustomEvent("unitRequestRefresh",{ detail: JSON.parse(details) });
+            window.dispatchEvent(event);
+        }
+        
+        <SCRIPT>
+    </script>
+</body>
