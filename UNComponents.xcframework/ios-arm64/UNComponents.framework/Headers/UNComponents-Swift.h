@@ -278,6 +278,10 @@ SWIFT_CLASS("_TtC12UNComponents19UNActivityComponent")
 @end
 
 
+
+
+
+
 SWIFT_CLASS("_TtC12UNComponents22UNBookPaymentComponent")
 @interface UNBookPaymentComponent : UIView
 - (nullable instancetype)initWithCoder:(NSCoder * _Nonnull)aDecoder OBJC_DESIGNATED_INITIALIZER;

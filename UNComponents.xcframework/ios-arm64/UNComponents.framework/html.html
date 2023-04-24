@@ -33,7 +33,7 @@
         
         window.addEventListener("unitOnLoad", (e) => {
               postHeight();
-              postMessageToSDK({ type: "unit", action: "unitOnLoad", details: e.detail })
+              postMessageToSDK({ type: "unit", action: "unitOnLoad", details: { ...e.detail, componentName: "<UN_COMPONENT_NAME>"  }})
             });
         
         window.addEventListener("unitPaymentCreated", (e) => {
@@ -62,15 +62,28 @@
             postMessageToSDK({ type: "unit", action: 'unitRequestCloseFlow', details: e.detail })
         });
         
+        window.addEventListener("unitRequestDownload", (e) => {
+            postMessageToSDK({ type: "unit", action: "unitRequestDownload", details: e.detail })
+        });
+        
         window.addEventListener("unitCardStatusChanged", (e) => {
             const response = e.detail
             response.then((data) => {
                 console.log( JSON.stringify(data.data))
-                postMessageToSDK({ type: "card", action: "unitCardStatusChanged", details:  { data: JSON.stringify(data.data) }})
+                postMessageToSDK({ type: "card", action: "cardStatusChanged", details: data.data} )
             }).catch((e) => {
                 console.log(e)
             })
         });
+        
+        window.addEventListener("unitAccountChanged", (e) => {
+             const response = e.detail
+             response.then((data) => {
+               postMessageToSDK({ type: "account",action: "accountStatusChanged", details: data.data })
+             }).catch((e) => {
+               console.log(e)
+             })
+         });
         
         
         const dispatchRenderingEvent = (details) => {
