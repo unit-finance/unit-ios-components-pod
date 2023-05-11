@@ -190,14 +190,14 @@ public protocol UNUIViews {
   func getACHCreditComponent(accountId: Swift.String, additionalSettings: UNComponents.UNACHCreditViewSettingsProtocol?, theme: UNComponents.UNTheme?, callbacks: UNComponents.UNACHCreditComponentCallbacks?) -> UNComponents.UNACHCreditView
   func getActivityComponent(accountId: Swift.String, theme: UNComponents.UNTheme?, callbacks: UNComponents.UNActivityComponentCallbacks?) -> UNComponents.UNActivityView
   func getAccountComponent(accountId: Swift.String, theme: UNComponents.UNTheme?, callbacks: UNComponents.UNAccountComponentCallbacks?) -> UNComponents.UNAccountView
-  func getBookPaymentComponent(accountId: Swift.String, counterPartyAccountId: Swift.String, counterPartyName: Swift.String, isSameCustomer: Swift.Bool, additionalSettings: UNComponents.UNBookPaymentViewSettingsProtocol?, theme: UNComponents.UNTheme?, callbacks: UNComponents.UNBookPaymentComponentCallbacks?) -> UNComponents.UNBookPaymentView
+  func getBookPaymentComponent(accountId: Swift.String, counterpartyAccountId: Swift.String, counterpartyName: Swift.String, isSameCustomer: Swift.Bool, additionalSettings: UNComponents.UNBookPaymentViewSettingsProtocol?, theme: UNComponents.UNTheme?, callbacks: UNComponents.UNBookPaymentComponentCallbacks?) -> UNComponents.UNBookPaymentView
 }
 extension UNComponents.UNUIViews {
   public func getCardComponent(id: Swift.String, additionalSettings: UNComponents.UNCardViewSettingsProtocol? = nil, theme: UNComponents.UNTheme? = nil, callbacks: UNComponents.UNCardComponentCallbacks? = nil) -> UNComponents.UNCardView
   public func getACHCreditComponent(accountId: Swift.String, additionalSettings: UNComponents.UNACHCreditViewSettingsProtocol? = nil, theme: UNComponents.UNTheme? = nil, callbacks: UNComponents.UNACHCreditComponentCallbacks? = nil) -> UNComponents.UNACHCreditView
   public func getActivityComponent(accountId: Swift.String, theme: UNComponents.UNTheme? = nil, callbacks: UNComponents.UNActivityComponentCallbacks? = nil) -> UNComponents.UNActivityView
   public func getAccountComponent(accountId: Swift.String, theme: UNComponents.UNTheme? = nil, callbacks: UNComponents.UNAccountComponentCallbacks? = nil) -> UNComponents.UNAccountView
-  public func getBookPaymentComponent(accountId: Swift.String, counterPartyAccountId: Swift.String, counterPartyName: Swift.String, isSameCustomer: Swift.Bool = false, additionalSettings: UNComponents.UNBookPaymentViewSettingsProtocol? = nil, theme: UNComponents.UNTheme? = nil, callbacks: UNComponents.UNBookPaymentComponentCallbacks? = nil) -> UNComponents.UNBookPaymentView
+  public func getBookPaymentComponent(accountId: Swift.String, counterpartyAccountId: Swift.String, counterpartyName: Swift.String, isSameCustomer: Swift.Bool = false, additionalSettings: UNComponents.UNBookPaymentViewSettingsProtocol? = nil, theme: UNComponents.UNTheme? = nil, callbacks: UNComponents.UNBookPaymentComponentCallbacks? = nil) -> UNComponents.UNBookPaymentView
 }
 public class UNCardViewSettingsBuilder : UNComponents.UNCardViewSettingsProtocol {
   public var hideActionsMenuButton: Swift.Bool {
@@ -377,8 +377,8 @@ public typealias UNCustomerToken = Swift.String
 public typealias UNTheme = Swift.String
 public protocol UNBookPaymentView : UIKit.UIView {
   var accountId: Swift.String { get set }
-  var counterPartyName: Swift.String { get set }
-  var counterPartyAccountId: Swift.String { get set }
+  var counterpartyName: Swift.String { get set }
+  var counterpartyAccountId: Swift.String { get set }
   var isSameCustomer: Swift.Bool { get set }
   var additionalSetting: UNComponents.UNBookPaymentViewSettingsProtocol { get set }
 }

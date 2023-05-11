@@ -6521,7 +6521,7 @@
           {
             "kind": "Function",
             "name": "getBookPaymentComponent",
-            "printedName": "getBookPaymentComponent(accountId:counterPartyAccountId:counterPartyName:isSameCustomer:additionalSettings:theme:callbacks:)",
+            "printedName": "getBookPaymentComponent(accountId:counterpartyAccountId:counterpartyName:isSameCustomer:additionalSettings:theme:callbacks:)",
             "children": [
               {
                 "kind": "TypeNominal",
@@ -6609,8 +6609,8 @@
               }
             ],
             "declKind": "Func",
-            "usr": "s:12UNComponents9UNUIViewsP23getBookPaymentComponent9accountId019counterPartyAccountH00iJ4Name14isSameCustomer18additionalSettings5theme9callbacksAA06UNBookE4View_pSS_S2SSbAA0teuQ8Protocol_pSgSSSgyAA0teF8CallbackOcSgtF",
-            "mangledName": "$s12UNComponents9UNUIViewsP23getBookPaymentComponent9accountId019counterPartyAccountH00iJ4Name14isSameCustomer18additionalSettings5theme9callbacksAA06UNBookE4View_pSS_S2SSbAA0teuQ8Protocol_pSgSSSgyAA0teF8CallbackOcSgtF",
+            "usr": "s:12UNComponents9UNUIViewsP23getBookPaymentComponent9accountId019counterpartyAccountH00I4Name14isSameCustomer18additionalSettings5theme9callbacksAA06UNBookE4View_pSS_S2SSbAA0setP8Protocol_pSgSSSgyAA0seF8CallbackOcSgtF",
+            "mangledName": "$s12UNComponents9UNUIViewsP23getBookPaymentComponent9accountId019counterpartyAccountH00I4Name14isSameCustomer18additionalSettings5theme9callbacksAA06UNBookE4View_pSS_S2SSbAA0setP8Protocol_pSgSSSgyAA0seF8CallbackOcSgtF",
             "moduleName": "UNComponents",
             "genericSig": "<τ_0_0 where τ_0_0 : UNComponents.UNUIViews>",
             "sugared_genericSig": "<Self where Self : UNComponents.UNUIViews>",
@@ -6927,7 +6927,7 @@
           {
             "kind": "Function",
             "name": "getBookPaymentComponent",
-            "printedName": "getBookPaymentComponent(accountId:counterPartyAccountId:counterPartyName:isSameCustomer:additionalSettings:theme:callbacks:)",
+            "printedName": "getBookPaymentComponent(accountId:counterpartyAccountId:counterpartyName:isSameCustomer:additionalSettings:theme:callbacks:)",
             "children": [
               {
                 "kind": "TypeNominal",
@@ -7019,8 +7019,8 @@
               }
             ],
             "declKind": "Func",
-            "usr": "s:12UNComponents9UNUIViewsPAAE23getBookPaymentComponent9accountId019counterPartyAccountH00iJ4Name14isSameCustomer18additionalSettings5theme9callbacksAA06UNBookE4View_pSS_S2SSbAA0teuQ8Protocol_pSgSSSgyAA0teF8CallbackOcSgtF",
-            "mangledName": "$s12UNComponents9UNUIViewsPAAE23getBookPaymentComponent9accountId019counterPartyAccountH00iJ4Name14isSameCustomer18additionalSettings5theme9callbacksAA06UNBookE4View_pSS_S2SSbAA0teuQ8Protocol_pSgSSSgyAA0teF8CallbackOcSgtF",
+            "usr": "s:12UNComponents9UNUIViewsPAAE23getBookPaymentComponent9accountId019counterpartyAccountH00I4Name14isSameCustomer18additionalSettings5theme9callbacksAA06UNBookE4View_pSS_S2SSbAA0setP8Protocol_pSgSSSgyAA0seF8CallbackOcSgtF",
+            "mangledName": "$s12UNComponents9UNUIViewsPAAE23getBookPaymentComponent9accountId019counterpartyAccountH00I4Name14isSameCustomer18additionalSettings5theme9callbacksAA06UNBookE4View_pSS_S2SSbAA0setP8Protocol_pSgSSSgyAA0seF8CallbackOcSgtF",
             "moduleName": "UNComponents",
             "genericSig": "<τ_0_0 where τ_0_0 : UNComponents.UNUIViews>",
             "sugared_genericSig": "<Self where Self : UNComponents.UNUIViews>",
@@ -12946,8 +12946,8 @@
           },
           {
             "kind": "Var",
-            "name": "counterPartyName",
-            "printedName": "counterPartyName",
+            "name": "counterpartyName",
+            "printedName": "counterpartyName",
             "children": [
               {
                 "kind": "TypeNominal",
@@ -12957,8 +12957,8 @@
               }
             ],
             "declKind": "Var",
-            "usr": "s:12UNComponents17UNBookPaymentViewP16counterPartyNameSSvp",
-            "mangledName": "$s12UNComponents17UNBookPaymentViewP16counterPartyNameSSvp",
+            "usr": "s:12UNComponents17UNBookPaymentViewP16counterpartyNameSSvp",
+            "mangledName": "$s12UNComponents17UNBookPaymentViewP16counterpartyNameSSvp",
             "moduleName": "UNComponents",
             "protocolReq": true,
             "accessors": [
@@ -12975,8 +12975,8 @@
                   }
                 ],
                 "declKind": "Accessor",
-                "usr": "s:12UNComponents17UNBookPaymentViewP16counterPartyNameSSvg",
-                "mangledName": "$s12UNComponents17UNBookPaymentViewP16counterPartyNameSSvg",
+                "usr": "s:12UNComponents17UNBookPaymentViewP16counterpartyNameSSvg",
+                "mangledName": "$s12UNComponents17UNBookPaymentViewP16counterpartyNameSSvg",
                 "moduleName": "UNComponents",
                 "genericSig": "<τ_0_0 where τ_0_0 : UNComponents.UNBookPaymentView>",
                 "sugared_genericSig": "<Self where Self : UNComponents.UNBookPaymentView>",
@@ -13002,8 +13002,8 @@
                   }
                 ],
                 "declKind": "Accessor",
-                "usr": "s:12UNComponents17UNBookPaymentViewP16counterPartyNameSSvs",
-                "mangledName": "$s12UNComponents17UNBookPaymentViewP16counterPartyNameSSvs",
+                "usr": "s:12UNComponents17UNBookPaymentViewP16counterpartyNameSSvs",
+                "mangledName": "$s12UNComponents17UNBookPaymentViewP16counterpartyNameSSvs",
                 "moduleName": "UNComponents",
                 "genericSig": "<τ_0_0 where τ_0_0 : UNComponents.UNBookPaymentView>",
                 "sugared_genericSig": "<Self where Self : UNComponents.UNBookPaymentView>",
@@ -13023,8 +13023,8 @@
                   }
                 ],
                 "declKind": "Accessor",
-                "usr": "s:12UNComponents17UNBookPaymentViewP16counterPartyNameSSvM",
-                "mangledName": "$s12UNComponents17UNBookPaymentViewP16counterPartyNameSSvM",
+                "usr": "s:12UNComponents17UNBookPaymentViewP16counterpartyNameSSvM",
+                "mangledName": "$s12UNComponents17UNBookPaymentViewP16counterpartyNameSSvM",
                 "moduleName": "UNComponents",
                 "genericSig": "<τ_0_0 where τ_0_0 : UNComponents.UNBookPaymentView>",
                 "sugared_genericSig": "<Self where Self : UNComponents.UNBookPaymentView>",
@@ -13037,8 +13037,8 @@
           },
           {
             "kind": "Var",
-            "name": "counterPartyAccountId",
-            "printedName": "counterPartyAccountId",
+            "name": "counterpartyAccountId",
+            "printedName": "counterpartyAccountId",
             "children": [
               {
                 "kind": "TypeNominal",
@@ -13048,8 +13048,8 @@
               }
             ],
             "declKind": "Var",
-            "usr": "s:12UNComponents17UNBookPaymentViewP21counterPartyAccountIdSSvp",
-            "mangledName": "$s12UNComponents17UNBookPaymentViewP21counterPartyAccountIdSSvp",
+            "usr": "s:12UNComponents17UNBookPaymentViewP21counterpartyAccountIdSSvp",
+            "mangledName": "$s12UNComponents17UNBookPaymentViewP21counterpartyAccountIdSSvp",
             "moduleName": "UNComponents",
             "protocolReq": true,
             "accessors": [
@@ -13066,8 +13066,8 @@
                   }
                 ],
                 "declKind": "Accessor",
-                "usr": "s:12UNComponents17UNBookPaymentViewP21counterPartyAccountIdSSvg",
-                "mangledName": "$s12UNComponents17UNBookPaymentViewP21counterPartyAccountIdSSvg",
+                "usr": "s:12UNComponents17UNBookPaymentViewP21counterpartyAccountIdSSvg",
+                "mangledName": "$s12UNComponents17UNBookPaymentViewP21counterpartyAccountIdSSvg",
                 "moduleName": "UNComponents",
                 "genericSig": "<τ_0_0 where τ_0_0 : UNComponents.UNBookPaymentView>",
                 "sugared_genericSig": "<Self where Self : UNComponents.UNBookPaymentView>",
@@ -13093,8 +13093,8 @@
                   }
                 ],
                 "declKind": "Accessor",
-                "usr": "s:12UNComponents17UNBookPaymentViewP21counterPartyAccountIdSSvs",
-                "mangledName": "$s12UNComponents17UNBookPaymentViewP21counterPartyAccountIdSSvs",
+                "usr": "s:12UNComponents17UNBookPaymentViewP21counterpartyAccountIdSSvs",
+                "mangledName": "$s12UNComponents17UNBookPaymentViewP21counterpartyAccountIdSSvs",
                 "moduleName": "UNComponents",
                 "genericSig": "<τ_0_0 where τ_0_0 : UNComponents.UNBookPaymentView>",
                 "sugared_genericSig": "<Self where Self : UNComponents.UNBookPaymentView>",
@@ -13114,8 +13114,8 @@
                   }
                 ],
                 "declKind": "Accessor",
-                "usr": "s:12UNComponents17UNBookPaymentViewP21counterPartyAccountIdSSvM",
-                "mangledName": "$s12UNComponents17UNBookPaymentViewP21counterPartyAccountIdSSvM",
+                "usr": "s:12UNComponents17UNBookPaymentViewP21counterpartyAccountIdSSvM",
+                "mangledName": "$s12UNComponents17UNBookPaymentViewP21counterpartyAccountIdSSvM",
                 "moduleName": "UNComponents",
                 "genericSig": "<τ_0_0 where τ_0_0 : UNComponents.UNBookPaymentView>",
                 "sugared_genericSig": "<Self where Self : UNComponents.UNBookPaymentView>",
