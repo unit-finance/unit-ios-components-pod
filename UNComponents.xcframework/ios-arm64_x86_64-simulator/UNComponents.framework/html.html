@@ -5,9 +5,8 @@
         window.UnitMobileSDK = true
     </script>
     
-    <UN_SCRIPT>
-    
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=0">
+    <UN_SCRIPT>
 </html>
 
 <body style="margin: 0;">
@@ -39,8 +38,7 @@
         window.addEventListener("unitPaymentCreated", (e) => {
             const response = e.detail
               response.then((data) => {
-                postMessageToSDK({ type: "unit", action: "unitPaymentCreated", details: data.data })
-                console.log({ type: "unit", action: "unitPaymentCreated", details: data.data })
+                postMessageToSDK({ type: "unit", action: "unitPaymentCreated", details: data.data, componentName: "<UN_COMPONENT_NAME>" })
               }).catch((e) => {
                 console.log(e)
               })
@@ -69,8 +67,16 @@
         window.addEventListener("unitCardStatusChanged", (e) => {
             const response = e.detail
             response.then((data) => {
-                console.log( JSON.stringify(data.data))
                 postMessageToSDK({ type: "card", action: "cardStatusChanged", details: data.data} )
+            }).catch((e) => {
+                console.log(e)
+            })
+        });
+        
+        window.addEventListener("unitCardActivated", (e) => {
+            const response = e.detail
+            response.then((data) => {
+                postMessageToSDK({ type: "card", action: "cardActivated", details: data.data })
             }).catch((e) => {
                 console.log(e)
             })
@@ -96,6 +102,13 @@
             window.dispatchEvent(event);
         }
         
-        <SCRIPT>
+        const dispatchOpenActionsMenu = (componentName) => {
+            document.querySelector(componentName).dispatchEvent(new CustomEvent("unitRequestOpenActionsMenu"))
+        }
+
+        const dispatchRequestCardAction = (action) => {
+            document.querySelector("unit-elements-card").dispatchEvent(new CustomEvent("unitRequestCardAction", {detail: {action: action}}))
+        }
+        
     </script>
 </body>

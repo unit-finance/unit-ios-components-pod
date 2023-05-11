@@ -15,7 +15,25 @@ import _Concurrency
 import _StringProcessing
 public enum UNCardComponentCallback {
   case cardStatusChanged(card: UNComponents.UNCardData)
+  case cardActivated(card: UNComponents.UNCardData)
   case unitOnLoad(result: Swift.Result<UNComponents.UNCardData, UNComponents.UNError>)
+}
+public enum UNCardMenuAction : Swift.String {
+  case freeze
+  case managePin
+  case replace
+  case report
+  case close
+  case activate
+  case unfreeze
+  case changePin
+  case setPin
+  case addToWallet
+  public init?(rawValue: Swift.String)
+  public typealias RawValue = Swift.String
+  public var rawValue: Swift.String {
+    get
+  }
 }
 public typealias UNCardComponentCallbacks = (_ callback: UNComponents.UNCardComponentCallback) -> Swift.Void
 public enum UNACHCreditComponentCallback {
@@ -47,7 +65,10 @@ public enum UNAccountComponentCallback {
 public enum UNError : Swift.Error {
   case onLoad(errors: [UNComponents.UNErrorResponse])
   case missingCustomerToken
-  case missingEnviorment
+  case missingEnvironment
+  public var description: Swift.String {
+    get
+  }
 }
 public struct UNACHData : Swift.Decodable {
   public let type: Swift.String
@@ -105,8 +126,10 @@ public class UNACHCreditViewSettingsBuilder : UNComponents.UNACHCreditViewSettin
   public func isAutoFocus(_ isAutoFocus: Swift.Bool) -> UNComponents.UNACHCreditViewSettingsBuilder
   @objc deinit
 }
+public typealias UNBookPaymentComponentCallbacks = (_ callback: UNComponents.UNBookPaymentComponentCallback) -> Swift.Void
 public protocol UNACHCreditView : UIKit.UIView {
   var accountId: Swift.String { get set }
+  var additionalSettings: UNComponents.UNACHCreditViewSettingsProtocol { get set }
 }
 public protocol UNACHCreditViewSettingsProtocol {
   var fee: Swift.Double? { get }
@@ -158,8 +181,8 @@ public enum UNCardType : Swift.String, Swift.Decodable {
   }
 }
 public protocol UNManagerProtocol : AnyObject {
-  var customerToken: UNComponents.UNCustomerToken { get set }
-  var environment: UNComponents.UNEnvironment { get set }
+  var customerToken: UNComponents.UNCustomerToken? { get set }
+  var environment: UNComponents.UNEnvironment? { get set }
   var ui: UNComponents.UNUI { get }
 }
 public protocol UNUIViews {
@@ -167,12 +190,14 @@ public protocol UNUIViews {
   func getACHCreditComponent(accountId: Swift.String, additionalSettings: UNComponents.UNACHCreditViewSettingsProtocol?, theme: UNComponents.UNTheme?, callbacks: UNComponents.UNACHCreditComponentCallbacks?) -> UNComponents.UNACHCreditView
   func getActivityComponent(accountId: Swift.String, theme: UNComponents.UNTheme?, callbacks: UNComponents.UNActivityComponentCallbacks?) -> UNComponents.UNActivityView
   func getAccountComponent(accountId: Swift.String, theme: UNComponents.UNTheme?, callbacks: UNComponents.UNAccountComponentCallbacks?) -> UNComponents.UNAccountView
+  func getBookPaymentComponent(accountId: Swift.String, counterPartyAccountId: Swift.String, counterPartyName: Swift.String, isSameCustomer: Swift.Bool, additionalSettings: UNComponents.UNBookPaymentViewSettingsProtocol?, theme: UNComponents.UNTheme?, callbacks: UNComponents.UNBookPaymentComponentCallbacks?) -> UNComponents.UNBookPaymentView
 }
 extension UNComponents.UNUIViews {
   public func getCardComponent(id: Swift.String, additionalSettings: UNComponents.UNCardViewSettingsProtocol? = nil, theme: UNComponents.UNTheme? = nil, callbacks: UNComponents.UNCardComponentCallbacks? = nil) -> UNComponents.UNCardView
   public func getACHCreditComponent(accountId: Swift.String, additionalSettings: UNComponents.UNACHCreditViewSettingsProtocol? = nil, theme: UNComponents.UNTheme? = nil, callbacks: UNComponents.UNACHCreditComponentCallbacks? = nil) -> UNComponents.UNACHCreditView
   public func getActivityComponent(accountId: Swift.String, theme: UNComponents.UNTheme? = nil, callbacks: UNComponents.UNActivityComponentCallbacks? = nil) -> UNComponents.UNActivityView
   public func getAccountComponent(accountId: Swift.String, theme: UNComponents.UNTheme? = nil, callbacks: UNComponents.UNAccountComponentCallbacks? = nil) -> UNComponents.UNAccountView
+  public func getBookPaymentComponent(accountId: Swift.String, counterPartyAccountId: Swift.String, counterPartyName: Swift.String, isSameCustomer: Swift.Bool = false, additionalSettings: UNComponents.UNBookPaymentViewSettingsProtocol? = nil, theme: UNComponents.UNTheme? = nil, callbacks: UNComponents.UNBookPaymentComponentCallbacks? = nil) -> UNComponents.UNBookPaymentView
 }
 public class UNCardViewSettingsBuilder : UNComponents.UNCardViewSettingsProtocol {
   public var hideActionsMenuButton: Swift.Bool {
@@ -189,6 +214,34 @@ public class UNCardViewSettingsBuilder : UNComponents.UNCardViewSettingsProtocol
   public func hideCardTitle(_ hideCardTitle: Swift.Bool) -> UNComponents.UNCardViewSettingsBuilder
   public func hideSensitiveDataButton(_ hideSensitiveDataButton: Swift.Bool) -> UNComponents.UNCardViewSettingsBuilder
   @objc deinit
+}
+public struct UNBookPaymentData : Swift.Decodable {
+  public let type: Swift.String
+  public let id: Swift.String
+  public let details: UNComponents.UNBookPaymentAttributes
+  public let relationships: UNComponents.UNBookPaymentRelationships
+  public init(from decoder: Swift.Decoder) throws
+}
+public struct UNBookPaymentAttributes : Swift.Decodable {
+  public let createdAt: Swift.String
+  public let status: UNComponents.UNPaymentStatus
+  public let reason: Swift.String?
+  public let direction: UNComponents.UNDirection
+  public let description: Swift.String
+  public let transactionSummaryOverride: Swift.String?
+  public let amount: Swift.Int
+  public let tags: UNComponents.UNTags?
+  public init(from decoder: Swift.Decoder) throws
+}
+public struct UNBookPaymentRelationships : Swift.Decodable {
+  public let account: UNComponents.UNRelationshipData?
+  public let customer: UNComponents.UNRelationshipData?
+  public let customers: UNComponents.UNRelationshipDataArray?
+  public let counterpartyAccount: UNComponents.UNRelationshipData?
+  public let counterpartyCustomer: UNComponents.UNRelationshipData?
+  public let transaction: UNComponents.UNRelationshipData?
+  public let recurringPayment: UNComponents.UNRelationshipData?
+  public init(from decoder: Swift.Decoder) throws
 }
 public enum UNPaymentStatus : Swift.String, Swift.Decodable {
   case sent
@@ -226,26 +279,9 @@ public enum UNCounterpartyVerificationMethod : Swift.String, Swift.Decodable {
     get
   }
 }
-public typealias UNBookPaymentComponentCallbacks = (_ callback: UNComponents.UNBookPaymentComponentCallback) -> Swift.Void
 public enum UNBookPaymentComponentCallback {
-  case complete(result: Swift.Result<Swift.Void, UNComponents.UNBookPaymentError>)
-}
-public enum UNBookPaymentError : Foundation.LocalizedError {
-  case wrongDetails
-  case insufficientFunds
-  public var errorDescription: Swift.String? {
-    get
-  }
-  public static func == (a: UNComponents.UNBookPaymentError, b: UNComponents.UNBookPaymentError) -> Swift.Bool
-  public func hash(into hasher: inout Swift.Hasher)
-  public var hashValue: Swift.Int {
-    get
-  }
-}
-@objc @_Concurrency.MainActor(unsafe) public class UNBookPaymentComponent : UIKit.UIView {
-  @_Concurrency.MainActor(unsafe) public init(customerToken: Swift.String, senderCustomerId: Swift.String, senderAccountId: Swift.String? = nil, recipientCustomerId: Swift.String, recipientAccountId: Swift.String? = nil, callbacks: @escaping UNComponents.UNBookPaymentComponentCallbacks)
-  @_Concurrency.MainActor(unsafe) @objc required dynamic public init?(coder aDecoder: Foundation.NSCoder)
-  @objc deinit
+  case onPaymentCreated(data: UNComponents.UNBookPaymentData)
+  case unitOnLoad(result: Swift.Result<UNComponents.UNAccountData, UNComponents.UNError>)
 }
 public typealias UNActivityComponentCallbacks = (_ callback: UNComponents.UNActivityComponentCallback) -> Swift.Void
 public struct UNAccountData : Swift.Decodable {
@@ -329,8 +365,26 @@ public enum UNAccountStatus : Swift.String, Swift.Decodable {
     get
   }
 }
+public class UNBookPaymentViewSettingsBuilder : UNComponents.UNBookPaymentViewSettingsProtocol {
+  public var isAutoFocus: Swift.Bool {
+    get
+  }
+  public init(isAutoFocus: Swift.Bool = false)
+  public func isAutoFocus(_ isAutoFocus: Swift.Bool) -> UNComponents.UNBookPaymentViewSettingsBuilder
+  @objc deinit
+}
 public typealias UNCustomerToken = Swift.String
 public typealias UNTheme = Swift.String
+public protocol UNBookPaymentView : UIKit.UIView {
+  var accountId: Swift.String { get set }
+  var counterPartyName: Swift.String { get set }
+  var counterPartyAccountId: Swift.String { get set }
+  var isSameCustomer: Swift.Bool { get set }
+  var additionalSetting: UNComponents.UNBookPaymentViewSettingsProtocol { get set }
+}
+public protocol UNBookPaymentViewSettingsProtocol {
+  var isAutoFocus: Swift.Bool { get }
+}
 public typealias UNACHCreditComponentCallbacks = (_ callback: UNComponents.UNACHCreditComponentCallback) -> Swift.Void
 public struct UNRelationshipData : Swift.Decodable {
   public let data: UNComponents.UNData
@@ -351,6 +405,7 @@ public struct UNTags : Swift.Decodable {
 }
 public protocol UNAccountView : UIKit.UIView {
   var accountId: Swift.String { get set }
+  func openActionsMenu()
 }
 public enum UNEnvironment {
   case sandbox
@@ -370,6 +425,10 @@ extension UNComponents.UNACHCreditComponent : UNComponents.UNACHCreditView {
   @_Concurrency.MainActor(unsafe) public var accountId: Swift.String {
     get
     set(newAccountId)
+  }
+  @_Concurrency.MainActor(unsafe) public var additionalSettings: UNComponents.UNACHCreditViewSettingsProtocol {
+    get
+    set(newAdditionalSettings)
   }
 }
 public struct UNComponentResponse<T> : Swift.Decodable where T : Swift.Decodable {
@@ -403,12 +462,18 @@ public protocol UNUI {
 }
 public protocol UNCardView : UIKit.UIView {
   var cardId: Swift.String { get set }
+  var additionalSetting: UNComponents.UNCardViewSettingsProtocol { get set }
+  func openActionsMenu()
+  func open(action: UNComponents.UNCardMenuAction)
 }
 public protocol UNCardViewSettingsProtocol {
   var hideActionsMenuButton: Swift.Bool { get }
   var hideCardTitle: Swift.Bool { get }
   var hideSensitiveDataButton: Swift.Bool { get }
 }
+extension UNComponents.UNCardMenuAction : Swift.Equatable {}
+extension UNComponents.UNCardMenuAction : Swift.Hashable {}
+extension UNComponents.UNCardMenuAction : Swift.RawRepresentable {}
 extension UNComponents.UNCardType : Swift.Equatable {}
 extension UNComponents.UNCardType : Swift.Hashable {}
 extension UNComponents.UNCardType : Swift.RawRepresentable {}
@@ -424,8 +489,6 @@ extension UNComponents.UNPaymentAccountType : Swift.RawRepresentable {}
 extension UNComponents.UNCounterpartyVerificationMethod : Swift.Equatable {}
 extension UNComponents.UNCounterpartyVerificationMethod : Swift.Hashable {}
 extension UNComponents.UNCounterpartyVerificationMethod : Swift.RawRepresentable {}
-extension UNComponents.UNBookPaymentError : Swift.Equatable {}
-extension UNComponents.UNBookPaymentError : Swift.Hashable {}
 extension UNComponents.UNAccountType : Swift.Equatable {}
 extension UNComponents.UNAccountType : Swift.Hashable {}
 extension UNComponents.UNAccountType : Swift.RawRepresentable {}

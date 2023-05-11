@@ -85,6 +85,63 @@
           },
           {
             "kind": "Var",
+            "name": "cardActivated",
+            "printedName": "cardActivated",
+            "children": [
+              {
+                "kind": "TypeFunc",
+                "name": "Function",
+                "printedName": "(UNComponents.UNCardComponentCallback.Type) -> (UNComponents.UNCardData) -> UNComponents.UNCardComponentCallback",
+                "children": [
+                  {
+                    "kind": "TypeFunc",
+                    "name": "Function",
+                    "printedName": "(UNComponents.UNCardData) -> UNComponents.UNCardComponentCallback",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "UNCardComponentCallback",
+                        "printedName": "UNComponents.UNCardComponentCallback",
+                        "usr": "s:12UNComponents23UNCardComponentCallbackO"
+                      },
+                      {
+                        "kind": "TypeNominal",
+                        "name": "Tuple",
+                        "printedName": "(card: UNComponents.UNCardData)",
+                        "children": [
+                          {
+                            "kind": "TypeNominal",
+                            "name": "UNCardData",
+                            "printedName": "UNComponents.UNCardData",
+                            "usr": "s:12UNComponents10UNCardDataV"
+                          }
+                        ]
+                      }
+                    ]
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Metatype",
+                    "printedName": "UNComponents.UNCardComponentCallback.Type",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "UNCardComponentCallback",
+                        "printedName": "UNComponents.UNCardComponentCallback",
+                        "usr": "s:12UNComponents23UNCardComponentCallbackO"
+                      }
+                    ]
+                  }
+                ]
+              }
+            ],
+            "declKind": "EnumElement",
+            "usr": "s:12UNComponents23UNCardComponentCallbackO13cardActivatedyAcA0B4DataV_tcACmF",
+            "mangledName": "$s12UNComponents23UNCardComponentCallbackO13cardActivatedyAcA0B4DataV_tcACmF",
+            "moduleName": "UNComponents"
+          },
+          {
+            "kind": "Var",
             "name": "unitOnLoad",
             "printedName": "unitOnLoad",
             "children": [
@@ -219,6 +276,511 @@
         "moduleName": "UNComponents",
         "declAttributes": [
           "RawDocComment"
+        ]
+      },
+      {
+        "kind": "Import",
+        "name": "Foundation",
+        "printedName": "Foundation",
+        "declKind": "Import",
+        "moduleName": "UNComponents",
+        "declAttributes": [
+          "RawDocComment"
+        ]
+      },
+      {
+        "kind": "TypeDecl",
+        "name": "UNCardMenuAction",
+        "printedName": "UNCardMenuAction",
+        "children": [
+          {
+            "kind": "Var",
+            "name": "freeze",
+            "printedName": "freeze",
+            "children": [
+              {
+                "kind": "TypeFunc",
+                "name": "Function",
+                "printedName": "(UNComponents.UNCardMenuAction.Type) -> UNComponents.UNCardMenuAction",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "UNCardMenuAction",
+                    "printedName": "UNComponents.UNCardMenuAction",
+                    "usr": "s:12UNComponents16UNCardMenuActionO"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Metatype",
+                    "printedName": "UNComponents.UNCardMenuAction.Type",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "UNCardMenuAction",
+                        "printedName": "UNComponents.UNCardMenuAction",
+                        "usr": "s:12UNComponents16UNCardMenuActionO"
+                      }
+                    ]
+                  }
+                ]
+              }
+            ],
+            "declKind": "EnumElement",
+            "usr": "s:12UNComponents16UNCardMenuActionO6freezeyA2CmF",
+            "mangledName": "$s12UNComponents16UNCardMenuActionO6freezeyA2CmF",
+            "moduleName": "UNComponents"
+          },
+          {
+            "kind": "Var",
+            "name": "managePin",
+            "printedName": "managePin",
+            "children": [
+              {
+                "kind": "TypeFunc",
+                "name": "Function",
+                "printedName": "(UNComponents.UNCardMenuAction.Type) -> UNComponents.UNCardMenuAction",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "UNCardMenuAction",
+                    "printedName": "UNComponents.UNCardMenuAction",
+                    "usr": "s:12UNComponents16UNCardMenuActionO"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Metatype",
+                    "printedName": "UNComponents.UNCardMenuAction.Type",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "UNCardMenuAction",
+                        "printedName": "UNComponents.UNCardMenuAction",
+                        "usr": "s:12UNComponents16UNCardMenuActionO"
+                      }
+                    ]
+                  }
+                ]
+              }
+            ],
+            "declKind": "EnumElement",
+            "usr": "s:12UNComponents16UNCardMenuActionO9managePinyA2CmF",
+            "mangledName": "$s12UNComponents16UNCardMenuActionO9managePinyA2CmF",
+            "moduleName": "UNComponents"
+          },
+          {
+            "kind": "Var",
+            "name": "replace",
+            "printedName": "replace",
+            "children": [
+              {
+                "kind": "TypeFunc",
+                "name": "Function",
+                "printedName": "(UNComponents.UNCardMenuAction.Type) -> UNComponents.UNCardMenuAction",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "UNCardMenuAction",
+                    "printedName": "UNComponents.UNCardMenuAction",
+                    "usr": "s:12UNComponents16UNCardMenuActionO"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Metatype",
+                    "printedName": "UNComponents.UNCardMenuAction.Type",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "UNCardMenuAction",
+                        "printedName": "UNComponents.UNCardMenuAction",
+                        "usr": "s:12UNComponents16UNCardMenuActionO"
+                      }
+                    ]
+                  }
+                ]
+              }
+            ],
+            "declKind": "EnumElement",
+            "usr": "s:12UNComponents16UNCardMenuActionO7replaceyA2CmF",
+            "mangledName": "$s12UNComponents16UNCardMenuActionO7replaceyA2CmF",
+            "moduleName": "UNComponents"
+          },
+          {
+            "kind": "Var",
+            "name": "report",
+            "printedName": "report",
+            "children": [
+              {
+                "kind": "TypeFunc",
+                "name": "Function",
+                "printedName": "(UNComponents.UNCardMenuAction.Type) -> UNComponents.UNCardMenuAction",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "UNCardMenuAction",
+                    "printedName": "UNComponents.UNCardMenuAction",
+                    "usr": "s:12UNComponents16UNCardMenuActionO"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Metatype",
+                    "printedName": "UNComponents.UNCardMenuAction.Type",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "UNCardMenuAction",
+                        "printedName": "UNComponents.UNCardMenuAction",
+                        "usr": "s:12UNComponents16UNCardMenuActionO"
+                      }
+                    ]
+                  }
+                ]
+              }
+            ],
+            "declKind": "EnumElement",
+            "usr": "s:12UNComponents16UNCardMenuActionO6reportyA2CmF",
+            "mangledName": "$s12UNComponents16UNCardMenuActionO6reportyA2CmF",
+            "moduleName": "UNComponents"
+          },
+          {
+            "kind": "Var",
+            "name": "close",
+            "printedName": "close",
+            "children": [
+              {
+                "kind": "TypeFunc",
+                "name": "Function",
+                "printedName": "(UNComponents.UNCardMenuAction.Type) -> UNComponents.UNCardMenuAction",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "UNCardMenuAction",
+                    "printedName": "UNComponents.UNCardMenuAction",
+                    "usr": "s:12UNComponents16UNCardMenuActionO"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Metatype",
+                    "printedName": "UNComponents.UNCardMenuAction.Type",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "UNCardMenuAction",
+                        "printedName": "UNComponents.UNCardMenuAction",
+                        "usr": "s:12UNComponents16UNCardMenuActionO"
+                      }
+                    ]
+                  }
+                ]
+              }
+            ],
+            "declKind": "EnumElement",
+            "usr": "s:12UNComponents16UNCardMenuActionO5closeyA2CmF",
+            "mangledName": "$s12UNComponents16UNCardMenuActionO5closeyA2CmF",
+            "moduleName": "UNComponents"
+          },
+          {
+            "kind": "Var",
+            "name": "activate",
+            "printedName": "activate",
+            "children": [
+              {
+                "kind": "TypeFunc",
+                "name": "Function",
+                "printedName": "(UNComponents.UNCardMenuAction.Type) -> UNComponents.UNCardMenuAction",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "UNCardMenuAction",
+                    "printedName": "UNComponents.UNCardMenuAction",
+                    "usr": "s:12UNComponents16UNCardMenuActionO"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Metatype",
+                    "printedName": "UNComponents.UNCardMenuAction.Type",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "UNCardMenuAction",
+                        "printedName": "UNComponents.UNCardMenuAction",
+                        "usr": "s:12UNComponents16UNCardMenuActionO"
+                      }
+                    ]
+                  }
+                ]
+              }
+            ],
+            "declKind": "EnumElement",
+            "usr": "s:12UNComponents16UNCardMenuActionO8activateyA2CmF",
+            "mangledName": "$s12UNComponents16UNCardMenuActionO8activateyA2CmF",
+            "moduleName": "UNComponents"
+          },
+          {
+            "kind": "Var",
+            "name": "unfreeze",
+            "printedName": "unfreeze",
+            "children": [
+              {
+                "kind": "TypeFunc",
+                "name": "Function",
+                "printedName": "(UNComponents.UNCardMenuAction.Type) -> UNComponents.UNCardMenuAction",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "UNCardMenuAction",
+                    "printedName": "UNComponents.UNCardMenuAction",
+                    "usr": "s:12UNComponents16UNCardMenuActionO"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Metatype",
+                    "printedName": "UNComponents.UNCardMenuAction.Type",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "UNCardMenuAction",
+                        "printedName": "UNComponents.UNCardMenuAction",
+                        "usr": "s:12UNComponents16UNCardMenuActionO"
+                      }
+                    ]
+                  }
+                ]
+              }
+            ],
+            "declKind": "EnumElement",
+            "usr": "s:12UNComponents16UNCardMenuActionO8unfreezeyA2CmF",
+            "mangledName": "$s12UNComponents16UNCardMenuActionO8unfreezeyA2CmF",
+            "moduleName": "UNComponents"
+          },
+          {
+            "kind": "Var",
+            "name": "changePin",
+            "printedName": "changePin",
+            "children": [
+              {
+                "kind": "TypeFunc",
+                "name": "Function",
+                "printedName": "(UNComponents.UNCardMenuAction.Type) -> UNComponents.UNCardMenuAction",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "UNCardMenuAction",
+                    "printedName": "UNComponents.UNCardMenuAction",
+                    "usr": "s:12UNComponents16UNCardMenuActionO"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Metatype",
+                    "printedName": "UNComponents.UNCardMenuAction.Type",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "UNCardMenuAction",
+                        "printedName": "UNComponents.UNCardMenuAction",
+                        "usr": "s:12UNComponents16UNCardMenuActionO"
+                      }
+                    ]
+                  }
+                ]
+              }
+            ],
+            "declKind": "EnumElement",
+            "usr": "s:12UNComponents16UNCardMenuActionO9changePinyA2CmF",
+            "mangledName": "$s12UNComponents16UNCardMenuActionO9changePinyA2CmF",
+            "moduleName": "UNComponents"
+          },
+          {
+            "kind": "Var",
+            "name": "setPin",
+            "printedName": "setPin",
+            "children": [
+              {
+                "kind": "TypeFunc",
+                "name": "Function",
+                "printedName": "(UNComponents.UNCardMenuAction.Type) -> UNComponents.UNCardMenuAction",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "UNCardMenuAction",
+                    "printedName": "UNComponents.UNCardMenuAction",
+                    "usr": "s:12UNComponents16UNCardMenuActionO"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Metatype",
+                    "printedName": "UNComponents.UNCardMenuAction.Type",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "UNCardMenuAction",
+                        "printedName": "UNComponents.UNCardMenuAction",
+                        "usr": "s:12UNComponents16UNCardMenuActionO"
+                      }
+                    ]
+                  }
+                ]
+              }
+            ],
+            "declKind": "EnumElement",
+            "usr": "s:12UNComponents16UNCardMenuActionO6setPinyA2CmF",
+            "mangledName": "$s12UNComponents16UNCardMenuActionO6setPinyA2CmF",
+            "moduleName": "UNComponents"
+          },
+          {
+            "kind": "Var",
+            "name": "addToWallet",
+            "printedName": "addToWallet",
+            "children": [
+              {
+                "kind": "TypeFunc",
+                "name": "Function",
+                "printedName": "(UNComponents.UNCardMenuAction.Type) -> UNComponents.UNCardMenuAction",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "UNCardMenuAction",
+                    "printedName": "UNComponents.UNCardMenuAction",
+                    "usr": "s:12UNComponents16UNCardMenuActionO"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Metatype",
+                    "printedName": "UNComponents.UNCardMenuAction.Type",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "UNCardMenuAction",
+                        "printedName": "UNComponents.UNCardMenuAction",
+                        "usr": "s:12UNComponents16UNCardMenuActionO"
+                      }
+                    ]
+                  }
+                ]
+              }
+            ],
+            "declKind": "EnumElement",
+            "usr": "s:12UNComponents16UNCardMenuActionO11addToWalletyA2CmF",
+            "mangledName": "$s12UNComponents16UNCardMenuActionO11addToWalletyA2CmF",
+            "moduleName": "UNComponents"
+          },
+          {
+            "kind": "Constructor",
+            "name": "init",
+            "printedName": "init(rawValue:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Optional",
+                "printedName": "UNComponents.UNCardMenuAction?",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "UNCardMenuAction",
+                    "printedName": "UNComponents.UNCardMenuAction",
+                    "usr": "s:12UNComponents16UNCardMenuActionO"
+                  }
+                ],
+                "usr": "s:Sq"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "String",
+                "printedName": "Swift.String",
+                "usr": "s:SS"
+              }
+            ],
+            "declKind": "Constructor",
+            "usr": "s:12UNComponents16UNCardMenuActionO8rawValueACSgSS_tcfc",
+            "mangledName": "$s12UNComponents16UNCardMenuActionO8rawValueACSgSS_tcfc",
+            "moduleName": "UNComponents",
+            "implicit": true,
+            "init_kind": "Designated"
+          },
+          {
+            "kind": "Var",
+            "name": "rawValue",
+            "printedName": "rawValue",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "String",
+                "printedName": "Swift.String",
+                "usr": "s:SS"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "s:12UNComponents16UNCardMenuActionO8rawValueSSvp",
+            "mangledName": "$s12UNComponents16UNCardMenuActionO8rawValueSSvp",
+            "moduleName": "UNComponents",
+            "implicit": true,
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "String",
+                    "printedName": "Swift.String",
+                    "usr": "s:SS"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:12UNComponents16UNCardMenuActionO8rawValueSSvg",
+                "mangledName": "$s12UNComponents16UNCardMenuActionO8rawValueSSvg",
+                "moduleName": "UNComponents",
+                "implicit": true,
+                "accessorKind": "get"
+              }
+            ]
+          }
+        ],
+        "declKind": "Enum",
+        "usr": "s:12UNComponents16UNCardMenuActionO",
+        "mangledName": "$s12UNComponents16UNCardMenuActionO",
+        "moduleName": "UNComponents",
+        "declAttributes": [
+          "AccessControl"
+        ],
+        "enumRawTypeName": "String",
+        "conformances": [
+          {
+            "kind": "Conformance",
+            "name": "Equatable",
+            "printedName": "Equatable",
+            "usr": "s:SQ",
+            "mangledName": "$sSQ"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Hashable",
+            "printedName": "Hashable",
+            "usr": "s:SH",
+            "mangledName": "$sSH"
+          },
+          {
+            "kind": "Conformance",
+            "name": "RawRepresentable",
+            "printedName": "RawRepresentable",
+            "children": [
+              {
+                "kind": "TypeWitness",
+                "name": "RawValue",
+                "printedName": "RawValue",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "String",
+                    "printedName": "Swift.String",
+                    "usr": "s:SS"
+                  }
+                ]
+              }
+            ],
+            "usr": "s:SY",
+            "mangledName": "$sSY"
+          }
         ]
       },
       {
@@ -1052,9 +1614,6 @@
             "mangledName": "$s12UNComponents14UNActivityViewP9accountIdSSvp",
             "moduleName": "UNComponents",
             "protocolReq": true,
-            "declAttributes": [
-              "RawDocComment"
-            ],
             "accessors": [
               {
                 "kind": "Accessor",
@@ -1446,8 +2005,8 @@
           },
           {
             "kind": "Var",
-            "name": "missingEnviorment",
-            "printedName": "missingEnviorment",
+            "name": "missingEnvironment",
+            "printedName": "missingEnvironment",
             "children": [
               {
                 "kind": "TypeFunc",
@@ -1477,9 +2036,49 @@
               }
             ],
             "declKind": "EnumElement",
-            "usr": "s:12UNComponents7UNErrorO17missingEnviormentyA2CmF",
-            "mangledName": "$s12UNComponents7UNErrorO17missingEnviormentyA2CmF",
+            "usr": "s:12UNComponents7UNErrorO18missingEnvironmentyA2CmF",
+            "mangledName": "$s12UNComponents7UNErrorO18missingEnvironmentyA2CmF",
             "moduleName": "UNComponents"
+          },
+          {
+            "kind": "Var",
+            "name": "description",
+            "printedName": "description",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "String",
+                "printedName": "Swift.String",
+                "usr": "s:SS"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "s:12UNComponents7UNErrorO11descriptionSSvp",
+            "mangledName": "$s12UNComponents7UNErrorO11descriptionSSvp",
+            "moduleName": "UNComponents",
+            "declAttributes": [
+              "AccessControl"
+            ],
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "String",
+                    "printedName": "Swift.String",
+                    "usr": "s:SS"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:12UNComponents7UNErrorO11descriptionSSvg",
+                "mangledName": "$s12UNComponents7UNErrorO11descriptionSSvg",
+                "moduleName": "UNComponents",
+                "accessorKind": "get"
+              }
+            ]
           }
         ],
         "declKind": "Enum",
@@ -3599,6 +4198,16 @@
       },
       {
         "kind": "Import",
+        "name": "Foundation",
+        "printedName": "Foundation",
+        "declKind": "Import",
+        "moduleName": "UNComponents",
+        "declAttributes": [
+          "RawDocComment"
+        ]
+      },
+      {
+        "kind": "Import",
         "name": "UIKit",
         "printedName": "UIKit",
         "declKind": "Import",
@@ -3683,9 +4292,6 @@
             "mangledName": "$s12UNComponents15UNACHCreditViewP9accountIdSSvp",
             "moduleName": "UNComponents",
             "protocolReq": true,
-            "declAttributes": [
-              "RawDocComment"
-            ],
             "accessors": [
               {
                 "kind": "Accessor",
@@ -3750,6 +4356,97 @@
                 "declKind": "Accessor",
                 "usr": "s:12UNComponents15UNACHCreditViewP9accountIdSSvM",
                 "mangledName": "$s12UNComponents15UNACHCreditViewP9accountIdSSvM",
+                "moduleName": "UNComponents",
+                "genericSig": "<τ_0_0 where τ_0_0 : UNComponents.UNACHCreditView>",
+                "sugared_genericSig": "<Self where Self : UNComponents.UNACHCreditView>",
+                "protocolReq": true,
+                "implicit": true,
+                "reqNewWitnessTableEntry": true,
+                "accessorKind": "_modify"
+              }
+            ]
+          },
+          {
+            "kind": "Var",
+            "name": "additionalSettings",
+            "printedName": "additionalSettings",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "UNACHCreditViewSettingsProtocol",
+                "printedName": "UNComponents.UNACHCreditViewSettingsProtocol",
+                "usr": "s:12UNComponents31UNACHCreditViewSettingsProtocolP"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "s:12UNComponents15UNACHCreditViewP18additionalSettingsAA0bcE8Protocol_pvp",
+            "mangledName": "$s12UNComponents15UNACHCreditViewP18additionalSettingsAA0bcE8Protocol_pvp",
+            "moduleName": "UNComponents",
+            "protocolReq": true,
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "UNACHCreditViewSettingsProtocol",
+                    "printedName": "UNComponents.UNACHCreditViewSettingsProtocol",
+                    "usr": "s:12UNComponents31UNACHCreditViewSettingsProtocolP"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:12UNComponents15UNACHCreditViewP18additionalSettingsAA0bcE8Protocol_pvg",
+                "mangledName": "$s12UNComponents15UNACHCreditViewP18additionalSettingsAA0bcE8Protocol_pvg",
+                "moduleName": "UNComponents",
+                "genericSig": "<τ_0_0 where τ_0_0 : UNComponents.UNACHCreditView>",
+                "sugared_genericSig": "<Self where Self : UNComponents.UNACHCreditView>",
+                "protocolReq": true,
+                "reqNewWitnessTableEntry": true,
+                "accessorKind": "get"
+              },
+              {
+                "kind": "Accessor",
+                "name": "Set",
+                "printedName": "Set()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Void",
+                    "printedName": "()"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "UNACHCreditViewSettingsProtocol",
+                    "printedName": "UNComponents.UNACHCreditViewSettingsProtocol",
+                    "usr": "s:12UNComponents31UNACHCreditViewSettingsProtocolP"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:12UNComponents15UNACHCreditViewP18additionalSettingsAA0bcE8Protocol_pvs",
+                "mangledName": "$s12UNComponents15UNACHCreditViewP18additionalSettingsAA0bcE8Protocol_pvs",
+                "moduleName": "UNComponents",
+                "genericSig": "<τ_0_0 where τ_0_0 : UNComponents.UNACHCreditView>",
+                "sugared_genericSig": "<Self where Self : UNComponents.UNACHCreditView>",
+                "protocolReq": true,
+                "reqNewWitnessTableEntry": true,
+                "accessorKind": "set"
+              },
+              {
+                "kind": "Accessor",
+                "name": "Modify",
+                "printedName": "Modify()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Void",
+                    "printedName": "()"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:12UNComponents15UNACHCreditViewP18additionalSettingsAA0bcE8Protocol_pvM",
+                "mangledName": "$s12UNComponents15UNACHCreditViewP18additionalSettingsAA0bcE8Protocol_pvM",
                 "moduleName": "UNComponents",
                 "genericSig": "<τ_0_0 where τ_0_0 : UNComponents.UNACHCreditView>",
                 "sugared_genericSig": "<Self where Self : UNComponents.UNACHCreditView>",
@@ -5223,14 +5920,22 @@
             "children": [
               {
                 "kind": "TypeNominal",
-                "name": "String",
-                "printedName": "Swift.String",
-                "usr": "s:SS"
+                "name": "Optional",
+                "printedName": "Swift.String?",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "String",
+                    "printedName": "Swift.String",
+                    "usr": "s:SS"
+                  }
+                ],
+                "usr": "s:Sq"
               }
             ],
             "declKind": "Var",
-            "usr": "s:12UNComponents17UNManagerProtocolP13customerTokenSSvp",
-            "mangledName": "$s12UNComponents17UNManagerProtocolP13customerTokenSSvp",
+            "usr": "s:12UNComponents17UNManagerProtocolP13customerTokenSSSgvp",
+            "mangledName": "$s12UNComponents17UNManagerProtocolP13customerTokenSSSgvp",
             "moduleName": "UNComponents",
             "protocolReq": true,
             "accessors": [
@@ -5241,14 +5946,22 @@
                 "children": [
                   {
                     "kind": "TypeNominal",
-                    "name": "String",
-                    "printedName": "Swift.String",
-                    "usr": "s:SS"
+                    "name": "Optional",
+                    "printedName": "Swift.String?",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "String",
+                        "printedName": "Swift.String",
+                        "usr": "s:SS"
+                      }
+                    ],
+                    "usr": "s:Sq"
                   }
                 ],
                 "declKind": "Accessor",
-                "usr": "s:12UNComponents17UNManagerProtocolP13customerTokenSSvg",
-                "mangledName": "$s12UNComponents17UNManagerProtocolP13customerTokenSSvg",
+                "usr": "s:12UNComponents17UNManagerProtocolP13customerTokenSSSgvg",
+                "mangledName": "$s12UNComponents17UNManagerProtocolP13customerTokenSSSgvg",
                 "moduleName": "UNComponents",
                 "genericSig": "<τ_0_0 where τ_0_0 : UNComponents.UNManagerProtocol>",
                 "sugared_genericSig": "<Self where Self : UNComponents.UNManagerProtocol>",
@@ -5268,14 +5981,22 @@
                   },
                   {
                     "kind": "TypeNominal",
-                    "name": "String",
-                    "printedName": "Swift.String",
-                    "usr": "s:SS"
+                    "name": "Optional",
+                    "printedName": "Swift.String?",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "String",
+                        "printedName": "Swift.String",
+                        "usr": "s:SS"
+                      }
+                    ],
+                    "usr": "s:Sq"
                   }
                 ],
                 "declKind": "Accessor",
-                "usr": "s:12UNComponents17UNManagerProtocolP13customerTokenSSvs",
-                "mangledName": "$s12UNComponents17UNManagerProtocolP13customerTokenSSvs",
+                "usr": "s:12UNComponents17UNManagerProtocolP13customerTokenSSSgvs",
+                "mangledName": "$s12UNComponents17UNManagerProtocolP13customerTokenSSSgvs",
                 "moduleName": "UNComponents",
                 "genericSig": "<τ_0_0 where τ_0_0 : UNComponents.UNManagerProtocol>",
                 "sugared_genericSig": "<Self where Self : UNComponents.UNManagerProtocol>",
@@ -5295,8 +6016,8 @@
                   }
                 ],
                 "declKind": "Accessor",
-                "usr": "s:12UNComponents17UNManagerProtocolP13customerTokenSSvM",
-                "mangledName": "$s12UNComponents17UNManagerProtocolP13customerTokenSSvM",
+                "usr": "s:12UNComponents17UNManagerProtocolP13customerTokenSSSgvM",
+                "mangledName": "$s12UNComponents17UNManagerProtocolP13customerTokenSSSgvM",
                 "moduleName": "UNComponents",
                 "genericSig": "<τ_0_0 where τ_0_0 : UNComponents.UNManagerProtocol>",
                 "sugared_genericSig": "<Self where Self : UNComponents.UNManagerProtocol>",
@@ -5314,14 +6035,22 @@
             "children": [
               {
                 "kind": "TypeNominal",
-                "name": "UNEnvironment",
-                "printedName": "UNComponents.UNEnvironment",
-                "usr": "s:12UNComponents13UNEnvironmentO"
+                "name": "Optional",
+                "printedName": "UNComponents.UNEnvironment?",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "UNEnvironment",
+                    "printedName": "UNComponents.UNEnvironment",
+                    "usr": "s:12UNComponents13UNEnvironmentO"
+                  }
+                ],
+                "usr": "s:Sq"
               }
             ],
             "declKind": "Var",
-            "usr": "s:12UNComponents17UNManagerProtocolP11environmentAA13UNEnvironmentOvp",
-            "mangledName": "$s12UNComponents17UNManagerProtocolP11environmentAA13UNEnvironmentOvp",
+            "usr": "s:12UNComponents17UNManagerProtocolP11environmentAA13UNEnvironmentOSgvp",
+            "mangledName": "$s12UNComponents17UNManagerProtocolP11environmentAA13UNEnvironmentOSgvp",
             "moduleName": "UNComponents",
             "protocolReq": true,
             "accessors": [
@@ -5332,14 +6061,22 @@
                 "children": [
                   {
                     "kind": "TypeNominal",
-                    "name": "UNEnvironment",
-                    "printedName": "UNComponents.UNEnvironment",
-                    "usr": "s:12UNComponents13UNEnvironmentO"
+                    "name": "Optional",
+                    "printedName": "UNComponents.UNEnvironment?",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "UNEnvironment",
+                        "printedName": "UNComponents.UNEnvironment",
+                        "usr": "s:12UNComponents13UNEnvironmentO"
+                      }
+                    ],
+                    "usr": "s:Sq"
                   }
                 ],
                 "declKind": "Accessor",
-                "usr": "s:12UNComponents17UNManagerProtocolP11environmentAA13UNEnvironmentOvg",
-                "mangledName": "$s12UNComponents17UNManagerProtocolP11environmentAA13UNEnvironmentOvg",
+                "usr": "s:12UNComponents17UNManagerProtocolP11environmentAA13UNEnvironmentOSgvg",
+                "mangledName": "$s12UNComponents17UNManagerProtocolP11environmentAA13UNEnvironmentOSgvg",
                 "moduleName": "UNComponents",
                 "genericSig": "<τ_0_0 where τ_0_0 : UNComponents.UNManagerProtocol>",
                 "sugared_genericSig": "<Self where Self : UNComponents.UNManagerProtocol>",
@@ -5359,14 +6096,22 @@
                   },
                   {
                     "kind": "TypeNominal",
-                    "name": "UNEnvironment",
-                    "printedName": "UNComponents.UNEnvironment",
-                    "usr": "s:12UNComponents13UNEnvironmentO"
+                    "name": "Optional",
+                    "printedName": "UNComponents.UNEnvironment?",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "UNEnvironment",
+                        "printedName": "UNComponents.UNEnvironment",
+                        "usr": "s:12UNComponents13UNEnvironmentO"
+                      }
+                    ],
+                    "usr": "s:Sq"
                   }
                 ],
                 "declKind": "Accessor",
-                "usr": "s:12UNComponents17UNManagerProtocolP11environmentAA13UNEnvironmentOvs",
-                "mangledName": "$s12UNComponents17UNManagerProtocolP11environmentAA13UNEnvironmentOvs",
+                "usr": "s:12UNComponents17UNManagerProtocolP11environmentAA13UNEnvironmentOSgvs",
+                "mangledName": "$s12UNComponents17UNManagerProtocolP11environmentAA13UNEnvironmentOSgvs",
                 "moduleName": "UNComponents",
                 "genericSig": "<τ_0_0 where τ_0_0 : UNComponents.UNManagerProtocol>",
                 "sugared_genericSig": "<Self where Self : UNComponents.UNManagerProtocol>",
@@ -5386,8 +6131,8 @@
                   }
                 ],
                 "declKind": "Accessor",
-                "usr": "s:12UNComponents17UNManagerProtocolP11environmentAA13UNEnvironmentOvM",
-                "mangledName": "$s12UNComponents17UNManagerProtocolP11environmentAA13UNEnvironmentOvM",
+                "usr": "s:12UNComponents17UNManagerProtocolP11environmentAA13UNEnvironmentOSgvM",
+                "mangledName": "$s12UNComponents17UNManagerProtocolP11environmentAA13UNEnvironmentOSgvM",
                 "moduleName": "UNComponents",
                 "genericSig": "<τ_0_0 where τ_0_0 : UNComponents.UNManagerProtocol>",
                 "sugared_genericSig": "<Self where Self : UNComponents.UNManagerProtocol>",
@@ -5775,6 +6520,106 @@
           },
           {
             "kind": "Function",
+            "name": "getBookPaymentComponent",
+            "printedName": "getBookPaymentComponent(accountId:counterPartyAccountId:counterPartyName:isSameCustomer:additionalSettings:theme:callbacks:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "UNBookPaymentView",
+                "printedName": "UNComponents.UNBookPaymentView",
+                "usr": "s:12UNComponents17UNBookPaymentViewP"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "String",
+                "printedName": "Swift.String",
+                "usr": "s:SS"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "String",
+                "printedName": "Swift.String",
+                "usr": "s:SS"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "String",
+                "printedName": "Swift.String",
+                "usr": "s:SS"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Bool",
+                "printedName": "Swift.Bool",
+                "usr": "s:Sb"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Optional",
+                "printedName": "UNComponents.UNBookPaymentViewSettingsProtocol?",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "UNBookPaymentViewSettingsProtocol",
+                    "printedName": "UNComponents.UNBookPaymentViewSettingsProtocol",
+                    "usr": "s:12UNComponents33UNBookPaymentViewSettingsProtocolP"
+                  }
+                ],
+                "usr": "s:Sq"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Optional",
+                "printedName": "Swift.String?",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "String",
+                    "printedName": "Swift.String",
+                    "usr": "s:SS"
+                  }
+                ],
+                "usr": "s:Sq"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Optional",
+                "printedName": "((UNComponents.UNBookPaymentComponentCallback) -> ())?",
+                "children": [
+                  {
+                    "kind": "TypeFunc",
+                    "name": "Function",
+                    "printedName": "(UNComponents.UNBookPaymentComponentCallback) -> ()",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "Void",
+                        "printedName": "()"
+                      },
+                      {
+                        "kind": "TypeNominal",
+                        "name": "UNBookPaymentComponentCallback",
+                        "printedName": "UNComponents.UNBookPaymentComponentCallback",
+                        "usr": "s:12UNComponents30UNBookPaymentComponentCallbackO"
+                      }
+                    ]
+                  }
+                ],
+                "usr": "s:Sq"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:12UNComponents9UNUIViewsP23getBookPaymentComponent9accountId019counterPartyAccountH00iJ4Name14isSameCustomer18additionalSettings5theme9callbacksAA06UNBookE4View_pSS_S2SSbAA0teuQ8Protocol_pSgSSSgyAA0teF8CallbackOcSgtF",
+            "mangledName": "$s12UNComponents9UNUIViewsP23getBookPaymentComponent9accountId019counterPartyAccountH00iJ4Name14isSameCustomer18additionalSettings5theme9callbacksAA06UNBookE4View_pSS_S2SSbAA0teuQ8Protocol_pSgSSSgyAA0teF8CallbackOcSgtF",
+            "moduleName": "UNComponents",
+            "genericSig": "<τ_0_0 where τ_0_0 : UNComponents.UNUIViews>",
+            "sugared_genericSig": "<Self where Self : UNComponents.UNUIViews>",
+            "protocolReq": true,
+            "reqNewWitnessTableEntry": true,
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Function",
             "name": "getCardComponent",
             "printedName": "getCardComponent(id:additionalSettings:theme:callbacks:)",
             "children": [
@@ -6073,6 +6918,109 @@
             "declKind": "Func",
             "usr": "s:12UNComponents9UNUIViewsPAAE19getAccountComponent9accountId5theme9callbacksAA13UNAccountView_pSS_SSSgyAA0jE8CallbackOcSgtF",
             "mangledName": "$s12UNComponents9UNUIViewsPAAE19getAccountComponent9accountId5theme9callbacksAA13UNAccountView_pSS_SSSgyAA0jE8CallbackOcSgtF",
+            "moduleName": "UNComponents",
+            "genericSig": "<τ_0_0 where τ_0_0 : UNComponents.UNUIViews>",
+            "sugared_genericSig": "<Self where Self : UNComponents.UNUIViews>",
+            "isFromExtension": true,
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Function",
+            "name": "getBookPaymentComponent",
+            "printedName": "getBookPaymentComponent(accountId:counterPartyAccountId:counterPartyName:isSameCustomer:additionalSettings:theme:callbacks:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "UNBookPaymentView",
+                "printedName": "UNComponents.UNBookPaymentView",
+                "usr": "s:12UNComponents17UNBookPaymentViewP"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "String",
+                "printedName": "Swift.String",
+                "usr": "s:SS"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "String",
+                "printedName": "Swift.String",
+                "usr": "s:SS"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "String",
+                "printedName": "Swift.String",
+                "usr": "s:SS"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Bool",
+                "printedName": "Swift.Bool",
+                "hasDefaultArg": true,
+                "usr": "s:Sb"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Optional",
+                "printedName": "UNComponents.UNBookPaymentViewSettingsProtocol?",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "UNBookPaymentViewSettingsProtocol",
+                    "printedName": "UNComponents.UNBookPaymentViewSettingsProtocol",
+                    "usr": "s:12UNComponents33UNBookPaymentViewSettingsProtocolP"
+                  }
+                ],
+                "hasDefaultArg": true,
+                "usr": "s:Sq"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Optional",
+                "printedName": "Swift.String?",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "String",
+                    "printedName": "Swift.String",
+                    "usr": "s:SS"
+                  }
+                ],
+                "hasDefaultArg": true,
+                "usr": "s:Sq"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Optional",
+                "printedName": "((UNComponents.UNBookPaymentComponentCallback) -> ())?",
+                "children": [
+                  {
+                    "kind": "TypeFunc",
+                    "name": "Function",
+                    "printedName": "(UNComponents.UNBookPaymentComponentCallback) -> ()",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "Void",
+                        "printedName": "()"
+                      },
+                      {
+                        "kind": "TypeNominal",
+                        "name": "UNBookPaymentComponentCallback",
+                        "printedName": "UNComponents.UNBookPaymentComponentCallback",
+                        "usr": "s:12UNComponents30UNBookPaymentComponentCallbackO"
+                      }
+                    ]
+                  }
+                ],
+                "hasDefaultArg": true,
+                "usr": "s:Sq"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:12UNComponents9UNUIViewsPAAE23getBookPaymentComponent9accountId019counterPartyAccountH00iJ4Name14isSameCustomer18additionalSettings5theme9callbacksAA06UNBookE4View_pSS_S2SSbAA0teuQ8Protocol_pSgSSSgyAA0teF8CallbackOcSgtF",
+            "mangledName": "$s12UNComponents9UNUIViewsPAAE23getBookPaymentComponent9accountId019counterPartyAccountH00iJ4Name14isSameCustomer18additionalSettings5theme9callbacksAA06UNBookE4View_pSS_S2SSbAA0teuQ8Protocol_pSgSSSgyAA0teF8CallbackOcSgtF",
             "moduleName": "UNComponents",
             "genericSig": "<τ_0_0 where τ_0_0 : UNComponents.UNUIViews>",
             "sugared_genericSig": "<Self where Self : UNComponents.UNUIViews>",
@@ -6461,6 +7409,1159 @@
         "moduleName": "UNComponents",
         "declAttributes": [
           "RawDocComment"
+        ]
+      },
+      {
+        "kind": "Import",
+        "name": "Foundation",
+        "printedName": "Foundation",
+        "declKind": "Import",
+        "moduleName": "UNComponents",
+        "declAttributes": [
+          "RawDocComment"
+        ]
+      },
+      {
+        "kind": "TypeDecl",
+        "name": "UNBookPaymentData",
+        "printedName": "UNBookPaymentData",
+        "children": [
+          {
+            "kind": "Var",
+            "name": "type",
+            "printedName": "type",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "String",
+                "printedName": "Swift.String",
+                "usr": "s:SS"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "s:12UNComponents17UNBookPaymentDataV4typeSSvp",
+            "mangledName": "$s12UNComponents17UNBookPaymentDataV4typeSSvp",
+            "moduleName": "UNComponents",
+            "declAttributes": [
+              "HasStorage",
+              "AccessControl"
+            ],
+            "isLet": true,
+            "hasStorage": true,
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "String",
+                    "printedName": "Swift.String",
+                    "usr": "s:SS"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:12UNComponents17UNBookPaymentDataV4typeSSvg",
+                "mangledName": "$s12UNComponents17UNBookPaymentDataV4typeSSvg",
+                "moduleName": "UNComponents",
+                "implicit": true,
+                "accessorKind": "get"
+              }
+            ]
+          },
+          {
+            "kind": "Var",
+            "name": "id",
+            "printedName": "id",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "String",
+                "printedName": "Swift.String",
+                "usr": "s:SS"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "s:12UNComponents17UNBookPaymentDataV2idSSvp",
+            "mangledName": "$s12UNComponents17UNBookPaymentDataV2idSSvp",
+            "moduleName": "UNComponents",
+            "declAttributes": [
+              "HasStorage",
+              "AccessControl"
+            ],
+            "isLet": true,
+            "hasStorage": true,
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "String",
+                    "printedName": "Swift.String",
+                    "usr": "s:SS"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:12UNComponents17UNBookPaymentDataV2idSSvg",
+                "mangledName": "$s12UNComponents17UNBookPaymentDataV2idSSvg",
+                "moduleName": "UNComponents",
+                "implicit": true,
+                "accessorKind": "get"
+              }
+            ]
+          },
+          {
+            "kind": "Var",
+            "name": "details",
+            "printedName": "details",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "UNBookPaymentAttributes",
+                "printedName": "UNComponents.UNBookPaymentAttributes",
+                "usr": "s:12UNComponents23UNBookPaymentAttributesV"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "s:12UNComponents17UNBookPaymentDataV7detailsAA0bC10AttributesVvp",
+            "mangledName": "$s12UNComponents17UNBookPaymentDataV7detailsAA0bC10AttributesVvp",
+            "moduleName": "UNComponents",
+            "declAttributes": [
+              "HasStorage",
+              "AccessControl"
+            ],
+            "isLet": true,
+            "hasStorage": true,
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "UNBookPaymentAttributes",
+                    "printedName": "UNComponents.UNBookPaymentAttributes",
+                    "usr": "s:12UNComponents23UNBookPaymentAttributesV"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:12UNComponents17UNBookPaymentDataV7detailsAA0bC10AttributesVvg",
+                "mangledName": "$s12UNComponents17UNBookPaymentDataV7detailsAA0bC10AttributesVvg",
+                "moduleName": "UNComponents",
+                "implicit": true,
+                "accessorKind": "get"
+              }
+            ]
+          },
+          {
+            "kind": "Var",
+            "name": "relationships",
+            "printedName": "relationships",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "UNBookPaymentRelationships",
+                "printedName": "UNComponents.UNBookPaymentRelationships",
+                "usr": "s:12UNComponents26UNBookPaymentRelationshipsV"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "s:12UNComponents17UNBookPaymentDataV13relationshipsAA0bC13RelationshipsVvp",
+            "mangledName": "$s12UNComponents17UNBookPaymentDataV13relationshipsAA0bC13RelationshipsVvp",
+            "moduleName": "UNComponents",
+            "declAttributes": [
+              "HasStorage",
+              "AccessControl"
+            ],
+            "isLet": true,
+            "hasStorage": true,
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "UNBookPaymentRelationships",
+                    "printedName": "UNComponents.UNBookPaymentRelationships",
+                    "usr": "s:12UNComponents26UNBookPaymentRelationshipsV"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:12UNComponents17UNBookPaymentDataV13relationshipsAA0bC13RelationshipsVvg",
+                "mangledName": "$s12UNComponents17UNBookPaymentDataV13relationshipsAA0bC13RelationshipsVvg",
+                "moduleName": "UNComponents",
+                "implicit": true,
+                "accessorKind": "get"
+              }
+            ]
+          },
+          {
+            "kind": "Constructor",
+            "name": "init",
+            "printedName": "init(from:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "UNBookPaymentData",
+                "printedName": "UNComponents.UNBookPaymentData",
+                "usr": "s:12UNComponents17UNBookPaymentDataV"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Decoder",
+                "printedName": "Swift.Decoder",
+                "usr": "s:s7DecoderP"
+              }
+            ],
+            "declKind": "Constructor",
+            "usr": "s:12UNComponents17UNBookPaymentDataV4fromACs7Decoder_p_tKcfc",
+            "mangledName": "$s12UNComponents17UNBookPaymentDataV4fromACs7Decoder_p_tKcfc",
+            "moduleName": "UNComponents",
+            "implicit": true,
+            "throwing": true,
+            "init_kind": "Designated"
+          }
+        ],
+        "declKind": "Struct",
+        "usr": "s:12UNComponents17UNBookPaymentDataV",
+        "mangledName": "$s12UNComponents17UNBookPaymentDataV",
+        "moduleName": "UNComponents",
+        "declAttributes": [
+          "AccessControl"
+        ],
+        "conformances": [
+          {
+            "kind": "Conformance",
+            "name": "Decodable",
+            "printedName": "Decodable",
+            "usr": "s:Se",
+            "mangledName": "$sSe"
+          }
+        ]
+      },
+      {
+        "kind": "TypeDecl",
+        "name": "UNBookPaymentAttributes",
+        "printedName": "UNBookPaymentAttributes",
+        "children": [
+          {
+            "kind": "Var",
+            "name": "createdAt",
+            "printedName": "createdAt",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "String",
+                "printedName": "Swift.String",
+                "usr": "s:SS"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "s:12UNComponents23UNBookPaymentAttributesV9createdAtSSvp",
+            "mangledName": "$s12UNComponents23UNBookPaymentAttributesV9createdAtSSvp",
+            "moduleName": "UNComponents",
+            "declAttributes": [
+              "HasStorage",
+              "AccessControl"
+            ],
+            "isLet": true,
+            "hasStorage": true,
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "String",
+                    "printedName": "Swift.String",
+                    "usr": "s:SS"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:12UNComponents23UNBookPaymentAttributesV9createdAtSSvg",
+                "mangledName": "$s12UNComponents23UNBookPaymentAttributesV9createdAtSSvg",
+                "moduleName": "UNComponents",
+                "implicit": true,
+                "accessorKind": "get"
+              }
+            ]
+          },
+          {
+            "kind": "Var",
+            "name": "status",
+            "printedName": "status",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "UNPaymentStatus",
+                "printedName": "UNComponents.UNPaymentStatus",
+                "usr": "s:12UNComponents15UNPaymentStatusO"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "s:12UNComponents23UNBookPaymentAttributesV6statusAA15UNPaymentStatusOvp",
+            "mangledName": "$s12UNComponents23UNBookPaymentAttributesV6statusAA15UNPaymentStatusOvp",
+            "moduleName": "UNComponents",
+            "declAttributes": [
+              "HasStorage",
+              "AccessControl"
+            ],
+            "isLet": true,
+            "hasStorage": true,
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "UNPaymentStatus",
+                    "printedName": "UNComponents.UNPaymentStatus",
+                    "usr": "s:12UNComponents15UNPaymentStatusO"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:12UNComponents23UNBookPaymentAttributesV6statusAA15UNPaymentStatusOvg",
+                "mangledName": "$s12UNComponents23UNBookPaymentAttributesV6statusAA15UNPaymentStatusOvg",
+                "moduleName": "UNComponents",
+                "implicit": true,
+                "accessorKind": "get"
+              }
+            ]
+          },
+          {
+            "kind": "Var",
+            "name": "reason",
+            "printedName": "reason",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Optional",
+                "printedName": "Swift.String?",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "String",
+                    "printedName": "Swift.String",
+                    "usr": "s:SS"
+                  }
+                ],
+                "usr": "s:Sq"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "s:12UNComponents23UNBookPaymentAttributesV6reasonSSSgvp",
+            "mangledName": "$s12UNComponents23UNBookPaymentAttributesV6reasonSSSgvp",
+            "moduleName": "UNComponents",
+            "declAttributes": [
+              "HasStorage",
+              "AccessControl"
+            ],
+            "isLet": true,
+            "hasStorage": true,
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Optional",
+                    "printedName": "Swift.String?",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "String",
+                        "printedName": "Swift.String",
+                        "usr": "s:SS"
+                      }
+                    ],
+                    "usr": "s:Sq"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:12UNComponents23UNBookPaymentAttributesV6reasonSSSgvg",
+                "mangledName": "$s12UNComponents23UNBookPaymentAttributesV6reasonSSSgvg",
+                "moduleName": "UNComponents",
+                "implicit": true,
+                "accessorKind": "get"
+              }
+            ]
+          },
+          {
+            "kind": "Var",
+            "name": "direction",
+            "printedName": "direction",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "UNDirection",
+                "printedName": "UNComponents.UNDirection",
+                "usr": "s:12UNComponents11UNDirectionO"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "s:12UNComponents23UNBookPaymentAttributesV9directionAA11UNDirectionOvp",
+            "mangledName": "$s12UNComponents23UNBookPaymentAttributesV9directionAA11UNDirectionOvp",
+            "moduleName": "UNComponents",
+            "declAttributes": [
+              "HasStorage",
+              "AccessControl"
+            ],
+            "isLet": true,
+            "hasStorage": true,
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "UNDirection",
+                    "printedName": "UNComponents.UNDirection",
+                    "usr": "s:12UNComponents11UNDirectionO"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:12UNComponents23UNBookPaymentAttributesV9directionAA11UNDirectionOvg",
+                "mangledName": "$s12UNComponents23UNBookPaymentAttributesV9directionAA11UNDirectionOvg",
+                "moduleName": "UNComponents",
+                "implicit": true,
+                "accessorKind": "get"
+              }
+            ]
+          },
+          {
+            "kind": "Var",
+            "name": "description",
+            "printedName": "description",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "String",
+                "printedName": "Swift.String",
+                "usr": "s:SS"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "s:12UNComponents23UNBookPaymentAttributesV11descriptionSSvp",
+            "mangledName": "$s12UNComponents23UNBookPaymentAttributesV11descriptionSSvp",
+            "moduleName": "UNComponents",
+            "declAttributes": [
+              "HasStorage",
+              "AccessControl"
+            ],
+            "isLet": true,
+            "hasStorage": true,
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "String",
+                    "printedName": "Swift.String",
+                    "usr": "s:SS"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:12UNComponents23UNBookPaymentAttributesV11descriptionSSvg",
+                "mangledName": "$s12UNComponents23UNBookPaymentAttributesV11descriptionSSvg",
+                "moduleName": "UNComponents",
+                "implicit": true,
+                "accessorKind": "get"
+              }
+            ]
+          },
+          {
+            "kind": "Var",
+            "name": "transactionSummaryOverride",
+            "printedName": "transactionSummaryOverride",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Optional",
+                "printedName": "Swift.String?",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "String",
+                    "printedName": "Swift.String",
+                    "usr": "s:SS"
+                  }
+                ],
+                "usr": "s:Sq"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "s:12UNComponents23UNBookPaymentAttributesV26transactionSummaryOverrideSSSgvp",
+            "mangledName": "$s12UNComponents23UNBookPaymentAttributesV26transactionSummaryOverrideSSSgvp",
+            "moduleName": "UNComponents",
+            "declAttributes": [
+              "HasStorage",
+              "AccessControl"
+            ],
+            "isLet": true,
+            "hasStorage": true,
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Optional",
+                    "printedName": "Swift.String?",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "String",
+                        "printedName": "Swift.String",
+                        "usr": "s:SS"
+                      }
+                    ],
+                    "usr": "s:Sq"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:12UNComponents23UNBookPaymentAttributesV26transactionSummaryOverrideSSSgvg",
+                "mangledName": "$s12UNComponents23UNBookPaymentAttributesV26transactionSummaryOverrideSSSgvg",
+                "moduleName": "UNComponents",
+                "implicit": true,
+                "accessorKind": "get"
+              }
+            ]
+          },
+          {
+            "kind": "Var",
+            "name": "amount",
+            "printedName": "amount",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Int",
+                "printedName": "Swift.Int",
+                "usr": "s:Si"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "s:12UNComponents23UNBookPaymentAttributesV6amountSivp",
+            "mangledName": "$s12UNComponents23UNBookPaymentAttributesV6amountSivp",
+            "moduleName": "UNComponents",
+            "declAttributes": [
+              "HasStorage",
+              "AccessControl"
+            ],
+            "isLet": true,
+            "hasStorage": true,
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Int",
+                    "printedName": "Swift.Int",
+                    "usr": "s:Si"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:12UNComponents23UNBookPaymentAttributesV6amountSivg",
+                "mangledName": "$s12UNComponents23UNBookPaymentAttributesV6amountSivg",
+                "moduleName": "UNComponents",
+                "implicit": true,
+                "accessorKind": "get"
+              }
+            ]
+          },
+          {
+            "kind": "Var",
+            "name": "tags",
+            "printedName": "tags",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Optional",
+                "printedName": "UNComponents.UNTags?",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "UNTags",
+                    "printedName": "UNComponents.UNTags",
+                    "usr": "s:12UNComponents6UNTagsV"
+                  }
+                ],
+                "usr": "s:Sq"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "s:12UNComponents23UNBookPaymentAttributesV4tagsAA6UNTagsVSgvp",
+            "mangledName": "$s12UNComponents23UNBookPaymentAttributesV4tagsAA6UNTagsVSgvp",
+            "moduleName": "UNComponents",
+            "declAttributes": [
+              "HasStorage",
+              "AccessControl"
+            ],
+            "isLet": true,
+            "hasStorage": true,
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Optional",
+                    "printedName": "UNComponents.UNTags?",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "UNTags",
+                        "printedName": "UNComponents.UNTags",
+                        "usr": "s:12UNComponents6UNTagsV"
+                      }
+                    ],
+                    "usr": "s:Sq"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:12UNComponents23UNBookPaymentAttributesV4tagsAA6UNTagsVSgvg",
+                "mangledName": "$s12UNComponents23UNBookPaymentAttributesV4tagsAA6UNTagsVSgvg",
+                "moduleName": "UNComponents",
+                "implicit": true,
+                "accessorKind": "get"
+              }
+            ]
+          },
+          {
+            "kind": "Constructor",
+            "name": "init",
+            "printedName": "init(from:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "UNBookPaymentAttributes",
+                "printedName": "UNComponents.UNBookPaymentAttributes",
+                "usr": "s:12UNComponents23UNBookPaymentAttributesV"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Decoder",
+                "printedName": "Swift.Decoder",
+                "usr": "s:s7DecoderP"
+              }
+            ],
+            "declKind": "Constructor",
+            "usr": "s:12UNComponents23UNBookPaymentAttributesV4fromACs7Decoder_p_tKcfc",
+            "mangledName": "$s12UNComponents23UNBookPaymentAttributesV4fromACs7Decoder_p_tKcfc",
+            "moduleName": "UNComponents",
+            "implicit": true,
+            "throwing": true,
+            "init_kind": "Designated"
+          }
+        ],
+        "declKind": "Struct",
+        "usr": "s:12UNComponents23UNBookPaymentAttributesV",
+        "mangledName": "$s12UNComponents23UNBookPaymentAttributesV",
+        "moduleName": "UNComponents",
+        "declAttributes": [
+          "AccessControl"
+        ],
+        "conformances": [
+          {
+            "kind": "Conformance",
+            "name": "Decodable",
+            "printedName": "Decodable",
+            "usr": "s:Se",
+            "mangledName": "$sSe"
+          }
+        ]
+      },
+      {
+        "kind": "TypeDecl",
+        "name": "UNBookPaymentRelationships",
+        "printedName": "UNBookPaymentRelationships",
+        "children": [
+          {
+            "kind": "Var",
+            "name": "account",
+            "printedName": "account",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Optional",
+                "printedName": "UNComponents.UNRelationshipData?",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "UNRelationshipData",
+                    "printedName": "UNComponents.UNRelationshipData",
+                    "usr": "s:12UNComponents18UNRelationshipDataV"
+                  }
+                ],
+                "usr": "s:Sq"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "s:12UNComponents26UNBookPaymentRelationshipsV7accountAA18UNRelationshipDataVSgvp",
+            "mangledName": "$s12UNComponents26UNBookPaymentRelationshipsV7accountAA18UNRelationshipDataVSgvp",
+            "moduleName": "UNComponents",
+            "declAttributes": [
+              "HasStorage",
+              "AccessControl"
+            ],
+            "isLet": true,
+            "hasStorage": true,
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Optional",
+                    "printedName": "UNComponents.UNRelationshipData?",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "UNRelationshipData",
+                        "printedName": "UNComponents.UNRelationshipData",
+                        "usr": "s:12UNComponents18UNRelationshipDataV"
+                      }
+                    ],
+                    "usr": "s:Sq"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:12UNComponents26UNBookPaymentRelationshipsV7accountAA18UNRelationshipDataVSgvg",
+                "mangledName": "$s12UNComponents26UNBookPaymentRelationshipsV7accountAA18UNRelationshipDataVSgvg",
+                "moduleName": "UNComponents",
+                "implicit": true,
+                "accessorKind": "get"
+              }
+            ]
+          },
+          {
+            "kind": "Var",
+            "name": "customer",
+            "printedName": "customer",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Optional",
+                "printedName": "UNComponents.UNRelationshipData?",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "UNRelationshipData",
+                    "printedName": "UNComponents.UNRelationshipData",
+                    "usr": "s:12UNComponents18UNRelationshipDataV"
+                  }
+                ],
+                "usr": "s:Sq"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "s:12UNComponents26UNBookPaymentRelationshipsV8customerAA18UNRelationshipDataVSgvp",
+            "mangledName": "$s12UNComponents26UNBookPaymentRelationshipsV8customerAA18UNRelationshipDataVSgvp",
+            "moduleName": "UNComponents",
+            "declAttributes": [
+              "HasStorage",
+              "AccessControl"
+            ],
+            "isLet": true,
+            "hasStorage": true,
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Optional",
+                    "printedName": "UNComponents.UNRelationshipData?",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "UNRelationshipData",
+                        "printedName": "UNComponents.UNRelationshipData",
+                        "usr": "s:12UNComponents18UNRelationshipDataV"
+                      }
+                    ],
+                    "usr": "s:Sq"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:12UNComponents26UNBookPaymentRelationshipsV8customerAA18UNRelationshipDataVSgvg",
+                "mangledName": "$s12UNComponents26UNBookPaymentRelationshipsV8customerAA18UNRelationshipDataVSgvg",
+                "moduleName": "UNComponents",
+                "implicit": true,
+                "accessorKind": "get"
+              }
+            ]
+          },
+          {
+            "kind": "Var",
+            "name": "customers",
+            "printedName": "customers",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Optional",
+                "printedName": "UNComponents.UNRelationshipDataArray?",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "UNRelationshipDataArray",
+                    "printedName": "UNComponents.UNRelationshipDataArray",
+                    "usr": "s:12UNComponents23UNRelationshipDataArrayV"
+                  }
+                ],
+                "usr": "s:Sq"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "s:12UNComponents26UNBookPaymentRelationshipsV9customersAA23UNRelationshipDataArrayVSgvp",
+            "mangledName": "$s12UNComponents26UNBookPaymentRelationshipsV9customersAA23UNRelationshipDataArrayVSgvp",
+            "moduleName": "UNComponents",
+            "declAttributes": [
+              "HasStorage",
+              "AccessControl"
+            ],
+            "isLet": true,
+            "hasStorage": true,
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Optional",
+                    "printedName": "UNComponents.UNRelationshipDataArray?",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "UNRelationshipDataArray",
+                        "printedName": "UNComponents.UNRelationshipDataArray",
+                        "usr": "s:12UNComponents23UNRelationshipDataArrayV"
+                      }
+                    ],
+                    "usr": "s:Sq"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:12UNComponents26UNBookPaymentRelationshipsV9customersAA23UNRelationshipDataArrayVSgvg",
+                "mangledName": "$s12UNComponents26UNBookPaymentRelationshipsV9customersAA23UNRelationshipDataArrayVSgvg",
+                "moduleName": "UNComponents",
+                "implicit": true,
+                "accessorKind": "get"
+              }
+            ]
+          },
+          {
+            "kind": "Var",
+            "name": "counterpartyAccount",
+            "printedName": "counterpartyAccount",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Optional",
+                "printedName": "UNComponents.UNRelationshipData?",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "UNRelationshipData",
+                    "printedName": "UNComponents.UNRelationshipData",
+                    "usr": "s:12UNComponents18UNRelationshipDataV"
+                  }
+                ],
+                "usr": "s:Sq"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "s:12UNComponents26UNBookPaymentRelationshipsV19counterpartyAccountAA18UNRelationshipDataVSgvp",
+            "mangledName": "$s12UNComponents26UNBookPaymentRelationshipsV19counterpartyAccountAA18UNRelationshipDataVSgvp",
+            "moduleName": "UNComponents",
+            "declAttributes": [
+              "HasStorage",
+              "AccessControl"
+            ],
+            "isLet": true,
+            "hasStorage": true,
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Optional",
+                    "printedName": "UNComponents.UNRelationshipData?",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "UNRelationshipData",
+                        "printedName": "UNComponents.UNRelationshipData",
+                        "usr": "s:12UNComponents18UNRelationshipDataV"
+                      }
+                    ],
+                    "usr": "s:Sq"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:12UNComponents26UNBookPaymentRelationshipsV19counterpartyAccountAA18UNRelationshipDataVSgvg",
+                "mangledName": "$s12UNComponents26UNBookPaymentRelationshipsV19counterpartyAccountAA18UNRelationshipDataVSgvg",
+                "moduleName": "UNComponents",
+                "implicit": true,
+                "accessorKind": "get"
+              }
+            ]
+          },
+          {
+            "kind": "Var",
+            "name": "counterpartyCustomer",
+            "printedName": "counterpartyCustomer",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Optional",
+                "printedName": "UNComponents.UNRelationshipData?",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "UNRelationshipData",
+                    "printedName": "UNComponents.UNRelationshipData",
+                    "usr": "s:12UNComponents18UNRelationshipDataV"
+                  }
+                ],
+                "usr": "s:Sq"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "s:12UNComponents26UNBookPaymentRelationshipsV20counterpartyCustomerAA18UNRelationshipDataVSgvp",
+            "mangledName": "$s12UNComponents26UNBookPaymentRelationshipsV20counterpartyCustomerAA18UNRelationshipDataVSgvp",
+            "moduleName": "UNComponents",
+            "declAttributes": [
+              "HasStorage",
+              "AccessControl"
+            ],
+            "isLet": true,
+            "hasStorage": true,
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Optional",
+                    "printedName": "UNComponents.UNRelationshipData?",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "UNRelationshipData",
+                        "printedName": "UNComponents.UNRelationshipData",
+                        "usr": "s:12UNComponents18UNRelationshipDataV"
+                      }
+                    ],
+                    "usr": "s:Sq"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:12UNComponents26UNBookPaymentRelationshipsV20counterpartyCustomerAA18UNRelationshipDataVSgvg",
+                "mangledName": "$s12UNComponents26UNBookPaymentRelationshipsV20counterpartyCustomerAA18UNRelationshipDataVSgvg",
+                "moduleName": "UNComponents",
+                "implicit": true,
+                "accessorKind": "get"
+              }
+            ]
+          },
+          {
+            "kind": "Var",
+            "name": "transaction",
+            "printedName": "transaction",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Optional",
+                "printedName": "UNComponents.UNRelationshipData?",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "UNRelationshipData",
+                    "printedName": "UNComponents.UNRelationshipData",
+                    "usr": "s:12UNComponents18UNRelationshipDataV"
+                  }
+                ],
+                "usr": "s:Sq"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "s:12UNComponents26UNBookPaymentRelationshipsV11transactionAA18UNRelationshipDataVSgvp",
+            "mangledName": "$s12UNComponents26UNBookPaymentRelationshipsV11transactionAA18UNRelationshipDataVSgvp",
+            "moduleName": "UNComponents",
+            "declAttributes": [
+              "HasStorage",
+              "AccessControl"
+            ],
+            "isLet": true,
+            "hasStorage": true,
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Optional",
+                    "printedName": "UNComponents.UNRelationshipData?",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "UNRelationshipData",
+                        "printedName": "UNComponents.UNRelationshipData",
+                        "usr": "s:12UNComponents18UNRelationshipDataV"
+                      }
+                    ],
+                    "usr": "s:Sq"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:12UNComponents26UNBookPaymentRelationshipsV11transactionAA18UNRelationshipDataVSgvg",
+                "mangledName": "$s12UNComponents26UNBookPaymentRelationshipsV11transactionAA18UNRelationshipDataVSgvg",
+                "moduleName": "UNComponents",
+                "implicit": true,
+                "accessorKind": "get"
+              }
+            ]
+          },
+          {
+            "kind": "Var",
+            "name": "recurringPayment",
+            "printedName": "recurringPayment",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Optional",
+                "printedName": "UNComponents.UNRelationshipData?",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "UNRelationshipData",
+                    "printedName": "UNComponents.UNRelationshipData",
+                    "usr": "s:12UNComponents18UNRelationshipDataV"
+                  }
+                ],
+                "usr": "s:Sq"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "s:12UNComponents26UNBookPaymentRelationshipsV09recurringC0AA18UNRelationshipDataVSgvp",
+            "mangledName": "$s12UNComponents26UNBookPaymentRelationshipsV09recurringC0AA18UNRelationshipDataVSgvp",
+            "moduleName": "UNComponents",
+            "declAttributes": [
+              "HasStorage",
+              "AccessControl"
+            ],
+            "isLet": true,
+            "hasStorage": true,
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Optional",
+                    "printedName": "UNComponents.UNRelationshipData?",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "UNRelationshipData",
+                        "printedName": "UNComponents.UNRelationshipData",
+                        "usr": "s:12UNComponents18UNRelationshipDataV"
+                      }
+                    ],
+                    "usr": "s:Sq"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:12UNComponents26UNBookPaymentRelationshipsV09recurringC0AA18UNRelationshipDataVSgvg",
+                "mangledName": "$s12UNComponents26UNBookPaymentRelationshipsV09recurringC0AA18UNRelationshipDataVSgvg",
+                "moduleName": "UNComponents",
+                "implicit": true,
+                "accessorKind": "get"
+              }
+            ]
+          },
+          {
+            "kind": "Constructor",
+            "name": "init",
+            "printedName": "init(from:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "UNBookPaymentRelationships",
+                "printedName": "UNComponents.UNBookPaymentRelationships",
+                "usr": "s:12UNComponents26UNBookPaymentRelationshipsV"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Decoder",
+                "printedName": "Swift.Decoder",
+                "usr": "s:s7DecoderP"
+              }
+            ],
+            "declKind": "Constructor",
+            "usr": "s:12UNComponents26UNBookPaymentRelationshipsV4fromACs7Decoder_p_tKcfc",
+            "mangledName": "$s12UNComponents26UNBookPaymentRelationshipsV4fromACs7Decoder_p_tKcfc",
+            "moduleName": "UNComponents",
+            "implicit": true,
+            "throwing": true,
+            "init_kind": "Designated"
+          }
+        ],
+        "declKind": "Struct",
+        "usr": "s:12UNComponents26UNBookPaymentRelationshipsV",
+        "mangledName": "$s12UNComponents26UNBookPaymentRelationshipsV",
+        "moduleName": "UNComponents",
+        "declAttributes": [
+          "AccessControl"
+        ],
+        "conformances": [
+          {
+            "kind": "Conformance",
+            "name": "Decodable",
+            "printedName": "Decodable",
+            "usr": "s:Se",
+            "mangledName": "$sSe"
+          }
         ]
       },
       {
@@ -7299,36 +9400,6 @@
       },
       {
         "kind": "Import",
-        "name": "Foundation",
-        "printedName": "Foundation",
-        "declKind": "Import",
-        "moduleName": "UNComponents",
-        "declAttributes": [
-          "RawDocComment"
-        ]
-      },
-      {
-        "kind": "Import",
-        "name": "UIKit",
-        "printedName": "UIKit",
-        "declKind": "Import",
-        "moduleName": "UNComponents",
-        "declAttributes": [
-          "RawDocComment"
-        ]
-      },
-      {
-        "kind": "Import",
-        "name": "UIKit",
-        "printedName": "UIKit",
-        "declKind": "Import",
-        "moduleName": "UNComponents",
-        "declAttributes": [
-          "RawDocComment"
-        ]
-      },
-      {
-        "kind": "Import",
         "name": "UIKit",
         "printedName": "UIKit",
         "declKind": "Import",
@@ -7362,7 +9433,20 @@
         "name": "UIKit",
         "printedName": "UIKit",
         "declKind": "Import",
-        "moduleName": "UNComponents"
+        "moduleName": "UNComponents",
+        "declAttributes": [
+          "RawDocComment"
+        ]
+      },
+      {
+        "kind": "Import",
+        "name": "Foundation",
+        "printedName": "Foundation",
+        "declKind": "Import",
+        "moduleName": "UNComponents",
+        "declAttributes": [
+          "RawDocComment"
+        ]
       },
       {
         "kind": "TypeDecl",
@@ -7371,18 +9455,18 @@
         "children": [
           {
             "kind": "Var",
-            "name": "complete",
-            "printedName": "complete",
+            "name": "onPaymentCreated",
+            "printedName": "onPaymentCreated",
             "children": [
               {
                 "kind": "TypeFunc",
                 "name": "Function",
-                "printedName": "(UNComponents.UNBookPaymentComponentCallback.Type) -> (Swift.Result<(), UNComponents.UNBookPaymentError>) -> UNComponents.UNBookPaymentComponentCallback",
+                "printedName": "(UNComponents.UNBookPaymentComponentCallback.Type) -> (UNComponents.UNBookPaymentData) -> UNComponents.UNBookPaymentComponentCallback",
                 "children": [
                   {
                     "kind": "TypeFunc",
                     "name": "Function",
-                    "printedName": "(Swift.Result<(), UNComponents.UNBookPaymentError>) -> UNComponents.UNBookPaymentComponentCallback",
+                    "printedName": "(UNComponents.UNBookPaymentData) -> UNComponents.UNBookPaymentComponentCallback",
                     "children": [
                       {
                         "kind": "TypeNominal",
@@ -7393,23 +9477,81 @@
                       {
                         "kind": "TypeNominal",
                         "name": "Tuple",
-                        "printedName": "(result: Swift.Result<(), UNComponents.UNBookPaymentError>)",
+                        "printedName": "(data: UNComponents.UNBookPaymentData)",
+                        "children": [
+                          {
+                            "kind": "TypeNominal",
+                            "name": "UNBookPaymentData",
+                            "printedName": "UNComponents.UNBookPaymentData",
+                            "usr": "s:12UNComponents17UNBookPaymentDataV"
+                          }
+                        ]
+                      }
+                    ]
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Metatype",
+                    "printedName": "UNComponents.UNBookPaymentComponentCallback.Type",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "UNBookPaymentComponentCallback",
+                        "printedName": "UNComponents.UNBookPaymentComponentCallback",
+                        "usr": "s:12UNComponents30UNBookPaymentComponentCallbackO"
+                      }
+                    ]
+                  }
+                ]
+              }
+            ],
+            "declKind": "EnumElement",
+            "usr": "s:12UNComponents30UNBookPaymentComponentCallbackO02onC7CreatedyAcA0bC4DataV_tcACmF",
+            "mangledName": "$s12UNComponents30UNBookPaymentComponentCallbackO02onC7CreatedyAcA0bC4DataV_tcACmF",
+            "moduleName": "UNComponents"
+          },
+          {
+            "kind": "Var",
+            "name": "unitOnLoad",
+            "printedName": "unitOnLoad",
+            "children": [
+              {
+                "kind": "TypeFunc",
+                "name": "Function",
+                "printedName": "(UNComponents.UNBookPaymentComponentCallback.Type) -> (Swift.Result<UNComponents.UNAccountData, UNComponents.UNError>) -> UNComponents.UNBookPaymentComponentCallback",
+                "children": [
+                  {
+                    "kind": "TypeFunc",
+                    "name": "Function",
+                    "printedName": "(Swift.Result<UNComponents.UNAccountData, UNComponents.UNError>) -> UNComponents.UNBookPaymentComponentCallback",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "UNBookPaymentComponentCallback",
+                        "printedName": "UNComponents.UNBookPaymentComponentCallback",
+                        "usr": "s:12UNComponents30UNBookPaymentComponentCallbackO"
+                      },
+                      {
+                        "kind": "TypeNominal",
+                        "name": "Tuple",
+                        "printedName": "(result: Swift.Result<UNComponents.UNAccountData, UNComponents.UNError>)",
                         "children": [
                           {
                             "kind": "TypeNominal",
                             "name": "Result",
-                            "printedName": "Swift.Result<(), UNComponents.UNBookPaymentError>",
+                            "printedName": "Swift.Result<UNComponents.UNAccountData, UNComponents.UNError>",
                             "children": [
                               {
                                 "kind": "TypeNominal",
-                                "name": "Void",
-                                "printedName": "()"
+                                "name": "UNAccountData",
+                                "printedName": "UNComponents.UNAccountData",
+                                "usr": "s:12UNComponents13UNAccountDataV"
                               },
                               {
                                 "kind": "TypeNominal",
-                                "name": "UNBookPaymentError",
-                                "printedName": "UNComponents.UNBookPaymentError",
-                                "usr": "s:12UNComponents18UNBookPaymentErrorO"
+                                "name": "UNError",
+                                "printedName": "UNComponents.UNError",
+                                "usr": "s:12UNComponents7UNErrorO"
                               }
                             ],
                             "usr": "s:s6ResultO"
@@ -7435,8 +9577,8 @@
               }
             ],
             "declKind": "EnumElement",
-            "usr": "s:12UNComponents30UNBookPaymentComponentCallbackO8completeyACs6ResultOyytAA0bC5ErrorOG_tcACmF",
-            "mangledName": "$s12UNComponents30UNBookPaymentComponentCallbackO8completeyACs6ResultOyytAA0bC5ErrorOG_tcACmF",
+            "usr": "s:12UNComponents30UNBookPaymentComponentCallbackO10unitOnLoadyACs6ResultOyAA13UNAccountDataVAA7UNErrorOG_tcACmF",
+            "mangledName": "$s12UNComponents30UNBookPaymentComponentCallbackO10unitOnLoadyACs6ResultOyAA13UNAccountDataVAA7UNErrorOG_tcACmF",
             "moduleName": "UNComponents"
           }
         ],
@@ -7449,552 +9591,31 @@
         ]
       },
       {
-        "kind": "TypeDecl",
-        "name": "UNBookPaymentError",
-        "printedName": "UNBookPaymentError",
-        "children": [
-          {
-            "kind": "Var",
-            "name": "wrongDetails",
-            "printedName": "wrongDetails",
-            "children": [
-              {
-                "kind": "TypeFunc",
-                "name": "Function",
-                "printedName": "(UNComponents.UNBookPaymentError.Type) -> UNComponents.UNBookPaymentError",
-                "children": [
-                  {
-                    "kind": "TypeNominal",
-                    "name": "UNBookPaymentError",
-                    "printedName": "UNComponents.UNBookPaymentError",
-                    "usr": "s:12UNComponents18UNBookPaymentErrorO"
-                  },
-                  {
-                    "kind": "TypeNominal",
-                    "name": "Metatype",
-                    "printedName": "UNComponents.UNBookPaymentError.Type",
-                    "children": [
-                      {
-                        "kind": "TypeNominal",
-                        "name": "UNBookPaymentError",
-                        "printedName": "UNComponents.UNBookPaymentError",
-                        "usr": "s:12UNComponents18UNBookPaymentErrorO"
-                      }
-                    ]
-                  }
-                ]
-              }
-            ],
-            "declKind": "EnumElement",
-            "usr": "s:12UNComponents18UNBookPaymentErrorO12wrongDetailsyA2CmF",
-            "mangledName": "$s12UNComponents18UNBookPaymentErrorO12wrongDetailsyA2CmF",
-            "moduleName": "UNComponents"
-          },
-          {
-            "kind": "Var",
-            "name": "insufficientFunds",
-            "printedName": "insufficientFunds",
-            "children": [
-              {
-                "kind": "TypeFunc",
-                "name": "Function",
-                "printedName": "(UNComponents.UNBookPaymentError.Type) -> UNComponents.UNBookPaymentError",
-                "children": [
-                  {
-                    "kind": "TypeNominal",
-                    "name": "UNBookPaymentError",
-                    "printedName": "UNComponents.UNBookPaymentError",
-                    "usr": "s:12UNComponents18UNBookPaymentErrorO"
-                  },
-                  {
-                    "kind": "TypeNominal",
-                    "name": "Metatype",
-                    "printedName": "UNComponents.UNBookPaymentError.Type",
-                    "children": [
-                      {
-                        "kind": "TypeNominal",
-                        "name": "UNBookPaymentError",
-                        "printedName": "UNComponents.UNBookPaymentError",
-                        "usr": "s:12UNComponents18UNBookPaymentErrorO"
-                      }
-                    ]
-                  }
-                ]
-              }
-            ],
-            "declKind": "EnumElement",
-            "usr": "s:12UNComponents18UNBookPaymentErrorO17insufficientFundsyA2CmF",
-            "mangledName": "$s12UNComponents18UNBookPaymentErrorO17insufficientFundsyA2CmF",
-            "moduleName": "UNComponents"
-          },
-          {
-            "kind": "Var",
-            "name": "errorDescription",
-            "printedName": "errorDescription",
-            "children": [
-              {
-                "kind": "TypeNominal",
-                "name": "Optional",
-                "printedName": "Swift.String?",
-                "children": [
-                  {
-                    "kind": "TypeNominal",
-                    "name": "String",
-                    "printedName": "Swift.String",
-                    "usr": "s:SS"
-                  }
-                ],
-                "usr": "s:Sq"
-              }
-            ],
-            "declKind": "Var",
-            "usr": "s:12UNComponents18UNBookPaymentErrorO16errorDescriptionSSSgvp",
-            "mangledName": "$s12UNComponents18UNBookPaymentErrorO16errorDescriptionSSSgvp",
-            "moduleName": "UNComponents",
-            "declAttributes": [
-              "AccessControl"
-            ],
-            "accessors": [
-              {
-                "kind": "Accessor",
-                "name": "Get",
-                "printedName": "Get()",
-                "children": [
-                  {
-                    "kind": "TypeNominal",
-                    "name": "Optional",
-                    "printedName": "Swift.String?",
-                    "children": [
-                      {
-                        "kind": "TypeNominal",
-                        "name": "String",
-                        "printedName": "Swift.String",
-                        "usr": "s:SS"
-                      }
-                    ],
-                    "usr": "s:Sq"
-                  }
-                ],
-                "declKind": "Accessor",
-                "usr": "s:12UNComponents18UNBookPaymentErrorO16errorDescriptionSSSgvg",
-                "mangledName": "$s12UNComponents18UNBookPaymentErrorO16errorDescriptionSSSgvg",
-                "moduleName": "UNComponents",
-                "accessorKind": "get"
-              }
-            ]
-          },
-          {
-            "kind": "Function",
-            "name": "==",
-            "printedName": "==(_:_:)",
-            "children": [
-              {
-                "kind": "TypeNominal",
-                "name": "Bool",
-                "printedName": "Swift.Bool",
-                "usr": "s:Sb"
-              },
-              {
-                "kind": "TypeNominal",
-                "name": "UNBookPaymentError",
-                "printedName": "UNComponents.UNBookPaymentError",
-                "usr": "s:12UNComponents18UNBookPaymentErrorO"
-              },
-              {
-                "kind": "TypeNominal",
-                "name": "UNBookPaymentError",
-                "printedName": "UNComponents.UNBookPaymentError",
-                "usr": "s:12UNComponents18UNBookPaymentErrorO"
-              }
-            ],
-            "declKind": "Func",
-            "usr": "s:12UNComponents18UNBookPaymentErrorO2eeoiySbAC_ACtFZ",
-            "mangledName": "$s12UNComponents18UNBookPaymentErrorO2eeoiySbAC_ACtFZ",
-            "moduleName": "UNComponents",
-            "static": true,
-            "implicit": true,
-            "funcSelfKind": "NonMutating"
-          },
-          {
-            "kind": "Var",
-            "name": "hashValue",
-            "printedName": "hashValue",
-            "children": [
-              {
-                "kind": "TypeNominal",
-                "name": "Int",
-                "printedName": "Swift.Int",
-                "usr": "s:Si"
-              }
-            ],
-            "declKind": "Var",
-            "usr": "s:12UNComponents18UNBookPaymentErrorO9hashValueSivp",
-            "mangledName": "$s12UNComponents18UNBookPaymentErrorO9hashValueSivp",
-            "moduleName": "UNComponents",
-            "implicit": true,
-            "accessors": [
-              {
-                "kind": "Accessor",
-                "name": "Get",
-                "printedName": "Get()",
-                "children": [
-                  {
-                    "kind": "TypeNominal",
-                    "name": "Int",
-                    "printedName": "Swift.Int",
-                    "usr": "s:Si"
-                  }
-                ],
-                "declKind": "Accessor",
-                "usr": "s:12UNComponents18UNBookPaymentErrorO9hashValueSivg",
-                "mangledName": "$s12UNComponents18UNBookPaymentErrorO9hashValueSivg",
-                "moduleName": "UNComponents",
-                "implicit": true,
-                "accessorKind": "get"
-              }
-            ]
-          },
-          {
-            "kind": "Function",
-            "name": "hash",
-            "printedName": "hash(into:)",
-            "children": [
-              {
-                "kind": "TypeNominal",
-                "name": "Void",
-                "printedName": "()"
-              },
-              {
-                "kind": "TypeNominal",
-                "name": "Hasher",
-                "printedName": "Swift.Hasher",
-                "paramValueOwnership": "InOut",
-                "usr": "s:s6HasherV"
-              }
-            ],
-            "declKind": "Func",
-            "usr": "s:12UNComponents18UNBookPaymentErrorO4hash4intoys6HasherVz_tF",
-            "mangledName": "$s12UNComponents18UNBookPaymentErrorO4hash4intoys6HasherVz_tF",
-            "moduleName": "UNComponents",
-            "implicit": true,
-            "funcSelfKind": "NonMutating"
-          }
-        ],
-        "declKind": "Enum",
-        "usr": "s:12UNComponents18UNBookPaymentErrorO",
-        "mangledName": "$s12UNComponents18UNBookPaymentErrorO",
+        "kind": "Import",
+        "name": "UIKit",
+        "printedName": "UIKit",
+        "declKind": "Import",
         "moduleName": "UNComponents",
         "declAttributes": [
-          "AccessControl"
-        ],
-        "conformances": [
-          {
-            "kind": "Conformance",
-            "name": "Equatable",
-            "printedName": "Equatable",
-            "usr": "s:SQ",
-            "mangledName": "$sSQ"
-          },
-          {
-            "kind": "Conformance",
-            "name": "Hashable",
-            "printedName": "Hashable",
-            "usr": "s:SH",
-            "mangledName": "$sSH"
-          },
-          {
-            "kind": "Conformance",
-            "name": "LocalizedError",
-            "printedName": "LocalizedError",
-            "usr": "s:10Foundation14LocalizedErrorP",
-            "mangledName": "$s10Foundation14LocalizedErrorP"
-          },
-          {
-            "kind": "Conformance",
-            "name": "Error",
-            "printedName": "Error",
-            "usr": "s:s5ErrorP",
-            "mangledName": "$ss5ErrorP"
-          },
-          {
-            "kind": "Conformance",
-            "name": "Sendable",
-            "printedName": "Sendable",
-            "usr": "s:s8SendableP",
-            "mangledName": "$ss8SendableP"
-          }
+          "RawDocComment"
         ]
       },
       {
-        "kind": "TypeDecl",
-        "name": "UNBookPaymentComponent",
-        "printedName": "UNBookPaymentComponent",
-        "children": [
-          {
-            "kind": "Constructor",
-            "name": "init",
-            "printedName": "init(customerToken:senderCustomerId:senderAccountId:recipientCustomerId:recipientAccountId:callbacks:)",
-            "children": [
-              {
-                "kind": "TypeNominal",
-                "name": "UNBookPaymentComponent",
-                "printedName": "UNComponents.UNBookPaymentComponent",
-                "usr": "c:@M@UNComponents@objc(cs)UNBookPaymentComponent"
-              },
-              {
-                "kind": "TypeNominal",
-                "name": "String",
-                "printedName": "Swift.String",
-                "usr": "s:SS"
-              },
-              {
-                "kind": "TypeNominal",
-                "name": "String",
-                "printedName": "Swift.String",
-                "usr": "s:SS"
-              },
-              {
-                "kind": "TypeNominal",
-                "name": "Optional",
-                "printedName": "Swift.String?",
-                "children": [
-                  {
-                    "kind": "TypeNominal",
-                    "name": "String",
-                    "printedName": "Swift.String",
-                    "usr": "s:SS"
-                  }
-                ],
-                "hasDefaultArg": true,
-                "usr": "s:Sq"
-              },
-              {
-                "kind": "TypeNominal",
-                "name": "String",
-                "printedName": "Swift.String",
-                "usr": "s:SS"
-              },
-              {
-                "kind": "TypeNominal",
-                "name": "Optional",
-                "printedName": "Swift.String?",
-                "children": [
-                  {
-                    "kind": "TypeNominal",
-                    "name": "String",
-                    "printedName": "Swift.String",
-                    "usr": "s:SS"
-                  }
-                ],
-                "hasDefaultArg": true,
-                "usr": "s:Sq"
-              },
-              {
-                "kind": "TypeFunc",
-                "name": "Function",
-                "printedName": "(UNComponents.UNBookPaymentComponentCallback) -> ()",
-                "children": [
-                  {
-                    "kind": "TypeNominal",
-                    "name": "Void",
-                    "printedName": "()"
-                  },
-                  {
-                    "kind": "TypeNominal",
-                    "name": "UNBookPaymentComponentCallback",
-                    "printedName": "UNComponents.UNBookPaymentComponentCallback",
-                    "usr": "s:12UNComponents30UNBookPaymentComponentCallbackO"
-                  }
-                ]
-              }
-            ],
-            "declKind": "Constructor",
-            "usr": "s:12UNComponents22UNBookPaymentComponentC13customerToken16senderCustomerId0g7AccountI009recipienthI00kjI09callbacksACSS_S2SSgSSAJyAA0bcD8CallbackOctcfc",
-            "mangledName": "$s12UNComponents22UNBookPaymentComponentC13customerToken16senderCustomerId0g7AccountI009recipienthI00kjI09callbacksACSS_S2SSgSSAJyAA0bcD8CallbackOctcfc",
-            "moduleName": "UNComponents",
-            "declAttributes": [
-              "Custom",
-              "AccessControl"
-            ],
-            "init_kind": "Designated"
-          },
-          {
-            "kind": "Constructor",
-            "name": "init",
-            "printedName": "init(coder:)",
-            "children": [
-              {
-                "kind": "TypeNominal",
-                "name": "Optional",
-                "printedName": "UNComponents.UNBookPaymentComponent?",
-                "children": [
-                  {
-                    "kind": "TypeNominal",
-                    "name": "UNBookPaymentComponent",
-                    "printedName": "UNComponents.UNBookPaymentComponent",
-                    "usr": "c:@M@UNComponents@objc(cs)UNBookPaymentComponent"
-                  }
-                ],
-                "usr": "s:Sq"
-              },
-              {
-                "kind": "TypeNominal",
-                "name": "NSCoder",
-                "printedName": "Foundation.NSCoder",
-                "usr": "c:objc(cs)NSCoder"
-              }
-            ],
-            "declKind": "Constructor",
-            "usr": "c:@M@UNComponents@objc(cs)UNBookPaymentComponent(im)initWithCoder:",
-            "mangledName": "$s12UNComponents22UNBookPaymentComponentC5coderACSgSo7NSCoderC_tcfc",
-            "moduleName": "UNComponents",
-            "overriding": true,
-            "objc_name": "initWithCoder:",
-            "declAttributes": [
-              "Dynamic",
-              "ObjC",
-              "Custom",
-              "Required",
-              "AccessControl"
-            ],
-            "init_kind": "Designated"
-          },
-          {
-            "kind": "Constructor",
-            "name": "init",
-            "printedName": "init(frame:)",
-            "children": [
-              {
-                "kind": "TypeNominal",
-                "name": "UNBookPaymentComponent",
-                "printedName": "UNComponents.UNBookPaymentComponent",
-                "usr": "c:@M@UNComponents@objc(cs)UNBookPaymentComponent"
-              },
-              {
-                "kind": "TypeNominal",
-                "name": "CGRect",
-                "printedName": "CoreFoundation.CGRect",
-                "usr": "c:@S@CGRect"
-              }
-            ],
-            "declKind": "Constructor",
-            "usr": "c:@M@UNComponents@objc(cs)UNBookPaymentComponent(im)initWithFrame:",
-            "mangledName": "$s12UNComponents22UNBookPaymentComponentC5frameACSo6CGRectV_tcfc",
-            "moduleName": "UNComponents",
-            "overriding": true,
-            "implicit": true,
-            "objc_name": "initWithFrame:",
-            "declAttributes": [
-              "Dynamic",
-              "ObjC",
-              "Custom",
-              "Override"
-            ],
-            "init_kind": "Designated"
-          }
-        ],
-        "declKind": "Class",
-        "usr": "c:@M@UNComponents@objc(cs)UNBookPaymentComponent",
-        "mangledName": "$s12UNComponents22UNBookPaymentComponentC",
+        "kind": "Import",
+        "name": "RxSwift",
+        "printedName": "RxSwift",
+        "declKind": "Import",
         "moduleName": "UNComponents",
         "declAttributes": [
-          "Custom",
-          "AccessControl",
-          "ObjC"
-        ],
-        "superclassUsr": "c:objc(cs)UIView",
-        "superclassNames": [
-          "UIKit.UIView",
-          "UIKit.UIResponder",
-          "ObjectiveC.NSObject"
-        ],
-        "conformances": [
-          {
-            "kind": "Conformance",
-            "name": "Equatable",
-            "printedName": "Equatable",
-            "usr": "s:SQ",
-            "mangledName": "$sSQ"
-          },
-          {
-            "kind": "Conformance",
-            "name": "Hashable",
-            "printedName": "Hashable",
-            "usr": "s:SH",
-            "mangledName": "$sSH"
-          },
-          {
-            "kind": "Conformance",
-            "name": "CVarArg",
-            "printedName": "CVarArg",
-            "usr": "s:s7CVarArgP",
-            "mangledName": "$ss7CVarArgP"
-          },
-          {
-            "kind": "Conformance",
-            "name": "_KeyValueCodingAndObservingPublishing",
-            "printedName": "_KeyValueCodingAndObservingPublishing",
-            "usr": "s:10Foundation37_KeyValueCodingAndObservingPublishingP",
-            "mangledName": "$s10Foundation37_KeyValueCodingAndObservingPublishingP"
-          },
-          {
-            "kind": "Conformance",
-            "name": "_KeyValueCodingAndObserving",
-            "printedName": "_KeyValueCodingAndObserving",
-            "usr": "s:10Foundation27_KeyValueCodingAndObservingP",
-            "mangledName": "$s10Foundation27_KeyValueCodingAndObservingP"
-          },
-          {
-            "kind": "Conformance",
-            "name": "CustomStringConvertible",
-            "printedName": "CustomStringConvertible",
-            "usr": "s:s23CustomStringConvertibleP",
-            "mangledName": "$ss23CustomStringConvertibleP"
-          },
-          {
-            "kind": "Conformance",
-            "name": "CustomDebugStringConvertible",
-            "printedName": "CustomDebugStringConvertible",
-            "usr": "s:s28CustomDebugStringConvertibleP",
-            "mangledName": "$ss28CustomDebugStringConvertibleP"
-          },
-          {
-            "kind": "Conformance",
-            "name": "ReactiveCompatible",
-            "printedName": "ReactiveCompatible",
-            "children": [
-              {
-                "kind": "TypeWitness",
-                "name": "ReactiveBase",
-                "printedName": "ReactiveBase",
-                "children": [
-                  {
-                    "kind": "TypeNominal",
-                    "name": "NSObject",
-                    "printedName": "ObjectiveC.NSObject",
-                    "usr": "c:objc(cs)NSObject"
-                  }
-                ]
-              }
-            ],
-            "usr": "s:7RxSwift18ReactiveCompatibleP",
-            "mangledName": "$s7RxSwift18ReactiveCompatibleP"
-          },
-          {
-            "kind": "Conformance",
-            "name": "__DefaultCustomPlaygroundQuickLookable",
-            "printedName": "__DefaultCustomPlaygroundQuickLookable",
-            "usr": "s:s38__DefaultCustomPlaygroundQuickLookableP",
-            "mangledName": "$ss38__DefaultCustomPlaygroundQuickLookableP"
-          },
-          {
-            "kind": "Conformance",
-            "name": "Sendable",
-            "printedName": "Sendable",
-            "usr": "s:s8SendableP",
-            "mangledName": "$ss8SendableP"
-          }
+          "RawDocComment"
         ]
+      },
+      {
+        "kind": "Import",
+        "name": "UIKit",
+        "printedName": "UIKit",
+        "declKind": "Import",
+        "moduleName": "UNComponents"
       },
       {
         "kind": "Import",
@@ -8054,6 +9675,16 @@
         "kind": "Import",
         "name": "UIKit",
         "printedName": "UIKit",
+        "declKind": "Import",
+        "moduleName": "UNComponents",
+        "declAttributes": [
+          "RawDocComment"
+        ]
+      },
+      {
+        "kind": "Import",
+        "name": "Foundation",
+        "printedName": "Foundation",
         "declKind": "Import",
         "moduleName": "UNComponents",
         "declAttributes": [
@@ -11032,6 +12663,138 @@
         ]
       },
       {
+        "kind": "TypeDecl",
+        "name": "UNBookPaymentViewSettingsBuilder",
+        "printedName": "UNBookPaymentViewSettingsBuilder",
+        "children": [
+          {
+            "kind": "Var",
+            "name": "isAutoFocus",
+            "printedName": "isAutoFocus",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Bool",
+                "printedName": "Swift.Bool",
+                "usr": "s:Sb"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "s:12UNComponents32UNBookPaymentViewSettingsBuilderC11isAutoFocusSbvp",
+            "mangledName": "$s12UNComponents32UNBookPaymentViewSettingsBuilderC11isAutoFocusSbvp",
+            "moduleName": "UNComponents",
+            "declAttributes": [
+              "HasStorage",
+              "SetterAccess",
+              "AccessControl"
+            ],
+            "hasStorage": true,
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Bool",
+                    "printedName": "Swift.Bool",
+                    "usr": "s:Sb"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:12UNComponents32UNBookPaymentViewSettingsBuilderC11isAutoFocusSbvg",
+                "mangledName": "$s12UNComponents32UNBookPaymentViewSettingsBuilderC11isAutoFocusSbvg",
+                "moduleName": "UNComponents",
+                "implicit": true,
+                "accessorKind": "get"
+              }
+            ]
+          },
+          {
+            "kind": "Constructor",
+            "name": "init",
+            "printedName": "init(isAutoFocus:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "UNBookPaymentViewSettingsBuilder",
+                "printedName": "UNComponents.UNBookPaymentViewSettingsBuilder",
+                "usr": "s:12UNComponents32UNBookPaymentViewSettingsBuilderC"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Bool",
+                "printedName": "Swift.Bool",
+                "hasDefaultArg": true,
+                "usr": "s:Sb"
+              }
+            ],
+            "declKind": "Constructor",
+            "usr": "s:12UNComponents32UNBookPaymentViewSettingsBuilderC11isAutoFocusACSb_tcfc",
+            "mangledName": "$s12UNComponents32UNBookPaymentViewSettingsBuilderC11isAutoFocusACSb_tcfc",
+            "moduleName": "UNComponents",
+            "declAttributes": [
+              "AccessControl"
+            ],
+            "init_kind": "Designated"
+          },
+          {
+            "kind": "Function",
+            "name": "isAutoFocus",
+            "printedName": "isAutoFocus(_:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "UNBookPaymentViewSettingsBuilder",
+                "printedName": "UNComponents.UNBookPaymentViewSettingsBuilder",
+                "usr": "s:12UNComponents32UNBookPaymentViewSettingsBuilderC"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Bool",
+                "printedName": "Swift.Bool",
+                "usr": "s:Sb"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:12UNComponents32UNBookPaymentViewSettingsBuilderC11isAutoFocusyACSbF",
+            "mangledName": "$s12UNComponents32UNBookPaymentViewSettingsBuilderC11isAutoFocusyACSbF",
+            "moduleName": "UNComponents",
+            "declAttributes": [
+              "AccessControl"
+            ],
+            "funcSelfKind": "NonMutating"
+          }
+        ],
+        "declKind": "Class",
+        "usr": "s:12UNComponents32UNBookPaymentViewSettingsBuilderC",
+        "mangledName": "$s12UNComponents32UNBookPaymentViewSettingsBuilderC",
+        "moduleName": "UNComponents",
+        "declAttributes": [
+          "AccessControl"
+        ],
+        "conformances": [
+          {
+            "kind": "Conformance",
+            "name": "UNBookPaymentViewSettingsProtocol",
+            "printedName": "UNBookPaymentViewSettingsProtocol",
+            "usr": "s:12UNComponents33UNBookPaymentViewSettingsProtocolP",
+            "mangledName": "$s12UNComponents33UNBookPaymentViewSettingsProtocolP"
+          }
+        ]
+      },
+      {
+        "kind": "Import",
+        "name": "Foundation",
+        "printedName": "Foundation",
+        "declKind": "Import",
+        "moduleName": "UNComponents",
+        "declAttributes": [
+          "RawDocComment"
+        ]
+      },
+      {
         "kind": "Import",
         "name": "RxSwift",
         "printedName": "RxSwift",
@@ -11066,6 +12829,550 @@
         "moduleName": "UNComponents",
         "declAttributes": [
           "RawDocComment"
+        ]
+      },
+      {
+        "kind": "Import",
+        "name": "Foundation",
+        "printedName": "Foundation",
+        "declKind": "Import",
+        "moduleName": "UNComponents",
+        "declAttributes": [
+          "RawDocComment"
+        ]
+      },
+      {
+        "kind": "Import",
+        "name": "UIKit",
+        "printedName": "UIKit",
+        "declKind": "Import",
+        "moduleName": "UNComponents"
+      },
+      {
+        "kind": "TypeDecl",
+        "name": "UNBookPaymentView",
+        "printedName": "UNBookPaymentView",
+        "children": [
+          {
+            "kind": "Var",
+            "name": "accountId",
+            "printedName": "accountId",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "String",
+                "printedName": "Swift.String",
+                "usr": "s:SS"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "s:12UNComponents17UNBookPaymentViewP9accountIdSSvp",
+            "mangledName": "$s12UNComponents17UNBookPaymentViewP9accountIdSSvp",
+            "moduleName": "UNComponents",
+            "protocolReq": true,
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "String",
+                    "printedName": "Swift.String",
+                    "usr": "s:SS"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:12UNComponents17UNBookPaymentViewP9accountIdSSvg",
+                "mangledName": "$s12UNComponents17UNBookPaymentViewP9accountIdSSvg",
+                "moduleName": "UNComponents",
+                "genericSig": "<τ_0_0 where τ_0_0 : UNComponents.UNBookPaymentView>",
+                "sugared_genericSig": "<Self where Self : UNComponents.UNBookPaymentView>",
+                "protocolReq": true,
+                "reqNewWitnessTableEntry": true,
+                "accessorKind": "get"
+              },
+              {
+                "kind": "Accessor",
+                "name": "Set",
+                "printedName": "Set()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Void",
+                    "printedName": "()"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "String",
+                    "printedName": "Swift.String",
+                    "usr": "s:SS"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:12UNComponents17UNBookPaymentViewP9accountIdSSvs",
+                "mangledName": "$s12UNComponents17UNBookPaymentViewP9accountIdSSvs",
+                "moduleName": "UNComponents",
+                "genericSig": "<τ_0_0 where τ_0_0 : UNComponents.UNBookPaymentView>",
+                "sugared_genericSig": "<Self where Self : UNComponents.UNBookPaymentView>",
+                "protocolReq": true,
+                "reqNewWitnessTableEntry": true,
+                "accessorKind": "set"
+              },
+              {
+                "kind": "Accessor",
+                "name": "Modify",
+                "printedName": "Modify()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Void",
+                    "printedName": "()"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:12UNComponents17UNBookPaymentViewP9accountIdSSvM",
+                "mangledName": "$s12UNComponents17UNBookPaymentViewP9accountIdSSvM",
+                "moduleName": "UNComponents",
+                "genericSig": "<τ_0_0 where τ_0_0 : UNComponents.UNBookPaymentView>",
+                "sugared_genericSig": "<Self where Self : UNComponents.UNBookPaymentView>",
+                "protocolReq": true,
+                "implicit": true,
+                "reqNewWitnessTableEntry": true,
+                "accessorKind": "_modify"
+              }
+            ]
+          },
+          {
+            "kind": "Var",
+            "name": "counterPartyName",
+            "printedName": "counterPartyName",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "String",
+                "printedName": "Swift.String",
+                "usr": "s:SS"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "s:12UNComponents17UNBookPaymentViewP16counterPartyNameSSvp",
+            "mangledName": "$s12UNComponents17UNBookPaymentViewP16counterPartyNameSSvp",
+            "moduleName": "UNComponents",
+            "protocolReq": true,
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "String",
+                    "printedName": "Swift.String",
+                    "usr": "s:SS"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:12UNComponents17UNBookPaymentViewP16counterPartyNameSSvg",
+                "mangledName": "$s12UNComponents17UNBookPaymentViewP16counterPartyNameSSvg",
+                "moduleName": "UNComponents",
+                "genericSig": "<τ_0_0 where τ_0_0 : UNComponents.UNBookPaymentView>",
+                "sugared_genericSig": "<Self where Self : UNComponents.UNBookPaymentView>",
+                "protocolReq": true,
+                "reqNewWitnessTableEntry": true,
+                "accessorKind": "get"
+              },
+              {
+                "kind": "Accessor",
+                "name": "Set",
+                "printedName": "Set()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Void",
+                    "printedName": "()"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "String",
+                    "printedName": "Swift.String",
+                    "usr": "s:SS"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:12UNComponents17UNBookPaymentViewP16counterPartyNameSSvs",
+                "mangledName": "$s12UNComponents17UNBookPaymentViewP16counterPartyNameSSvs",
+                "moduleName": "UNComponents",
+                "genericSig": "<τ_0_0 where τ_0_0 : UNComponents.UNBookPaymentView>",
+                "sugared_genericSig": "<Self where Self : UNComponents.UNBookPaymentView>",
+                "protocolReq": true,
+                "reqNewWitnessTableEntry": true,
+                "accessorKind": "set"
+              },
+              {
+                "kind": "Accessor",
+                "name": "Modify",
+                "printedName": "Modify()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Void",
+                    "printedName": "()"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:12UNComponents17UNBookPaymentViewP16counterPartyNameSSvM",
+                "mangledName": "$s12UNComponents17UNBookPaymentViewP16counterPartyNameSSvM",
+                "moduleName": "UNComponents",
+                "genericSig": "<τ_0_0 where τ_0_0 : UNComponents.UNBookPaymentView>",
+                "sugared_genericSig": "<Self where Self : UNComponents.UNBookPaymentView>",
+                "protocolReq": true,
+                "implicit": true,
+                "reqNewWitnessTableEntry": true,
+                "accessorKind": "_modify"
+              }
+            ]
+          },
+          {
+            "kind": "Var",
+            "name": "counterPartyAccountId",
+            "printedName": "counterPartyAccountId",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "String",
+                "printedName": "Swift.String",
+                "usr": "s:SS"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "s:12UNComponents17UNBookPaymentViewP21counterPartyAccountIdSSvp",
+            "mangledName": "$s12UNComponents17UNBookPaymentViewP21counterPartyAccountIdSSvp",
+            "moduleName": "UNComponents",
+            "protocolReq": true,
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "String",
+                    "printedName": "Swift.String",
+                    "usr": "s:SS"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:12UNComponents17UNBookPaymentViewP21counterPartyAccountIdSSvg",
+                "mangledName": "$s12UNComponents17UNBookPaymentViewP21counterPartyAccountIdSSvg",
+                "moduleName": "UNComponents",
+                "genericSig": "<τ_0_0 where τ_0_0 : UNComponents.UNBookPaymentView>",
+                "sugared_genericSig": "<Self where Self : UNComponents.UNBookPaymentView>",
+                "protocolReq": true,
+                "reqNewWitnessTableEntry": true,
+                "accessorKind": "get"
+              },
+              {
+                "kind": "Accessor",
+                "name": "Set",
+                "printedName": "Set()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Void",
+                    "printedName": "()"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "String",
+                    "printedName": "Swift.String",
+                    "usr": "s:SS"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:12UNComponents17UNBookPaymentViewP21counterPartyAccountIdSSvs",
+                "mangledName": "$s12UNComponents17UNBookPaymentViewP21counterPartyAccountIdSSvs",
+                "moduleName": "UNComponents",
+                "genericSig": "<τ_0_0 where τ_0_0 : UNComponents.UNBookPaymentView>",
+                "sugared_genericSig": "<Self where Self : UNComponents.UNBookPaymentView>",
+                "protocolReq": true,
+                "reqNewWitnessTableEntry": true,
+                "accessorKind": "set"
+              },
+              {
+                "kind": "Accessor",
+                "name": "Modify",
+                "printedName": "Modify()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Void",
+                    "printedName": "()"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:12UNComponents17UNBookPaymentViewP21counterPartyAccountIdSSvM",
+                "mangledName": "$s12UNComponents17UNBookPaymentViewP21counterPartyAccountIdSSvM",
+                "moduleName": "UNComponents",
+                "genericSig": "<τ_0_0 where τ_0_0 : UNComponents.UNBookPaymentView>",
+                "sugared_genericSig": "<Self where Self : UNComponents.UNBookPaymentView>",
+                "protocolReq": true,
+                "implicit": true,
+                "reqNewWitnessTableEntry": true,
+                "accessorKind": "_modify"
+              }
+            ]
+          },
+          {
+            "kind": "Var",
+            "name": "isSameCustomer",
+            "printedName": "isSameCustomer",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Bool",
+                "printedName": "Swift.Bool",
+                "usr": "s:Sb"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "s:12UNComponents17UNBookPaymentViewP14isSameCustomerSbvp",
+            "mangledName": "$s12UNComponents17UNBookPaymentViewP14isSameCustomerSbvp",
+            "moduleName": "UNComponents",
+            "protocolReq": true,
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Bool",
+                    "printedName": "Swift.Bool",
+                    "usr": "s:Sb"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:12UNComponents17UNBookPaymentViewP14isSameCustomerSbvg",
+                "mangledName": "$s12UNComponents17UNBookPaymentViewP14isSameCustomerSbvg",
+                "moduleName": "UNComponents",
+                "genericSig": "<τ_0_0 where τ_0_0 : UNComponents.UNBookPaymentView>",
+                "sugared_genericSig": "<Self where Self : UNComponents.UNBookPaymentView>",
+                "protocolReq": true,
+                "reqNewWitnessTableEntry": true,
+                "accessorKind": "get"
+              },
+              {
+                "kind": "Accessor",
+                "name": "Set",
+                "printedName": "Set()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Void",
+                    "printedName": "()"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Bool",
+                    "printedName": "Swift.Bool",
+                    "usr": "s:Sb"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:12UNComponents17UNBookPaymentViewP14isSameCustomerSbvs",
+                "mangledName": "$s12UNComponents17UNBookPaymentViewP14isSameCustomerSbvs",
+                "moduleName": "UNComponents",
+                "genericSig": "<τ_0_0 where τ_0_0 : UNComponents.UNBookPaymentView>",
+                "sugared_genericSig": "<Self where Self : UNComponents.UNBookPaymentView>",
+                "protocolReq": true,
+                "reqNewWitnessTableEntry": true,
+                "accessorKind": "set"
+              },
+              {
+                "kind": "Accessor",
+                "name": "Modify",
+                "printedName": "Modify()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Void",
+                    "printedName": "()"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:12UNComponents17UNBookPaymentViewP14isSameCustomerSbvM",
+                "mangledName": "$s12UNComponents17UNBookPaymentViewP14isSameCustomerSbvM",
+                "moduleName": "UNComponents",
+                "genericSig": "<τ_0_0 where τ_0_0 : UNComponents.UNBookPaymentView>",
+                "sugared_genericSig": "<Self where Self : UNComponents.UNBookPaymentView>",
+                "protocolReq": true,
+                "implicit": true,
+                "reqNewWitnessTableEntry": true,
+                "accessorKind": "_modify"
+              }
+            ]
+          },
+          {
+            "kind": "Var",
+            "name": "additionalSetting",
+            "printedName": "additionalSetting",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "UNBookPaymentViewSettingsProtocol",
+                "printedName": "UNComponents.UNBookPaymentViewSettingsProtocol",
+                "usr": "s:12UNComponents33UNBookPaymentViewSettingsProtocolP"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "s:12UNComponents17UNBookPaymentViewP17additionalSettingAA0bcD16SettingsProtocol_pvp",
+            "mangledName": "$s12UNComponents17UNBookPaymentViewP17additionalSettingAA0bcD16SettingsProtocol_pvp",
+            "moduleName": "UNComponents",
+            "protocolReq": true,
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "UNBookPaymentViewSettingsProtocol",
+                    "printedName": "UNComponents.UNBookPaymentViewSettingsProtocol",
+                    "usr": "s:12UNComponents33UNBookPaymentViewSettingsProtocolP"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:12UNComponents17UNBookPaymentViewP17additionalSettingAA0bcD16SettingsProtocol_pvg",
+                "mangledName": "$s12UNComponents17UNBookPaymentViewP17additionalSettingAA0bcD16SettingsProtocol_pvg",
+                "moduleName": "UNComponents",
+                "genericSig": "<τ_0_0 where τ_0_0 : UNComponents.UNBookPaymentView>",
+                "sugared_genericSig": "<Self where Self : UNComponents.UNBookPaymentView>",
+                "protocolReq": true,
+                "reqNewWitnessTableEntry": true,
+                "accessorKind": "get"
+              },
+              {
+                "kind": "Accessor",
+                "name": "Set",
+                "printedName": "Set()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Void",
+                    "printedName": "()"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "UNBookPaymentViewSettingsProtocol",
+                    "printedName": "UNComponents.UNBookPaymentViewSettingsProtocol",
+                    "usr": "s:12UNComponents33UNBookPaymentViewSettingsProtocolP"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:12UNComponents17UNBookPaymentViewP17additionalSettingAA0bcD16SettingsProtocol_pvs",
+                "mangledName": "$s12UNComponents17UNBookPaymentViewP17additionalSettingAA0bcD16SettingsProtocol_pvs",
+                "moduleName": "UNComponents",
+                "genericSig": "<τ_0_0 where τ_0_0 : UNComponents.UNBookPaymentView>",
+                "sugared_genericSig": "<Self where Self : UNComponents.UNBookPaymentView>",
+                "protocolReq": true,
+                "reqNewWitnessTableEntry": true,
+                "accessorKind": "set"
+              },
+              {
+                "kind": "Accessor",
+                "name": "Modify",
+                "printedName": "Modify()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Void",
+                    "printedName": "()"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:12UNComponents17UNBookPaymentViewP17additionalSettingAA0bcD16SettingsProtocol_pvM",
+                "mangledName": "$s12UNComponents17UNBookPaymentViewP17additionalSettingAA0bcD16SettingsProtocol_pvM",
+                "moduleName": "UNComponents",
+                "genericSig": "<τ_0_0 where τ_0_0 : UNComponents.UNBookPaymentView>",
+                "sugared_genericSig": "<Self where Self : UNComponents.UNBookPaymentView>",
+                "protocolReq": true,
+                "implicit": true,
+                "reqNewWitnessTableEntry": true,
+                "accessorKind": "_modify"
+              }
+            ]
+          }
+        ],
+        "declKind": "Protocol",
+        "usr": "s:12UNComponents17UNBookPaymentViewP",
+        "mangledName": "$s12UNComponents17UNBookPaymentViewP",
+        "moduleName": "UNComponents",
+        "genericSig": "<τ_0_0 : UIKit.UIView>",
+        "sugared_genericSig": "<Self : UIKit.UIView>",
+        "declAttributes": [
+          "AccessControl"
+        ]
+      },
+      {
+        "kind": "TypeDecl",
+        "name": "UNBookPaymentViewSettingsProtocol",
+        "printedName": "UNBookPaymentViewSettingsProtocol",
+        "children": [
+          {
+            "kind": "Var",
+            "name": "isAutoFocus",
+            "printedName": "isAutoFocus",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Bool",
+                "printedName": "Swift.Bool",
+                "usr": "s:Sb"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "s:12UNComponents33UNBookPaymentViewSettingsProtocolP11isAutoFocusSbvp",
+            "mangledName": "$s12UNComponents33UNBookPaymentViewSettingsProtocolP11isAutoFocusSbvp",
+            "moduleName": "UNComponents",
+            "protocolReq": true,
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Bool",
+                    "printedName": "Swift.Bool",
+                    "usr": "s:Sb"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:12UNComponents33UNBookPaymentViewSettingsProtocolP11isAutoFocusSbvg",
+                "mangledName": "$s12UNComponents33UNBookPaymentViewSettingsProtocolP11isAutoFocusSbvg",
+                "moduleName": "UNComponents",
+                "genericSig": "<τ_0_0 where τ_0_0 : UNComponents.UNBookPaymentViewSettingsProtocol>",
+                "sugared_genericSig": "<Self where Self : UNComponents.UNBookPaymentViewSettingsProtocol>",
+                "protocolReq": true,
+                "reqNewWitnessTableEntry": true,
+                "accessorKind": "get"
+              }
+            ]
+          }
+        ],
+        "declKind": "Protocol",
+        "usr": "s:12UNComponents33UNBookPaymentViewSettingsProtocolP",
+        "mangledName": "$s12UNComponents33UNBookPaymentViewSettingsProtocolP",
+        "moduleName": "UNComponents",
+        "declAttributes": [
+          "AccessControl"
         ]
       },
       {
@@ -11662,6 +13969,27 @@
                 "accessorKind": "_modify"
               }
             ]
+          },
+          {
+            "kind": "Function",
+            "name": "openActionsMenu",
+            "printedName": "openActionsMenu()",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Void",
+                "printedName": "()"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:12UNComponents13UNAccountViewP15openActionsMenuyyF",
+            "mangledName": "$s12UNComponents13UNAccountViewP15openActionsMenuyyF",
+            "moduleName": "UNComponents",
+            "genericSig": "<τ_0_0 where τ_0_0 : UNComponents.UNAccountView>",
+            "sugared_genericSig": "<Self where Self : UNComponents.UNAccountView>",
+            "protocolReq": true,
+            "reqNewWitnessTableEntry": true,
+            "funcSelfKind": "NonMutating"
           }
         ],
         "declKind": "Protocol",
@@ -12211,6 +14539,92 @@
                 "declKind": "Accessor",
                 "usr": "s:12UNComponents20UNACHCreditComponentC9accountIdSSvM",
                 "mangledName": "$s12UNComponents20UNACHCreditComponentC9accountIdSSvM",
+                "moduleName": "UNComponents",
+                "implicit": true,
+                "isFromExtension": true,
+                "accessorKind": "_modify"
+              }
+            ]
+          },
+          {
+            "kind": "Var",
+            "name": "additionalSettings",
+            "printedName": "additionalSettings",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "UNACHCreditViewSettingsProtocol",
+                "printedName": "UNComponents.UNACHCreditViewSettingsProtocol",
+                "usr": "s:12UNComponents31UNACHCreditViewSettingsProtocolP"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "s:12UNComponents20UNACHCreditComponentC18additionalSettingsAA0b4ViewE8Protocol_pvp",
+            "mangledName": "$s12UNComponents20UNACHCreditComponentC18additionalSettingsAA0b4ViewE8Protocol_pvp",
+            "moduleName": "UNComponents",
+            "declAttributes": [
+              "Custom",
+              "AccessControl"
+            ],
+            "isFromExtension": true,
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "UNACHCreditViewSettingsProtocol",
+                    "printedName": "UNComponents.UNACHCreditViewSettingsProtocol",
+                    "usr": "s:12UNComponents31UNACHCreditViewSettingsProtocolP"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:12UNComponents20UNACHCreditComponentC18additionalSettingsAA0b4ViewE8Protocol_pvg",
+                "mangledName": "$s12UNComponents20UNACHCreditComponentC18additionalSettingsAA0b4ViewE8Protocol_pvg",
+                "moduleName": "UNComponents",
+                "isFromExtension": true,
+                "accessorKind": "get"
+              },
+              {
+                "kind": "Accessor",
+                "name": "Set",
+                "printedName": "Set()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Void",
+                    "printedName": "()"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "UNACHCreditViewSettingsProtocol",
+                    "printedName": "UNComponents.UNACHCreditViewSettingsProtocol",
+                    "usr": "s:12UNComponents31UNACHCreditViewSettingsProtocolP"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:12UNComponents20UNACHCreditComponentC18additionalSettingsAA0b4ViewE8Protocol_pvs",
+                "mangledName": "$s12UNComponents20UNACHCreditComponentC18additionalSettingsAA0b4ViewE8Protocol_pvs",
+                "moduleName": "UNComponents",
+                "isFromExtension": true,
+                "accessorKind": "set"
+              },
+              {
+                "kind": "Accessor",
+                "name": "Modify",
+                "printedName": "Modify()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Void",
+                    "printedName": "()"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:12UNComponents20UNACHCreditComponentC18additionalSettingsAA0b4ViewE8Protocol_pvM",
+                "mangledName": "$s12UNComponents20UNACHCreditComponentC18additionalSettingsAA0b4ViewE8Protocol_pvM",
                 "moduleName": "UNComponents",
                 "implicit": true,
                 "isFromExtension": true,
@@ -13308,9 +15722,6 @@
             "mangledName": "$s12UNComponents10UNCardViewP6cardIdSSvp",
             "moduleName": "UNComponents",
             "protocolReq": true,
-            "declAttributes": [
-              "RawDocComment"
-            ],
             "accessors": [
               {
                 "kind": "Accessor",
@@ -13384,6 +15795,145 @@
                 "accessorKind": "_modify"
               }
             ]
+          },
+          {
+            "kind": "Var",
+            "name": "additionalSetting",
+            "printedName": "additionalSetting",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "UNCardViewSettingsProtocol",
+                "printedName": "UNComponents.UNCardViewSettingsProtocol",
+                "usr": "s:12UNComponents26UNCardViewSettingsProtocolP"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "s:12UNComponents10UNCardViewP17additionalSettingAA0bC16SettingsProtocol_pvp",
+            "mangledName": "$s12UNComponents10UNCardViewP17additionalSettingAA0bC16SettingsProtocol_pvp",
+            "moduleName": "UNComponents",
+            "protocolReq": true,
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "UNCardViewSettingsProtocol",
+                    "printedName": "UNComponents.UNCardViewSettingsProtocol",
+                    "usr": "s:12UNComponents26UNCardViewSettingsProtocolP"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:12UNComponents10UNCardViewP17additionalSettingAA0bC16SettingsProtocol_pvg",
+                "mangledName": "$s12UNComponents10UNCardViewP17additionalSettingAA0bC16SettingsProtocol_pvg",
+                "moduleName": "UNComponents",
+                "genericSig": "<τ_0_0 where τ_0_0 : UNComponents.UNCardView>",
+                "sugared_genericSig": "<Self where Self : UNComponents.UNCardView>",
+                "protocolReq": true,
+                "reqNewWitnessTableEntry": true,
+                "accessorKind": "get"
+              },
+              {
+                "kind": "Accessor",
+                "name": "Set",
+                "printedName": "Set()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Void",
+                    "printedName": "()"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "UNCardViewSettingsProtocol",
+                    "printedName": "UNComponents.UNCardViewSettingsProtocol",
+                    "usr": "s:12UNComponents26UNCardViewSettingsProtocolP"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:12UNComponents10UNCardViewP17additionalSettingAA0bC16SettingsProtocol_pvs",
+                "mangledName": "$s12UNComponents10UNCardViewP17additionalSettingAA0bC16SettingsProtocol_pvs",
+                "moduleName": "UNComponents",
+                "genericSig": "<τ_0_0 where τ_0_0 : UNComponents.UNCardView>",
+                "sugared_genericSig": "<Self where Self : UNComponents.UNCardView>",
+                "protocolReq": true,
+                "reqNewWitnessTableEntry": true,
+                "accessorKind": "set"
+              },
+              {
+                "kind": "Accessor",
+                "name": "Modify",
+                "printedName": "Modify()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Void",
+                    "printedName": "()"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:12UNComponents10UNCardViewP17additionalSettingAA0bC16SettingsProtocol_pvM",
+                "mangledName": "$s12UNComponents10UNCardViewP17additionalSettingAA0bC16SettingsProtocol_pvM",
+                "moduleName": "UNComponents",
+                "genericSig": "<τ_0_0 where τ_0_0 : UNComponents.UNCardView>",
+                "sugared_genericSig": "<Self where Self : UNComponents.UNCardView>",
+                "protocolReq": true,
+                "implicit": true,
+                "reqNewWitnessTableEntry": true,
+                "accessorKind": "_modify"
+              }
+            ]
+          },
+          {
+            "kind": "Function",
+            "name": "openActionsMenu",
+            "printedName": "openActionsMenu()",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Void",
+                "printedName": "()"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:12UNComponents10UNCardViewP15openActionsMenuyyF",
+            "mangledName": "$s12UNComponents10UNCardViewP15openActionsMenuyyF",
+            "moduleName": "UNComponents",
+            "genericSig": "<τ_0_0 where τ_0_0 : UNComponents.UNCardView>",
+            "sugared_genericSig": "<Self where Self : UNComponents.UNCardView>",
+            "protocolReq": true,
+            "reqNewWitnessTableEntry": true,
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Function",
+            "name": "open",
+            "printedName": "open(action:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Void",
+                "printedName": "()"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "UNCardMenuAction",
+                "printedName": "UNComponents.UNCardMenuAction",
+                "usr": "s:12UNComponents16UNCardMenuActionO"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:12UNComponents10UNCardViewP4open6actionyAA0B10MenuActionO_tF",
+            "mangledName": "$s12UNComponents10UNCardViewP4open6actionyAA0B10MenuActionO_tF",
+            "moduleName": "UNComponents",
+            "genericSig": "<τ_0_0 where τ_0_0 : UNComponents.UNCardView>",
+            "sugared_genericSig": "<Self where Self : UNComponents.UNCardView>",
+            "protocolReq": true,
+            "reqNewWitnessTableEntry": true,
+            "funcSelfKind": "NonMutating"
           }
         ],
         "declKind": "Protocol",
@@ -16113,9 +18663,156 @@
   },
   "ConstValues": [
     {
+      "filePath": "\/Users\/alonshprung\/Work\/Unit\/white-label-banking-ios\/UnitWhiteLabelBanking\/UNComponents\/Models\/Shared\/Card\/MenuActions.swift",
+      "kind": "StringLiteral",
+      "offset": 170,
+      "length": 8,
+      "value": "\"Freeze\""
+    },
+    {
+      "filePath": "\/Users\/alonshprung\/Work\/Unit\/white-label-banking-ios\/UnitWhiteLabelBanking\/UNComponents\/Models\/Shared\/Card\/MenuActions.swift",
+      "kind": "StringLiteral",
+      "offset": 200,
+      "length": 11,
+      "value": "\"ManagePin\""
+    },
+    {
+      "filePath": "\/Users\/alonshprung\/Work\/Unit\/white-label-banking-ios\/UnitWhiteLabelBanking\/UNComponents\/Models\/Shared\/Card\/MenuActions.swift",
+      "kind": "StringLiteral",
+      "offset": 231,
+      "length": 9,
+      "value": "\"Replace\""
+    },
+    {
+      "filePath": "\/Users\/alonshprung\/Work\/Unit\/white-label-banking-ios\/UnitWhiteLabelBanking\/UNComponents\/Models\/Shared\/Card\/MenuActions.swift",
+      "kind": "StringLiteral",
+      "offset": 259,
+      "length": 8,
+      "value": "\"Report\""
+    },
+    {
+      "filePath": "\/Users\/alonshprung\/Work\/Unit\/white-label-banking-ios\/UnitWhiteLabelBanking\/UNComponents\/Models\/Shared\/Card\/MenuActions.swift",
+      "kind": "StringLiteral",
+      "offset": 285,
+      "length": 7,
+      "value": "\"Close\""
+    },
+    {
+      "filePath": "\/Users\/alonshprung\/Work\/Unit\/white-label-banking-ios\/UnitWhiteLabelBanking\/UNComponents\/Models\/Shared\/Card\/MenuActions.swift",
+      "kind": "StringLiteral",
+      "offset": 313,
+      "length": 10,
+      "value": "\"Activate\""
+    },
+    {
+      "filePath": "\/Users\/alonshprung\/Work\/Unit\/white-label-banking-ios\/UnitWhiteLabelBanking\/UNComponents\/Models\/Shared\/Card\/MenuActions.swift",
+      "kind": "StringLiteral",
+      "offset": 344,
+      "length": 10,
+      "value": "\"Unfreeze\""
+    },
+    {
+      "filePath": "\/Users\/alonshprung\/Work\/Unit\/white-label-banking-ios\/UnitWhiteLabelBanking\/UNComponents\/Models\/Shared\/Card\/MenuActions.swift",
+      "kind": "StringLiteral",
+      "offset": 376,
+      "length": 11,
+      "value": "\"ChangePin\""
+    },
+    {
+      "filePath": "\/Users\/alonshprung\/Work\/Unit\/white-label-banking-ios\/UnitWhiteLabelBanking\/UNComponents\/Models\/Shared\/Card\/MenuActions.swift",
+      "kind": "StringLiteral",
+      "offset": 406,
+      "length": 8,
+      "value": "\"SetPin\""
+    },
+    {
+      "filePath": "\/Users\/alonshprung\/Work\/Unit\/white-label-banking-ios\/UnitWhiteLabelBanking\/UNComponents\/Models\/Shared\/Card\/MenuActions.swift",
+      "kind": "StringLiteral",
+      "offset": 438,
+      "length": 13,
+      "value": "\"AddToWallet\""
+    },
+    {
+      "filePath": "\/Users\/alonshprung\/Work\/Unit\/white-label-banking-ios\/UnitWhiteLabelBanking\/UNComponents\/Models\/Shared\/Card\/MenuActions.swift",
+      "kind": "StringLiteral",
+      "offset": 170,
+      "length": 8,
+      "value": "\"Freeze\""
+    },
+    {
+      "filePath": "\/Users\/alonshprung\/Work\/Unit\/white-label-banking-ios\/UnitWhiteLabelBanking\/UNComponents\/Models\/Shared\/Card\/MenuActions.swift",
+      "kind": "StringLiteral",
+      "offset": 200,
+      "length": 11,
+      "value": "\"ManagePin\""
+    },
+    {
+      "filePath": "\/Users\/alonshprung\/Work\/Unit\/white-label-banking-ios\/UnitWhiteLabelBanking\/UNComponents\/Models\/Shared\/Card\/MenuActions.swift",
+      "kind": "StringLiteral",
+      "offset": 231,
+      "length": 9,
+      "value": "\"Replace\""
+    },
+    {
+      "filePath": "\/Users\/alonshprung\/Work\/Unit\/white-label-banking-ios\/UnitWhiteLabelBanking\/UNComponents\/Models\/Shared\/Card\/MenuActions.swift",
+      "kind": "StringLiteral",
+      "offset": 259,
+      "length": 8,
+      "value": "\"Report\""
+    },
+    {
+      "filePath": "\/Users\/alonshprung\/Work\/Unit\/white-label-banking-ios\/UnitWhiteLabelBanking\/UNComponents\/Models\/Shared\/Card\/MenuActions.swift",
+      "kind": "StringLiteral",
+      "offset": 285,
+      "length": 7,
+      "value": "\"Close\""
+    },
+    {
+      "filePath": "\/Users\/alonshprung\/Work\/Unit\/white-label-banking-ios\/UnitWhiteLabelBanking\/UNComponents\/Models\/Shared\/Card\/MenuActions.swift",
+      "kind": "StringLiteral",
+      "offset": 313,
+      "length": 10,
+      "value": "\"Activate\""
+    },
+    {
+      "filePath": "\/Users\/alonshprung\/Work\/Unit\/white-label-banking-ios\/UnitWhiteLabelBanking\/UNComponents\/Models\/Shared\/Card\/MenuActions.swift",
+      "kind": "StringLiteral",
+      "offset": 344,
+      "length": 10,
+      "value": "\"Unfreeze\""
+    },
+    {
+      "filePath": "\/Users\/alonshprung\/Work\/Unit\/white-label-banking-ios\/UnitWhiteLabelBanking\/UNComponents\/Models\/Shared\/Card\/MenuActions.swift",
+      "kind": "StringLiteral",
+      "offset": 376,
+      "length": 11,
+      "value": "\"ChangePin\""
+    },
+    {
+      "filePath": "\/Users\/alonshprung\/Work\/Unit\/white-label-banking-ios\/UnitWhiteLabelBanking\/UNComponents\/Models\/Shared\/Card\/MenuActions.swift",
+      "kind": "StringLiteral",
+      "offset": 406,
+      "length": 8,
+      "value": "\"SetPin\""
+    },
+    {
+      "filePath": "\/Users\/alonshprung\/Work\/Unit\/white-label-banking-ios\/UnitWhiteLabelBanking\/UNComponents\/Models\/Shared\/Card\/MenuActions.swift",
+      "kind": "StringLiteral",
+      "offset": 438,
+      "length": 13,
+      "value": "\"AddToWallet\""
+    },
+    {
       "filePath": "\/Users\/alonshprung\/Work\/Unit\/white-label-banking-ios\/UnitWhiteLabelBanking\/UNComponents\/UI\/Components\/Account\/UNAccountComponent.swift",
       "kind": "StringLiteral",
-      "offset": 135,
+      "offset": 370,
+      "length": 12,
+      "value": "\"account-id\""
+    },
+    {
+      "filePath": "\/Users\/alonshprung\/Work\/Unit\/white-label-banking-ios\/UnitWhiteLabelBanking\/UNComponents\/UI\/Components\/Account\/UNAccountComponent.swift",
+      "kind": "StringLiteral",
+      "offset": 136,
       "length": 18,
       "value": "\"UNComponents.UNAccountComponent\""
     },
@@ -16157,9 +18854,23 @@
     {
       "filePath": "\/Users\/alonshprung\/Work\/Unit\/white-label-banking-ios\/UnitWhiteLabelBanking\/UNComponents\/UI\/Components\/Activity\/UNActivityComponent.swift",
       "kind": "StringLiteral",
+      "offset": 386,
+      "length": 12,
+      "value": "\"account-id\""
+    },
+    {
+      "filePath": "\/Users\/alonshprung\/Work\/Unit\/white-label-banking-ios\/UnitWhiteLabelBanking\/UNComponents\/UI\/Components\/Activity\/UNActivityComponent.swift",
+      "kind": "StringLiteral",
       "offset": 145,
       "length": 19,
       "value": "\"UNComponents.UNActivityComponent\""
+    },
+    {
+      "filePath": "\/Users\/alonshprung\/Work\/Unit\/white-label-banking-ios\/UnitWhiteLabelBanking\/UNComponents\/Infra\/Protocols\/Layers\/UNUIViews.swift",
+      "kind": "BooleanLiteral",
+      "offset": 2388,
+      "length": 5,
+      "value": "false"
     },
     {
       "filePath": "\/Users\/alonshprung\/Work\/Unit\/white-label-banking-ios\/UnitWhiteLabelBanking\/UNComponents\/Infra\/Builders\/Components\/Card\/UNCardViewSettingsBuilder.swift",
@@ -16382,71 +19093,85 @@
       "filePath": "\/Users\/alonshprung\/Work\/Unit\/white-label-banking-ios\/UnitWhiteLabelBanking\/UNComponents\/UI\/WebComponent\/UNWebComponentType.swift",
       "kind": "StringLiteral",
       "offset": 221,
-      "length": 20,
-      "value": "\"unit-elements-card\""
-    },
-    {
-      "filePath": "\/Users\/alonshprung\/Work\/Unit\/white-label-banking-ios\/UnitWhiteLabelBanking\/UNComponents\/UI\/WebComponent\/UNWebComponentType.swift",
-      "kind": "StringLiteral",
-      "offset": 258,
       "length": 24,
       "value": "\"unit-elements-sdk-slot\""
     },
     {
       "filePath": "\/Users\/alonshprung\/Work\/Unit\/white-label-banking-ios\/UnitWhiteLabelBanking\/UNComponents\/UI\/WebComponent\/UNWebComponentType.swift",
       "kind": "StringLiteral",
-      "offset": 303,
+      "offset": 267,
+      "length": 20,
+      "value": "\"unit-elements-card\""
+    },
+    {
+      "filePath": "\/Users\/alonshprung\/Work\/Unit\/white-label-banking-ios\/UnitWhiteLabelBanking\/UNComponents\/UI\/WebComponent\/UNWebComponentType.swift",
+      "kind": "StringLiteral",
+      "offset": 308,
       "length": 24,
       "value": "\"unit-elements-activity\""
     },
     {
       "filePath": "\/Users\/alonshprung\/Work\/Unit\/white-label-banking-ios\/UnitWhiteLabelBanking\/UNComponents\/UI\/WebComponent\/UNWebComponentType.swift",
       "kind": "StringLiteral",
-      "offset": 347,
+      "offset": 352,
       "length": 23,
       "value": "\"unit-elements-account\""
     },
     {
       "filePath": "\/Users\/alonshprung\/Work\/Unit\/white-label-banking-ios\/UnitWhiteLabelBanking\/UNComponents\/UI\/WebComponent\/UNWebComponentType.swift",
       "kind": "StringLiteral",
-      "offset": 392,
+      "offset": 397,
       "length": 34,
       "value": "\"unit-elements-ach-credit-payment\""
+    },
+    {
+      "filePath": "\/Users\/alonshprung\/Work\/Unit\/white-label-banking-ios\/UnitWhiteLabelBanking\/UNComponents\/UI\/WebComponent\/UNWebComponentType.swift",
+      "kind": "StringLiteral",
+      "offset": 455,
+      "length": 28,
+      "value": "\"unit-elements-book-payment\""
     },
     {
       "filePath": "\/Users\/alonshprung\/Work\/Unit\/white-label-banking-ios\/UnitWhiteLabelBanking\/UNComponents\/UI\/WebComponent\/UNWebComponentType.swift",
       "kind": "StringLiteral",
       "offset": 221,
-      "length": 20,
-      "value": "\"unit-elements-card\""
-    },
-    {
-      "filePath": "\/Users\/alonshprung\/Work\/Unit\/white-label-banking-ios\/UnitWhiteLabelBanking\/UNComponents\/UI\/WebComponent\/UNWebComponentType.swift",
-      "kind": "StringLiteral",
-      "offset": 258,
       "length": 24,
       "value": "\"unit-elements-sdk-slot\""
     },
     {
       "filePath": "\/Users\/alonshprung\/Work\/Unit\/white-label-banking-ios\/UnitWhiteLabelBanking\/UNComponents\/UI\/WebComponent\/UNWebComponentType.swift",
       "kind": "StringLiteral",
-      "offset": 303,
+      "offset": 267,
+      "length": 20,
+      "value": "\"unit-elements-card\""
+    },
+    {
+      "filePath": "\/Users\/alonshprung\/Work\/Unit\/white-label-banking-ios\/UnitWhiteLabelBanking\/UNComponents\/UI\/WebComponent\/UNWebComponentType.swift",
+      "kind": "StringLiteral",
+      "offset": 308,
       "length": 24,
       "value": "\"unit-elements-activity\""
     },
     {
       "filePath": "\/Users\/alonshprung\/Work\/Unit\/white-label-banking-ios\/UnitWhiteLabelBanking\/UNComponents\/UI\/WebComponent\/UNWebComponentType.swift",
       "kind": "StringLiteral",
-      "offset": 347,
+      "offset": 352,
       "length": 23,
       "value": "\"unit-elements-account\""
     },
     {
       "filePath": "\/Users\/alonshprung\/Work\/Unit\/white-label-banking-ios\/UnitWhiteLabelBanking\/UNComponents\/UI\/WebComponent\/UNWebComponentType.swift",
       "kind": "StringLiteral",
-      "offset": 392,
+      "offset": 397,
       "length": 34,
       "value": "\"unit-elements-ach-credit-payment\""
+    },
+    {
+      "filePath": "\/Users\/alonshprung\/Work\/Unit\/white-label-banking-ios\/UnitWhiteLabelBanking\/UNComponents\/UI\/WebComponent\/UNWebComponentType.swift",
+      "kind": "StringLiteral",
+      "offset": 455,
+      "length": 28,
+      "value": "\"unit-elements-book-payment\""
     },
     {
       "filePath": "\/Users\/alonshprung\/Work\/Unit\/white-label-banking-ios\/UnitWhiteLabelBanking\/UNComponents\/UI\/UNSnapKit\/UNConstraintDSL.swift",
@@ -16454,6 +19179,20 @@
       "offset": 322,
       "length": 1,
       "value": "0"
+    },
+    {
+      "filePath": "\/Users\/alonshprung\/Work\/Unit\/white-label-banking-ios\/UnitWhiteLabelBanking\/UNComponents\/Models\/Shared\/BookPayment\/UNBookPaymentData.swift",
+      "kind": "StringLiteral",
+      "offset": 234,
+      "length": 12,
+      "value": "\"attributes\""
+    },
+    {
+      "filePath": "\/Users\/alonshprung\/Work\/Unit\/white-label-banking-ios\/UnitWhiteLabelBanking\/UNComponents\/Models\/Shared\/BookPayment\/UNBookPaymentData.swift",
+      "kind": "StringLiteral",
+      "offset": 234,
+      "length": 12,
+      "value": "\"attributes\""
     },
     {
       "filePath": "\/Users\/alonshprung\/Work\/Unit\/white-label-banking-ios\/UnitWhiteLabelBanking\/UNComponents\/Models\/Shared\/Payment\/UNPayments.swift",
@@ -16570,7 +19309,56 @@
     {
       "filePath": "\/Users\/alonshprung\/Work\/Unit\/white-label-banking-ios\/UnitWhiteLabelBanking\/UNComponents\/UI\/Components\/BookPayment\/UNBookPaymentComponent.swift",
       "kind": "StringLiteral",
-      "offset": 711,
+      "offset": 234,
+      "length": 12,
+      "value": "\"account-id\""
+    },
+    {
+      "filePath": "\/Users\/alonshprung\/Work\/Unit\/white-label-banking-ios\/UnitWhiteLabelBanking\/UNComponents\/UI\/Components\/BookPayment\/UNBookPaymentComponent.swift",
+      "kind": "StringLiteral",
+      "offset": 285,
+      "length": 19,
+      "value": "\"counterparty-name\""
+    },
+    {
+      "filePath": "\/Users\/alonshprung\/Work\/Unit\/white-label-banking-ios\/UnitWhiteLabelBanking\/UNComponents\/UI\/Components\/BookPayment\/UNBookPaymentComponent.swift",
+      "kind": "StringLiteral",
+      "offset": 348,
+      "length": 25,
+      "value": "\"counterparty-account-id\""
+    },
+    {
+      "filePath": "\/Users\/alonshprung\/Work\/Unit\/white-label-banking-ios\/UnitWhiteLabelBanking\/UNComponents\/UI\/Components\/BookPayment\/UNBookPaymentComponent.swift",
+      "kind": "StringLiteral",
+      "offset": 410,
+      "length": 18,
+      "value": "\"is-same-customer\""
+    },
+    {
+      "filePath": "\/Users\/alonshprung\/Work\/Unit\/white-label-banking-ios\/UnitWhiteLabelBanking\/UNComponents\/UI\/Components\/BookPayment\/UNBookPaymentComponent.swift",
+      "kind": "StringLiteral",
+      "offset": 462,
+      "length": 15,
+      "value": "\"is-auto-focus\""
+    },
+    {
+      "filePath": "\/Users\/alonshprung\/Work\/Unit\/white-label-banking-ios\/UnitWhiteLabelBanking\/UNComponents\/UI\/Components\/BookPayment\/UNBookPaymentComponent.swift",
+      "kind": "StringLiteral",
+      "offset": 505,
+      "length": 7,
+      "value": "\"style\""
+    },
+    {
+      "filePath": "\/Users\/alonshprung\/Work\/Unit\/white-label-banking-ios\/UnitWhiteLabelBanking\/UNComponents\/UI\/Components\/BookPayment\/UNBookPaymentComponent.swift",
+      "kind": "Dictionary",
+      "offset": 874,
+      "length": 3,
+      "value": "[]"
+    },
+    {
+      "filePath": "\/Users\/alonshprung\/Work\/Unit\/white-label-banking-ios\/UnitWhiteLabelBanking\/UNComponents\/UI\/Components\/BookPayment\/UNBookPaymentComponent.swift",
+      "kind": "StringLiteral",
+      "offset": 138,
       "length": 22,
       "value": "\"UNComponents.UNBookPaymentComponent\""
     },
@@ -16587,6 +19375,34 @@
       "offset": 357,
       "length": 1,
       "value": "0"
+    },
+    {
+      "filePath": "\/Users\/alonshprung\/Work\/Unit\/white-label-banking-ios\/UnitWhiteLabelBanking\/UNComponents\/UI\/Components\/Card\/UNCardComponent.swift",
+      "kind": "StringLiteral",
+      "offset": 482,
+      "length": 9,
+      "value": "\"card-id\""
+    },
+    {
+      "filePath": "\/Users\/alonshprung\/Work\/Unit\/white-label-banking-ios\/UnitWhiteLabelBanking\/UNComponents\/UI\/Components\/Card\/UNCardComponent.swift",
+      "kind": "StringLiteral",
+      "offset": 535,
+      "length": 26,
+      "value": "\"hide-actions-menu-button\""
+    },
+    {
+      "filePath": "\/Users\/alonshprung\/Work\/Unit\/white-label-banking-ios\/UnitWhiteLabelBanking\/UNComponents\/UI\/Components\/Card\/UNCardComponent.swift",
+      "kind": "StringLiteral",
+      "offset": 597,
+      "length": 17,
+      "value": "\"hide-card-title\""
+    },
+    {
+      "filePath": "\/Users\/alonshprung\/Work\/Unit\/white-label-banking-ios\/UnitWhiteLabelBanking\/UNComponents\/UI\/Components\/Card\/UNCardComponent.swift",
+      "kind": "StringLiteral",
+      "offset": 660,
+      "length": 28,
+      "value": "\"hide-sensitive-data-button\""
     },
     {
       "filePath": "\/Users\/alonshprung\/Work\/Unit\/white-label-banking-ios\/UnitWhiteLabelBanking\/UNComponents\/UI\/Components\/Card\/UNCardComponent.swift",
@@ -16748,6 +19564,13 @@
       "offset": 2683,
       "length": 8,
       "value": "\"Frozen\""
+    },
+    {
+      "filePath": "\/Users\/alonshprung\/Work\/Unit\/white-label-banking-ios\/UnitWhiteLabelBanking\/UNComponents\/Infra\/Builders\/Components\/UNBookPaymentViewSettingsBuilder.swift",
+      "kind": "BooleanLiteral",
+      "offset": 297,
+      "length": 5,
+      "value": "false"
     },
     {
       "filePath": "\/Users\/alonshprung\/Work\/Unit\/white-label-banking-ios\/UnitWhiteLabelBanking\/UNComponents\/UI\/UNSnapKit\/UNConstraintAttributes.swift",
@@ -17038,31 +19861,66 @@
     },
     {
       "filePath": "\/Users\/alonshprung\/Work\/Unit\/white-label-banking-ios\/UnitWhiteLabelBanking\/UNComponents\/UI\/WebComponent\/UNWebComponent.swift",
+      "kind": "Dictionary",
+      "offset": 573,
+      "length": 3,
+      "value": "[]"
+    },
+    {
+      "filePath": "\/Users\/alonshprung\/Work\/Unit\/white-label-banking-ios\/UnitWhiteLabelBanking\/UNComponents\/UI\/WebComponent\/UNWebComponent.swift",
       "kind": "FloatLiteral",
-      "offset": 456,
+      "offset": 828,
       "length": 3,
       "value": "0.0"
     },
     {
       "filePath": "\/Users\/alonshprung\/Work\/Unit\/white-label-banking-ios\/UnitWhiteLabelBanking\/UNComponents\/UI\/WebComponent\/UNWebComponent.swift",
       "kind": "BooleanLiteral",
-      "offset": 789,
+      "offset": 1161,
       "length": 5,
       "value": "false"
     },
     {
       "filePath": "\/Users\/alonshprung\/Work\/Unit\/white-label-banking-ios\/UnitWhiteLabelBanking\/UNComponents\/UI\/WebComponent\/UNWebComponent.swift",
       "kind": "BooleanLiteral",
-      "offset": 866,
+      "offset": 1238,
       "length": 4,
       "value": "true"
     },
     {
       "filePath": "\/Users\/alonshprung\/Work\/Unit\/white-label-banking-ios\/UnitWhiteLabelBanking\/UNComponents\/UI\/WebComponent\/UNWebComponent.swift",
+      "kind": "Dictionary",
+      "offset": 1668,
+      "length": 3,
+      "value": "[]"
+    },
+    {
+      "filePath": "\/Users\/alonshprung\/Work\/Unit\/white-label-banking-ios\/UnitWhiteLabelBanking\/UNComponents\/UI\/WebComponent\/UNWebComponent.swift",
       "kind": "StringLiteral",
-      "offset": 175,
+      "offset": 278,
       "length": 14,
       "value": "\"UNComponents.UNWebComponent\""
+    },
+    {
+      "filePath": "\/Users\/alonshprung\/Work\/Unit\/white-label-banking-ios\/UnitWhiteLabelBanking\/UNComponents\/UI\/Components\/ACHCredit\/UNACHCreditComponent.swift",
+      "kind": "StringLiteral",
+      "offset": 444,
+      "length": 12,
+      "value": "\"account-id\""
+    },
+    {
+      "filePath": "\/Users\/alonshprung\/Work\/Unit\/white-label-banking-ios\/UnitWhiteLabelBanking\/UNComponents\/UI\/Components\/ACHCredit\/UNACHCreditComponent.swift",
+      "kind": "StringLiteral",
+      "offset": 490,
+      "length": 15,
+      "value": "\"is-auto-focus\""
+    },
+    {
+      "filePath": "\/Users\/alonshprung\/Work\/Unit\/white-label-banking-ios\/UnitWhiteLabelBanking\/UNComponents\/UI\/Components\/ACHCredit\/UNACHCreditComponent.swift",
+      "kind": "StringLiteral",
+      "offset": 531,
+      "length": 5,
+      "value": "\"fee\""
     },
     {
       "filePath": "\/Users\/alonshprung\/Work\/Unit\/white-label-banking-ios\/UnitWhiteLabelBanking\/UNComponents\/UI\/Components\/ACHCredit\/UNACHCreditComponent.swift",

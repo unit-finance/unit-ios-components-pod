@@ -271,6 +271,7 @@ SWIFT_CLASS("_TtC12UNComponents20UNACHCreditComponent")
 
 
 
+
 SWIFT_CLASS("_TtC12UNComponents19UNActivityComponent")
 @interface UNActivityComponent : UIView
 - (nullable instancetype)initWithCoder:(NSCoder * _Nonnull)aDecoder OBJC_DESIGNATED_INITIALIZER;
@@ -281,12 +282,6 @@ SWIFT_CLASS("_TtC12UNComponents19UNActivityComponent")
 
 
 
-
-SWIFT_CLASS("_TtC12UNComponents22UNBookPaymentComponent")
-@interface UNBookPaymentComponent : UIView
-- (nullable instancetype)initWithCoder:(NSCoder * _Nonnull)aDecoder OBJC_DESIGNATED_INITIALIZER;
-- (nonnull instancetype)initWithFrame:(CGRect)frame SWIFT_UNAVAILABLE;
-@end
 
 #endif
 #if defined(__cplusplus)
