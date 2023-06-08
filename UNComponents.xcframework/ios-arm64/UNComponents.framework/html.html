@@ -6,7 +6,9 @@
     </script>
     
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=0">
-    <UN_SCRIPT>
+    <script>
+        <UN_SCRIPT>
+    </script>
 </html>
 
 <body style="margin: 0;">
@@ -44,6 +46,24 @@
               })
           });
         
+        window.addEventListener("unitCheckDepositCreated", (e) => {
+            const response = e.detail
+              response.then((data) => {
+                postMessageToSDK({ type: "unit", action: "unitCheckDepositCreated", details: data.data })
+              }).catch((e) => {
+                console.log(e)
+              })
+          });
+        
+        window.addEventListener("unitCheckDepositRestartRequest", (e) => {
+            const response = e.detail
+              response.then((data) => {
+                postMessageToSDK({ type: "unit", action: "unitCheckDepositRestartRequest", details: data.data })
+              }).catch((e) => {
+                console.log(e)
+              })
+          });
+        
         window.addEventListener("unitRequestRendering", (e) => {
             postMessageToSDK({ type: "unit", action: 'unitRequestRendering', details: e.detail })
         });
@@ -55,7 +75,7 @@
         window.addEventListener("unitRequestOpenLink", (e) => {
             postMessageToSDK({ type: "unit", action: "unitRequestOpenLink", details: e.detail.href })
         });
-        
+
         window.addEventListener("unitRequestCloseFlow", (e) => {
             postMessageToSDK({ type: "unit", action: 'unitRequestCloseFlow', details: e.detail })
         });
@@ -64,10 +84,23 @@
             postMessageToSDK({ type: "unit", action: "unitRequestDownload", details: e.detail })
         });
         
+        window.addEventListener("unitPlaidLinkTokenCreated", (e) => {
+            const response = e.detail
+            response.then((data) => {
+                postMessageToSDK({ type: "unit", action: "plaidLinkTokenCreated", details: data.data})
+            }).catch((e) => {
+            console.log(e)
+            })
+        });
+        
+        window.addEventListener("unitRequestExternalSdk", (e) => {
+            postMessageToSDK({ type: "unit", action: "requestExternalSdk", details: e.detail})
+        });
+        
         window.addEventListener("unitCardStatusChanged", (e) => {
             const response = e.detail
             response.then((data) => {
-                postMessageToSDK({ type: "card", action: "cardStatusChanged", details: data.data} )
+                postMessageToSDK({ type: "bottomSheetSharedEvents", action: "cardStatusChanged", details: data.data} )
             }).catch((e) => {
                 console.log(e)
             })
@@ -76,7 +109,7 @@
         window.addEventListener("unitCardActivated", (e) => {
             const response = e.detail
             response.then((data) => {
-                postMessageToSDK({ type: "card", action: "cardActivated", details: data.data })
+                postMessageToSDK({ type: "bottomSheetSharedEvents", action: "cardActivated", details: data.data })
             }).catch((e) => {
                 console.log(e)
             })
@@ -85,12 +118,21 @@
         window.addEventListener("unitAccountChanged", (e) => {
              const response = e.detail
              response.then((data) => {
-               postMessageToSDK({ type: "account",action: "accountStatusChanged", details: data.data })
+               postMessageToSDK({ type: "bottomSheetSharedEvents",action: "accountStatusChanged", details: data.data })
              }).catch((e) => {
                console.log(e)
              })
          });
         
+        window.addEventListener("unitActivityFiltersChanged", (e) => {
+            postMessageToSDK({ type: "bottomSheetSharedEvents", action: "activityFiltersChanged", details: e.detail })
+        });
+        
+        const dispatchPlaidEvent = (details) => {
+            console.log(details)
+             const event = new CustomEvent("unitPlaidResponse",{ detail: JSON.parse(details) })
+             window.dispatchEvent(event)
+        }
         
         const dispatchRenderingEvent = (details) => {
             const event = new CustomEvent("unitRequestRendering",{ detail: JSON.parse(details) })
@@ -102,12 +144,21 @@
             window.dispatchEvent(event);
         }
         
+        const dispatchActivityFilterChangedEvent = (details) => {
+            const event = new CustomEvent("unitActivityFiltersChanged",{ detail: details});
+            window.dispatchEvent(event);
+        }
+        
         const dispatchOpenActionsMenu = (componentName) => {
             document.querySelector(componentName).dispatchEvent(new CustomEvent("unitRequestOpenActionsMenu"))
         }
 
         const dispatchRequestCardAction = (action) => {
             document.querySelector("unit-elements-card").dispatchEvent(new CustomEvent("unitRequestCardAction", {detail: {action: action}}))
+        }
+        
+        const dispatchRequestAccountAction = (action) => {
+            document.querySelector("unit-elements-account").dispatchEvent(new CustomEvent("unitRequestAccountAction", {detail: {action: action}}))
         }
         
     </script>
