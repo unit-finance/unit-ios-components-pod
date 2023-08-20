@@ -3,7 +3,7 @@
 ## Installation
 
 ### Cocoapods
-1. Set the dependency in your Podfile as follows: `pod 'UnitComponents', '~> 0.6.1'`.
+1. Set the dependency in your Podfile as follows: `pod 'UnitComponents'`.
 2. Execute `pod install` in Terminal.
 
 ## Follow The Official Documentation
