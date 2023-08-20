@@ -22,12 +22,11 @@ Pod::Spec.new do |s|
   # Setting pod `BUILD_LIBRARY_FOR_DISTRIBUTION` to `YES`
   s.pod_target_xcconfig = { 'BUILD_LIBRARY_FOR_DISTRIBUTION' => 'YES' }
 
-  s.source           = { :git => 'https://github.com/unit-finance/unit-ios-components-pod', :tag => s.version.to_s }
+  s.source           = { :git => 'https://github.com/unit-finance/unit-ios-components-pod.git', :tag => s.version.to_s }
   s.ios.vendored_frameworks = 'UNComponents.xcframework'
 
   # Dependencies
   s.dependency 'RxSwift', '~> 6.5'
   s.dependency 'RxCocoa', '~> 6.5'
-  s.dependency 'Alamofire', '~> 5.6'
   s.dependency 'Plaid', '~> 4.1'
 end
