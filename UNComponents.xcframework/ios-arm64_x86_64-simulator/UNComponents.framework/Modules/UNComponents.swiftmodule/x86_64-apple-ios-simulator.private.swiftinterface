@@ -3,16 +3,19 @@
 // swift-module-flags: -target x86_64-apple-ios11.0-simulator -enable-objc-interop -enable-library-evolution -swift-version 5 -enforce-exclusivity=checked -O -module-name UNComponents
 // swift-module-flags-ignorable: -enable-bare-slash-regex
 import AVFoundation
-import Alamofire
+import Dispatch
 import Foundation
 import LinkKit
+import MobileCoreServices
 import PassKit
 import RxCocoa
 import RxSwift
 import SafariServices
 import Swift
+import SystemConfiguration
 import UIKit
 @_exported import UNComponents
+import UniformTypeIdentifiers
 import WebKit
 import _Concurrency
 import _StringProcessing
