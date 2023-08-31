@@ -7665,6 +7665,794 @@
       },
       {
         "kind": "Import",
+        "name": "Foundation",
+        "printedName": "Foundation",
+        "declKind": "Import",
+        "moduleName": "UNComponents",
+        "declAttributes": [
+          "RawDocComment"
+        ]
+      },
+      {
+        "kind": "TypeDecl",
+        "name": "UNFontData",
+        "printedName": "UNFontData",
+        "children": [
+          {
+            "kind": "Var",
+            "name": "fontWeight",
+            "printedName": "fontWeight",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "FontWeight",
+                "printedName": "UNComponents.FontWeight",
+                "usr": "s:12UNComponents10FontWeightO"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "s:12UNComponents10UNFontDataV10fontWeightAA04FontE0Ovp",
+            "mangledName": "$s12UNComponents10UNFontDataV10fontWeightAA04FontE0Ovp",
+            "moduleName": "UNComponents",
+            "declAttributes": [
+              "HasStorage",
+              "AccessControl"
+            ],
+            "isLet": true,
+            "hasStorage": true,
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "FontWeight",
+                    "printedName": "UNComponents.FontWeight",
+                    "usr": "s:12UNComponents10FontWeightO"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:12UNComponents10UNFontDataV10fontWeightAA04FontE0Ovg",
+                "mangledName": "$s12UNComponents10UNFontDataV10fontWeightAA04FontE0Ovg",
+                "moduleName": "UNComponents",
+                "implicit": true,
+                "accessorKind": "get"
+              }
+            ]
+          },
+          {
+            "kind": "Var",
+            "name": "sources",
+            "printedName": "sources",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Array",
+                "printedName": "[UNComponents.UNFontSource]",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "UNFontSource",
+                    "printedName": "UNComponents.UNFontSource",
+                    "usr": "s:12UNComponents12UNFontSourceV"
+                  }
+                ],
+                "usr": "s:Sa"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "s:12UNComponents10UNFontDataV7sourcesSayAA0B6SourceVGvp",
+            "mangledName": "$s12UNComponents10UNFontDataV7sourcesSayAA0B6SourceVGvp",
+            "moduleName": "UNComponents",
+            "declAttributes": [
+              "HasStorage",
+              "AccessControl"
+            ],
+            "isLet": true,
+            "hasStorage": true,
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Array",
+                    "printedName": "[UNComponents.UNFontSource]",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "UNFontSource",
+                        "printedName": "UNComponents.UNFontSource",
+                        "usr": "s:12UNComponents12UNFontSourceV"
+                      }
+                    ],
+                    "usr": "s:Sa"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:12UNComponents10UNFontDataV7sourcesSayAA0B6SourceVGvg",
+                "mangledName": "$s12UNComponents10UNFontDataV7sourcesSayAA0B6SourceVGvg",
+                "moduleName": "UNComponents",
+                "implicit": true,
+                "accessorKind": "get"
+              }
+            ]
+          },
+          {
+            "kind": "Constructor",
+            "name": "init",
+            "printedName": "init(fontWeight:sources:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "UNFontData",
+                "printedName": "UNComponents.UNFontData",
+                "usr": "s:12UNComponents10UNFontDataV"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "FontWeight",
+                "printedName": "UNComponents.FontWeight",
+                "usr": "s:12UNComponents10FontWeightO"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Array",
+                "printedName": "[UNComponents.UNFontSource]",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "UNFontSource",
+                    "printedName": "UNComponents.UNFontSource",
+                    "usr": "s:12UNComponents12UNFontSourceV"
+                  }
+                ],
+                "usr": "s:Sa"
+              }
+            ],
+            "declKind": "Constructor",
+            "usr": "s:12UNComponents10UNFontDataV10fontWeight7sourcesAcA04FontE0O_SayAA0B6SourceVGtcfc",
+            "mangledName": "$s12UNComponents10UNFontDataV10fontWeight7sourcesAcA04FontE0O_SayAA0B6SourceVGtcfc",
+            "moduleName": "UNComponents",
+            "declAttributes": [
+              "AccessControl"
+            ],
+            "init_kind": "Designated"
+          }
+        ],
+        "declKind": "Struct",
+        "usr": "s:12UNComponents10UNFontDataV",
+        "mangledName": "$s12UNComponents10UNFontDataV",
+        "moduleName": "UNComponents",
+        "declAttributes": [
+          "AccessControl"
+        ]
+      },
+      {
+        "kind": "TypeDecl",
+        "name": "UNFontSource",
+        "printedName": "UNFontSource",
+        "children": [
+          {
+            "kind": "Var",
+            "name": "fileName",
+            "printedName": "fileName",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "String",
+                "printedName": "Swift.String",
+                "usr": "s:SS"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "s:12UNComponents12UNFontSourceV8fileNameSSvp",
+            "mangledName": "$s12UNComponents12UNFontSourceV8fileNameSSvp",
+            "moduleName": "UNComponents",
+            "declAttributes": [
+              "HasStorage",
+              "AccessControl"
+            ],
+            "isLet": true,
+            "hasStorage": true,
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "String",
+                    "printedName": "Swift.String",
+                    "usr": "s:SS"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:12UNComponents12UNFontSourceV8fileNameSSvg",
+                "mangledName": "$s12UNComponents12UNFontSourceV8fileNameSSvg",
+                "moduleName": "UNComponents",
+                "implicit": true,
+                "accessorKind": "get"
+              }
+            ]
+          },
+          {
+            "kind": "Var",
+            "name": "format",
+            "printedName": "format",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Optional",
+                "printedName": "Swift.String?",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "String",
+                    "printedName": "Swift.String",
+                    "usr": "s:SS"
+                  }
+                ],
+                "usr": "s:Sq"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "s:12UNComponents12UNFontSourceV6formatSSSgvp",
+            "mangledName": "$s12UNComponents12UNFontSourceV6formatSSSgvp",
+            "moduleName": "UNComponents",
+            "declAttributes": [
+              "HasStorage",
+              "AccessControl"
+            ],
+            "isLet": true,
+            "hasStorage": true,
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Optional",
+                    "printedName": "Swift.String?",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "String",
+                        "printedName": "Swift.String",
+                        "usr": "s:SS"
+                      }
+                    ],
+                    "usr": "s:Sq"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:12UNComponents12UNFontSourceV6formatSSSgvg",
+                "mangledName": "$s12UNComponents12UNFontSourceV6formatSSSgvg",
+                "moduleName": "UNComponents",
+                "implicit": true,
+                "accessorKind": "get"
+              }
+            ]
+          },
+          {
+            "kind": "Constructor",
+            "name": "init",
+            "printedName": "init(fileName:format:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "UNFontSource",
+                "printedName": "UNComponents.UNFontSource",
+                "usr": "s:12UNComponents12UNFontSourceV"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "String",
+                "printedName": "Swift.String",
+                "usr": "s:SS"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Optional",
+                "printedName": "Swift.String?",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "String",
+                    "printedName": "Swift.String",
+                    "usr": "s:SS"
+                  }
+                ],
+                "hasDefaultArg": true,
+                "usr": "s:Sq"
+              }
+            ],
+            "declKind": "Constructor",
+            "usr": "s:12UNComponents12UNFontSourceV8fileName6formatACSS_SSSgtcfc",
+            "mangledName": "$s12UNComponents12UNFontSourceV8fileName6formatACSS_SSSgtcfc",
+            "moduleName": "UNComponents",
+            "declAttributes": [
+              "AccessControl"
+            ],
+            "init_kind": "Designated"
+          }
+        ],
+        "declKind": "Struct",
+        "usr": "s:12UNComponents12UNFontSourceV",
+        "mangledName": "$s12UNComponents12UNFontSourceV",
+        "moduleName": "UNComponents",
+        "declAttributes": [
+          "AccessControl"
+        ]
+      },
+      {
+        "kind": "TypeDecl",
+        "name": "FontWeight",
+        "printedName": "FontWeight",
+        "children": [
+          {
+            "kind": "Var",
+            "name": "thin",
+            "printedName": "thin",
+            "children": [
+              {
+                "kind": "TypeFunc",
+                "name": "Function",
+                "printedName": "(UNComponents.FontWeight.Type) -> UNComponents.FontWeight",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "FontWeight",
+                    "printedName": "UNComponents.FontWeight",
+                    "usr": "s:12UNComponents10FontWeightO"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Metatype",
+                    "printedName": "UNComponents.FontWeight.Type",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "FontWeight",
+                        "printedName": "UNComponents.FontWeight",
+                        "usr": "s:12UNComponents10FontWeightO"
+                      }
+                    ]
+                  }
+                ]
+              }
+            ],
+            "declKind": "EnumElement",
+            "usr": "s:12UNComponents10FontWeightO4thinyA2CmF",
+            "mangledName": "$s12UNComponents10FontWeightO4thinyA2CmF",
+            "moduleName": "UNComponents"
+          },
+          {
+            "kind": "Var",
+            "name": "extraLight",
+            "printedName": "extraLight",
+            "children": [
+              {
+                "kind": "TypeFunc",
+                "name": "Function",
+                "printedName": "(UNComponents.FontWeight.Type) -> UNComponents.FontWeight",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "FontWeight",
+                    "printedName": "UNComponents.FontWeight",
+                    "usr": "s:12UNComponents10FontWeightO"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Metatype",
+                    "printedName": "UNComponents.FontWeight.Type",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "FontWeight",
+                        "printedName": "UNComponents.FontWeight",
+                        "usr": "s:12UNComponents10FontWeightO"
+                      }
+                    ]
+                  }
+                ]
+              }
+            ],
+            "declKind": "EnumElement",
+            "usr": "s:12UNComponents10FontWeightO10extraLightyA2CmF",
+            "mangledName": "$s12UNComponents10FontWeightO10extraLightyA2CmF",
+            "moduleName": "UNComponents"
+          },
+          {
+            "kind": "Var",
+            "name": "light",
+            "printedName": "light",
+            "children": [
+              {
+                "kind": "TypeFunc",
+                "name": "Function",
+                "printedName": "(UNComponents.FontWeight.Type) -> UNComponents.FontWeight",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "FontWeight",
+                    "printedName": "UNComponents.FontWeight",
+                    "usr": "s:12UNComponents10FontWeightO"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Metatype",
+                    "printedName": "UNComponents.FontWeight.Type",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "FontWeight",
+                        "printedName": "UNComponents.FontWeight",
+                        "usr": "s:12UNComponents10FontWeightO"
+                      }
+                    ]
+                  }
+                ]
+              }
+            ],
+            "declKind": "EnumElement",
+            "usr": "s:12UNComponents10FontWeightO5lightyA2CmF",
+            "mangledName": "$s12UNComponents10FontWeightO5lightyA2CmF",
+            "moduleName": "UNComponents"
+          },
+          {
+            "kind": "Var",
+            "name": "regular",
+            "printedName": "regular",
+            "children": [
+              {
+                "kind": "TypeFunc",
+                "name": "Function",
+                "printedName": "(UNComponents.FontWeight.Type) -> UNComponents.FontWeight",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "FontWeight",
+                    "printedName": "UNComponents.FontWeight",
+                    "usr": "s:12UNComponents10FontWeightO"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Metatype",
+                    "printedName": "UNComponents.FontWeight.Type",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "FontWeight",
+                        "printedName": "UNComponents.FontWeight",
+                        "usr": "s:12UNComponents10FontWeightO"
+                      }
+                    ]
+                  }
+                ]
+              }
+            ],
+            "declKind": "EnumElement",
+            "usr": "s:12UNComponents10FontWeightO7regularyA2CmF",
+            "mangledName": "$s12UNComponents10FontWeightO7regularyA2CmF",
+            "moduleName": "UNComponents"
+          },
+          {
+            "kind": "Var",
+            "name": "medium",
+            "printedName": "medium",
+            "children": [
+              {
+                "kind": "TypeFunc",
+                "name": "Function",
+                "printedName": "(UNComponents.FontWeight.Type) -> UNComponents.FontWeight",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "FontWeight",
+                    "printedName": "UNComponents.FontWeight",
+                    "usr": "s:12UNComponents10FontWeightO"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Metatype",
+                    "printedName": "UNComponents.FontWeight.Type",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "FontWeight",
+                        "printedName": "UNComponents.FontWeight",
+                        "usr": "s:12UNComponents10FontWeightO"
+                      }
+                    ]
+                  }
+                ]
+              }
+            ],
+            "declKind": "EnumElement",
+            "usr": "s:12UNComponents10FontWeightO6mediumyA2CmF",
+            "mangledName": "$s12UNComponents10FontWeightO6mediumyA2CmF",
+            "moduleName": "UNComponents"
+          },
+          {
+            "kind": "Var",
+            "name": "semiBold",
+            "printedName": "semiBold",
+            "children": [
+              {
+                "kind": "TypeFunc",
+                "name": "Function",
+                "printedName": "(UNComponents.FontWeight.Type) -> UNComponents.FontWeight",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "FontWeight",
+                    "printedName": "UNComponents.FontWeight",
+                    "usr": "s:12UNComponents10FontWeightO"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Metatype",
+                    "printedName": "UNComponents.FontWeight.Type",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "FontWeight",
+                        "printedName": "UNComponents.FontWeight",
+                        "usr": "s:12UNComponents10FontWeightO"
+                      }
+                    ]
+                  }
+                ]
+              }
+            ],
+            "declKind": "EnumElement",
+            "usr": "s:12UNComponents10FontWeightO8semiBoldyA2CmF",
+            "mangledName": "$s12UNComponents10FontWeightO8semiBoldyA2CmF",
+            "moduleName": "UNComponents"
+          },
+          {
+            "kind": "Var",
+            "name": "bold",
+            "printedName": "bold",
+            "children": [
+              {
+                "kind": "TypeFunc",
+                "name": "Function",
+                "printedName": "(UNComponents.FontWeight.Type) -> UNComponents.FontWeight",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "FontWeight",
+                    "printedName": "UNComponents.FontWeight",
+                    "usr": "s:12UNComponents10FontWeightO"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Metatype",
+                    "printedName": "UNComponents.FontWeight.Type",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "FontWeight",
+                        "printedName": "UNComponents.FontWeight",
+                        "usr": "s:12UNComponents10FontWeightO"
+                      }
+                    ]
+                  }
+                ]
+              }
+            ],
+            "declKind": "EnumElement",
+            "usr": "s:12UNComponents10FontWeightO4boldyA2CmF",
+            "mangledName": "$s12UNComponents10FontWeightO4boldyA2CmF",
+            "moduleName": "UNComponents"
+          },
+          {
+            "kind": "Var",
+            "name": "extraBold",
+            "printedName": "extraBold",
+            "children": [
+              {
+                "kind": "TypeFunc",
+                "name": "Function",
+                "printedName": "(UNComponents.FontWeight.Type) -> UNComponents.FontWeight",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "FontWeight",
+                    "printedName": "UNComponents.FontWeight",
+                    "usr": "s:12UNComponents10FontWeightO"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Metatype",
+                    "printedName": "UNComponents.FontWeight.Type",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "FontWeight",
+                        "printedName": "UNComponents.FontWeight",
+                        "usr": "s:12UNComponents10FontWeightO"
+                      }
+                    ]
+                  }
+                ]
+              }
+            ],
+            "declKind": "EnumElement",
+            "usr": "s:12UNComponents10FontWeightO9extraBoldyA2CmF",
+            "mangledName": "$s12UNComponents10FontWeightO9extraBoldyA2CmF",
+            "moduleName": "UNComponents"
+          },
+          {
+            "kind": "Var",
+            "name": "black",
+            "printedName": "black",
+            "children": [
+              {
+                "kind": "TypeFunc",
+                "name": "Function",
+                "printedName": "(UNComponents.FontWeight.Type) -> UNComponents.FontWeight",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "FontWeight",
+                    "printedName": "UNComponents.FontWeight",
+                    "usr": "s:12UNComponents10FontWeightO"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Metatype",
+                    "printedName": "UNComponents.FontWeight.Type",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "FontWeight",
+                        "printedName": "UNComponents.FontWeight",
+                        "usr": "s:12UNComponents10FontWeightO"
+                      }
+                    ]
+                  }
+                ]
+              }
+            ],
+            "declKind": "EnumElement",
+            "usr": "s:12UNComponents10FontWeightO5blackyA2CmF",
+            "mangledName": "$s12UNComponents10FontWeightO5blackyA2CmF",
+            "moduleName": "UNComponents"
+          },
+          {
+            "kind": "Function",
+            "name": "==",
+            "printedName": "==(_:_:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Bool",
+                "printedName": "Swift.Bool",
+                "usr": "s:Sb"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "FontWeight",
+                "printedName": "UNComponents.FontWeight",
+                "usr": "s:12UNComponents10FontWeightO"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "FontWeight",
+                "printedName": "UNComponents.FontWeight",
+                "usr": "s:12UNComponents10FontWeightO"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:12UNComponents10FontWeightO2eeoiySbAC_ACtFZ",
+            "mangledName": "$s12UNComponents10FontWeightO2eeoiySbAC_ACtFZ",
+            "moduleName": "UNComponents",
+            "static": true,
+            "implicit": true,
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Var",
+            "name": "hashValue",
+            "printedName": "hashValue",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Int",
+                "printedName": "Swift.Int",
+                "usr": "s:Si"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "s:12UNComponents10FontWeightO9hashValueSivp",
+            "mangledName": "$s12UNComponents10FontWeightO9hashValueSivp",
+            "moduleName": "UNComponents",
+            "implicit": true,
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Int",
+                    "printedName": "Swift.Int",
+                    "usr": "s:Si"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:12UNComponents10FontWeightO9hashValueSivg",
+                "mangledName": "$s12UNComponents10FontWeightO9hashValueSivg",
+                "moduleName": "UNComponents",
+                "implicit": true,
+                "accessorKind": "get"
+              }
+            ]
+          },
+          {
+            "kind": "Function",
+            "name": "hash",
+            "printedName": "hash(into:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Void",
+                "printedName": "()"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Hasher",
+                "printedName": "Swift.Hasher",
+                "paramValueOwnership": "InOut",
+                "usr": "s:s6HasherV"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:12UNComponents10FontWeightO4hash4intoys6HasherVz_tF",
+            "mangledName": "$s12UNComponents10FontWeightO4hash4intoys6HasherVz_tF",
+            "moduleName": "UNComponents",
+            "implicit": true,
+            "funcSelfKind": "NonMutating"
+          }
+        ],
+        "declKind": "Enum",
+        "usr": "s:12UNComponents10FontWeightO",
+        "mangledName": "$s12UNComponents10FontWeightO",
+        "moduleName": "UNComponents",
+        "declAttributes": [
+          "AccessControl"
+        ],
+        "conformances": [
+          {
+            "kind": "Conformance",
+            "name": "Equatable",
+            "printedName": "Equatable",
+            "usr": "s:SQ",
+            "mangledName": "$sSQ"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Hashable",
+            "printedName": "Hashable",
+            "usr": "s:SH",
+            "mangledName": "$sSH"
+          }
+        ]
+      },
+      {
+        "kind": "Import",
         "name": "UIKit",
         "printedName": "UIKit",
         "declKind": "Import",
@@ -11744,6 +12532,23 @@
         "declAttributes": [
           "RawDocComment"
         ]
+      },
+      {
+        "kind": "Import",
+        "name": "Foundation",
+        "printedName": "Foundation",
+        "declKind": "Import",
+        "moduleName": "UNComponents",
+        "declAttributes": [
+          "RawDocComment"
+        ]
+      },
+      {
+        "kind": "Import",
+        "name": "RxCocoa",
+        "printedName": "RxCocoa",
+        "declKind": "Import",
+        "moduleName": "UNComponents"
       },
       {
         "kind": "Import",
@@ -19778,6 +20583,16 @@
       },
       {
         "kind": "Import",
+        "name": "Foundation",
+        "printedName": "Foundation",
+        "declKind": "Import",
+        "moduleName": "UNComponents",
+        "declAttributes": [
+          "RawDocComment"
+        ]
+      },
+      {
+        "kind": "Import",
         "name": "LinkKit",
         "printedName": "LinkKit",
         "declKind": "Import",
@@ -23214,6 +24029,23 @@
       },
       {
         "kind": "Import",
+        "name": "Foundation",
+        "printedName": "Foundation",
+        "declKind": "Import",
+        "moduleName": "UNComponents",
+        "declAttributes": [
+          "RawDocComment"
+        ]
+      },
+      {
+        "kind": "Import",
+        "name": "UIKit",
+        "printedName": "UIKit",
+        "declKind": "Import",
+        "moduleName": "UNComponents"
+      },
+      {
+        "kind": "Import",
         "name": "UIKit",
         "printedName": "UIKit",
         "declKind": "Import",
@@ -23334,6 +24166,63 @@
             "declKind": "Func",
             "usr": "s:12UNComponents4UNUIP11setLanguageyySSSgF",
             "mangledName": "$s12UNComponents4UNUIP11setLanguageyySSSgF",
+            "moduleName": "UNComponents",
+            "genericSig": "<τ_0_0 where τ_0_0 : UNComponents.UNUI>",
+            "sugared_genericSig": "<Self where Self : UNComponents.UNUI>",
+            "protocolReq": true,
+            "reqNewWitnessTableEntry": true,
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Function",
+            "name": "setFonts",
+            "printedName": "setFonts(_:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Void",
+                "printedName": "()"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Optional",
+                "printedName": "[Swift.String : [UNComponents.UNFontData]]?",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Dictionary",
+                    "printedName": "[Swift.String : [UNComponents.UNFontData]]",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "String",
+                        "printedName": "Swift.String",
+                        "usr": "s:SS"
+                      },
+                      {
+                        "kind": "TypeNominal",
+                        "name": "Array",
+                        "printedName": "[UNComponents.UNFontData]",
+                        "children": [
+                          {
+                            "kind": "TypeNominal",
+                            "name": "UNFontData",
+                            "printedName": "UNComponents.UNFontData",
+                            "usr": "s:12UNComponents10UNFontDataV"
+                          }
+                        ],
+                        "usr": "s:Sa"
+                      }
+                    ],
+                    "usr": "s:SD"
+                  }
+                ],
+                "usr": "s:Sq"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:12UNComponents4UNUIP8setFontsyySDySSSayAA10UNFontDataVGGSgF",
+            "mangledName": "$s12UNComponents4UNUIP8setFontsyySDySSSayAA10UNFontDataVGGSgF",
             "moduleName": "UNComponents",
             "genericSig": "<τ_0_0 where τ_0_0 : UNComponents.UNUI>",
             "sugared_genericSig": "<Self where Self : UNComponents.UNUI>",
@@ -23532,6 +24421,108 @@
                 "declKind": "Accessor",
                 "usr": "s:12UNComponents4UNUIP8languageSSSgvg",
                 "mangledName": "$s12UNComponents4UNUIP8languageSSSgvg",
+                "moduleName": "UNComponents",
+                "genericSig": "<τ_0_0 where τ_0_0 : UNComponents.UNUI>",
+                "sugared_genericSig": "<Self where Self : UNComponents.UNUI>",
+                "protocolReq": true,
+                "reqNewWitnessTableEntry": true,
+                "accessorKind": "get"
+              }
+            ]
+          },
+          {
+            "kind": "Var",
+            "name": "fonts",
+            "printedName": "fonts",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Optional",
+                "printedName": "[Swift.String : [UNComponents.UNFontData]]?",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Dictionary",
+                    "printedName": "[Swift.String : [UNComponents.UNFontData]]",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "String",
+                        "printedName": "Swift.String",
+                        "usr": "s:SS"
+                      },
+                      {
+                        "kind": "TypeNominal",
+                        "name": "Array",
+                        "printedName": "[UNComponents.UNFontData]",
+                        "children": [
+                          {
+                            "kind": "TypeNominal",
+                            "name": "UNFontData",
+                            "printedName": "UNComponents.UNFontData",
+                            "usr": "s:12UNComponents10UNFontDataV"
+                          }
+                        ],
+                        "usr": "s:Sa"
+                      }
+                    ],
+                    "usr": "s:SD"
+                  }
+                ],
+                "usr": "s:Sq"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "s:12UNComponents4UNUIP5fontsSDySSSayAA10UNFontDataVGGSgvp",
+            "mangledName": "$s12UNComponents4UNUIP5fontsSDySSSayAA10UNFontDataVGGSgvp",
+            "moduleName": "UNComponents",
+            "protocolReq": true,
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Optional",
+                    "printedName": "[Swift.String : [UNComponents.UNFontData]]?",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "Dictionary",
+                        "printedName": "[Swift.String : [UNComponents.UNFontData]]",
+                        "children": [
+                          {
+                            "kind": "TypeNominal",
+                            "name": "String",
+                            "printedName": "Swift.String",
+                            "usr": "s:SS"
+                          },
+                          {
+                            "kind": "TypeNominal",
+                            "name": "Array",
+                            "printedName": "[UNComponents.UNFontData]",
+                            "children": [
+                              {
+                                "kind": "TypeNominal",
+                                "name": "UNFontData",
+                                "printedName": "UNComponents.UNFontData",
+                                "usr": "s:12UNComponents10UNFontDataV"
+                              }
+                            ],
+                            "usr": "s:Sa"
+                          }
+                        ],
+                        "usr": "s:SD"
+                      }
+                    ],
+                    "usr": "s:Sq"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:12UNComponents4UNUIP5fontsSDySSSayAA10UNFontDataVGGSgvg",
+                "mangledName": "$s12UNComponents4UNUIP5fontsSDySSSayAA10UNFontDataVGGSgvg",
                 "moduleName": "UNComponents",
                 "genericSig": "<τ_0_0 where τ_0_0 : UNComponents.UNUI>",
                 "sugared_genericSig": "<Self where Self : UNComponents.UNUI>",
@@ -31101,79 +32092,79 @@
     {
       "filePath": "\/Users\/runner\/work\/unit-ios-components\/unit-ios-components\/UnitWhiteLabelBanking\/UNComponents\/UI\/BottomSheetComponent\/UNBottomSheetComponent.swift",
       "kind": "IntegerLiteral",
-      "offset": 1232,
+      "offset": 1228,
       "length": 2,
       "value": "15"
     },
     {
       "filePath": "\/Users\/runner\/work\/unit-ios-components\/unit-ios-components\/UnitWhiteLabelBanking\/UNComponents\/UI\/BottomSheetComponent\/UNBottomSheetComponent.swift",
       "kind": "IntegerLiteral",
-      "offset": 1285,
+      "offset": 1281,
       "length": 3,
       "value": "15"
     },
     {
       "filePath": "\/Users\/runner\/work\/unit-ios-components\/unit-ios-components\/UnitWhiteLabelBanking\/UNComponents\/UI\/BottomSheetComponent\/UNBottomSheetComponent.swift",
       "kind": "IntegerLiteral",
-      "offset": 1321,
+      "offset": 1317,
       "length": 2,
       "value": "36"
     },
     {
       "filePath": "\/Users\/runner\/work\/unit-ios-components\/unit-ios-components\/UnitWhiteLabelBanking\/UNComponents\/UI\/BottomSheetComponent\/UNBottomSheetComponent.swift",
       "kind": "IntegerLiteral",
-      "offset": 1357,
+      "offset": 1353,
       "length": 2,
       "value": "36"
     },
     {
       "filePath": "\/Users\/runner\/work\/unit-ios-components\/unit-ios-components\/UnitWhiteLabelBanking\/UNComponents\/UI\/BottomSheetComponent\/UNBottomSheetComponent.swift",
       "kind": "FloatLiteral",
-      "offset": 1438,
+      "offset": 1434,
       "length": 3,
       "value": "0.6"
     },
     {
       "filePath": "\/Users\/runner\/work\/unit-ios-components\/unit-ios-components\/UnitWhiteLabelBanking\/UNComponents\/UI\/BottomSheetComponent\/UNBottomSheetComponent.swift",
       "kind": "IntegerLiteral",
-      "offset": 1565,
+      "offset": 1561,
       "length": 1,
       "value": "0"
     },
     {
       "filePath": "\/Users\/runner\/work\/unit-ios-components\/unit-ios-components\/UnitWhiteLabelBanking\/UNComponents\/UI\/BottomSheetComponent\/UNBottomSheetComponent.swift",
       "kind": "IntegerLiteral",
-      "offset": 1764,
+      "offset": 1759,
       "length": 2,
       "value": "18"
     },
     {
       "filePath": "\/Users\/runner\/work\/unit-ios-components\/unit-ios-components\/UnitWhiteLabelBanking\/UNComponents\/UI\/BottomSheetComponent\/UNBottomSheetComponent.swift",
       "kind": "BooleanLiteral",
-      "offset": 1813,
+      "offset": 1808,
       "length": 4,
       "value": "true"
     },
     {
       "filePath": "\/Users\/runner\/work\/unit-ios-components\/unit-ios-components\/UnitWhiteLabelBanking\/UNComponents\/UI\/BottomSheetComponent\/UNBottomSheetComponent.swift",
       "kind": "IntegerLiteral",
-      "offset": 2200,
+      "offset": 2201,
       "length": 2,
       "value": "16"
     },
     {
       "filePath": "\/Users\/runner\/work\/unit-ios-components\/unit-ios-components\/UnitWhiteLabelBanking\/UNComponents\/UI\/BottomSheetComponent\/UNBottomSheetComponent.swift",
       "kind": "IntegerLiteral",
-      "offset": 2236,
+      "offset": 2237,
       "length": 2,
       "value": "16"
     },
     {
       "filePath": "\/Users\/runner\/work\/unit-ios-components\/unit-ios-components\/UnitWhiteLabelBanking\/UNComponents\/UI\/BottomSheetComponent\/UNBottomSheetComponent.swift",
       "kind": "StringLiteral",
-      "offset": 2391,
-      "length": 14,
-      "value": "\"cancelButton\""
+      "offset": 2400,
+      "length": 17,
+      "value": "\"un_close_button\""
     },
     {
       "filePath": "\/Users\/runner\/work\/unit-ios-components\/unit-ios-components\/UnitWhiteLabelBanking\/UNComponents\/UI\/BottomSheetComponent\/UNBottomSheetComponent.swift",

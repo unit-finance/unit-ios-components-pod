@@ -265,6 +265,9 @@ using UInt = size_t;
 
 
 
+
+
+
 @class NSCoder;
 
 SWIFT_CLASS("_TtC12UNComponents20UNACHCreditComponent")
@@ -567,6 +570,9 @@ using UInt = size_t;
 #endif
 
 #if defined(__OBJC__)
+
+
+
 
 
 

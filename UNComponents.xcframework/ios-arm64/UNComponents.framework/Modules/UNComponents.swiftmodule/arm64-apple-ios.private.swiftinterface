@@ -252,6 +252,34 @@ public protocol UNACHDebitViewSettingsProtocol {
   var isAutoFocus: Swift.Bool { get }
 }
 public typealias UNAccountComponentCallbacks = (_ callback: UNComponents.UNAccountComponentCallback) -> Swift.Void
+public typealias UNFonts = [UNComponents.UNFontFamilyName : [UNComponents.UNFontData]]
+public typealias UNFontFamilyName = Swift.String
+public struct UNFontData {
+  public let fontWeight: UNComponents.FontWeight
+  public let sources: [UNComponents.UNFontSource]
+  public init(fontWeight: UNComponents.FontWeight, sources: [UNComponents.UNFontSource])
+}
+public struct UNFontSource {
+  public let fileName: Swift.String
+  public let format: Swift.String?
+  public init(fileName: Swift.String, format: Swift.String? = nil)
+}
+public enum FontWeight {
+  case thin
+  case extraLight
+  case light
+  case regular
+  case medium
+  case semiBold
+  case bold
+  case extraBold
+  case black
+  public static func == (a: UNComponents.FontWeight, b: UNComponents.FontWeight) -> Swift.Bool
+  public func hash(into hasher: inout Swift.Hasher)
+  public var hashValue: Swift.Int {
+    get
+  }
+}
 public enum UNActivityComponentCallback {
   case unitOnLoad(result: Swift.Result<Swift.Void, UNComponents.UNError>)
 }
@@ -698,10 +726,12 @@ public struct UNErrorResponse : Swift.Codable {
 public protocol UNUI {
   func setTheme(_ theme: UNComponents.UNTheme?)
   func setLanguage(_ language: UNComponents.UNLanguage?)
+  func setFonts(_ fonts: UNComponents.UNFonts?)
   var views: UNComponents.UNUIViews { get }
   var flows: UNComponents.UNUIFlows { get }
   var theme: UNComponents.UNTheme? { get }
   var language: UNComponents.UNLanguage? { get }
+  var fonts: UNComponents.UNFonts? { get }
 }
 @_hasMissingDesignatedInitializers public class UnitSDK {
   public static let manager: UNComponents.UNManagerProtocol
@@ -757,6 +787,8 @@ extension UNComponents.UNCheckStatus : Swift.RawRepresentable {}
 extension UNComponents.UNAccountMenuAction : Swift.Equatable {}
 extension UNComponents.UNAccountMenuAction : Swift.Hashable {}
 extension UNComponents.UNAccountMenuAction : Swift.RawRepresentable {}
+extension UNComponents.FontWeight : Swift.Equatable {}
+extension UNComponents.FontWeight : Swift.Hashable {}
 extension UNComponents.UNCardType : Swift.Equatable {}
 extension UNComponents.UNCardType : Swift.Hashable {}
 extension UNComponents.UNCardType : Swift.RawRepresentable {}
