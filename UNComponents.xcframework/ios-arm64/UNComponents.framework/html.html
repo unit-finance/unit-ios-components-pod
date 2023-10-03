@@ -173,5 +173,14 @@
             document.querySelector("unit-elements-account").dispatchEvent(new CustomEvent("unitRequestAccountAction", {detail: {action: action}}))
         }
         
+        const dispatchRequestHideSensitiveData = (componentName) => {
+            document.querySelector(componentName).dispatchEvent(new CustomEvent("unitRequestHideSensitiveData"))
+        }
+        
+        const dispatchRequestShowSensitiveData = (componentName) => {
+            document.querySelector(componentName).dispatchEvent(new CustomEvent("unitRequestShowSensitiveData"))
+        }
+
+        
     </script>
 </body>

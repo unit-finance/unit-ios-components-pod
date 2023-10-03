@@ -119,9 +119,13 @@ public class UNACHDebitViewSettingsBuilder : UNComponents.UNACHDebitViewSettings
   public var isAutoFocus: Swift.Bool {
     get
   }
-  public init(fee: Swift.Double? = nil, isAutoFocus: Swift.Bool = false)
+  public var sameDay: Swift.Bool {
+    get
+  }
+  public init(fee: Swift.Double? = nil, isAutoFocus: Swift.Bool = false, sameDay: Swift.Bool = false)
   public func fee(_ fee: Swift.Double) -> UNComponents.UNACHDebitViewSettingsBuilder
   public func isAutoFocus(_ isAutoFocus: Swift.Bool) -> UNComponents.UNACHDebitViewSettingsBuilder
+  public func sameDay(_ sameDay: Swift.Bool) -> UNComponents.UNACHDebitViewSettingsBuilder
   @objc deinit
 }
 public struct UNCheckCounterparty : Swift.Codable {
@@ -217,10 +221,14 @@ public class UNACHCreditViewSettingsBuilder : UNComponents.UNACHCreditViewSettin
   public var withPlaid: Swift.Bool {
     get
   }
-  public init(fee: Swift.Double? = nil, isAutoFocus: Swift.Bool = false, withPlaid: Swift.Bool = false)
+  public var sameDay: Swift.Bool {
+    get
+  }
+  public init(fee: Swift.Double? = nil, isAutoFocus: Swift.Bool = false, withPlaid: Swift.Bool = false, sameDay: Swift.Bool = false)
   public func fee(_ fee: Swift.Double) -> UNComponents.UNACHCreditViewSettingsBuilder
   public func isAutoFocus(_ isAutoFocus: Swift.Bool) -> UNComponents.UNACHCreditViewSettingsBuilder
   public func withPlaid(_ withPlaid: Swift.Bool) -> UNComponents.UNACHCreditViewSettingsBuilder
+  public func sameDay(_ sameDay: Swift.Bool) -> UNComponents.UNACHCreditViewSettingsBuilder
   @objc deinit
 }
 public typealias UNBookPaymentComponentCallbacks = (_ callback: UNComponents.UNBookPaymentComponentCallback) -> Swift.Void
@@ -242,6 +250,7 @@ public protocol UNACHCreditViewSettingsProtocol {
   var fee: Swift.Double? { get }
   var isAutoFocus: Swift.Bool { get }
   var withPlaid: Swift.Bool { get }
+  var sameDay: Swift.Bool { get }
 }
 public protocol UNACHDebitView : UIKit.UIView {
   var accountId: Swift.String { get set }
@@ -250,6 +259,7 @@ public protocol UNACHDebitView : UIKit.UIView {
 public protocol UNACHDebitViewSettingsProtocol {
   var fee: Swift.Double? { get }
   var isAutoFocus: Swift.Bool { get }
+  var sameDay: Swift.Bool { get }
 }
 public typealias UNAccountComponentCallbacks = (_ callback: UNComponents.UNAccountComponentCallback) -> Swift.Void
 public typealias UNFonts = [UNComponents.UNFontFamilyName : [UNComponents.UNFontData]]
@@ -333,6 +343,7 @@ public enum UNCardType : Swift.String, Swift.Codable {
 public protocol UNManagerProtocol : AnyObject {
   var customerToken: UNComponents.UNCustomerToken? { get set }
   var environment: UNComponents.UNEnvironment? { get set }
+  var webVersioningStrategy: UNComponents.UNWebVersioningStrategy { get set }
   var ui: UNComponents.UNUI { get }
   var services: UNComponents.UNServices { get }
 }
@@ -723,6 +734,11 @@ public struct UNErrorResponse : Swift.Codable {
   public func encode(to encoder: Swift.Encoder) throws
   public init(from decoder: Swift.Decoder) throws
 }
+public enum UNWebVersioningStrategy {
+  case exact(major: Swift.Int, minor: Swift.Int, patch: Swift.Int)
+  case upToNextMinor(major: Swift.Int, minor: Swift.Int)
+  case upToNextMajor(major: Swift.Int)
+}
 public protocol UNUI {
   func setTheme(_ theme: UNComponents.UNTheme?)
   func setLanguage(_ language: UNComponents.UNLanguage?)
@@ -770,6 +786,8 @@ public protocol UNCardView : UIKit.UIView {
   var additionalSetting: UNComponents.UNCardViewSettingsProtocol { get set }
   func openActionsMenu()
   func open(action: UNComponents.UNCardMenuAction)
+  func showSensitiveData()
+  func hideSensitiveData()
 }
 public protocol UNCardViewSettingsProtocol {
   var hideActionsMenuButton: Swift.Bool { get }
