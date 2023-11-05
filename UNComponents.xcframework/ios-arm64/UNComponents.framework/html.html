@@ -139,6 +139,15 @@
         window.addEventListener("unitActivityFiltersChanged", (e) => {
             postMessageToSDK({ type: "bottomSheetSharedEvents", action: "activityFiltersChanged", details: e.detail })
         });
+
+        window.addEventListener("unitMultipleCardsCardClicked", (e) => {
+            const response = e.detail
+            response.then((data) => {
+              postMessageToSDK({ type: "unit",action: "unitMultipleCardsCardClicked", details: data.data })
+            }).catch((e) => {
+              console.log(e)
+            })
+        });
         
         const dispatchPlaidEvent = (details) => {
             console.log(details)

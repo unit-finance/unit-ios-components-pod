@@ -80,9 +80,12 @@ extension UNComponents.UNACHDebitComponent : UNComponents.UNACHDebitView {
 }
 public protocol UNActivityView : UIKit.UIView {
   var accountId: Swift.String? { get set }
+  var additionalSettings: UNComponents.UNActivityViewSettingsProtocol { get set }
 }
 public protocol UNActivityViewSettingsProtocol {
   var hideFilterButton: Swift.Bool { get }
+  var paginationType: UNComponents.UNActivityComponentPaginationType { get }
+  var transactionsPerPage: Swift.Int? { get }
 }
 public protocol UNServices {
   func setVisaProvider(_ provider: UNComponents.UNVisaProviding)
@@ -103,6 +106,19 @@ public class UNAccountViewSettingsBuilder : UNComponents.UNAccountViewSettingsPr
   public func hideSelectionMenuButton(_ hideSelectionMenuButton: Swift.Bool) -> UNComponents.UNAccountViewSettingsBuilder
   @objc deinit
 }
+public enum UNMultipleCardsComponentCallback {
+  case unitOnLoad(result: Swift.Result<[UNComponents.UNCardData], UNComponents.UNError>)
+  case cardClicked(card: UNComponents.UNCardData)
+}
+public enum UNMultipleCardsComponentPaginationType : Swift.String {
+  case infiniteScroll
+  case pagination
+  public init?(rawValue: Swift.String)
+  public typealias RawValue = Swift.String
+  public var rawValue: Swift.String {
+    get
+  }
+}
 public enum UNError : Swift.Error {
   case onLoad(errors: [UNComponents.UNErrorResponse])
   case missingCustomerToken
@@ -112,6 +128,7 @@ public enum UNError : Swift.Error {
     get
   }
 }
+public typealias UNMultipleCardsComponentCallbacks = (_ callback: UNComponents.UNMultipleCardsComponentCallback) -> Swift.Void
 public class UNACHDebitViewSettingsBuilder : UNComponents.UNACHDebitViewSettingsProtocol {
   public var fee: Swift.Double? {
     get
@@ -231,6 +248,14 @@ public class UNACHCreditViewSettingsBuilder : UNComponents.UNACHCreditViewSettin
   public func sameDay(_ sameDay: Swift.Bool) -> UNComponents.UNACHCreditViewSettingsBuilder
   @objc deinit
 }
+public protocol UNMultipleCardsView : UIKit.UIView {
+  var additionalSetting: UNComponents.UNMultipleCardsViewSettingsProtocol { get set }
+}
+public protocol UNMultipleCardsViewSettingsProtocol {
+  var paginationType: UNComponents.UNMultipleCardsComponentPaginationType { get }
+  var cardsPerPage: Swift.Int? { get }
+  var disableCardClick: Swift.Bool { get }
+}
 public typealias UNBookPaymentComponentCallbacks = (_ callback: UNComponents.UNBookPaymentComponentCallback) -> Swift.Void
 public enum UNAccountMenuAction : Swift.String {
   case openAccountDetails
@@ -293,6 +318,15 @@ public enum FontWeight {
 public enum UNActivityComponentCallback {
   case unitOnLoad(result: Swift.Result<Swift.Void, UNComponents.UNError>)
 }
+public enum UNActivityComponentPaginationType : Swift.String {
+  case infiniteScroll
+  case pagination
+  public init?(rawValue: Swift.String)
+  public typealias RawValue = Swift.String
+  public var rawValue: Swift.String {
+    get
+  }
+}
 @objc @_Concurrency.MainActor(unsafe) public class UNActivityComponent : UIKit.UIView {
   @_Concurrency.MainActor(unsafe) public init(accountId: Swift.String?, additionalSettings: UNComponents.UNActivityViewSettingsProtocol, theme: UNComponents.UNTheme?, language: UNComponents.UNLanguage?, callbacks: UNComponents.UNActivityComponentCallbacks?)
   @_Concurrency.MainActor(unsafe) @objc required dynamic public init?(coder aDecoder: Foundation.NSCoder)
@@ -302,6 +336,10 @@ extension UNComponents.UNActivityComponent : UNComponents.UNActivityView {
   @_Concurrency.MainActor(unsafe) public var accountId: Swift.String? {
     get
     set(newAccountId)
+  }
+  @_Concurrency.MainActor(unsafe) public var additionalSettings: UNComponents.UNActivityViewSettingsProtocol {
+    get
+    set(newAdditionalSettings)
   }
 }
 public enum UNACHDebitComponentCallback {
@@ -355,6 +393,7 @@ public protocol UNUIViews {
   func getAccountComponent(accountId: Swift.String?, additionalSettings: UNComponents.UNAccountViewSettingsProtocol?, theme: UNComponents.UNTheme?, language: UNComponents.UNLanguage?, callbacks: UNComponents.UNAccountComponentCallbacks?) -> UNComponents.UNAccountView
   func getBookPaymentComponent(accountId: Swift.String, counterpartyAccountId: Swift.String, counterpartyName: Swift.String, isSameCustomer: Swift.Bool, additionalSettings: UNComponents.UNBookPaymentViewSettingsProtocol?, theme: UNComponents.UNTheme?, language: UNComponents.UNLanguage?, callbacks: UNComponents.UNBookPaymentComponentCallbacks?) -> UNComponents.UNBookPaymentView
   func getCheckDepositComponent(accountId: Swift.String, fee: Swift.Double, theme: UNComponents.UNTheme?, language: UNComponents.UNLanguage?, callbacks: UNComponents.UNCheckDepositComponentCallbacks?) -> UNComponents.UNCheckDepositView
+  func getMultipleCardsComponent(additionalSettings: UNComponents.UNMultipleCardsViewSettingsProtocol?, theme: UNComponents.UNTheme?, language: UNComponents.UNLanguage?, callbacks: UNComponents.UNMultipleCardsComponentCallbacks?) -> UNComponents.UNMultipleCardsView
 }
 extension UNComponents.UNUIViews {
   public func getCardComponent(id: Swift.String, additionalSettings: UNComponents.UNCardViewSettingsProtocol? = nil, theme: UNComponents.UNTheme? = nil, language: UNComponents.UNLanguage? = nil, callbacks: UNComponents.UNCardComponentCallbacks? = nil) -> UNComponents.UNCardView
@@ -364,6 +403,7 @@ extension UNComponents.UNUIViews {
   public func getAccountComponent(accountId: Swift.String? = nil, additionalSettings: UNComponents.UNAccountViewSettingsProtocol? = nil, theme: UNComponents.UNTheme? = nil, language: UNComponents.UNLanguage? = nil, callbacks: UNComponents.UNAccountComponentCallbacks? = nil) -> UNComponents.UNAccountView
   public func getBookPaymentComponent(accountId: Swift.String, counterpartyAccountId: Swift.String, counterpartyName: Swift.String, isSameCustomer: Swift.Bool = false, additionalSettings: UNComponents.UNBookPaymentViewSettingsProtocol? = nil, theme: UNComponents.UNTheme? = nil, language: UNComponents.UNLanguage? = nil, callbacks: UNComponents.UNBookPaymentComponentCallbacks? = nil) -> UNComponents.UNBookPaymentView
   public func getCheckDepositComponent(accountId: Swift.String, fee: Swift.Double, theme: UNComponents.UNTheme? = nil, language: UNComponents.UNLanguage? = nil, callbacks: UNComponents.UNCheckDepositComponentCallbacks? = nil) -> UNComponents.UNCheckDepositView
+  public func getMultipleCardsComponent(additionalSettings: UNComponents.UNMultipleCardsViewSettingsProtocol? = nil, theme: UNComponents.UNTheme? = nil, language: UNComponents.UNLanguage? = nil, callbacks: UNComponents.UNMultipleCardsComponentCallbacks? = nil) -> UNComponents.UNMultipleCardsView
 }
 public class UNCardViewSettingsBuilder : UNComponents.UNCardViewSettingsProtocol {
   public var hideActionsMenuButton: Swift.Bool {
@@ -529,11 +569,19 @@ public struct UNVPCardProvisioningResponse {
   public init(walletStatus: UNComponents.UNVPProvisionStatus)
 }
 public class UNActivityViewSettingsBuilder : UNComponents.UNActivityViewSettingsProtocol {
+  public var paginationType: UNComponents.UNActivityComponentPaginationType {
+    get
+  }
+  public var transactionsPerPage: Swift.Int? {
+    get
+  }
   public var hideFilterButton: Swift.Bool {
     get
   }
-  public init(hideFilterButton: Swift.Bool = false)
+  public init(hideFilterButton: Swift.Bool = false, paginationType: UNComponents.UNActivityComponentPaginationType = .infiniteScroll, transactionsPerPage: Swift.Int? = nil)
   public func hideFilterButton(_ hideFilterButton: Swift.Bool) -> UNComponents.UNActivityViewSettingsBuilder
+  public func paginationType(_ paginationType: UNComponents.UNActivityComponentPaginationType) -> UNComponents.UNActivityViewSettingsBuilder
+  public func transactionsPerPage(_ transactionsPerPage: Swift.Int) -> UNComponents.UNActivityViewSettingsBuilder
   @objc deinit
 }
 public typealias UNActivityComponentCallbacks = (_ callback: UNComponents.UNActivityComponentCallback) -> Swift.Void
@@ -686,16 +734,34 @@ public protocol UNAccountViewSettingsProtocol {
   var hideActionsMenuButton: Swift.Bool { get }
   var hideSelectionMenuButton: Swift.Bool { get }
 }
-public enum UNEnvironment {
+public enum UNEnvironment : Swift.Codable {
   case sandbox
   case production
   public static func == (a: UNComponents.UNEnvironment, b: UNComponents.UNEnvironment) -> Swift.Bool
   public func hash(into hasher: inout Swift.Hasher)
+  public func encode(to encoder: Swift.Encoder) throws
   public var hashValue: Swift.Int {
     get
   }
+  public init(from decoder: Swift.Decoder) throws
 }
 public typealias UNACHDebitComponentCallbacks = (_ callback: UNComponents.UNACHDebitComponentCallback) -> Swift.Void
+public class UNMultipleCardsViewSettingsBuilder : UNComponents.UNMultipleCardsViewSettingsProtocol {
+  public var paginationType: UNComponents.UNMultipleCardsComponentPaginationType {
+    get
+  }
+  public var cardsPerPage: Swift.Int? {
+    get
+  }
+  public var disableCardClick: Swift.Bool {
+    get
+  }
+  public init(paginationType: UNComponents.UNMultipleCardsComponentPaginationType = .infiniteScroll, cardsPerPage: Swift.Int? = nil, disableCardClick: Swift.Bool = false)
+  public func paginationType(_ paginationType: UNComponents.UNMultipleCardsComponentPaginationType) -> UNComponents.UNMultipleCardsViewSettingsBuilder
+  public func cardsPerPage(_ cardsPerPage: Swift.Int) -> UNComponents.UNMultipleCardsViewSettingsBuilder
+  public func disableCardClick(_ disableCardClick: Swift.Bool) -> UNComponents.UNMultipleCardsViewSettingsBuilder
+  @objc deinit
+}
 @objc @_Concurrency.MainActor(unsafe) public class UNACHCreditComponent : UIKit.UIView {
   @_Concurrency.MainActor(unsafe) public init(accountId: Swift.String, additionalSettings: UNComponents.UNACHCreditViewSettingsProtocol, theme: UNComponents.UNTheme?, language: UNComponents.UNLanguage?, callbacks: UNComponents.UNACHCreditComponentCallbacks?)
   @_Concurrency.MainActor(unsafe) @objc required dynamic public init?(coder aDecoder: Foundation.NSCoder)
@@ -750,6 +816,7 @@ public protocol UNUI {
   var fonts: UNComponents.UNFonts? { get }
 }
 @_hasMissingDesignatedInitializers public class UnitSDK {
+  public static var version: Swift.String
   public static let manager: UNComponents.UNManagerProtocol
   @objc deinit
 }
@@ -799,6 +866,9 @@ public protocol UNCardViewSettingsProtocol {
 extension UNComponents.UNCardMenuAction : Swift.Equatable {}
 extension UNComponents.UNCardMenuAction : Swift.Hashable {}
 extension UNComponents.UNCardMenuAction : Swift.RawRepresentable {}
+extension UNComponents.UNMultipleCardsComponentPaginationType : Swift.Equatable {}
+extension UNComponents.UNMultipleCardsComponentPaginationType : Swift.Hashable {}
+extension UNComponents.UNMultipleCardsComponentPaginationType : Swift.RawRepresentable {}
 extension UNComponents.UNCheckStatus : Swift.Equatable {}
 extension UNComponents.UNCheckStatus : Swift.Hashable {}
 extension UNComponents.UNCheckStatus : Swift.RawRepresentable {}
@@ -807,6 +877,9 @@ extension UNComponents.UNAccountMenuAction : Swift.Hashable {}
 extension UNComponents.UNAccountMenuAction : Swift.RawRepresentable {}
 extension UNComponents.FontWeight : Swift.Equatable {}
 extension UNComponents.FontWeight : Swift.Hashable {}
+extension UNComponents.UNActivityComponentPaginationType : Swift.Equatable {}
+extension UNComponents.UNActivityComponentPaginationType : Swift.Hashable {}
+extension UNComponents.UNActivityComponentPaginationType : Swift.RawRepresentable {}
 extension UNComponents.UNCardType : Swift.Equatable {}
 extension UNComponents.UNCardType : Swift.Hashable {}
 extension UNComponents.UNCardType : Swift.RawRepresentable {}
