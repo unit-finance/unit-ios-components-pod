@@ -8,4 +8,4 @@
 
 ## Follow The Official Documentation
 
-Please follow [the official White-Label UIs iOS SDK documentation](https://guides.unit.co/ios-sdk).
+Please follow [the official White-Label UIs iOS SDK documentation](https://unit.co/docs/white-label-uis/ios-sdk).
