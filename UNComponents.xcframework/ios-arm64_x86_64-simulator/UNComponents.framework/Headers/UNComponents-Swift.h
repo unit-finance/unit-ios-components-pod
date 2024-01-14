@@ -294,19 +294,6 @@ SWIFT_CLASS("_TtC12UNComponents19UNACHDebitComponent")
 
 
 
-SWIFT_CLASS("_TtC12UNComponents19UNActivityComponent")
-@interface UNActivityComponent : UIView
-- (nullable instancetype)initWithCoder:(NSCoder * _Nonnull)aDecoder OBJC_DESIGNATED_INITIALIZER;
-- (nonnull instancetype)initWithFrame:(CGRect)frame SWIFT_UNAVAILABLE;
-@end
-
-
-
-
-
-
-
-
 
 #endif
 #if defined(__cplusplus)
@@ -605,19 +592,6 @@ SWIFT_CLASS("_TtC12UNComponents19UNACHDebitComponent")
 - (nullable instancetype)initWithCoder:(NSCoder * _Nonnull)aDecoder OBJC_DESIGNATED_INITIALIZER;
 - (nonnull instancetype)initWithFrame:(CGRect)frame SWIFT_UNAVAILABLE;
 @end
-
-
-
-
-
-
-
-SWIFT_CLASS("_TtC12UNComponents19UNActivityComponent")
-@interface UNActivityComponent : UIView
-- (nullable instancetype)initWithCoder:(NSCoder * _Nonnull)aDecoder OBJC_DESIGNATED_INITIALIZER;
-- (nonnull instancetype)initWithFrame:(CGRect)frame SWIFT_UNAVAILABLE;
-@end
-
 
 
 

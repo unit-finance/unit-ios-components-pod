@@ -24,6 +24,19 @@ public enum UNCardComponentCallback {
   case cardActivated(card: UNComponents.UNCardData)
   case unitOnLoad(result: Swift.Result<UNComponents.UNCardData, UNComponents.UNError>)
 }
+public enum UNCardComponentMenuItems : Swift.String {
+  case freeze
+  case addToWallet
+  case managePin
+  case replace
+  case report
+  case close
+  public init?(rawValue: Swift.String)
+  public typealias RawValue = Swift.String
+  public var rawValue: Swift.String {
+    get
+  }
+}
 public enum UNCardMenuAction : Swift.String {
   case freeze
   case managePin
@@ -81,9 +94,13 @@ extension UNComponents.UNACHDebitComponent : UNComponents.UNACHDebitView {
 public protocol UNActivityView : UIKit.UIView {
   var accountId: Swift.String? { get set }
   var additionalSettings: UNComponents.UNActivityViewSettingsProtocol { get set }
+  func refresh()
 }
 public protocol UNActivityViewSettingsProtocol {
   var hideFilterButton: Swift.Bool { get }
+  var hideTitle: Swift.Bool { get }
+  var hideBackToTop: Swift.Bool { get }
+  var queryFilter: Swift.String? { get }
   var paginationType: UNComponents.UNActivityComponentPaginationType { get }
   var transactionsPerPage: Swift.Int? { get }
 }
@@ -94,6 +111,16 @@ public enum UNAccountComponentCallback {
   case unitOnLoad(result: Swift.Result<[UNComponents.UNAccountData], UNComponents.UNError>)
   case onAccountChange(account: UNComponents.UNAccountData)
 }
+public enum UNAccountComponentMenuItems : Swift.String {
+  case details
+  case statements
+  case bankVerification
+  public init?(rawValue: Swift.String)
+  public typealias RawValue = Swift.String
+  public var rawValue: Swift.String {
+    get
+  }
+}
 public class UNAccountViewSettingsBuilder : UNComponents.UNAccountViewSettingsProtocol {
   public var hideActionsMenuButton: Swift.Bool {
     get
@@ -101,9 +128,13 @@ public class UNAccountViewSettingsBuilder : UNComponents.UNAccountViewSettingsPr
   public var hideSelectionMenuButton: Swift.Bool {
     get
   }
-  public init(hideActionsMenuButton: Swift.Bool = false, hideSelectionMenuButton: Swift.Bool = false)
+  public var menuItems: [UNComponents.UNAccountComponentMenuItems]? {
+    get
+  }
+  public init(hideActionsMenuButton: Swift.Bool = false, hideSelectionMenuButton: Swift.Bool = false, menuItems: [UNComponents.UNAccountComponentMenuItems]? = nil)
   public func hideActionsMenuButton(_ hideActionsMenuButton: Swift.Bool) -> UNComponents.UNAccountViewSettingsBuilder
   public func hideSelectionMenuButton(_ hideSelectionMenuButton: Swift.Bool) -> UNComponents.UNAccountViewSettingsBuilder
+  public func menuItems(_ menuItems: [UNComponents.UNAccountComponentMenuItems]) -> UNComponents.UNAccountViewSettingsBuilder
   @objc deinit
 }
 public enum UNMultipleCardsComponentCallback {
@@ -255,6 +286,9 @@ public protocol UNMultipleCardsViewSettingsProtocol {
   var paginationType: UNComponents.UNMultipleCardsComponentPaginationType { get }
   var cardsPerPage: Swift.Int? { get }
   var disableCardClick: Swift.Bool { get }
+  var hideTitle: Swift.Bool { get }
+  var hideBackToTop: Swift.Bool { get }
+  var queryFilter: Swift.String? { get }
 }
 public typealias UNBookPaymentComponentCallbacks = (_ callback: UNComponents.UNBookPaymentComponentCallback) -> Swift.Void
 public enum UNAccountMenuAction : Swift.String {
@@ -325,21 +359,6 @@ public enum UNActivityComponentPaginationType : Swift.String {
   public typealias RawValue = Swift.String
   public var rawValue: Swift.String {
     get
-  }
-}
-@objc @_Concurrency.MainActor(unsafe) public class UNActivityComponent : UIKit.UIView {
-  @_Concurrency.MainActor(unsafe) public init(accountId: Swift.String?, additionalSettings: UNComponents.UNActivityViewSettingsProtocol, theme: UNComponents.UNTheme?, language: UNComponents.UNLanguage?, callbacks: UNComponents.UNActivityComponentCallbacks?)
-  @_Concurrency.MainActor(unsafe) @objc required dynamic public init?(coder aDecoder: Foundation.NSCoder)
-  @objc deinit
-}
-extension UNComponents.UNActivityComponent : UNComponents.UNActivityView {
-  @_Concurrency.MainActor(unsafe) public var accountId: Swift.String? {
-    get
-    set(newAccountId)
-  }
-  @_Concurrency.MainActor(unsafe) public var additionalSettings: UNComponents.UNActivityViewSettingsProtocol {
-    get
-    set(newAdditionalSettings)
   }
 }
 public enum UNACHDebitComponentCallback {
@@ -421,12 +440,16 @@ public class UNCardViewSettingsBuilder : UNComponents.UNCardViewSettingsProtocol
   public var learnMoreUrl: Swift.String {
     get
   }
-  public init(hideActionsMenuButton: Swift.Bool = false, hideCardTitle: Swift.Bool = false, hideSensitiveDataButton: Swift.Bool = false, enablePushProvisioning: Swift.Bool = false, learnMoreUrl: Swift.String = "")
+  public var menuItems: [UNComponents.UNCardComponentMenuItems]? {
+    get
+  }
+  public init(hideActionsMenuButton: Swift.Bool = false, hideCardTitle: Swift.Bool = false, hideSensitiveDataButton: Swift.Bool = false, enablePushProvisioning: Swift.Bool = false, learnMoreUrl: Swift.String = "", menuItems: [UNComponents.UNCardComponentMenuItems]? = nil)
   public func hideActionsMenuButton(_ hideActionsMenuButton: Swift.Bool) -> UNComponents.UNCardViewSettingsBuilder
   public func hideCardTitle(_ hideCardTitle: Swift.Bool) -> UNComponents.UNCardViewSettingsBuilder
   public func hideSensitiveDataButton(_ hideSensitiveDataButton: Swift.Bool) -> UNComponents.UNCardViewSettingsBuilder
   public func enablePushProvisioning(_ enablePushProvisioning: Swift.Bool) -> UNComponents.UNCardViewSettingsBuilder
   public func learnMoreUrl(_ learnMoreUrl: Swift.String) -> UNComponents.UNCardViewSettingsBuilder
+  public func menuItems(_ menuItems: [UNComponents.UNCardComponentMenuItems]) -> UNComponents.UNCardViewSettingsBuilder
   @objc deinit
 }
 public enum UNCheckDepositComponentCallback {
@@ -578,10 +601,22 @@ public class UNActivityViewSettingsBuilder : UNComponents.UNActivityViewSettings
   public var hideFilterButton: Swift.Bool {
     get
   }
-  public init(hideFilterButton: Swift.Bool = false, paginationType: UNComponents.UNActivityComponentPaginationType = .infiniteScroll, transactionsPerPage: Swift.Int? = nil)
+  public var hideTitle: Swift.Bool {
+    get
+  }
+  public var hideBackToTop: Swift.Bool {
+    get
+  }
+  public var queryFilter: Swift.String? {
+    get
+  }
+  public init(hideFilterButton: Swift.Bool = false, paginationType: UNComponents.UNActivityComponentPaginationType = .infiniteScroll, transactionsPerPage: Swift.Int? = nil, hideTitle: Swift.Bool = false, hideBackToTop: Swift.Bool = false, queryFilter: Swift.String? = nil)
   public func hideFilterButton(_ hideFilterButton: Swift.Bool) -> UNComponents.UNActivityViewSettingsBuilder
   public func paginationType(_ paginationType: UNComponents.UNActivityComponentPaginationType) -> UNComponents.UNActivityViewSettingsBuilder
   public func transactionsPerPage(_ transactionsPerPage: Swift.Int) -> UNComponents.UNActivityViewSettingsBuilder
+  public func hideTitle(_ hideTitle: Swift.Bool) -> UNComponents.UNActivityViewSettingsBuilder
+  public func hideBackToTop(_ hideBackToTop: Swift.Bool) -> UNComponents.UNActivityViewSettingsBuilder
+  public func queryFilter(_ queryFilter: Swift.String) -> UNComponents.UNActivityViewSettingsBuilder
   @objc deinit
 }
 public typealias UNActivityComponentCallbacks = (_ callback: UNComponents.UNActivityComponentCallback) -> Swift.Void
@@ -727,12 +762,15 @@ public struct UNTags : Swift.Codable {
 }
 public protocol UNAccountView : UIKit.UIView {
   var accountId: Swift.String? { get set }
+  var additionalSetting: UNComponents.UNAccountViewSettingsProtocol { get set }
   func openActionsMenu()
   func open(action: UNComponents.UNAccountMenuAction)
+  func refresh()
 }
 public protocol UNAccountViewSettingsProtocol {
   var hideActionsMenuButton: Swift.Bool { get }
   var hideSelectionMenuButton: Swift.Bool { get }
+  var menuItems: [UNComponents.UNAccountComponentMenuItems]? { get }
 }
 public enum UNEnvironment : Swift.Codable {
   case sandbox
@@ -756,10 +794,22 @@ public class UNMultipleCardsViewSettingsBuilder : UNComponents.UNMultipleCardsVi
   public var disableCardClick: Swift.Bool {
     get
   }
-  public init(paginationType: UNComponents.UNMultipleCardsComponentPaginationType = .infiniteScroll, cardsPerPage: Swift.Int? = nil, disableCardClick: Swift.Bool = false)
+  public var hideTitle: Swift.Bool {
+    get
+  }
+  public var hideBackToTop: Swift.Bool {
+    get
+  }
+  public var queryFilter: Swift.String? {
+    get
+  }
+  public init(paginationType: UNComponents.UNMultipleCardsComponentPaginationType = .infiniteScroll, cardsPerPage: Swift.Int? = nil, disableCardClick: Swift.Bool = false, hideTitle: Swift.Bool = false, hideBackToTop: Swift.Bool = false, queryFilter: Swift.String? = nil)
   public func paginationType(_ paginationType: UNComponents.UNMultipleCardsComponentPaginationType) -> UNComponents.UNMultipleCardsViewSettingsBuilder
   public func cardsPerPage(_ cardsPerPage: Swift.Int) -> UNComponents.UNMultipleCardsViewSettingsBuilder
   public func disableCardClick(_ disableCardClick: Swift.Bool) -> UNComponents.UNMultipleCardsViewSettingsBuilder
+  public func hideTitle(_ hideTitle: Swift.Bool) -> UNComponents.UNMultipleCardsViewSettingsBuilder
+  public func hideBackToTop(_ hideBackToTop: Swift.Bool) -> UNComponents.UNMultipleCardsViewSettingsBuilder
+  public func queryFilter(_ queryFilter: Swift.String) -> UNComponents.UNMultipleCardsViewSettingsBuilder
   @objc deinit
 }
 @objc @_Concurrency.MainActor(unsafe) public class UNACHCreditComponent : UIKit.UIView {
@@ -801,6 +851,7 @@ public struct UNErrorResponse : Swift.Codable {
   public init(from decoder: Swift.Decoder) throws
 }
 public enum UNWebVersioningStrategy {
+  case latest
   case exact(major: Swift.Int, minor: Swift.Int, patch: Swift.Int)
   case upToNextMinor(major: Swift.Int, minor: Swift.Int)
   case upToNextMajor(major: Swift.Int)
@@ -862,10 +913,17 @@ public protocol UNCardViewSettingsProtocol {
   var hideSensitiveDataButton: Swift.Bool { get }
   var enablePushProvisioning: Swift.Bool { get }
   var learnMoreUrl: Swift.String { get }
+  var menuItems: [UNComponents.UNCardComponentMenuItems]? { get }
 }
+extension UNComponents.UNCardComponentMenuItems : Swift.Equatable {}
+extension UNComponents.UNCardComponentMenuItems : Swift.Hashable {}
+extension UNComponents.UNCardComponentMenuItems : Swift.RawRepresentable {}
 extension UNComponents.UNCardMenuAction : Swift.Equatable {}
 extension UNComponents.UNCardMenuAction : Swift.Hashable {}
 extension UNComponents.UNCardMenuAction : Swift.RawRepresentable {}
+extension UNComponents.UNAccountComponentMenuItems : Swift.Equatable {}
+extension UNComponents.UNAccountComponentMenuItems : Swift.Hashable {}
+extension UNComponents.UNAccountComponentMenuItems : Swift.RawRepresentable {}
 extension UNComponents.UNMultipleCardsComponentPaginationType : Swift.Equatable {}
 extension UNComponents.UNMultipleCardsComponentPaginationType : Swift.Hashable {}
 extension UNComponents.UNMultipleCardsComponentPaginationType : Swift.RawRepresentable {}

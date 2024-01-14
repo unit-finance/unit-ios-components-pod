@@ -81,6 +81,7 @@
         });
         
         window.addEventListener("unitRequestRefresh", (e) => {
+            if (e.detail.fromSDK) { return } // avoid infinite loop
             postMessageToSDK({ type: "unit", action: 'unitRequestRefresh', details: e.detail })
         });
         
@@ -161,7 +162,14 @@
         }
 
         const dispatchRefreshEvent = (details) => {
-            const event = new CustomEvent("unitRequestRefresh",{ detail: JSON.parse(details) });
+            let event;
+            // we are adding "fromSDK" param to avoid infinite loop
+            if (details) {
+                event = new CustomEvent("unitRequestRefresh",{ detail: {...JSON.parse(details), fromSDK: true} });
+            } else {
+                event = new CustomEvent("unitRequestRefresh", { detail: { fromSDK: true }});
+            }
+
             window.dispatchEvent(event);
         }
         
