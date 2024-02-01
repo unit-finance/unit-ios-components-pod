@@ -35573,28 +35573,28 @@
     {
       "filePath": "\/Users\/runner\/work\/unit-ios-components\/unit-ios-components\/UnitWhiteLabelBanking\/UNComponents\/UI\/Components\/ACHDebit\/UNACHDebitComponent.swift",
       "kind": "StringLiteral",
-      "offset": 530,
+      "offset": 587,
       "length": 12,
       "value": "\"account-id\""
     },
     {
       "filePath": "\/Users\/runner\/work\/unit-ios-components\/unit-ios-components\/UnitWhiteLabelBanking\/UNComponents\/UI\/Components\/ACHDebit\/UNACHDebitComponent.swift",
       "kind": "StringLiteral",
-      "offset": 576,
+      "offset": 633,
       "length": 15,
       "value": "\"is-auto-focus\""
     },
     {
       "filePath": "\/Users\/runner\/work\/unit-ios-components\/unit-ios-components\/UnitWhiteLabelBanking\/UNComponents\/UI\/Components\/ACHDebit\/UNACHDebitComponent.swift",
       "kind": "StringLiteral",
-      "offset": 617,
+      "offset": 674,
       "length": 5,
       "value": "\"fee\""
     },
     {
       "filePath": "\/Users\/runner\/work\/unit-ios-components\/unit-ios-components\/UnitWhiteLabelBanking\/UNComponents\/UI\/Components\/ACHDebit\/UNACHDebitComponent.swift",
       "kind": "StringLiteral",
-      "offset": 652,
+      "offset": 709,
       "length": 10,
       "value": "\"same-day\""
     },
@@ -38079,35 +38079,35 @@
     {
       "filePath": "\/Users\/runner\/work\/unit-ios-components\/unit-ios-components\/UnitWhiteLabelBanking\/UNComponents\/UI\/Components\/ACHCredit\/UNACHCreditComponent.swift",
       "kind": "StringLiteral",
-      "offset": 505,
+      "offset": 562,
       "length": 12,
       "value": "\"account-id\""
     },
     {
       "filePath": "\/Users\/runner\/work\/unit-ios-components\/unit-ios-components\/UnitWhiteLabelBanking\/UNComponents\/UI\/Components\/ACHCredit\/UNACHCreditComponent.swift",
       "kind": "StringLiteral",
-      "offset": 551,
+      "offset": 608,
       "length": 15,
       "value": "\"is-auto-focus\""
     },
     {
       "filePath": "\/Users\/runner\/work\/unit-ios-components\/unit-ios-components\/UnitWhiteLabelBanking\/UNComponents\/UI\/Components\/ACHCredit\/UNACHCreditComponent.swift",
       "kind": "StringLiteral",
-      "offset": 592,
+      "offset": 649,
       "length": 5,
       "value": "\"fee\""
     },
     {
       "filePath": "\/Users\/runner\/work\/unit-ios-components\/unit-ios-components\/UnitWhiteLabelBanking\/UNComponents\/UI\/Components\/ACHCredit\/UNACHCreditComponent.swift",
       "kind": "StringLiteral",
-      "offset": 629,
+      "offset": 686,
       "length": 12,
       "value": "\"with-plaid\""
     },
     {
       "filePath": "\/Users\/runner\/work\/unit-ios-components\/unit-ios-components\/UnitWhiteLabelBanking\/UNComponents\/UI\/Components\/ACHCredit\/UNACHCreditComponent.swift",
       "kind": "StringLiteral",
-      "offset": 671,
+      "offset": 728,
       "length": 10,
       "value": "\"same-day\""
     },

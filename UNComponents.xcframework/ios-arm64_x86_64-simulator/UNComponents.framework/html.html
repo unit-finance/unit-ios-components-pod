@@ -150,9 +150,15 @@
             })
         });
         
-        const dispatchPlaidEvent = (details) => {
-            console.log(details)
-             const event = new CustomEvent("unitPlaidResponse",{ detail: JSON.parse(details) })
+        const dispatchPlaidEvent = (token, metadata) => {
+            const dataDetailsObj = {
+                data: {
+                    publicToken: token,
+                    metadata: JSON.parse(metadata)
+                }
+            }
+            
+             const event = new CustomEvent("unitPlaidResponse",{ detail: dataDetailsObj })
              window.dispatchEvent(event)
         }
         
