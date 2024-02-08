@@ -1258,6 +1258,80 @@
           },
           {
             "kind": "Var",
+            "name": "onInitialStageBackButtonClicked",
+            "printedName": "onInitialStageBackButtonClicked",
+            "children": [
+              {
+                "kind": "TypeFunc",
+                "name": "Function",
+                "printedName": "(UNComponents.UNACHCreditComponentCallback.Type) -> UNComponents.UNACHCreditComponentCallback",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "UNACHCreditComponentCallback",
+                    "printedName": "UNComponents.UNACHCreditComponentCallback",
+                    "usr": "s:12UNComponents28UNACHCreditComponentCallbackO"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Metatype",
+                    "printedName": "UNComponents.UNACHCreditComponentCallback.Type",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "UNACHCreditComponentCallback",
+                        "printedName": "UNComponents.UNACHCreditComponentCallback",
+                        "usr": "s:12UNComponents28UNACHCreditComponentCallbackO"
+                      }
+                    ]
+                  }
+                ]
+              }
+            ],
+            "declKind": "EnumElement",
+            "usr": "s:12UNComponents28UNACHCreditComponentCallbackO31onInitialStageBackButtonClickedyA2CmF",
+            "mangledName": "$s12UNComponents28UNACHCreditComponentCallbackO31onInitialStageBackButtonClickedyA2CmF",
+            "moduleName": "UNComponents"
+          },
+          {
+            "kind": "Var",
+            "name": "onFinalStageDoneButtonClicked",
+            "printedName": "onFinalStageDoneButtonClicked",
+            "children": [
+              {
+                "kind": "TypeFunc",
+                "name": "Function",
+                "printedName": "(UNComponents.UNACHCreditComponentCallback.Type) -> UNComponents.UNACHCreditComponentCallback",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "UNACHCreditComponentCallback",
+                    "printedName": "UNComponents.UNACHCreditComponentCallback",
+                    "usr": "s:12UNComponents28UNACHCreditComponentCallbackO"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Metatype",
+                    "printedName": "UNComponents.UNACHCreditComponentCallback.Type",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "UNACHCreditComponentCallback",
+                        "printedName": "UNComponents.UNACHCreditComponentCallback",
+                        "usr": "s:12UNComponents28UNACHCreditComponentCallbackO"
+                      }
+                    ]
+                  }
+                ]
+              }
+            ],
+            "declKind": "EnumElement",
+            "usr": "s:12UNComponents28UNACHCreditComponentCallbackO29onFinalStageDoneButtonClickedyA2CmF",
+            "mangledName": "$s12UNComponents28UNACHCreditComponentCallbackO29onFinalStageDoneButtonClickedyA2CmF",
+            "moduleName": "UNComponents"
+          },
+          {
+            "kind": "Var",
             "name": "unitOnLoad",
             "printedName": "unitOnLoad",
             "children": [
@@ -2018,9 +2092,17 @@
               },
               {
                 "kind": "TypeNominal",
-                "name": "String",
-                "printedName": "Swift.String",
-                "usr": "s:SS"
+                "name": "Optional",
+                "printedName": "Swift.String?",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "String",
+                    "printedName": "Swift.String",
+                    "usr": "s:SS"
+                  }
+                ],
+                "usr": "s:Sq"
               },
               {
                 "kind": "TypeNominal",
@@ -2084,8 +2166,8 @@
               }
             ],
             "declKind": "Constructor",
-            "usr": "s:12UNComponents19UNACHDebitComponentC9accountId18additionalSettings5theme8language9callbacksACSS_AA0b4ViewG8Protocol_pSSSgAJyAA0bC8CallbackOcSgtcfc",
-            "mangledName": "$s12UNComponents19UNACHDebitComponentC9accountId18additionalSettings5theme8language9callbacksACSS_AA0b4ViewG8Protocol_pSSSgAJyAA0bC8CallbackOcSgtcfc",
+            "usr": "s:12UNComponents19UNACHDebitComponentC9accountId18additionalSettings5theme8language9callbacksACSSSg_AA0b4ViewG8Protocol_pA2IyAA0bC8CallbackOcSgtcfc",
+            "mangledName": "$s12UNComponents19UNACHDebitComponentC9accountId18additionalSettings5theme8language9callbacksACSSSg_AA0b4ViewG8Protocol_pA2IyAA0bC8CallbackOcSgtcfc",
             "moduleName": "UNComponents",
             "declAttributes": [
               "Custom",
@@ -2174,14 +2256,22 @@
             "children": [
               {
                 "kind": "TypeNominal",
-                "name": "String",
-                "printedName": "Swift.String",
-                "usr": "s:SS"
+                "name": "Optional",
+                "printedName": "Swift.String?",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "String",
+                    "printedName": "Swift.String",
+                    "usr": "s:SS"
+                  }
+                ],
+                "usr": "s:Sq"
               }
             ],
             "declKind": "Var",
-            "usr": "s:12UNComponents19UNACHDebitComponentC9accountIdSSvp",
-            "mangledName": "$s12UNComponents19UNACHDebitComponentC9accountIdSSvp",
+            "usr": "s:12UNComponents19UNACHDebitComponentC9accountIdSSSgvp",
+            "mangledName": "$s12UNComponents19UNACHDebitComponentC9accountIdSSSgvp",
             "moduleName": "UNComponents",
             "declAttributes": [
               "Custom",
@@ -2196,14 +2286,22 @@
                 "children": [
                   {
                     "kind": "TypeNominal",
-                    "name": "String",
-                    "printedName": "Swift.String",
-                    "usr": "s:SS"
+                    "name": "Optional",
+                    "printedName": "Swift.String?",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "String",
+                        "printedName": "Swift.String",
+                        "usr": "s:SS"
+                      }
+                    ],
+                    "usr": "s:Sq"
                   }
                 ],
                 "declKind": "Accessor",
-                "usr": "s:12UNComponents19UNACHDebitComponentC9accountIdSSvg",
-                "mangledName": "$s12UNComponents19UNACHDebitComponentC9accountIdSSvg",
+                "usr": "s:12UNComponents19UNACHDebitComponentC9accountIdSSSgvg",
+                "mangledName": "$s12UNComponents19UNACHDebitComponentC9accountIdSSSgvg",
                 "moduleName": "UNComponents",
                 "isFromExtension": true,
                 "accessorKind": "get"
@@ -2220,14 +2318,22 @@
                   },
                   {
                     "kind": "TypeNominal",
-                    "name": "String",
-                    "printedName": "Swift.String",
-                    "usr": "s:SS"
+                    "name": "Optional",
+                    "printedName": "Swift.String?",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "String",
+                        "printedName": "Swift.String",
+                        "usr": "s:SS"
+                      }
+                    ],
+                    "usr": "s:Sq"
                   }
                 ],
                 "declKind": "Accessor",
-                "usr": "s:12UNComponents19UNACHDebitComponentC9accountIdSSvs",
-                "mangledName": "$s12UNComponents19UNACHDebitComponentC9accountIdSSvs",
+                "usr": "s:12UNComponents19UNACHDebitComponentC9accountIdSSSgvs",
+                "mangledName": "$s12UNComponents19UNACHDebitComponentC9accountIdSSSgvs",
                 "moduleName": "UNComponents",
                 "isFromExtension": true,
                 "accessorKind": "set"
@@ -2244,8 +2350,8 @@
                   }
                 ],
                 "declKind": "Accessor",
-                "usr": "s:12UNComponents19UNACHDebitComponentC9accountIdSSvM",
-                "mangledName": "$s12UNComponents19UNACHDebitComponentC9accountIdSSvM",
+                "usr": "s:12UNComponents19UNACHDebitComponentC9accountIdSSSgvM",
+                "mangledName": "$s12UNComponents19UNACHDebitComponentC9accountIdSSSgvM",
                 "moduleName": "UNComponents",
                 "implicit": true,
                 "isFromExtension": true,
@@ -3273,6 +3379,63 @@
             "usr": "s:12UNComponents26UNAccountComponentCallbackO15onAccountChangeyAcA0B4DataV_tcACmF",
             "mangledName": "$s12UNComponents26UNAccountComponentCallbackO15onAccountChangeyAcA0B4DataV_tcACmF",
             "moduleName": "UNComponents"
+          },
+          {
+            "kind": "Var",
+            "name": "onRequestLeftToSpendDetails",
+            "printedName": "onRequestLeftToSpendDetails",
+            "children": [
+              {
+                "kind": "TypeFunc",
+                "name": "Function",
+                "printedName": "(UNComponents.UNAccountComponentCallback.Type) -> (UNComponents.UNAccountData) -> UNComponents.UNAccountComponentCallback",
+                "children": [
+                  {
+                    "kind": "TypeFunc",
+                    "name": "Function",
+                    "printedName": "(UNComponents.UNAccountData) -> UNComponents.UNAccountComponentCallback",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "UNAccountComponentCallback",
+                        "printedName": "UNComponents.UNAccountComponentCallback",
+                        "usr": "s:12UNComponents26UNAccountComponentCallbackO"
+                      },
+                      {
+                        "kind": "TypeNominal",
+                        "name": "Tuple",
+                        "printedName": "(account: UNComponents.UNAccountData)",
+                        "children": [
+                          {
+                            "kind": "TypeNominal",
+                            "name": "UNAccountData",
+                            "printedName": "UNComponents.UNAccountData",
+                            "usr": "s:12UNComponents13UNAccountDataV"
+                          }
+                        ]
+                      }
+                    ]
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Metatype",
+                    "printedName": "UNComponents.UNAccountComponentCallback.Type",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "UNAccountComponentCallback",
+                        "printedName": "UNComponents.UNAccountComponentCallback",
+                        "usr": "s:12UNComponents26UNAccountComponentCallbackO"
+                      }
+                    ]
+                  }
+                ]
+              }
+            ],
+            "declKind": "EnumElement",
+            "usr": "s:12UNComponents26UNAccountComponentCallbackO27onRequestLeftToSpendDetailsyAcA0B4DataV_tcACmF",
+            "mangledName": "$s12UNComponents26UNAccountComponentCallbackO27onRequestLeftToSpendDetailsyAcA0B4DataV_tcACmF",
+            "moduleName": "UNComponents"
           }
         ],
         "declKind": "Enum",
@@ -3710,9 +3873,53 @@
             ]
           },
           {
+            "kind": "Var",
+            "name": "showLeftToSpend",
+            "printedName": "showLeftToSpend",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Bool",
+                "printedName": "Swift.Bool",
+                "usr": "s:Sb"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "s:12UNComponents28UNAccountViewSettingsBuilderC15showLeftToSpendSbvp",
+            "mangledName": "$s12UNComponents28UNAccountViewSettingsBuilderC15showLeftToSpendSbvp",
+            "moduleName": "UNComponents",
+            "declAttributes": [
+              "HasStorage",
+              "SetterAccess",
+              "AccessControl"
+            ],
+            "hasStorage": true,
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Bool",
+                    "printedName": "Swift.Bool",
+                    "usr": "s:Sb"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:12UNComponents28UNAccountViewSettingsBuilderC15showLeftToSpendSbvg",
+                "mangledName": "$s12UNComponents28UNAccountViewSettingsBuilderC15showLeftToSpendSbvg",
+                "moduleName": "UNComponents",
+                "implicit": true,
+                "accessorKind": "get"
+              }
+            ]
+          },
+          {
             "kind": "Constructor",
             "name": "init",
-            "printedName": "init(hideActionsMenuButton:hideSelectionMenuButton:menuItems:)",
+            "printedName": "init(hideActionsMenuButton:hideSelectionMenuButton:menuItems:showLeftToSpend:)",
             "children": [
               {
                 "kind": "TypeNominal",
@@ -3756,11 +3963,18 @@
                 ],
                 "hasDefaultArg": true,
                 "usr": "s:Sq"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Bool",
+                "printedName": "Swift.Bool",
+                "hasDefaultArg": true,
+                "usr": "s:Sb"
               }
             ],
             "declKind": "Constructor",
-            "usr": "s:12UNComponents28UNAccountViewSettingsBuilderC21hideActionsMenuButton0f9SelectionhI09menuItemsACSb_SbSayAA0b9ComponenthL0OGSgtcfc",
-            "mangledName": "$s12UNComponents28UNAccountViewSettingsBuilderC21hideActionsMenuButton0f9SelectionhI09menuItemsACSb_SbSayAA0b9ComponenthL0OGSgtcfc",
+            "usr": "s:12UNComponents28UNAccountViewSettingsBuilderC21hideActionsMenuButton0f9SelectionhI09menuItems15showLeftToSpendACSb_SbSayAA0b9ComponenthL0OGSgSbtcfc",
+            "mangledName": "$s12UNComponents28UNAccountViewSettingsBuilderC21hideActionsMenuButton0f9SelectionhI09menuItems15showLeftToSpendACSb_SbSayAA0b9ComponenthL0OGSgSbtcfc",
             "moduleName": "UNComponents",
             "declAttributes": [
               "AccessControl"
@@ -3850,6 +4064,33 @@
             "declKind": "Func",
             "usr": "s:12UNComponents28UNAccountViewSettingsBuilderC9menuItemsyACSayAA0b13ComponentMenuG0OGF",
             "mangledName": "$s12UNComponents28UNAccountViewSettingsBuilderC9menuItemsyACSayAA0b13ComponentMenuG0OGF",
+            "moduleName": "UNComponents",
+            "declAttributes": [
+              "AccessControl"
+            ],
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Function",
+            "name": "showLeftToSpend",
+            "printedName": "showLeftToSpend(_:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "UNAccountViewSettingsBuilder",
+                "printedName": "UNComponents.UNAccountViewSettingsBuilder",
+                "usr": "s:12UNComponents28UNAccountViewSettingsBuilderC"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Bool",
+                "printedName": "Swift.Bool",
+                "usr": "s:Sb"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:12UNComponents28UNAccountViewSettingsBuilderC15showLeftToSpendyACSbF",
+            "mangledName": "$s12UNComponents28UNAccountViewSettingsBuilderC15showLeftToSpendyACSbF",
             "moduleName": "UNComponents",
             "declAttributes": [
               "AccessControl"
@@ -4641,6 +4882,94 @@
           },
           {
             "kind": "Var",
+            "name": "initialStageBackButton",
+            "printedName": "initialStageBackButton",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Bool",
+                "printedName": "Swift.Bool",
+                "usr": "s:Sb"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "s:12UNComponents29UNACHDebitViewSettingsBuilderC22initialStageBackButtonSbvp",
+            "mangledName": "$s12UNComponents29UNACHDebitViewSettingsBuilderC22initialStageBackButtonSbvp",
+            "moduleName": "UNComponents",
+            "declAttributes": [
+              "HasStorage",
+              "SetterAccess",
+              "AccessControl"
+            ],
+            "hasStorage": true,
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Bool",
+                    "printedName": "Swift.Bool",
+                    "usr": "s:Sb"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:12UNComponents29UNACHDebitViewSettingsBuilderC22initialStageBackButtonSbvg",
+                "mangledName": "$s12UNComponents29UNACHDebitViewSettingsBuilderC22initialStageBackButtonSbvg",
+                "moduleName": "UNComponents",
+                "implicit": true,
+                "accessorKind": "get"
+              }
+            ]
+          },
+          {
+            "kind": "Var",
+            "name": "finalStageDoneButton",
+            "printedName": "finalStageDoneButton",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Bool",
+                "printedName": "Swift.Bool",
+                "usr": "s:Sb"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "s:12UNComponents29UNACHDebitViewSettingsBuilderC20finalStageDoneButtonSbvp",
+            "mangledName": "$s12UNComponents29UNACHDebitViewSettingsBuilderC20finalStageDoneButtonSbvp",
+            "moduleName": "UNComponents",
+            "declAttributes": [
+              "HasStorage",
+              "SetterAccess",
+              "AccessControl"
+            ],
+            "hasStorage": true,
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Bool",
+                    "printedName": "Swift.Bool",
+                    "usr": "s:Sb"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:12UNComponents29UNACHDebitViewSettingsBuilderC20finalStageDoneButtonSbvg",
+                "mangledName": "$s12UNComponents29UNACHDebitViewSettingsBuilderC20finalStageDoneButtonSbvg",
+                "moduleName": "UNComponents",
+                "implicit": true,
+                "accessorKind": "get"
+              }
+            ]
+          },
+          {
+            "kind": "Var",
             "name": "sameDay",
             "printedName": "sameDay",
             "children": [
@@ -4684,9 +5013,147 @@
             ]
           },
           {
+            "kind": "Var",
+            "name": "plaidAccountFilters",
+            "printedName": "plaidAccountFilters",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Optional",
+                "printedName": "[UNComponents.UNPlaidAccountFilter]?",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Array",
+                    "printedName": "[UNComponents.UNPlaidAccountFilter]",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "UNPlaidAccountFilter",
+                        "printedName": "UNComponents.UNPlaidAccountFilter",
+                        "usr": "s:12UNComponents20UNPlaidAccountFilterO"
+                      }
+                    ],
+                    "usr": "s:Sa"
+                  }
+                ],
+                "usr": "s:Sq"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "s:12UNComponents29UNACHDebitViewSettingsBuilderC19plaidAccountFiltersSayAA07UNPlaidG6FilterOGSgvp",
+            "mangledName": "$s12UNComponents29UNACHDebitViewSettingsBuilderC19plaidAccountFiltersSayAA07UNPlaidG6FilterOGSgvp",
+            "moduleName": "UNComponents",
+            "declAttributes": [
+              "HasInitialValue",
+              "HasStorage",
+              "SetterAccess",
+              "AccessControl"
+            ],
+            "hasStorage": true,
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Optional",
+                    "printedName": "[UNComponents.UNPlaidAccountFilter]?",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "Array",
+                        "printedName": "[UNComponents.UNPlaidAccountFilter]",
+                        "children": [
+                          {
+                            "kind": "TypeNominal",
+                            "name": "UNPlaidAccountFilter",
+                            "printedName": "UNComponents.UNPlaidAccountFilter",
+                            "usr": "s:12UNComponents20UNPlaidAccountFilterO"
+                          }
+                        ],
+                        "usr": "s:Sa"
+                      }
+                    ],
+                    "usr": "s:Sq"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:12UNComponents29UNACHDebitViewSettingsBuilderC19plaidAccountFiltersSayAA07UNPlaidG6FilterOGSgvg",
+                "mangledName": "$s12UNComponents29UNACHDebitViewSettingsBuilderC19plaidAccountFiltersSayAA07UNPlaidG6FilterOGSgvg",
+                "moduleName": "UNComponents",
+                "implicit": true,
+                "accessorKind": "get"
+              }
+            ]
+          },
+          {
+            "kind": "Var",
+            "name": "plaidLinkCustomizationName",
+            "printedName": "plaidLinkCustomizationName",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Optional",
+                "printedName": "Swift.String?",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "String",
+                    "printedName": "Swift.String",
+                    "usr": "s:SS"
+                  }
+                ],
+                "usr": "s:Sq"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "s:12UNComponents29UNACHDebitViewSettingsBuilderC26plaidLinkCustomizationNameSSSgvp",
+            "mangledName": "$s12UNComponents29UNACHDebitViewSettingsBuilderC26plaidLinkCustomizationNameSSSgvp",
+            "moduleName": "UNComponents",
+            "declAttributes": [
+              "HasInitialValue",
+              "HasStorage",
+              "SetterAccess",
+              "AccessControl"
+            ],
+            "hasStorage": true,
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Optional",
+                    "printedName": "Swift.String?",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "String",
+                        "printedName": "Swift.String",
+                        "usr": "s:SS"
+                      }
+                    ],
+                    "usr": "s:Sq"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:12UNComponents29UNACHDebitViewSettingsBuilderC26plaidLinkCustomizationNameSSSgvg",
+                "mangledName": "$s12UNComponents29UNACHDebitViewSettingsBuilderC26plaidLinkCustomizationNameSSSgvg",
+                "moduleName": "UNComponents",
+                "implicit": true,
+                "accessorKind": "get"
+              }
+            ]
+          },
+          {
             "kind": "Constructor",
             "name": "init",
-            "printedName": "init(fee:isAutoFocus:sameDay:)",
+            "printedName": "init(fee:isAutoFocus:plaidAccountFilters:plaidLinkCustomizationName:sameDay:initialStageBackButton:finalStageDoneButton:)",
             "children": [
               {
                 "kind": "TypeNominal",
@@ -4718,6 +5185,58 @@
               },
               {
                 "kind": "TypeNominal",
+                "name": "Optional",
+                "printedName": "[UNComponents.UNPlaidAccountFilter]?",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Array",
+                    "printedName": "[UNComponents.UNPlaidAccountFilter]",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "UNPlaidAccountFilter",
+                        "printedName": "UNComponents.UNPlaidAccountFilter",
+                        "usr": "s:12UNComponents20UNPlaidAccountFilterO"
+                      }
+                    ],
+                    "usr": "s:Sa"
+                  }
+                ],
+                "hasDefaultArg": true,
+                "usr": "s:Sq"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Optional",
+                "printedName": "Swift.String?",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "String",
+                    "printedName": "Swift.String",
+                    "usr": "s:SS"
+                  }
+                ],
+                "hasDefaultArg": true,
+                "usr": "s:Sq"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Bool",
+                "printedName": "Swift.Bool",
+                "hasDefaultArg": true,
+                "usr": "s:Sb"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Bool",
+                "printedName": "Swift.Bool",
+                "hasDefaultArg": true,
+                "usr": "s:Sb"
+              },
+              {
+                "kind": "TypeNominal",
                 "name": "Bool",
                 "printedName": "Swift.Bool",
                 "hasDefaultArg": true,
@@ -4725,8 +5244,8 @@
               }
             ],
             "declKind": "Constructor",
-            "usr": "s:12UNComponents29UNACHDebitViewSettingsBuilderC3fee11isAutoFocus7sameDayACSdSg_S2btcfc",
-            "mangledName": "$s12UNComponents29UNACHDebitViewSettingsBuilderC3fee11isAutoFocus7sameDayACSdSg_S2btcfc",
+            "usr": "s:12UNComponents29UNACHDebitViewSettingsBuilderC3fee11isAutoFocus19plaidAccountFilters0J21LinkCustomizationName7sameDay22initialStageBackButton05finals4DoneU0ACSdSg_SbSayAA07UNPlaidK6FilterOGSgSSSgS3btcfc",
+            "mangledName": "$s12UNComponents29UNACHDebitViewSettingsBuilderC3fee11isAutoFocus19plaidAccountFilters0J21LinkCustomizationName7sameDay22initialStageBackButton05finals4DoneU0ACSdSg_SbSayAA07UNPlaidK6FilterOGSgSSSgS3btcfc",
             "moduleName": "UNComponents",
             "declAttributes": [
               "AccessControl"
@@ -4808,6 +5327,122 @@
             "declKind": "Func",
             "usr": "s:12UNComponents29UNACHDebitViewSettingsBuilderC7sameDayyACSbF",
             "mangledName": "$s12UNComponents29UNACHDebitViewSettingsBuilderC7sameDayyACSbF",
+            "moduleName": "UNComponents",
+            "declAttributes": [
+              "AccessControl"
+            ],
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Function",
+            "name": "plaidAccountFilters",
+            "printedName": "plaidAccountFilters(_:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "UNACHDebitViewSettingsBuilder",
+                "printedName": "UNComponents.UNACHDebitViewSettingsBuilder",
+                "usr": "s:12UNComponents29UNACHDebitViewSettingsBuilderC"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Array",
+                "printedName": "[UNComponents.UNPlaidAccountFilter]",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "UNPlaidAccountFilter",
+                    "printedName": "UNComponents.UNPlaidAccountFilter",
+                    "usr": "s:12UNComponents20UNPlaidAccountFilterO"
+                  }
+                ],
+                "usr": "s:Sa"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:12UNComponents29UNACHDebitViewSettingsBuilderC19plaidAccountFiltersyACSayAA07UNPlaidG6FilterOGF",
+            "mangledName": "$s12UNComponents29UNACHDebitViewSettingsBuilderC19plaidAccountFiltersyACSayAA07UNPlaidG6FilterOGF",
+            "moduleName": "UNComponents",
+            "declAttributes": [
+              "AccessControl"
+            ],
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Function",
+            "name": "plaidLinkCustomizationName",
+            "printedName": "plaidLinkCustomizationName(_:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "UNACHDebitViewSettingsBuilder",
+                "printedName": "UNComponents.UNACHDebitViewSettingsBuilder",
+                "usr": "s:12UNComponents29UNACHDebitViewSettingsBuilderC"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "String",
+                "printedName": "Swift.String",
+                "usr": "s:SS"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:12UNComponents29UNACHDebitViewSettingsBuilderC26plaidLinkCustomizationNameyACSSF",
+            "mangledName": "$s12UNComponents29UNACHDebitViewSettingsBuilderC26plaidLinkCustomizationNameyACSSF",
+            "moduleName": "UNComponents",
+            "declAttributes": [
+              "AccessControl"
+            ],
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Function",
+            "name": "initialStageBackButton",
+            "printedName": "initialStageBackButton(_:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "UNACHDebitViewSettingsBuilder",
+                "printedName": "UNComponents.UNACHDebitViewSettingsBuilder",
+                "usr": "s:12UNComponents29UNACHDebitViewSettingsBuilderC"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Bool",
+                "printedName": "Swift.Bool",
+                "usr": "s:Sb"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:12UNComponents29UNACHDebitViewSettingsBuilderC22initialStageBackButtonyACSbF",
+            "mangledName": "$s12UNComponents29UNACHDebitViewSettingsBuilderC22initialStageBackButtonyACSbF",
+            "moduleName": "UNComponents",
+            "declAttributes": [
+              "AccessControl"
+            ],
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Function",
+            "name": "finalStageDoneButton",
+            "printedName": "finalStageDoneButton(_:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "UNACHDebitViewSettingsBuilder",
+                "printedName": "UNComponents.UNACHDebitViewSettingsBuilder",
+                "usr": "s:12UNComponents29UNACHDebitViewSettingsBuilderC"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Bool",
+                "printedName": "Swift.Bool",
+                "usr": "s:Sb"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:12UNComponents29UNACHDebitViewSettingsBuilderC20finalStageDoneButtonyACSbF",
+            "mangledName": "$s12UNComponents29UNACHDebitViewSettingsBuilderC20finalStageDoneButtonyACSbF",
             "moduleName": "UNComponents",
             "declAttributes": [
               "AccessControl"
@@ -7611,6 +8246,216 @@
         ]
       },
       {
+        "kind": "TypeDecl",
+        "name": "UNCheckDepositViewSettingsBuilder",
+        "printedName": "UNCheckDepositViewSettingsBuilder",
+        "children": [
+          {
+            "kind": "Var",
+            "name": "initialStageBackButton",
+            "printedName": "initialStageBackButton",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Bool",
+                "printedName": "Swift.Bool",
+                "usr": "s:Sb"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "s:12UNComponents33UNCheckDepositViewSettingsBuilderC22initialStageBackButtonSbvp",
+            "mangledName": "$s12UNComponents33UNCheckDepositViewSettingsBuilderC22initialStageBackButtonSbvp",
+            "moduleName": "UNComponents",
+            "declAttributes": [
+              "HasStorage",
+              "SetterAccess",
+              "AccessControl"
+            ],
+            "hasStorage": true,
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Bool",
+                    "printedName": "Swift.Bool",
+                    "usr": "s:Sb"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:12UNComponents33UNCheckDepositViewSettingsBuilderC22initialStageBackButtonSbvg",
+                "mangledName": "$s12UNComponents33UNCheckDepositViewSettingsBuilderC22initialStageBackButtonSbvg",
+                "moduleName": "UNComponents",
+                "implicit": true,
+                "accessorKind": "get"
+              }
+            ]
+          },
+          {
+            "kind": "Var",
+            "name": "finalStageDoneButton",
+            "printedName": "finalStageDoneButton",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Bool",
+                "printedName": "Swift.Bool",
+                "usr": "s:Sb"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "s:12UNComponents33UNCheckDepositViewSettingsBuilderC20finalStageDoneButtonSbvp",
+            "mangledName": "$s12UNComponents33UNCheckDepositViewSettingsBuilderC20finalStageDoneButtonSbvp",
+            "moduleName": "UNComponents",
+            "declAttributes": [
+              "HasStorage",
+              "SetterAccess",
+              "AccessControl"
+            ],
+            "hasStorage": true,
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Bool",
+                    "printedName": "Swift.Bool",
+                    "usr": "s:Sb"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:12UNComponents33UNCheckDepositViewSettingsBuilderC20finalStageDoneButtonSbvg",
+                "mangledName": "$s12UNComponents33UNCheckDepositViewSettingsBuilderC20finalStageDoneButtonSbvg",
+                "moduleName": "UNComponents",
+                "implicit": true,
+                "accessorKind": "get"
+              }
+            ]
+          },
+          {
+            "kind": "Constructor",
+            "name": "init",
+            "printedName": "init(initialStageBackButton:finalStageDoneButton:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "UNCheckDepositViewSettingsBuilder",
+                "printedName": "UNComponents.UNCheckDepositViewSettingsBuilder",
+                "usr": "s:12UNComponents33UNCheckDepositViewSettingsBuilderC"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Bool",
+                "printedName": "Swift.Bool",
+                "hasDefaultArg": true,
+                "usr": "s:Sb"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Bool",
+                "printedName": "Swift.Bool",
+                "hasDefaultArg": true,
+                "usr": "s:Sb"
+              }
+            ],
+            "declKind": "Constructor",
+            "usr": "s:12UNComponents33UNCheckDepositViewSettingsBuilderC22initialStageBackButton05finalh4DoneJ0ACSb_Sbtcfc",
+            "mangledName": "$s12UNComponents33UNCheckDepositViewSettingsBuilderC22initialStageBackButton05finalh4DoneJ0ACSb_Sbtcfc",
+            "moduleName": "UNComponents",
+            "declAttributes": [
+              "AccessControl"
+            ],
+            "init_kind": "Designated"
+          },
+          {
+            "kind": "Function",
+            "name": "initialStageBackButton",
+            "printedName": "initialStageBackButton(_:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "UNCheckDepositViewSettingsBuilder",
+                "printedName": "UNComponents.UNCheckDepositViewSettingsBuilder",
+                "usr": "s:12UNComponents33UNCheckDepositViewSettingsBuilderC"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Bool",
+                "printedName": "Swift.Bool",
+                "usr": "s:Sb"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:12UNComponents33UNCheckDepositViewSettingsBuilderC22initialStageBackButtonyACSbF",
+            "mangledName": "$s12UNComponents33UNCheckDepositViewSettingsBuilderC22initialStageBackButtonyACSbF",
+            "moduleName": "UNComponents",
+            "declAttributes": [
+              "AccessControl"
+            ],
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Function",
+            "name": "finalStageDoneButton",
+            "printedName": "finalStageDoneButton(_:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "UNCheckDepositViewSettingsBuilder",
+                "printedName": "UNComponents.UNCheckDepositViewSettingsBuilder",
+                "usr": "s:12UNComponents33UNCheckDepositViewSettingsBuilderC"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Bool",
+                "printedName": "Swift.Bool",
+                "usr": "s:Sb"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:12UNComponents33UNCheckDepositViewSettingsBuilderC20finalStageDoneButtonyACSbF",
+            "mangledName": "$s12UNComponents33UNCheckDepositViewSettingsBuilderC20finalStageDoneButtonyACSbF",
+            "moduleName": "UNComponents",
+            "declAttributes": [
+              "AccessControl"
+            ],
+            "funcSelfKind": "NonMutating"
+          }
+        ],
+        "declKind": "Class",
+        "usr": "s:12UNComponents33UNCheckDepositViewSettingsBuilderC",
+        "mangledName": "$s12UNComponents33UNCheckDepositViewSettingsBuilderC",
+        "moduleName": "UNComponents",
+        "declAttributes": [
+          "AccessControl"
+        ],
+        "conformances": [
+          {
+            "kind": "Conformance",
+            "name": "UNCheckDepositViewSettingsProtocol",
+            "printedName": "UNCheckDepositViewSettingsProtocol",
+            "usr": "s:12UNComponents34UNCheckDepositViewSettingsProtocolP",
+            "mangledName": "$s12UNComponents34UNCheckDepositViewSettingsProtocolP"
+          }
+        ]
+      },
+      {
+        "kind": "Import",
+        "name": "Foundation",
+        "printedName": "Foundation",
+        "declKind": "Import",
+        "moduleName": "UNComponents",
+        "declAttributes": [
+          "RawDocComment"
+        ]
+      },
+      {
         "kind": "Import",
         "name": "Foundation",
         "printedName": "Foundation",
@@ -8002,6 +8847,144 @@
           },
           {
             "kind": "Var",
+            "name": "plaidAccountFilters",
+            "printedName": "plaidAccountFilters",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Optional",
+                "printedName": "[UNComponents.UNPlaidAccountFilter]?",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Array",
+                    "printedName": "[UNComponents.UNPlaidAccountFilter]",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "UNPlaidAccountFilter",
+                        "printedName": "UNComponents.UNPlaidAccountFilter",
+                        "usr": "s:12UNComponents20UNPlaidAccountFilterO"
+                      }
+                    ],
+                    "usr": "s:Sa"
+                  }
+                ],
+                "usr": "s:Sq"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "s:12UNComponents30UNACHCreditViewSettingsBuilderC19plaidAccountFiltersSayAA07UNPlaidG6FilterOGSgvp",
+            "mangledName": "$s12UNComponents30UNACHCreditViewSettingsBuilderC19plaidAccountFiltersSayAA07UNPlaidG6FilterOGSgvp",
+            "moduleName": "UNComponents",
+            "declAttributes": [
+              "HasInitialValue",
+              "HasStorage",
+              "SetterAccess",
+              "AccessControl"
+            ],
+            "hasStorage": true,
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Optional",
+                    "printedName": "[UNComponents.UNPlaidAccountFilter]?",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "Array",
+                        "printedName": "[UNComponents.UNPlaidAccountFilter]",
+                        "children": [
+                          {
+                            "kind": "TypeNominal",
+                            "name": "UNPlaidAccountFilter",
+                            "printedName": "UNComponents.UNPlaidAccountFilter",
+                            "usr": "s:12UNComponents20UNPlaidAccountFilterO"
+                          }
+                        ],
+                        "usr": "s:Sa"
+                      }
+                    ],
+                    "usr": "s:Sq"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:12UNComponents30UNACHCreditViewSettingsBuilderC19plaidAccountFiltersSayAA07UNPlaidG6FilterOGSgvg",
+                "mangledName": "$s12UNComponents30UNACHCreditViewSettingsBuilderC19plaidAccountFiltersSayAA07UNPlaidG6FilterOGSgvg",
+                "moduleName": "UNComponents",
+                "implicit": true,
+                "accessorKind": "get"
+              }
+            ]
+          },
+          {
+            "kind": "Var",
+            "name": "plaidLinkCustomizationName",
+            "printedName": "plaidLinkCustomizationName",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Optional",
+                "printedName": "Swift.String?",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "String",
+                    "printedName": "Swift.String",
+                    "usr": "s:SS"
+                  }
+                ],
+                "usr": "s:Sq"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "s:12UNComponents30UNACHCreditViewSettingsBuilderC26plaidLinkCustomizationNameSSSgvp",
+            "mangledName": "$s12UNComponents30UNACHCreditViewSettingsBuilderC26plaidLinkCustomizationNameSSSgvp",
+            "moduleName": "UNComponents",
+            "declAttributes": [
+              "HasInitialValue",
+              "HasStorage",
+              "SetterAccess",
+              "AccessControl"
+            ],
+            "hasStorage": true,
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Optional",
+                    "printedName": "Swift.String?",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "String",
+                        "printedName": "Swift.String",
+                        "usr": "s:SS"
+                      }
+                    ],
+                    "usr": "s:Sq"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:12UNComponents30UNACHCreditViewSettingsBuilderC26plaidLinkCustomizationNameSSSgvg",
+                "mangledName": "$s12UNComponents30UNACHCreditViewSettingsBuilderC26plaidLinkCustomizationNameSSSgvg",
+                "moduleName": "UNComponents",
+                "implicit": true,
+                "accessorKind": "get"
+              }
+            ]
+          },
+          {
+            "kind": "Var",
             "name": "sameDay",
             "printedName": "sameDay",
             "children": [
@@ -8045,9 +9028,97 @@
             ]
           },
           {
+            "kind": "Var",
+            "name": "initialStageBackButton",
+            "printedName": "initialStageBackButton",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Bool",
+                "printedName": "Swift.Bool",
+                "usr": "s:Sb"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "s:12UNComponents30UNACHCreditViewSettingsBuilderC22initialStageBackButtonSbvp",
+            "mangledName": "$s12UNComponents30UNACHCreditViewSettingsBuilderC22initialStageBackButtonSbvp",
+            "moduleName": "UNComponents",
+            "declAttributes": [
+              "HasStorage",
+              "SetterAccess",
+              "AccessControl"
+            ],
+            "hasStorage": true,
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Bool",
+                    "printedName": "Swift.Bool",
+                    "usr": "s:Sb"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:12UNComponents30UNACHCreditViewSettingsBuilderC22initialStageBackButtonSbvg",
+                "mangledName": "$s12UNComponents30UNACHCreditViewSettingsBuilderC22initialStageBackButtonSbvg",
+                "moduleName": "UNComponents",
+                "implicit": true,
+                "accessorKind": "get"
+              }
+            ]
+          },
+          {
+            "kind": "Var",
+            "name": "finalStageDoneButton",
+            "printedName": "finalStageDoneButton",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Bool",
+                "printedName": "Swift.Bool",
+                "usr": "s:Sb"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "s:12UNComponents30UNACHCreditViewSettingsBuilderC20finalStageDoneButtonSbvp",
+            "mangledName": "$s12UNComponents30UNACHCreditViewSettingsBuilderC20finalStageDoneButtonSbvp",
+            "moduleName": "UNComponents",
+            "declAttributes": [
+              "HasStorage",
+              "SetterAccess",
+              "AccessControl"
+            ],
+            "hasStorage": true,
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Bool",
+                    "printedName": "Swift.Bool",
+                    "usr": "s:Sb"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:12UNComponents30UNACHCreditViewSettingsBuilderC20finalStageDoneButtonSbvg",
+                "mangledName": "$s12UNComponents30UNACHCreditViewSettingsBuilderC20finalStageDoneButtonSbvg",
+                "moduleName": "UNComponents",
+                "implicit": true,
+                "accessorKind": "get"
+              }
+            ]
+          },
+          {
             "kind": "Constructor",
             "name": "init",
-            "printedName": "init(fee:isAutoFocus:withPlaid:sameDay:)",
+            "printedName": "init(fee:isAutoFocus:withPlaid:plaidAccountFilters:plaidLinkCustomizationName:sameDay:initialStageBackButton:finalStageDoneButton:)",
             "children": [
               {
                 "kind": "TypeNominal",
@@ -8086,6 +9157,58 @@
               },
               {
                 "kind": "TypeNominal",
+                "name": "Optional",
+                "printedName": "[UNComponents.UNPlaidAccountFilter]?",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Array",
+                    "printedName": "[UNComponents.UNPlaidAccountFilter]",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "UNPlaidAccountFilter",
+                        "printedName": "UNComponents.UNPlaidAccountFilter",
+                        "usr": "s:12UNComponents20UNPlaidAccountFilterO"
+                      }
+                    ],
+                    "usr": "s:Sa"
+                  }
+                ],
+                "hasDefaultArg": true,
+                "usr": "s:Sq"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Optional",
+                "printedName": "Swift.String?",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "String",
+                    "printedName": "Swift.String",
+                    "usr": "s:SS"
+                  }
+                ],
+                "hasDefaultArg": true,
+                "usr": "s:Sq"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Bool",
+                "printedName": "Swift.Bool",
+                "hasDefaultArg": true,
+                "usr": "s:Sb"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Bool",
+                "printedName": "Swift.Bool",
+                "hasDefaultArg": true,
+                "usr": "s:Sb"
+              },
+              {
+                "kind": "TypeNominal",
                 "name": "Bool",
                 "printedName": "Swift.Bool",
                 "hasDefaultArg": true,
@@ -8093,8 +9216,8 @@
               }
             ],
             "declKind": "Constructor",
-            "usr": "s:12UNComponents30UNACHCreditViewSettingsBuilderC3fee11isAutoFocus9withPlaid7sameDayACSdSg_S3btcfc",
-            "mangledName": "$s12UNComponents30UNACHCreditViewSettingsBuilderC3fee11isAutoFocus9withPlaid7sameDayACSdSg_S3btcfc",
+            "usr": "s:12UNComponents30UNACHCreditViewSettingsBuilderC3fee11isAutoFocus9withPlaid19plaidAccountFilters0L21LinkCustomizationName7sameDay22initialStageBackButton05finalu4DoneW0ACSdSg_S2bSayAA07UNPlaidM6FilterOGSgSSSgS3btcfc",
+            "mangledName": "$s12UNComponents30UNACHCreditViewSettingsBuilderC3fee11isAutoFocus9withPlaid19plaidAccountFilters0L21LinkCustomizationName7sameDay22initialStageBackButton05finalu4DoneW0ACSdSg_S2bSayAA07UNPlaidM6FilterOGSgSSSgS3btcfc",
             "moduleName": "UNComponents",
             "declAttributes": [
               "AccessControl"
@@ -8184,6 +9307,68 @@
           },
           {
             "kind": "Function",
+            "name": "plaidAccountFilters",
+            "printedName": "plaidAccountFilters(_:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "UNACHCreditViewSettingsBuilder",
+                "printedName": "UNComponents.UNACHCreditViewSettingsBuilder",
+                "usr": "s:12UNComponents30UNACHCreditViewSettingsBuilderC"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Array",
+                "printedName": "[UNComponents.UNPlaidAccountFilter]",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "UNPlaidAccountFilter",
+                    "printedName": "UNComponents.UNPlaidAccountFilter",
+                    "usr": "s:12UNComponents20UNPlaidAccountFilterO"
+                  }
+                ],
+                "usr": "s:Sa"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:12UNComponents30UNACHCreditViewSettingsBuilderC19plaidAccountFiltersyACSayAA07UNPlaidG6FilterOGF",
+            "mangledName": "$s12UNComponents30UNACHCreditViewSettingsBuilderC19plaidAccountFiltersyACSayAA07UNPlaidG6FilterOGF",
+            "moduleName": "UNComponents",
+            "declAttributes": [
+              "AccessControl"
+            ],
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Function",
+            "name": "plaidLinkCustomizationName",
+            "printedName": "plaidLinkCustomizationName(_:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "UNACHCreditViewSettingsBuilder",
+                "printedName": "UNComponents.UNACHCreditViewSettingsBuilder",
+                "usr": "s:12UNComponents30UNACHCreditViewSettingsBuilderC"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "String",
+                "printedName": "Swift.String",
+                "usr": "s:SS"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:12UNComponents30UNACHCreditViewSettingsBuilderC26plaidLinkCustomizationNameyACSSF",
+            "mangledName": "$s12UNComponents30UNACHCreditViewSettingsBuilderC26plaidLinkCustomizationNameyACSSF",
+            "moduleName": "UNComponents",
+            "declAttributes": [
+              "AccessControl"
+            ],
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Function",
             "name": "sameDay",
             "printedName": "sameDay(_:)",
             "children": [
@@ -8203,6 +9388,60 @@
             "declKind": "Func",
             "usr": "s:12UNComponents30UNACHCreditViewSettingsBuilderC7sameDayyACSbF",
             "mangledName": "$s12UNComponents30UNACHCreditViewSettingsBuilderC7sameDayyACSbF",
+            "moduleName": "UNComponents",
+            "declAttributes": [
+              "AccessControl"
+            ],
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Function",
+            "name": "initialStageBackButton",
+            "printedName": "initialStageBackButton(_:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "UNACHCreditViewSettingsBuilder",
+                "printedName": "UNComponents.UNACHCreditViewSettingsBuilder",
+                "usr": "s:12UNComponents30UNACHCreditViewSettingsBuilderC"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Bool",
+                "printedName": "Swift.Bool",
+                "usr": "s:Sb"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:12UNComponents30UNACHCreditViewSettingsBuilderC22initialStageBackButtonyACSbF",
+            "mangledName": "$s12UNComponents30UNACHCreditViewSettingsBuilderC22initialStageBackButtonyACSbF",
+            "moduleName": "UNComponents",
+            "declAttributes": [
+              "AccessControl"
+            ],
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Function",
+            "name": "finalStageDoneButton",
+            "printedName": "finalStageDoneButton(_:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "UNACHCreditViewSettingsBuilder",
+                "printedName": "UNComponents.UNACHCreditViewSettingsBuilder",
+                "usr": "s:12UNComponents30UNACHCreditViewSettingsBuilderC"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Bool",
+                "printedName": "Swift.Bool",
+                "usr": "s:Sb"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:12UNComponents30UNACHCreditViewSettingsBuilderC20finalStageDoneButtonyACSbF",
+            "mangledName": "$s12UNComponents30UNACHCreditViewSettingsBuilderC20finalStageDoneButtonyACSbF",
             "moduleName": "UNComponents",
             "declAttributes": [
               "AccessControl"
@@ -9031,14 +10270,22 @@
             "children": [
               {
                 "kind": "TypeNominal",
-                "name": "String",
-                "printedName": "Swift.String",
-                "usr": "s:SS"
+                "name": "Optional",
+                "printedName": "Swift.String?",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "String",
+                    "printedName": "Swift.String",
+                    "usr": "s:SS"
+                  }
+                ],
+                "usr": "s:Sq"
               }
             ],
             "declKind": "Var",
-            "usr": "s:12UNComponents15UNACHCreditViewP9accountIdSSvp",
-            "mangledName": "$s12UNComponents15UNACHCreditViewP9accountIdSSvp",
+            "usr": "s:12UNComponents15UNACHCreditViewP9accountIdSSSgvp",
+            "mangledName": "$s12UNComponents15UNACHCreditViewP9accountIdSSSgvp",
             "moduleName": "UNComponents",
             "protocolReq": true,
             "accessors": [
@@ -9049,14 +10296,22 @@
                 "children": [
                   {
                     "kind": "TypeNominal",
-                    "name": "String",
-                    "printedName": "Swift.String",
-                    "usr": "s:SS"
+                    "name": "Optional",
+                    "printedName": "Swift.String?",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "String",
+                        "printedName": "Swift.String",
+                        "usr": "s:SS"
+                      }
+                    ],
+                    "usr": "s:Sq"
                   }
                 ],
                 "declKind": "Accessor",
-                "usr": "s:12UNComponents15UNACHCreditViewP9accountIdSSvg",
-                "mangledName": "$s12UNComponents15UNACHCreditViewP9accountIdSSvg",
+                "usr": "s:12UNComponents15UNACHCreditViewP9accountIdSSSgvg",
+                "mangledName": "$s12UNComponents15UNACHCreditViewP9accountIdSSSgvg",
                 "moduleName": "UNComponents",
                 "genericSig": "<τ_0_0 where τ_0_0 : UNComponents.UNACHCreditView>",
                 "sugared_genericSig": "<Self where Self : UNComponents.UNACHCreditView>",
@@ -9076,14 +10331,22 @@
                   },
                   {
                     "kind": "TypeNominal",
-                    "name": "String",
-                    "printedName": "Swift.String",
-                    "usr": "s:SS"
+                    "name": "Optional",
+                    "printedName": "Swift.String?",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "String",
+                        "printedName": "Swift.String",
+                        "usr": "s:SS"
+                      }
+                    ],
+                    "usr": "s:Sq"
                   }
                 ],
                 "declKind": "Accessor",
-                "usr": "s:12UNComponents15UNACHCreditViewP9accountIdSSvs",
-                "mangledName": "$s12UNComponents15UNACHCreditViewP9accountIdSSvs",
+                "usr": "s:12UNComponents15UNACHCreditViewP9accountIdSSSgvs",
+                "mangledName": "$s12UNComponents15UNACHCreditViewP9accountIdSSSgvs",
                 "moduleName": "UNComponents",
                 "genericSig": "<τ_0_0 where τ_0_0 : UNComponents.UNACHCreditView>",
                 "sugared_genericSig": "<Self where Self : UNComponents.UNACHCreditView>",
@@ -9103,8 +10366,8 @@
                   }
                 ],
                 "declKind": "Accessor",
-                "usr": "s:12UNComponents15UNACHCreditViewP9accountIdSSvM",
-                "mangledName": "$s12UNComponents15UNACHCreditViewP9accountIdSSvM",
+                "usr": "s:12UNComponents15UNACHCreditViewP9accountIdSSSgvM",
+                "mangledName": "$s12UNComponents15UNACHCreditViewP9accountIdSSSgvM",
                 "moduleName": "UNComponents",
                 "genericSig": "<τ_0_0 where τ_0_0 : UNComponents.UNACHCreditView>",
                 "sugared_genericSig": "<Self where Self : UNComponents.UNACHCreditView>",
@@ -9366,6 +10629,138 @@
           },
           {
             "kind": "Var",
+            "name": "plaidAccountFilters",
+            "printedName": "plaidAccountFilters",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Optional",
+                "printedName": "[UNComponents.UNPlaidAccountFilter]?",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Array",
+                    "printedName": "[UNComponents.UNPlaidAccountFilter]",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "UNPlaidAccountFilter",
+                        "printedName": "UNComponents.UNPlaidAccountFilter",
+                        "usr": "s:12UNComponents20UNPlaidAccountFilterO"
+                      }
+                    ],
+                    "usr": "s:Sa"
+                  }
+                ],
+                "usr": "s:Sq"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "s:12UNComponents31UNACHCreditViewSettingsProtocolP19plaidAccountFiltersSayAA07UNPlaidG6FilterOGSgvp",
+            "mangledName": "$s12UNComponents31UNACHCreditViewSettingsProtocolP19plaidAccountFiltersSayAA07UNPlaidG6FilterOGSgvp",
+            "moduleName": "UNComponents",
+            "protocolReq": true,
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Optional",
+                    "printedName": "[UNComponents.UNPlaidAccountFilter]?",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "Array",
+                        "printedName": "[UNComponents.UNPlaidAccountFilter]",
+                        "children": [
+                          {
+                            "kind": "TypeNominal",
+                            "name": "UNPlaidAccountFilter",
+                            "printedName": "UNComponents.UNPlaidAccountFilter",
+                            "usr": "s:12UNComponents20UNPlaidAccountFilterO"
+                          }
+                        ],
+                        "usr": "s:Sa"
+                      }
+                    ],
+                    "usr": "s:Sq"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:12UNComponents31UNACHCreditViewSettingsProtocolP19plaidAccountFiltersSayAA07UNPlaidG6FilterOGSgvg",
+                "mangledName": "$s12UNComponents31UNACHCreditViewSettingsProtocolP19plaidAccountFiltersSayAA07UNPlaidG6FilterOGSgvg",
+                "moduleName": "UNComponents",
+                "genericSig": "<τ_0_0 where τ_0_0 : UNComponents.UNACHCreditViewSettingsProtocol>",
+                "sugared_genericSig": "<Self where Self : UNComponents.UNACHCreditViewSettingsProtocol>",
+                "protocolReq": true,
+                "reqNewWitnessTableEntry": true,
+                "accessorKind": "get"
+              }
+            ]
+          },
+          {
+            "kind": "Var",
+            "name": "plaidLinkCustomizationName",
+            "printedName": "plaidLinkCustomizationName",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Optional",
+                "printedName": "Swift.String?",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "String",
+                    "printedName": "Swift.String",
+                    "usr": "s:SS"
+                  }
+                ],
+                "usr": "s:Sq"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "s:12UNComponents31UNACHCreditViewSettingsProtocolP26plaidLinkCustomizationNameSSSgvp",
+            "mangledName": "$s12UNComponents31UNACHCreditViewSettingsProtocolP26plaidLinkCustomizationNameSSSgvp",
+            "moduleName": "UNComponents",
+            "protocolReq": true,
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Optional",
+                    "printedName": "Swift.String?",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "String",
+                        "printedName": "Swift.String",
+                        "usr": "s:SS"
+                      }
+                    ],
+                    "usr": "s:Sq"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:12UNComponents31UNACHCreditViewSettingsProtocolP26plaidLinkCustomizationNameSSSgvg",
+                "mangledName": "$s12UNComponents31UNACHCreditViewSettingsProtocolP26plaidLinkCustomizationNameSSSgvg",
+                "moduleName": "UNComponents",
+                "genericSig": "<τ_0_0 where τ_0_0 : UNComponents.UNACHCreditViewSettingsProtocol>",
+                "sugared_genericSig": "<Self where Self : UNComponents.UNACHCreditViewSettingsProtocol>",
+                "protocolReq": true,
+                "reqNewWitnessTableEntry": true,
+                "accessorKind": "get"
+              }
+            ]
+          },
+          {
+            "kind": "Var",
             "name": "sameDay",
             "printedName": "sameDay",
             "children": [
@@ -9397,6 +10792,90 @@
                 "declKind": "Accessor",
                 "usr": "s:12UNComponents31UNACHCreditViewSettingsProtocolP7sameDaySbvg",
                 "mangledName": "$s12UNComponents31UNACHCreditViewSettingsProtocolP7sameDaySbvg",
+                "moduleName": "UNComponents",
+                "genericSig": "<τ_0_0 where τ_0_0 : UNComponents.UNACHCreditViewSettingsProtocol>",
+                "sugared_genericSig": "<Self where Self : UNComponents.UNACHCreditViewSettingsProtocol>",
+                "protocolReq": true,
+                "reqNewWitnessTableEntry": true,
+                "accessorKind": "get"
+              }
+            ]
+          },
+          {
+            "kind": "Var",
+            "name": "initialStageBackButton",
+            "printedName": "initialStageBackButton",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Bool",
+                "printedName": "Swift.Bool",
+                "usr": "s:Sb"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "s:12UNComponents31UNACHCreditViewSettingsProtocolP22initialStageBackButtonSbvp",
+            "mangledName": "$s12UNComponents31UNACHCreditViewSettingsProtocolP22initialStageBackButtonSbvp",
+            "moduleName": "UNComponents",
+            "protocolReq": true,
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Bool",
+                    "printedName": "Swift.Bool",
+                    "usr": "s:Sb"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:12UNComponents31UNACHCreditViewSettingsProtocolP22initialStageBackButtonSbvg",
+                "mangledName": "$s12UNComponents31UNACHCreditViewSettingsProtocolP22initialStageBackButtonSbvg",
+                "moduleName": "UNComponents",
+                "genericSig": "<τ_0_0 where τ_0_0 : UNComponents.UNACHCreditViewSettingsProtocol>",
+                "sugared_genericSig": "<Self where Self : UNComponents.UNACHCreditViewSettingsProtocol>",
+                "protocolReq": true,
+                "reqNewWitnessTableEntry": true,
+                "accessorKind": "get"
+              }
+            ]
+          },
+          {
+            "kind": "Var",
+            "name": "finalStageDoneButton",
+            "printedName": "finalStageDoneButton",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Bool",
+                "printedName": "Swift.Bool",
+                "usr": "s:Sb"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "s:12UNComponents31UNACHCreditViewSettingsProtocolP20finalStageDoneButtonSbvp",
+            "mangledName": "$s12UNComponents31UNACHCreditViewSettingsProtocolP20finalStageDoneButtonSbvp",
+            "moduleName": "UNComponents",
+            "protocolReq": true,
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Bool",
+                    "printedName": "Swift.Bool",
+                    "usr": "s:Sb"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:12UNComponents31UNACHCreditViewSettingsProtocolP20finalStageDoneButtonSbvg",
+                "mangledName": "$s12UNComponents31UNACHCreditViewSettingsProtocolP20finalStageDoneButtonSbvg",
                 "moduleName": "UNComponents",
                 "genericSig": "<τ_0_0 where τ_0_0 : UNComponents.UNACHCreditViewSettingsProtocol>",
                 "sugared_genericSig": "<Self where Self : UNComponents.UNACHCreditViewSettingsProtocol>",
@@ -9461,14 +10940,22 @@
             "children": [
               {
                 "kind": "TypeNominal",
-                "name": "String",
-                "printedName": "Swift.String",
-                "usr": "s:SS"
+                "name": "Optional",
+                "printedName": "Swift.String?",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "String",
+                    "printedName": "Swift.String",
+                    "usr": "s:SS"
+                  }
+                ],
+                "usr": "s:Sq"
               }
             ],
             "declKind": "Var",
-            "usr": "s:12UNComponents14UNACHDebitViewP9accountIdSSvp",
-            "mangledName": "$s12UNComponents14UNACHDebitViewP9accountIdSSvp",
+            "usr": "s:12UNComponents14UNACHDebitViewP9accountIdSSSgvp",
+            "mangledName": "$s12UNComponents14UNACHDebitViewP9accountIdSSSgvp",
             "moduleName": "UNComponents",
             "protocolReq": true,
             "accessors": [
@@ -9479,14 +10966,22 @@
                 "children": [
                   {
                     "kind": "TypeNominal",
-                    "name": "String",
-                    "printedName": "Swift.String",
-                    "usr": "s:SS"
+                    "name": "Optional",
+                    "printedName": "Swift.String?",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "String",
+                        "printedName": "Swift.String",
+                        "usr": "s:SS"
+                      }
+                    ],
+                    "usr": "s:Sq"
                   }
                 ],
                 "declKind": "Accessor",
-                "usr": "s:12UNComponents14UNACHDebitViewP9accountIdSSvg",
-                "mangledName": "$s12UNComponents14UNACHDebitViewP9accountIdSSvg",
+                "usr": "s:12UNComponents14UNACHDebitViewP9accountIdSSSgvg",
+                "mangledName": "$s12UNComponents14UNACHDebitViewP9accountIdSSSgvg",
                 "moduleName": "UNComponents",
                 "genericSig": "<τ_0_0 where τ_0_0 : UNComponents.UNACHDebitView>",
                 "sugared_genericSig": "<Self where Self : UNComponents.UNACHDebitView>",
@@ -9506,14 +11001,22 @@
                   },
                   {
                     "kind": "TypeNominal",
-                    "name": "String",
-                    "printedName": "Swift.String",
-                    "usr": "s:SS"
+                    "name": "Optional",
+                    "printedName": "Swift.String?",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "String",
+                        "printedName": "Swift.String",
+                        "usr": "s:SS"
+                      }
+                    ],
+                    "usr": "s:Sq"
                   }
                 ],
                 "declKind": "Accessor",
-                "usr": "s:12UNComponents14UNACHDebitViewP9accountIdSSvs",
-                "mangledName": "$s12UNComponents14UNACHDebitViewP9accountIdSSvs",
+                "usr": "s:12UNComponents14UNACHDebitViewP9accountIdSSSgvs",
+                "mangledName": "$s12UNComponents14UNACHDebitViewP9accountIdSSSgvs",
                 "moduleName": "UNComponents",
                 "genericSig": "<τ_0_0 where τ_0_0 : UNComponents.UNACHDebitView>",
                 "sugared_genericSig": "<Self where Self : UNComponents.UNACHDebitView>",
@@ -9533,8 +11036,8 @@
                   }
                 ],
                 "declKind": "Accessor",
-                "usr": "s:12UNComponents14UNACHDebitViewP9accountIdSSvM",
-                "mangledName": "$s12UNComponents14UNACHDebitViewP9accountIdSSvM",
+                "usr": "s:12UNComponents14UNACHDebitViewP9accountIdSSSgvM",
+                "mangledName": "$s12UNComponents14UNACHDebitViewP9accountIdSSSgvM",
                 "moduleName": "UNComponents",
                 "genericSig": "<τ_0_0 where τ_0_0 : UNComponents.UNACHDebitView>",
                 "sugared_genericSig": "<Self where Self : UNComponents.UNACHDebitView>",
@@ -9785,6 +11288,222 @@
                 "declKind": "Accessor",
                 "usr": "s:12UNComponents30UNACHDebitViewSettingsProtocolP7sameDaySbvg",
                 "mangledName": "$s12UNComponents30UNACHDebitViewSettingsProtocolP7sameDaySbvg",
+                "moduleName": "UNComponents",
+                "genericSig": "<τ_0_0 where τ_0_0 : UNComponents.UNACHDebitViewSettingsProtocol>",
+                "sugared_genericSig": "<Self where Self : UNComponents.UNACHDebitViewSettingsProtocol>",
+                "protocolReq": true,
+                "reqNewWitnessTableEntry": true,
+                "accessorKind": "get"
+              }
+            ]
+          },
+          {
+            "kind": "Var",
+            "name": "plaidAccountFilters",
+            "printedName": "plaidAccountFilters",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Optional",
+                "printedName": "[UNComponents.UNPlaidAccountFilter]?",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Array",
+                    "printedName": "[UNComponents.UNPlaidAccountFilter]",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "UNPlaidAccountFilter",
+                        "printedName": "UNComponents.UNPlaidAccountFilter",
+                        "usr": "s:12UNComponents20UNPlaidAccountFilterO"
+                      }
+                    ],
+                    "usr": "s:Sa"
+                  }
+                ],
+                "usr": "s:Sq"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "s:12UNComponents30UNACHDebitViewSettingsProtocolP19plaidAccountFiltersSayAA07UNPlaidG6FilterOGSgvp",
+            "mangledName": "$s12UNComponents30UNACHDebitViewSettingsProtocolP19plaidAccountFiltersSayAA07UNPlaidG6FilterOGSgvp",
+            "moduleName": "UNComponents",
+            "protocolReq": true,
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Optional",
+                    "printedName": "[UNComponents.UNPlaidAccountFilter]?",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "Array",
+                        "printedName": "[UNComponents.UNPlaidAccountFilter]",
+                        "children": [
+                          {
+                            "kind": "TypeNominal",
+                            "name": "UNPlaidAccountFilter",
+                            "printedName": "UNComponents.UNPlaidAccountFilter",
+                            "usr": "s:12UNComponents20UNPlaidAccountFilterO"
+                          }
+                        ],
+                        "usr": "s:Sa"
+                      }
+                    ],
+                    "usr": "s:Sq"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:12UNComponents30UNACHDebitViewSettingsProtocolP19plaidAccountFiltersSayAA07UNPlaidG6FilterOGSgvg",
+                "mangledName": "$s12UNComponents30UNACHDebitViewSettingsProtocolP19plaidAccountFiltersSayAA07UNPlaidG6FilterOGSgvg",
+                "moduleName": "UNComponents",
+                "genericSig": "<τ_0_0 where τ_0_0 : UNComponents.UNACHDebitViewSettingsProtocol>",
+                "sugared_genericSig": "<Self where Self : UNComponents.UNACHDebitViewSettingsProtocol>",
+                "protocolReq": true,
+                "reqNewWitnessTableEntry": true,
+                "accessorKind": "get"
+              }
+            ]
+          },
+          {
+            "kind": "Var",
+            "name": "plaidLinkCustomizationName",
+            "printedName": "plaidLinkCustomizationName",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Optional",
+                "printedName": "Swift.String?",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "String",
+                    "printedName": "Swift.String",
+                    "usr": "s:SS"
+                  }
+                ],
+                "usr": "s:Sq"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "s:12UNComponents30UNACHDebitViewSettingsProtocolP26plaidLinkCustomizationNameSSSgvp",
+            "mangledName": "$s12UNComponents30UNACHDebitViewSettingsProtocolP26plaidLinkCustomizationNameSSSgvp",
+            "moduleName": "UNComponents",
+            "protocolReq": true,
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Optional",
+                    "printedName": "Swift.String?",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "String",
+                        "printedName": "Swift.String",
+                        "usr": "s:SS"
+                      }
+                    ],
+                    "usr": "s:Sq"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:12UNComponents30UNACHDebitViewSettingsProtocolP26plaidLinkCustomizationNameSSSgvg",
+                "mangledName": "$s12UNComponents30UNACHDebitViewSettingsProtocolP26plaidLinkCustomizationNameSSSgvg",
+                "moduleName": "UNComponents",
+                "genericSig": "<τ_0_0 where τ_0_0 : UNComponents.UNACHDebitViewSettingsProtocol>",
+                "sugared_genericSig": "<Self where Self : UNComponents.UNACHDebitViewSettingsProtocol>",
+                "protocolReq": true,
+                "reqNewWitnessTableEntry": true,
+                "accessorKind": "get"
+              }
+            ]
+          },
+          {
+            "kind": "Var",
+            "name": "initialStageBackButton",
+            "printedName": "initialStageBackButton",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Bool",
+                "printedName": "Swift.Bool",
+                "usr": "s:Sb"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "s:12UNComponents30UNACHDebitViewSettingsProtocolP22initialStageBackButtonSbvp",
+            "mangledName": "$s12UNComponents30UNACHDebitViewSettingsProtocolP22initialStageBackButtonSbvp",
+            "moduleName": "UNComponents",
+            "protocolReq": true,
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Bool",
+                    "printedName": "Swift.Bool",
+                    "usr": "s:Sb"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:12UNComponents30UNACHDebitViewSettingsProtocolP22initialStageBackButtonSbvg",
+                "mangledName": "$s12UNComponents30UNACHDebitViewSettingsProtocolP22initialStageBackButtonSbvg",
+                "moduleName": "UNComponents",
+                "genericSig": "<τ_0_0 where τ_0_0 : UNComponents.UNACHDebitViewSettingsProtocol>",
+                "sugared_genericSig": "<Self where Self : UNComponents.UNACHDebitViewSettingsProtocol>",
+                "protocolReq": true,
+                "reqNewWitnessTableEntry": true,
+                "accessorKind": "get"
+              }
+            ]
+          },
+          {
+            "kind": "Var",
+            "name": "finalStageDoneButton",
+            "printedName": "finalStageDoneButton",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Bool",
+                "printedName": "Swift.Bool",
+                "usr": "s:Sb"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "s:12UNComponents30UNACHDebitViewSettingsProtocolP20finalStageDoneButtonSbvp",
+            "mangledName": "$s12UNComponents30UNACHDebitViewSettingsProtocolP20finalStageDoneButtonSbvp",
+            "moduleName": "UNComponents",
+            "protocolReq": true,
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Bool",
+                    "printedName": "Swift.Bool",
+                    "usr": "s:Sb"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:12UNComponents30UNACHDebitViewSettingsProtocolP20finalStageDoneButtonSbvg",
+                "mangledName": "$s12UNComponents30UNACHDebitViewSettingsProtocolP20finalStageDoneButtonSbvg",
                 "moduleName": "UNComponents",
                 "genericSig": "<τ_0_0 where τ_0_0 : UNComponents.UNACHDebitViewSettingsProtocol>",
                 "sugared_genericSig": "<Self where Self : UNComponents.UNACHDebitViewSettingsProtocol>",
@@ -11066,6 +12785,80 @@
             "declKind": "EnumElement",
             "usr": "s:12UNComponents27UNACHDebitComponentCallbackO16onPaymentCreatedyAcA9UNACHDataV_tcACmF",
             "mangledName": "$s12UNComponents27UNACHDebitComponentCallbackO16onPaymentCreatedyAcA9UNACHDataV_tcACmF",
+            "moduleName": "UNComponents"
+          },
+          {
+            "kind": "Var",
+            "name": "onInitialStageBackButtonClicked",
+            "printedName": "onInitialStageBackButtonClicked",
+            "children": [
+              {
+                "kind": "TypeFunc",
+                "name": "Function",
+                "printedName": "(UNComponents.UNACHDebitComponentCallback.Type) -> UNComponents.UNACHDebitComponentCallback",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "UNACHDebitComponentCallback",
+                    "printedName": "UNComponents.UNACHDebitComponentCallback",
+                    "usr": "s:12UNComponents27UNACHDebitComponentCallbackO"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Metatype",
+                    "printedName": "UNComponents.UNACHDebitComponentCallback.Type",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "UNACHDebitComponentCallback",
+                        "printedName": "UNComponents.UNACHDebitComponentCallback",
+                        "usr": "s:12UNComponents27UNACHDebitComponentCallbackO"
+                      }
+                    ]
+                  }
+                ]
+              }
+            ],
+            "declKind": "EnumElement",
+            "usr": "s:12UNComponents27UNACHDebitComponentCallbackO31onInitialStageBackButtonClickedyA2CmF",
+            "mangledName": "$s12UNComponents27UNACHDebitComponentCallbackO31onInitialStageBackButtonClickedyA2CmF",
+            "moduleName": "UNComponents"
+          },
+          {
+            "kind": "Var",
+            "name": "onFinalStageDoneButtonClicked",
+            "printedName": "onFinalStageDoneButtonClicked",
+            "children": [
+              {
+                "kind": "TypeFunc",
+                "name": "Function",
+                "printedName": "(UNComponents.UNACHDebitComponentCallback.Type) -> UNComponents.UNACHDebitComponentCallback",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "UNACHDebitComponentCallback",
+                    "printedName": "UNComponents.UNACHDebitComponentCallback",
+                    "usr": "s:12UNComponents27UNACHDebitComponentCallbackO"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Metatype",
+                    "printedName": "UNComponents.UNACHDebitComponentCallback.Type",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "UNACHDebitComponentCallback",
+                        "printedName": "UNComponents.UNACHDebitComponentCallback",
+                        "usr": "s:12UNComponents27UNACHDebitComponentCallbackO"
+                      }
+                    ]
+                  }
+                ]
+              }
+            ],
+            "declKind": "EnumElement",
+            "usr": "s:12UNComponents27UNACHDebitComponentCallbackO29onFinalStageDoneButtonClickedyA2CmF",
+            "mangledName": "$s12UNComponents27UNACHDebitComponentCallbackO29onFinalStageDoneButtonClickedyA2CmF",
             "moduleName": "UNComponents"
           },
           {
@@ -12585,9 +14378,17 @@
               },
               {
                 "kind": "TypeNominal",
-                "name": "String",
-                "printedName": "Swift.String",
-                "usr": "s:SS"
+                "name": "Optional",
+                "printedName": "Swift.String?",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "String",
+                    "printedName": "Swift.String",
+                    "usr": "s:SS"
+                  }
+                ],
+                "usr": "s:Sq"
               },
               {
                 "kind": "TypeNominal",
@@ -12659,8 +14460,8 @@
               }
             ],
             "declKind": "Func",
-            "usr": "s:12UNComponents9UNUIViewsP21getACHCreditComponent9accountId18additionalSettings5theme8language9callbacksAA15UNACHCreditView_pSS_AA0mnI8Protocol_pSgSSSgAMyAA0mE8CallbackOcSgtF",
-            "mangledName": "$s12UNComponents9UNUIViewsP21getACHCreditComponent9accountId18additionalSettings5theme8language9callbacksAA15UNACHCreditView_pSS_AA0mnI8Protocol_pSgSSSgAMyAA0mE8CallbackOcSgtF",
+            "usr": "s:12UNComponents9UNUIViewsP21getACHCreditComponent9accountId18additionalSettings5theme8language9callbacksAA15UNACHCreditView_pSSSg_AA0mnI8Protocol_pSgA2KyAA0mE8CallbackOcSgtF",
+            "mangledName": "$s12UNComponents9UNUIViewsP21getACHCreditComponent9accountId18additionalSettings5theme8language9callbacksAA15UNACHCreditView_pSSSg_AA0mnI8Protocol_pSgA2KyAA0mE8CallbackOcSgtF",
             "moduleName": "UNComponents",
             "genericSig": "<τ_0_0 where τ_0_0 : UNComponents.UNUIViews>",
             "sugared_genericSig": "<Self where Self : UNComponents.UNUIViews>",
@@ -12681,9 +14482,17 @@
               },
               {
                 "kind": "TypeNominal",
-                "name": "String",
-                "printedName": "Swift.String",
-                "usr": "s:SS"
+                "name": "Optional",
+                "printedName": "Swift.String?",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "String",
+                    "printedName": "Swift.String",
+                    "usr": "s:SS"
+                  }
+                ],
+                "usr": "s:Sq"
               },
               {
                 "kind": "TypeNominal",
@@ -12755,8 +14564,8 @@
               }
             ],
             "declKind": "Func",
-            "usr": "s:12UNComponents9UNUIViewsP20getACHDebitComponent9accountId18additionalSettings5theme8language9callbacksAA14UNACHDebitView_pSS_AA0mnI8Protocol_pSgSSSgAMyAA0mE8CallbackOcSgtF",
-            "mangledName": "$s12UNComponents9UNUIViewsP20getACHDebitComponent9accountId18additionalSettings5theme8language9callbacksAA14UNACHDebitView_pSS_AA0mnI8Protocol_pSgSSSgAMyAA0mE8CallbackOcSgtF",
+            "usr": "s:12UNComponents9UNUIViewsP20getACHDebitComponent9accountId18additionalSettings5theme8language9callbacksAA14UNACHDebitView_pSSSg_AA0mnI8Protocol_pSgA2KyAA0mE8CallbackOcSgtF",
+            "mangledName": "$s12UNComponents9UNUIViewsP20getACHDebitComponent9accountId18additionalSettings5theme8language9callbacksAA14UNACHDebitView_pSSSg_AA0mnI8Protocol_pSgA2KyAA0mE8CallbackOcSgtF",
             "moduleName": "UNComponents",
             "genericSig": "<τ_0_0 where τ_0_0 : UNComponents.UNUIViews>",
             "sugared_genericSig": "<Self where Self : UNComponents.UNUIViews>",
@@ -12985,21 +14794,45 @@
               },
               {
                 "kind": "TypeNominal",
-                "name": "String",
-                "printedName": "Swift.String",
-                "usr": "s:SS"
+                "name": "Optional",
+                "printedName": "Swift.String?",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "String",
+                    "printedName": "Swift.String",
+                    "usr": "s:SS"
+                  }
+                ],
+                "usr": "s:Sq"
               },
               {
                 "kind": "TypeNominal",
-                "name": "String",
-                "printedName": "Swift.String",
-                "usr": "s:SS"
+                "name": "Optional",
+                "printedName": "Swift.String?",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "String",
+                    "printedName": "Swift.String",
+                    "usr": "s:SS"
+                  }
+                ],
+                "usr": "s:Sq"
               },
               {
                 "kind": "TypeNominal",
-                "name": "String",
-                "printedName": "Swift.String",
-                "usr": "s:SS"
+                "name": "Optional",
+                "printedName": "Swift.String?",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "String",
+                    "printedName": "Swift.String",
+                    "usr": "s:SS"
+                  }
+                ],
+                "usr": "s:Sq"
               },
               {
                 "kind": "TypeNominal",
@@ -13077,8 +14910,8 @@
               }
             ],
             "declKind": "Func",
-            "usr": "s:12UNComponents9UNUIViewsP23getBookPaymentComponent9accountId019counterpartyAccountH00I4Name14isSameCustomer18additionalSettings5theme8language9callbacksAA06UNBookE4View_pSS_S2SSbAA0teuP8Protocol_pSgSSSgAPyAA0teF8CallbackOcSgtF",
-            "mangledName": "$s12UNComponents9UNUIViewsP23getBookPaymentComponent9accountId019counterpartyAccountH00I4Name14isSameCustomer18additionalSettings5theme8language9callbacksAA06UNBookE4View_pSS_S2SSbAA0teuP8Protocol_pSgSSSgAPyAA0teF8CallbackOcSgtF",
+            "usr": "s:12UNComponents9UNUIViewsP23getBookPaymentComponent9accountId019counterpartyAccountH00I4Name14isSameCustomer18additionalSettings5theme8language9callbacksAA06UNBookE4View_pSSSg_A2NSbAA0teuP8Protocol_pSgA2NyAA0teF8CallbackOcSgtF",
+            "mangledName": "$s12UNComponents9UNUIViewsP23getBookPaymentComponent9accountId019counterpartyAccountH00I4Name14isSameCustomer18additionalSettings5theme8language9callbacksAA06UNBookE4View_pSSSg_A2NSbAA0teuP8Protocol_pSgA2NyAA0teF8CallbackOcSgtF",
             "moduleName": "UNComponents",
             "genericSig": "<τ_0_0 where τ_0_0 : UNComponents.UNUIViews>",
             "sugared_genericSig": "<Self where Self : UNComponents.UNUIViews>",
@@ -13089,7 +14922,7 @@
           {
             "kind": "Function",
             "name": "getCheckDepositComponent",
-            "printedName": "getCheckDepositComponent(accountId:fee:theme:language:callbacks:)",
+            "printedName": "getCheckDepositComponent(accountId:fee:additionalSettings:theme:language:callbacks:)",
             "children": [
               {
                 "kind": "TypeNominal",
@@ -13105,9 +14938,31 @@
               },
               {
                 "kind": "TypeNominal",
-                "name": "Double",
-                "printedName": "Swift.Double",
-                "usr": "s:Sd"
+                "name": "Optional",
+                "printedName": "Swift.Double?",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Double",
+                    "printedName": "Swift.Double",
+                    "usr": "s:Sd"
+                  }
+                ],
+                "usr": "s:Sq"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Optional",
+                "printedName": "UNComponents.UNCheckDepositViewSettingsProtocol?",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "UNCheckDepositViewSettingsProtocol",
+                    "printedName": "UNComponents.UNCheckDepositViewSettingsProtocol",
+                    "usr": "s:12UNComponents34UNCheckDepositViewSettingsProtocolP"
+                  }
+                ],
+                "usr": "s:Sq"
               },
               {
                 "kind": "TypeNominal",
@@ -13165,8 +15020,8 @@
               }
             ],
             "declKind": "Func",
-            "usr": "s:12UNComponents9UNUIViewsP24getCheckDepositComponent9accountId3fee5theme8language9callbacksAA07UNCheckE4View_pSS_SdSSSgAKyAA0meF8CallbackOcSgtF",
-            "mangledName": "$s12UNComponents9UNUIViewsP24getCheckDepositComponent9accountId3fee5theme8language9callbacksAA07UNCheckE4View_pSS_SdSSSgAKyAA0meF8CallbackOcSgtF",
+            "usr": "s:12UNComponents9UNUIViewsP24getCheckDepositComponent9accountId3fee18additionalSettings5theme8language9callbacksAA07UNCheckE4View_pSS_SdSgAA0oepK8Protocol_pSgSSSgAOyAA0oeF8CallbackOcSgtF",
+            "mangledName": "$s12UNComponents9UNUIViewsP24getCheckDepositComponent9accountId3fee18additionalSettings5theme8language9callbacksAA07UNCheckE4View_pSS_SdSgAA0oepK8Protocol_pSgSSSgAOyAA0oeF8CallbackOcSgtF",
             "moduleName": "UNComponents",
             "genericSig": "<τ_0_0 where τ_0_0 : UNComponents.UNUIViews>",
             "sugared_genericSig": "<Self where Self : UNComponents.UNUIViews>",
@@ -13376,9 +15231,18 @@
               },
               {
                 "kind": "TypeNominal",
-                "name": "String",
-                "printedName": "Swift.String",
-                "usr": "s:SS"
+                "name": "Optional",
+                "printedName": "Swift.String?",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "String",
+                    "printedName": "Swift.String",
+                    "usr": "s:SS"
+                  }
+                ],
+                "hasDefaultArg": true,
+                "usr": "s:Sq"
               },
               {
                 "kind": "TypeNominal",
@@ -13454,8 +15318,8 @@
               }
             ],
             "declKind": "Func",
-            "usr": "s:12UNComponents9UNUIViewsPAAE21getACHCreditComponent9accountId18additionalSettings5theme8language9callbacksAA15UNACHCreditView_pSS_AA0mnI8Protocol_pSgSSSgAMyAA0mE8CallbackOcSgtF",
-            "mangledName": "$s12UNComponents9UNUIViewsPAAE21getACHCreditComponent9accountId18additionalSettings5theme8language9callbacksAA15UNACHCreditView_pSS_AA0mnI8Protocol_pSgSSSgAMyAA0mE8CallbackOcSgtF",
+            "usr": "s:12UNComponents9UNUIViewsPAAE21getACHCreditComponent9accountId18additionalSettings5theme8language9callbacksAA15UNACHCreditView_pSSSg_AA0mnI8Protocol_pSgA2KyAA0mE8CallbackOcSgtF",
+            "mangledName": "$s12UNComponents9UNUIViewsPAAE21getACHCreditComponent9accountId18additionalSettings5theme8language9callbacksAA15UNACHCreditView_pSSSg_AA0mnI8Protocol_pSgA2KyAA0mE8CallbackOcSgtF",
             "moduleName": "UNComponents",
             "genericSig": "<τ_0_0 where τ_0_0 : UNComponents.UNUIViews>",
             "sugared_genericSig": "<Self where Self : UNComponents.UNUIViews>",
@@ -13475,9 +15339,18 @@
               },
               {
                 "kind": "TypeNominal",
-                "name": "String",
-                "printedName": "Swift.String",
-                "usr": "s:SS"
+                "name": "Optional",
+                "printedName": "Swift.String?",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "String",
+                    "printedName": "Swift.String",
+                    "usr": "s:SS"
+                  }
+                ],
+                "hasDefaultArg": true,
+                "usr": "s:Sq"
               },
               {
                 "kind": "TypeNominal",
@@ -13553,8 +15426,8 @@
               }
             ],
             "declKind": "Func",
-            "usr": "s:12UNComponents9UNUIViewsPAAE20getACHDebitComponent9accountId18additionalSettings5theme8language9callbacksAA14UNACHDebitView_pSS_AA0mnI8Protocol_pSgSSSgAMyAA0mE8CallbackOcSgtF",
-            "mangledName": "$s12UNComponents9UNUIViewsPAAE20getACHDebitComponent9accountId18additionalSettings5theme8language9callbacksAA14UNACHDebitView_pSS_AA0mnI8Protocol_pSgSSSgAMyAA0mE8CallbackOcSgtF",
+            "usr": "s:12UNComponents9UNUIViewsPAAE20getACHDebitComponent9accountId18additionalSettings5theme8language9callbacksAA14UNACHDebitView_pSSSg_AA0mnI8Protocol_pSgA2KyAA0mE8CallbackOcSgtF",
+            "mangledName": "$s12UNComponents9UNUIViewsPAAE20getACHDebitComponent9accountId18additionalSettings5theme8language9callbacksAA14UNACHDebitView_pSSSg_AA0mnI8Protocol_pSgA2KyAA0mE8CallbackOcSgtF",
             "moduleName": "UNComponents",
             "genericSig": "<τ_0_0 where τ_0_0 : UNComponents.UNUIViews>",
             "sugared_genericSig": "<Self where Self : UNComponents.UNUIViews>",
@@ -13790,21 +15663,48 @@
               },
               {
                 "kind": "TypeNominal",
-                "name": "String",
-                "printedName": "Swift.String",
-                "usr": "s:SS"
+                "name": "Optional",
+                "printedName": "Swift.String?",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "String",
+                    "printedName": "Swift.String",
+                    "usr": "s:SS"
+                  }
+                ],
+                "hasDefaultArg": true,
+                "usr": "s:Sq"
               },
               {
                 "kind": "TypeNominal",
-                "name": "String",
-                "printedName": "Swift.String",
-                "usr": "s:SS"
+                "name": "Optional",
+                "printedName": "Swift.String?",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "String",
+                    "printedName": "Swift.String",
+                    "usr": "s:SS"
+                  }
+                ],
+                "hasDefaultArg": true,
+                "usr": "s:Sq"
               },
               {
                 "kind": "TypeNominal",
-                "name": "String",
-                "printedName": "Swift.String",
-                "usr": "s:SS"
+                "name": "Optional",
+                "printedName": "Swift.String?",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "String",
+                    "printedName": "Swift.String",
+                    "usr": "s:SS"
+                  }
+                ],
+                "hasDefaultArg": true,
+                "usr": "s:Sq"
               },
               {
                 "kind": "TypeNominal",
@@ -13887,8 +15787,8 @@
               }
             ],
             "declKind": "Func",
-            "usr": "s:12UNComponents9UNUIViewsPAAE23getBookPaymentComponent9accountId019counterpartyAccountH00I4Name14isSameCustomer18additionalSettings5theme8language9callbacksAA06UNBookE4View_pSS_S2SSbAA0teuP8Protocol_pSgSSSgAPyAA0teF8CallbackOcSgtF",
-            "mangledName": "$s12UNComponents9UNUIViewsPAAE23getBookPaymentComponent9accountId019counterpartyAccountH00I4Name14isSameCustomer18additionalSettings5theme8language9callbacksAA06UNBookE4View_pSS_S2SSbAA0teuP8Protocol_pSgSSSgAPyAA0teF8CallbackOcSgtF",
+            "usr": "s:12UNComponents9UNUIViewsPAAE23getBookPaymentComponent9accountId019counterpartyAccountH00I4Name14isSameCustomer18additionalSettings5theme8language9callbacksAA06UNBookE4View_pSSSg_A2NSbAA0teuP8Protocol_pSgA2NyAA0teF8CallbackOcSgtF",
+            "mangledName": "$s12UNComponents9UNUIViewsPAAE23getBookPaymentComponent9accountId019counterpartyAccountH00I4Name14isSameCustomer18additionalSettings5theme8language9callbacksAA06UNBookE4View_pSSSg_A2NSbAA0teuP8Protocol_pSgA2NyAA0teF8CallbackOcSgtF",
             "moduleName": "UNComponents",
             "genericSig": "<τ_0_0 where τ_0_0 : UNComponents.UNUIViews>",
             "sugared_genericSig": "<Self where Self : UNComponents.UNUIViews>",
@@ -13898,7 +15798,7 @@
           {
             "kind": "Function",
             "name": "getCheckDepositComponent",
-            "printedName": "getCheckDepositComponent(accountId:fee:theme:language:callbacks:)",
+            "printedName": "getCheckDepositComponent(accountId:fee:additionalSettings:theme:language:callbacks:)",
             "children": [
               {
                 "kind": "TypeNominal",
@@ -13914,9 +15814,33 @@
               },
               {
                 "kind": "TypeNominal",
-                "name": "Double",
-                "printedName": "Swift.Double",
-                "usr": "s:Sd"
+                "name": "Optional",
+                "printedName": "Swift.Double?",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Double",
+                    "printedName": "Swift.Double",
+                    "usr": "s:Sd"
+                  }
+                ],
+                "hasDefaultArg": true,
+                "usr": "s:Sq"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Optional",
+                "printedName": "UNComponents.UNCheckDepositViewSettingsProtocol?",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "UNCheckDepositViewSettingsProtocol",
+                    "printedName": "UNComponents.UNCheckDepositViewSettingsProtocol",
+                    "usr": "s:12UNComponents34UNCheckDepositViewSettingsProtocolP"
+                  }
+                ],
+                "hasDefaultArg": true,
+                "usr": "s:Sq"
               },
               {
                 "kind": "TypeNominal",
@@ -13977,8 +15901,8 @@
               }
             ],
             "declKind": "Func",
-            "usr": "s:12UNComponents9UNUIViewsPAAE24getCheckDepositComponent9accountId3fee5theme8language9callbacksAA07UNCheckE4View_pSS_SdSSSgAKyAA0meF8CallbackOcSgtF",
-            "mangledName": "$s12UNComponents9UNUIViewsPAAE24getCheckDepositComponent9accountId3fee5theme8language9callbacksAA07UNCheckE4View_pSS_SdSSSgAKyAA0meF8CallbackOcSgtF",
+            "usr": "s:12UNComponents9UNUIViewsPAAE24getCheckDepositComponent9accountId3fee18additionalSettings5theme8language9callbacksAA07UNCheckE4View_pSS_SdSgAA0oepK8Protocol_pSgSSSgAOyAA0oeF8CallbackOcSgtF",
+            "mangledName": "$s12UNComponents9UNUIViewsPAAE24getCheckDepositComponent9accountId3fee18additionalSettings5theme8language9callbacksAA07UNCheckE4View_pSS_SdSgAA0oepK8Protocol_pSgSSSgAOyAA0oeF8CallbackOcSgtF",
             "moduleName": "UNComponents",
             "genericSig": "<τ_0_0 where τ_0_0 : UNComponents.UNUIViews>",
             "sugared_genericSig": "<Self where Self : UNComponents.UNUIViews>",
@@ -14817,6 +16741,80 @@
           },
           {
             "kind": "Var",
+            "name": "onInitialStageBackButtonClicked",
+            "printedName": "onInitialStageBackButtonClicked",
+            "children": [
+              {
+                "kind": "TypeFunc",
+                "name": "Function",
+                "printedName": "(UNComponents.UNCheckDepositComponentCallback.Type) -> UNComponents.UNCheckDepositComponentCallback",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "UNCheckDepositComponentCallback",
+                    "printedName": "UNComponents.UNCheckDepositComponentCallback",
+                    "usr": "s:12UNComponents31UNCheckDepositComponentCallbackO"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Metatype",
+                    "printedName": "UNComponents.UNCheckDepositComponentCallback.Type",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "UNCheckDepositComponentCallback",
+                        "printedName": "UNComponents.UNCheckDepositComponentCallback",
+                        "usr": "s:12UNComponents31UNCheckDepositComponentCallbackO"
+                      }
+                    ]
+                  }
+                ]
+              }
+            ],
+            "declKind": "EnumElement",
+            "usr": "s:12UNComponents31UNCheckDepositComponentCallbackO31onInitialStageBackButtonClickedyA2CmF",
+            "mangledName": "$s12UNComponents31UNCheckDepositComponentCallbackO31onInitialStageBackButtonClickedyA2CmF",
+            "moduleName": "UNComponents"
+          },
+          {
+            "kind": "Var",
+            "name": "onFinalStageDoneButtonClicked",
+            "printedName": "onFinalStageDoneButtonClicked",
+            "children": [
+              {
+                "kind": "TypeFunc",
+                "name": "Function",
+                "printedName": "(UNComponents.UNCheckDepositComponentCallback.Type) -> UNComponents.UNCheckDepositComponentCallback",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "UNCheckDepositComponentCallback",
+                    "printedName": "UNComponents.UNCheckDepositComponentCallback",
+                    "usr": "s:12UNComponents31UNCheckDepositComponentCallbackO"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Metatype",
+                    "printedName": "UNComponents.UNCheckDepositComponentCallback.Type",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "UNCheckDepositComponentCallback",
+                        "printedName": "UNComponents.UNCheckDepositComponentCallback",
+                        "usr": "s:12UNComponents31UNCheckDepositComponentCallbackO"
+                      }
+                    ]
+                  }
+                ]
+              }
+            ],
+            "declKind": "EnumElement",
+            "usr": "s:12UNComponents31UNCheckDepositComponentCallbackO29onFinalStageDoneButtonClickedyA2CmF",
+            "mangledName": "$s12UNComponents31UNCheckDepositComponentCallbackO29onFinalStageDoneButtonClickedyA2CmF",
+            "moduleName": "UNComponents"
+          },
+          {
+            "kind": "Var",
             "name": "unitOnLoad",
             "printedName": "unitOnLoad",
             "children": [
@@ -15126,14 +17124,22 @@
             "children": [
               {
                 "kind": "TypeNominal",
-                "name": "Double",
-                "printedName": "Swift.Double",
-                "usr": "s:Sd"
+                "name": "Optional",
+                "printedName": "Swift.Double?",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Double",
+                    "printedName": "Swift.Double",
+                    "usr": "s:Sd"
+                  }
+                ],
+                "usr": "s:Sq"
               }
             ],
             "declKind": "Var",
-            "usr": "s:12UNComponents18UNCheckDepositViewP3feeSdvp",
-            "mangledName": "$s12UNComponents18UNCheckDepositViewP3feeSdvp",
+            "usr": "s:12UNComponents18UNCheckDepositViewP3feeSdSgvp",
+            "mangledName": "$s12UNComponents18UNCheckDepositViewP3feeSdSgvp",
             "moduleName": "UNComponents",
             "protocolReq": true,
             "accessors": [
@@ -15144,14 +17150,22 @@
                 "children": [
                   {
                     "kind": "TypeNominal",
-                    "name": "Double",
-                    "printedName": "Swift.Double",
-                    "usr": "s:Sd"
+                    "name": "Optional",
+                    "printedName": "Swift.Double?",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "Double",
+                        "printedName": "Swift.Double",
+                        "usr": "s:Sd"
+                      }
+                    ],
+                    "usr": "s:Sq"
                   }
                 ],
                 "declKind": "Accessor",
-                "usr": "s:12UNComponents18UNCheckDepositViewP3feeSdvg",
-                "mangledName": "$s12UNComponents18UNCheckDepositViewP3feeSdvg",
+                "usr": "s:12UNComponents18UNCheckDepositViewP3feeSdSgvg",
+                "mangledName": "$s12UNComponents18UNCheckDepositViewP3feeSdSgvg",
                 "moduleName": "UNComponents",
                 "genericSig": "<τ_0_0 where τ_0_0 : UNComponents.UNCheckDepositView>",
                 "sugared_genericSig": "<Self where Self : UNComponents.UNCheckDepositView>",
@@ -15171,14 +17185,22 @@
                   },
                   {
                     "kind": "TypeNominal",
-                    "name": "Double",
-                    "printedName": "Swift.Double",
-                    "usr": "s:Sd"
+                    "name": "Optional",
+                    "printedName": "Swift.Double?",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "Double",
+                        "printedName": "Swift.Double",
+                        "usr": "s:Sd"
+                      }
+                    ],
+                    "usr": "s:Sq"
                   }
                 ],
                 "declKind": "Accessor",
-                "usr": "s:12UNComponents18UNCheckDepositViewP3feeSdvs",
-                "mangledName": "$s12UNComponents18UNCheckDepositViewP3feeSdvs",
+                "usr": "s:12UNComponents18UNCheckDepositViewP3feeSdSgvs",
+                "mangledName": "$s12UNComponents18UNCheckDepositViewP3feeSdSgvs",
                 "moduleName": "UNComponents",
                 "genericSig": "<τ_0_0 where τ_0_0 : UNComponents.UNCheckDepositView>",
                 "sugared_genericSig": "<Self where Self : UNComponents.UNCheckDepositView>",
@@ -15198,8 +17220,99 @@
                   }
                 ],
                 "declKind": "Accessor",
-                "usr": "s:12UNComponents18UNCheckDepositViewP3feeSdvM",
-                "mangledName": "$s12UNComponents18UNCheckDepositViewP3feeSdvM",
+                "usr": "s:12UNComponents18UNCheckDepositViewP3feeSdSgvM",
+                "mangledName": "$s12UNComponents18UNCheckDepositViewP3feeSdSgvM",
+                "moduleName": "UNComponents",
+                "genericSig": "<τ_0_0 where τ_0_0 : UNComponents.UNCheckDepositView>",
+                "sugared_genericSig": "<Self where Self : UNComponents.UNCheckDepositView>",
+                "protocolReq": true,
+                "implicit": true,
+                "reqNewWitnessTableEntry": true,
+                "accessorKind": "_modify"
+              }
+            ]
+          },
+          {
+            "kind": "Var",
+            "name": "additionalSettings",
+            "printedName": "additionalSettings",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "UNCheckDepositViewSettingsProtocol",
+                "printedName": "UNComponents.UNCheckDepositViewSettingsProtocol",
+                "usr": "s:12UNComponents34UNCheckDepositViewSettingsProtocolP"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "s:12UNComponents18UNCheckDepositViewP18additionalSettingsAA0bcdF8Protocol_pvp",
+            "mangledName": "$s12UNComponents18UNCheckDepositViewP18additionalSettingsAA0bcdF8Protocol_pvp",
+            "moduleName": "UNComponents",
+            "protocolReq": true,
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "UNCheckDepositViewSettingsProtocol",
+                    "printedName": "UNComponents.UNCheckDepositViewSettingsProtocol",
+                    "usr": "s:12UNComponents34UNCheckDepositViewSettingsProtocolP"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:12UNComponents18UNCheckDepositViewP18additionalSettingsAA0bcdF8Protocol_pvg",
+                "mangledName": "$s12UNComponents18UNCheckDepositViewP18additionalSettingsAA0bcdF8Protocol_pvg",
+                "moduleName": "UNComponents",
+                "genericSig": "<τ_0_0 where τ_0_0 : UNComponents.UNCheckDepositView>",
+                "sugared_genericSig": "<Self where Self : UNComponents.UNCheckDepositView>",
+                "protocolReq": true,
+                "reqNewWitnessTableEntry": true,
+                "accessorKind": "get"
+              },
+              {
+                "kind": "Accessor",
+                "name": "Set",
+                "printedName": "Set()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Void",
+                    "printedName": "()"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "UNCheckDepositViewSettingsProtocol",
+                    "printedName": "UNComponents.UNCheckDepositViewSettingsProtocol",
+                    "usr": "s:12UNComponents34UNCheckDepositViewSettingsProtocolP"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:12UNComponents18UNCheckDepositViewP18additionalSettingsAA0bcdF8Protocol_pvs",
+                "mangledName": "$s12UNComponents18UNCheckDepositViewP18additionalSettingsAA0bcdF8Protocol_pvs",
+                "moduleName": "UNComponents",
+                "genericSig": "<τ_0_0 where τ_0_0 : UNComponents.UNCheckDepositView>",
+                "sugared_genericSig": "<Self where Self : UNComponents.UNCheckDepositView>",
+                "protocolReq": true,
+                "reqNewWitnessTableEntry": true,
+                "accessorKind": "set"
+              },
+              {
+                "kind": "Accessor",
+                "name": "Modify",
+                "printedName": "Modify()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Void",
+                    "printedName": "()"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:12UNComponents18UNCheckDepositViewP18additionalSettingsAA0bcdF8Protocol_pvM",
+                "mangledName": "$s12UNComponents18UNCheckDepositViewP18additionalSettingsAA0bcdF8Protocol_pvM",
                 "moduleName": "UNComponents",
                 "genericSig": "<τ_0_0 where τ_0_0 : UNComponents.UNCheckDepositView>",
                 "sugared_genericSig": "<Self where Self : UNComponents.UNCheckDepositView>",
@@ -15217,6 +17330,104 @@
         "moduleName": "UNComponents",
         "genericSig": "<τ_0_0 : UIKit.UIView>",
         "sugared_genericSig": "<Self : UIKit.UIView>",
+        "declAttributes": [
+          "AccessControl"
+        ]
+      },
+      {
+        "kind": "TypeDecl",
+        "name": "UNCheckDepositViewSettingsProtocol",
+        "printedName": "UNCheckDepositViewSettingsProtocol",
+        "children": [
+          {
+            "kind": "Var",
+            "name": "initialStageBackButton",
+            "printedName": "initialStageBackButton",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Bool",
+                "printedName": "Swift.Bool",
+                "usr": "s:Sb"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "s:12UNComponents34UNCheckDepositViewSettingsProtocolP22initialStageBackButtonSbvp",
+            "mangledName": "$s12UNComponents34UNCheckDepositViewSettingsProtocolP22initialStageBackButtonSbvp",
+            "moduleName": "UNComponents",
+            "protocolReq": true,
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Bool",
+                    "printedName": "Swift.Bool",
+                    "usr": "s:Sb"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:12UNComponents34UNCheckDepositViewSettingsProtocolP22initialStageBackButtonSbvg",
+                "mangledName": "$s12UNComponents34UNCheckDepositViewSettingsProtocolP22initialStageBackButtonSbvg",
+                "moduleName": "UNComponents",
+                "genericSig": "<τ_0_0 where τ_0_0 : UNComponents.UNCheckDepositViewSettingsProtocol>",
+                "sugared_genericSig": "<Self where Self : UNComponents.UNCheckDepositViewSettingsProtocol>",
+                "protocolReq": true,
+                "reqNewWitnessTableEntry": true,
+                "accessorKind": "get"
+              }
+            ]
+          },
+          {
+            "kind": "Var",
+            "name": "finalStageDoneButton",
+            "printedName": "finalStageDoneButton",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Bool",
+                "printedName": "Swift.Bool",
+                "usr": "s:Sb"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "s:12UNComponents34UNCheckDepositViewSettingsProtocolP20finalStageDoneButtonSbvp",
+            "mangledName": "$s12UNComponents34UNCheckDepositViewSettingsProtocolP20finalStageDoneButtonSbvp",
+            "moduleName": "UNComponents",
+            "protocolReq": true,
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Bool",
+                    "printedName": "Swift.Bool",
+                    "usr": "s:Sb"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:12UNComponents34UNCheckDepositViewSettingsProtocolP20finalStageDoneButtonSbvg",
+                "mangledName": "$s12UNComponents34UNCheckDepositViewSettingsProtocolP20finalStageDoneButtonSbvg",
+                "moduleName": "UNComponents",
+                "genericSig": "<τ_0_0 where τ_0_0 : UNComponents.UNCheckDepositViewSettingsProtocol>",
+                "sugared_genericSig": "<Self where Self : UNComponents.UNCheckDepositViewSettingsProtocol>",
+                "protocolReq": true,
+                "reqNewWitnessTableEntry": true,
+                "accessorKind": "get"
+              }
+            ]
+          }
+        ],
+        "declKind": "Protocol",
+        "usr": "s:12UNComponents34UNCheckDepositViewSettingsProtocolP",
+        "mangledName": "$s12UNComponents34UNCheckDepositViewSettingsProtocolP",
+        "moduleName": "UNComponents",
         "declAttributes": [
           "AccessControl"
         ]
@@ -17215,6 +19426,219 @@
       },
       {
         "kind": "TypeDecl",
+        "name": "UNPlaidAccountFilter",
+        "printedName": "UNPlaidAccountFilter",
+        "children": [
+          {
+            "kind": "Var",
+            "name": "savings",
+            "printedName": "savings",
+            "children": [
+              {
+                "kind": "TypeFunc",
+                "name": "Function",
+                "printedName": "(UNComponents.UNPlaidAccountFilter.Type) -> UNComponents.UNPlaidAccountFilter",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "UNPlaidAccountFilter",
+                    "printedName": "UNComponents.UNPlaidAccountFilter",
+                    "usr": "s:12UNComponents20UNPlaidAccountFilterO"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Metatype",
+                    "printedName": "UNComponents.UNPlaidAccountFilter.Type",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "UNPlaidAccountFilter",
+                        "printedName": "UNComponents.UNPlaidAccountFilter",
+                        "usr": "s:12UNComponents20UNPlaidAccountFilterO"
+                      }
+                    ]
+                  }
+                ]
+              }
+            ],
+            "declKind": "EnumElement",
+            "usr": "s:12UNComponents20UNPlaidAccountFilterO7savingsyA2CmF",
+            "mangledName": "$s12UNComponents20UNPlaidAccountFilterO7savingsyA2CmF",
+            "moduleName": "UNComponents"
+          },
+          {
+            "kind": "Var",
+            "name": "checking",
+            "printedName": "checking",
+            "children": [
+              {
+                "kind": "TypeFunc",
+                "name": "Function",
+                "printedName": "(UNComponents.UNPlaidAccountFilter.Type) -> UNComponents.UNPlaidAccountFilter",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "UNPlaidAccountFilter",
+                    "printedName": "UNComponents.UNPlaidAccountFilter",
+                    "usr": "s:12UNComponents20UNPlaidAccountFilterO"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Metatype",
+                    "printedName": "UNComponents.UNPlaidAccountFilter.Type",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "UNPlaidAccountFilter",
+                        "printedName": "UNComponents.UNPlaidAccountFilter",
+                        "usr": "s:12UNComponents20UNPlaidAccountFilterO"
+                      }
+                    ]
+                  }
+                ]
+              }
+            ],
+            "declKind": "EnumElement",
+            "usr": "s:12UNComponents20UNPlaidAccountFilterO8checkingyA2CmF",
+            "mangledName": "$s12UNComponents20UNPlaidAccountFilterO8checkingyA2CmF",
+            "moduleName": "UNComponents"
+          },
+          {
+            "kind": "Constructor",
+            "name": "init",
+            "printedName": "init(rawValue:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Optional",
+                "printedName": "UNComponents.UNPlaidAccountFilter?",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "UNPlaidAccountFilter",
+                    "printedName": "UNComponents.UNPlaidAccountFilter",
+                    "usr": "s:12UNComponents20UNPlaidAccountFilterO"
+                  }
+                ],
+                "usr": "s:Sq"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "String",
+                "printedName": "Swift.String",
+                "usr": "s:SS"
+              }
+            ],
+            "declKind": "Constructor",
+            "usr": "s:12UNComponents20UNPlaidAccountFilterO8rawValueACSgSS_tcfc",
+            "mangledName": "$s12UNComponents20UNPlaidAccountFilterO8rawValueACSgSS_tcfc",
+            "moduleName": "UNComponents",
+            "implicit": true,
+            "init_kind": "Designated"
+          },
+          {
+            "kind": "Var",
+            "name": "rawValue",
+            "printedName": "rawValue",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "String",
+                "printedName": "Swift.String",
+                "usr": "s:SS"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "s:12UNComponents20UNPlaidAccountFilterO8rawValueSSvp",
+            "mangledName": "$s12UNComponents20UNPlaidAccountFilterO8rawValueSSvp",
+            "moduleName": "UNComponents",
+            "implicit": true,
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "String",
+                    "printedName": "Swift.String",
+                    "usr": "s:SS"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:12UNComponents20UNPlaidAccountFilterO8rawValueSSvg",
+                "mangledName": "$s12UNComponents20UNPlaidAccountFilterO8rawValueSSvg",
+                "moduleName": "UNComponents",
+                "implicit": true,
+                "accessorKind": "get"
+              }
+            ]
+          }
+        ],
+        "declKind": "Enum",
+        "usr": "s:12UNComponents20UNPlaidAccountFilterO",
+        "mangledName": "$s12UNComponents20UNPlaidAccountFilterO",
+        "moduleName": "UNComponents",
+        "declAttributes": [
+          "AccessControl"
+        ],
+        "enumRawTypeName": "String",
+        "conformances": [
+          {
+            "kind": "Conformance",
+            "name": "Equatable",
+            "printedName": "Equatable",
+            "usr": "s:SQ",
+            "mangledName": "$sSQ"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Hashable",
+            "printedName": "Hashable",
+            "usr": "s:SH",
+            "mangledName": "$sSH"
+          },
+          {
+            "kind": "Conformance",
+            "name": "RawRepresentable",
+            "printedName": "RawRepresentable",
+            "children": [
+              {
+                "kind": "TypeWitness",
+                "name": "RawValue",
+                "printedName": "RawValue",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "String",
+                    "printedName": "Swift.String",
+                    "usr": "s:SS"
+                  }
+                ]
+              }
+            ],
+            "usr": "s:SY",
+            "mangledName": "$sSY"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Decodable",
+            "printedName": "Decodable",
+            "usr": "s:Se",
+            "mangledName": "$sSe"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Encodable",
+            "printedName": "Encodable",
+            "usr": "s:SE",
+            "mangledName": "$sSE"
+          }
+        ]
+      },
+      {
+        "kind": "TypeDecl",
         "name": "UNCounterpartyVerificationMethod",
         "printedName": "UNCounterpartyVerificationMethod",
         "children": [
@@ -17553,6 +19977,80 @@
             "declKind": "EnumElement",
             "usr": "s:12UNComponents30UNBookPaymentComponentCallbackO02onC7CreatedyAcA0bC4DataV_tcACmF",
             "mangledName": "$s12UNComponents30UNBookPaymentComponentCallbackO02onC7CreatedyAcA0bC4DataV_tcACmF",
+            "moduleName": "UNComponents"
+          },
+          {
+            "kind": "Var",
+            "name": "onInitialStageBackButtonClicked",
+            "printedName": "onInitialStageBackButtonClicked",
+            "children": [
+              {
+                "kind": "TypeFunc",
+                "name": "Function",
+                "printedName": "(UNComponents.UNBookPaymentComponentCallback.Type) -> UNComponents.UNBookPaymentComponentCallback",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "UNBookPaymentComponentCallback",
+                    "printedName": "UNComponents.UNBookPaymentComponentCallback",
+                    "usr": "s:12UNComponents30UNBookPaymentComponentCallbackO"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Metatype",
+                    "printedName": "UNComponents.UNBookPaymentComponentCallback.Type",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "UNBookPaymentComponentCallback",
+                        "printedName": "UNComponents.UNBookPaymentComponentCallback",
+                        "usr": "s:12UNComponents30UNBookPaymentComponentCallbackO"
+                      }
+                    ]
+                  }
+                ]
+              }
+            ],
+            "declKind": "EnumElement",
+            "usr": "s:12UNComponents30UNBookPaymentComponentCallbackO31onInitialStageBackButtonClickedyA2CmF",
+            "mangledName": "$s12UNComponents30UNBookPaymentComponentCallbackO31onInitialStageBackButtonClickedyA2CmF",
+            "moduleName": "UNComponents"
+          },
+          {
+            "kind": "Var",
+            "name": "onFinalStageDoneButtonClicked",
+            "printedName": "onFinalStageDoneButtonClicked",
+            "children": [
+              {
+                "kind": "TypeFunc",
+                "name": "Function",
+                "printedName": "(UNComponents.UNBookPaymentComponentCallback.Type) -> UNComponents.UNBookPaymentComponentCallback",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "UNBookPaymentComponentCallback",
+                    "printedName": "UNComponents.UNBookPaymentComponentCallback",
+                    "usr": "s:12UNComponents30UNBookPaymentComponentCallbackO"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Metatype",
+                    "printedName": "UNComponents.UNBookPaymentComponentCallback.Type",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "UNBookPaymentComponentCallback",
+                        "printedName": "UNComponents.UNBookPaymentComponentCallback",
+                        "usr": "s:12UNComponents30UNBookPaymentComponentCallbackO"
+                      }
+                    ]
+                  }
+                ]
+              }
+            ],
+            "declKind": "EnumElement",
+            "usr": "s:12UNComponents30UNBookPaymentComponentCallbackO29onFinalStageDoneButtonClickedyA2CmF",
+            "mangledName": "$s12UNComponents30UNBookPaymentComponentCallbackO29onFinalStageDoneButtonClickedyA2CmF",
             "moduleName": "UNComponents"
           },
           {
@@ -23301,9 +25799,97 @@
             ]
           },
           {
+            "kind": "Var",
+            "name": "initialStageBackButton",
+            "printedName": "initialStageBackButton",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Bool",
+                "printedName": "Swift.Bool",
+                "usr": "s:Sb"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "s:12UNComponents32UNBookPaymentViewSettingsBuilderC22initialStageBackButtonSbvp",
+            "mangledName": "$s12UNComponents32UNBookPaymentViewSettingsBuilderC22initialStageBackButtonSbvp",
+            "moduleName": "UNComponents",
+            "declAttributes": [
+              "HasStorage",
+              "SetterAccess",
+              "AccessControl"
+            ],
+            "hasStorage": true,
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Bool",
+                    "printedName": "Swift.Bool",
+                    "usr": "s:Sb"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:12UNComponents32UNBookPaymentViewSettingsBuilderC22initialStageBackButtonSbvg",
+                "mangledName": "$s12UNComponents32UNBookPaymentViewSettingsBuilderC22initialStageBackButtonSbvg",
+                "moduleName": "UNComponents",
+                "implicit": true,
+                "accessorKind": "get"
+              }
+            ]
+          },
+          {
+            "kind": "Var",
+            "name": "finalStageDoneButton",
+            "printedName": "finalStageDoneButton",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Bool",
+                "printedName": "Swift.Bool",
+                "usr": "s:Sb"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "s:12UNComponents32UNBookPaymentViewSettingsBuilderC20finalStageDoneButtonSbvp",
+            "mangledName": "$s12UNComponents32UNBookPaymentViewSettingsBuilderC20finalStageDoneButtonSbvp",
+            "moduleName": "UNComponents",
+            "declAttributes": [
+              "HasStorage",
+              "SetterAccess",
+              "AccessControl"
+            ],
+            "hasStorage": true,
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Bool",
+                    "printedName": "Swift.Bool",
+                    "usr": "s:Sb"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:12UNComponents32UNBookPaymentViewSettingsBuilderC20finalStageDoneButtonSbvg",
+                "mangledName": "$s12UNComponents32UNBookPaymentViewSettingsBuilderC20finalStageDoneButtonSbvg",
+                "moduleName": "UNComponents",
+                "implicit": true,
+                "accessorKind": "get"
+              }
+            ]
+          },
+          {
             "kind": "Constructor",
             "name": "init",
-            "printedName": "init(isAutoFocus:)",
+            "printedName": "init(isAutoFocus:initialStageBackButton:finalStageDoneButton:)",
             "children": [
               {
                 "kind": "TypeNominal",
@@ -23317,11 +25903,25 @@
                 "printedName": "Swift.Bool",
                 "hasDefaultArg": true,
                 "usr": "s:Sb"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Bool",
+                "printedName": "Swift.Bool",
+                "hasDefaultArg": true,
+                "usr": "s:Sb"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Bool",
+                "printedName": "Swift.Bool",
+                "hasDefaultArg": true,
+                "usr": "s:Sb"
               }
             ],
             "declKind": "Constructor",
-            "usr": "s:12UNComponents32UNBookPaymentViewSettingsBuilderC11isAutoFocusACSb_tcfc",
-            "mangledName": "$s12UNComponents32UNBookPaymentViewSettingsBuilderC11isAutoFocusACSb_tcfc",
+            "usr": "s:12UNComponents32UNBookPaymentViewSettingsBuilderC11isAutoFocus22initialStageBackButton05finalk4DoneM0ACSb_S2btcfc",
+            "mangledName": "$s12UNComponents32UNBookPaymentViewSettingsBuilderC11isAutoFocus22initialStageBackButton05finalk4DoneM0ACSb_S2btcfc",
             "moduleName": "UNComponents",
             "declAttributes": [
               "AccessControl"
@@ -23349,6 +25949,60 @@
             "declKind": "Func",
             "usr": "s:12UNComponents32UNBookPaymentViewSettingsBuilderC11isAutoFocusyACSbF",
             "mangledName": "$s12UNComponents32UNBookPaymentViewSettingsBuilderC11isAutoFocusyACSbF",
+            "moduleName": "UNComponents",
+            "declAttributes": [
+              "AccessControl"
+            ],
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Function",
+            "name": "initialStageBackButton",
+            "printedName": "initialStageBackButton(_:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "UNBookPaymentViewSettingsBuilder",
+                "printedName": "UNComponents.UNBookPaymentViewSettingsBuilder",
+                "usr": "s:12UNComponents32UNBookPaymentViewSettingsBuilderC"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Bool",
+                "printedName": "Swift.Bool",
+                "usr": "s:Sb"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:12UNComponents32UNBookPaymentViewSettingsBuilderC22initialStageBackButtonyACSbF",
+            "mangledName": "$s12UNComponents32UNBookPaymentViewSettingsBuilderC22initialStageBackButtonyACSbF",
+            "moduleName": "UNComponents",
+            "declAttributes": [
+              "AccessControl"
+            ],
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Function",
+            "name": "finalStageDoneButton",
+            "printedName": "finalStageDoneButton(_:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "UNBookPaymentViewSettingsBuilder",
+                "printedName": "UNComponents.UNBookPaymentViewSettingsBuilder",
+                "usr": "s:12UNComponents32UNBookPaymentViewSettingsBuilderC"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Bool",
+                "printedName": "Swift.Bool",
+                "usr": "s:Sb"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:12UNComponents32UNBookPaymentViewSettingsBuilderC20finalStageDoneButtonyACSbF",
+            "mangledName": "$s12UNComponents32UNBookPaymentViewSettingsBuilderC20finalStageDoneButtonyACSbF",
             "moduleName": "UNComponents",
             "declAttributes": [
               "AccessControl"
@@ -23865,14 +26519,22 @@
             "children": [
               {
                 "kind": "TypeNominal",
-                "name": "String",
-                "printedName": "Swift.String",
-                "usr": "s:SS"
+                "name": "Optional",
+                "printedName": "Swift.String?",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "String",
+                    "printedName": "Swift.String",
+                    "usr": "s:SS"
+                  }
+                ],
+                "usr": "s:Sq"
               }
             ],
             "declKind": "Var",
-            "usr": "s:12UNComponents17UNBookPaymentViewP9accountIdSSvp",
-            "mangledName": "$s12UNComponents17UNBookPaymentViewP9accountIdSSvp",
+            "usr": "s:12UNComponents17UNBookPaymentViewP9accountIdSSSgvp",
+            "mangledName": "$s12UNComponents17UNBookPaymentViewP9accountIdSSSgvp",
             "moduleName": "UNComponents",
             "protocolReq": true,
             "accessors": [
@@ -23883,14 +26545,22 @@
                 "children": [
                   {
                     "kind": "TypeNominal",
-                    "name": "String",
-                    "printedName": "Swift.String",
-                    "usr": "s:SS"
+                    "name": "Optional",
+                    "printedName": "Swift.String?",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "String",
+                        "printedName": "Swift.String",
+                        "usr": "s:SS"
+                      }
+                    ],
+                    "usr": "s:Sq"
                   }
                 ],
                 "declKind": "Accessor",
-                "usr": "s:12UNComponents17UNBookPaymentViewP9accountIdSSvg",
-                "mangledName": "$s12UNComponents17UNBookPaymentViewP9accountIdSSvg",
+                "usr": "s:12UNComponents17UNBookPaymentViewP9accountIdSSSgvg",
+                "mangledName": "$s12UNComponents17UNBookPaymentViewP9accountIdSSSgvg",
                 "moduleName": "UNComponents",
                 "genericSig": "<τ_0_0 where τ_0_0 : UNComponents.UNBookPaymentView>",
                 "sugared_genericSig": "<Self where Self : UNComponents.UNBookPaymentView>",
@@ -23910,14 +26580,22 @@
                   },
                   {
                     "kind": "TypeNominal",
-                    "name": "String",
-                    "printedName": "Swift.String",
-                    "usr": "s:SS"
+                    "name": "Optional",
+                    "printedName": "Swift.String?",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "String",
+                        "printedName": "Swift.String",
+                        "usr": "s:SS"
+                      }
+                    ],
+                    "usr": "s:Sq"
                   }
                 ],
                 "declKind": "Accessor",
-                "usr": "s:12UNComponents17UNBookPaymentViewP9accountIdSSvs",
-                "mangledName": "$s12UNComponents17UNBookPaymentViewP9accountIdSSvs",
+                "usr": "s:12UNComponents17UNBookPaymentViewP9accountIdSSSgvs",
+                "mangledName": "$s12UNComponents17UNBookPaymentViewP9accountIdSSSgvs",
                 "moduleName": "UNComponents",
                 "genericSig": "<τ_0_0 where τ_0_0 : UNComponents.UNBookPaymentView>",
                 "sugared_genericSig": "<Self where Self : UNComponents.UNBookPaymentView>",
@@ -23937,8 +26615,8 @@
                   }
                 ],
                 "declKind": "Accessor",
-                "usr": "s:12UNComponents17UNBookPaymentViewP9accountIdSSvM",
-                "mangledName": "$s12UNComponents17UNBookPaymentViewP9accountIdSSvM",
+                "usr": "s:12UNComponents17UNBookPaymentViewP9accountIdSSSgvM",
+                "mangledName": "$s12UNComponents17UNBookPaymentViewP9accountIdSSSgvM",
                 "moduleName": "UNComponents",
                 "genericSig": "<τ_0_0 where τ_0_0 : UNComponents.UNBookPaymentView>",
                 "sugared_genericSig": "<Self where Self : UNComponents.UNBookPaymentView>",
@@ -23956,14 +26634,22 @@
             "children": [
               {
                 "kind": "TypeNominal",
-                "name": "String",
-                "printedName": "Swift.String",
-                "usr": "s:SS"
+                "name": "Optional",
+                "printedName": "Swift.String?",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "String",
+                    "printedName": "Swift.String",
+                    "usr": "s:SS"
+                  }
+                ],
+                "usr": "s:Sq"
               }
             ],
             "declKind": "Var",
-            "usr": "s:12UNComponents17UNBookPaymentViewP16counterpartyNameSSvp",
-            "mangledName": "$s12UNComponents17UNBookPaymentViewP16counterpartyNameSSvp",
+            "usr": "s:12UNComponents17UNBookPaymentViewP16counterpartyNameSSSgvp",
+            "mangledName": "$s12UNComponents17UNBookPaymentViewP16counterpartyNameSSSgvp",
             "moduleName": "UNComponents",
             "protocolReq": true,
             "accessors": [
@@ -23974,14 +26660,22 @@
                 "children": [
                   {
                     "kind": "TypeNominal",
-                    "name": "String",
-                    "printedName": "Swift.String",
-                    "usr": "s:SS"
+                    "name": "Optional",
+                    "printedName": "Swift.String?",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "String",
+                        "printedName": "Swift.String",
+                        "usr": "s:SS"
+                      }
+                    ],
+                    "usr": "s:Sq"
                   }
                 ],
                 "declKind": "Accessor",
-                "usr": "s:12UNComponents17UNBookPaymentViewP16counterpartyNameSSvg",
-                "mangledName": "$s12UNComponents17UNBookPaymentViewP16counterpartyNameSSvg",
+                "usr": "s:12UNComponents17UNBookPaymentViewP16counterpartyNameSSSgvg",
+                "mangledName": "$s12UNComponents17UNBookPaymentViewP16counterpartyNameSSSgvg",
                 "moduleName": "UNComponents",
                 "genericSig": "<τ_0_0 where τ_0_0 : UNComponents.UNBookPaymentView>",
                 "sugared_genericSig": "<Self where Self : UNComponents.UNBookPaymentView>",
@@ -24001,14 +26695,22 @@
                   },
                   {
                     "kind": "TypeNominal",
-                    "name": "String",
-                    "printedName": "Swift.String",
-                    "usr": "s:SS"
+                    "name": "Optional",
+                    "printedName": "Swift.String?",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "String",
+                        "printedName": "Swift.String",
+                        "usr": "s:SS"
+                      }
+                    ],
+                    "usr": "s:Sq"
                   }
                 ],
                 "declKind": "Accessor",
-                "usr": "s:12UNComponents17UNBookPaymentViewP16counterpartyNameSSvs",
-                "mangledName": "$s12UNComponents17UNBookPaymentViewP16counterpartyNameSSvs",
+                "usr": "s:12UNComponents17UNBookPaymentViewP16counterpartyNameSSSgvs",
+                "mangledName": "$s12UNComponents17UNBookPaymentViewP16counterpartyNameSSSgvs",
                 "moduleName": "UNComponents",
                 "genericSig": "<τ_0_0 where τ_0_0 : UNComponents.UNBookPaymentView>",
                 "sugared_genericSig": "<Self where Self : UNComponents.UNBookPaymentView>",
@@ -24028,8 +26730,8 @@
                   }
                 ],
                 "declKind": "Accessor",
-                "usr": "s:12UNComponents17UNBookPaymentViewP16counterpartyNameSSvM",
-                "mangledName": "$s12UNComponents17UNBookPaymentViewP16counterpartyNameSSvM",
+                "usr": "s:12UNComponents17UNBookPaymentViewP16counterpartyNameSSSgvM",
+                "mangledName": "$s12UNComponents17UNBookPaymentViewP16counterpartyNameSSSgvM",
                 "moduleName": "UNComponents",
                 "genericSig": "<τ_0_0 where τ_0_0 : UNComponents.UNBookPaymentView>",
                 "sugared_genericSig": "<Self where Self : UNComponents.UNBookPaymentView>",
@@ -24047,14 +26749,22 @@
             "children": [
               {
                 "kind": "TypeNominal",
-                "name": "String",
-                "printedName": "Swift.String",
-                "usr": "s:SS"
+                "name": "Optional",
+                "printedName": "Swift.String?",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "String",
+                    "printedName": "Swift.String",
+                    "usr": "s:SS"
+                  }
+                ],
+                "usr": "s:Sq"
               }
             ],
             "declKind": "Var",
-            "usr": "s:12UNComponents17UNBookPaymentViewP21counterpartyAccountIdSSvp",
-            "mangledName": "$s12UNComponents17UNBookPaymentViewP21counterpartyAccountIdSSvp",
+            "usr": "s:12UNComponents17UNBookPaymentViewP21counterpartyAccountIdSSSgvp",
+            "mangledName": "$s12UNComponents17UNBookPaymentViewP21counterpartyAccountIdSSSgvp",
             "moduleName": "UNComponents",
             "protocolReq": true,
             "accessors": [
@@ -24065,14 +26775,22 @@
                 "children": [
                   {
                     "kind": "TypeNominal",
-                    "name": "String",
-                    "printedName": "Swift.String",
-                    "usr": "s:SS"
+                    "name": "Optional",
+                    "printedName": "Swift.String?",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "String",
+                        "printedName": "Swift.String",
+                        "usr": "s:SS"
+                      }
+                    ],
+                    "usr": "s:Sq"
                   }
                 ],
                 "declKind": "Accessor",
-                "usr": "s:12UNComponents17UNBookPaymentViewP21counterpartyAccountIdSSvg",
-                "mangledName": "$s12UNComponents17UNBookPaymentViewP21counterpartyAccountIdSSvg",
+                "usr": "s:12UNComponents17UNBookPaymentViewP21counterpartyAccountIdSSSgvg",
+                "mangledName": "$s12UNComponents17UNBookPaymentViewP21counterpartyAccountIdSSSgvg",
                 "moduleName": "UNComponents",
                 "genericSig": "<τ_0_0 where τ_0_0 : UNComponents.UNBookPaymentView>",
                 "sugared_genericSig": "<Self where Self : UNComponents.UNBookPaymentView>",
@@ -24092,14 +26810,22 @@
                   },
                   {
                     "kind": "TypeNominal",
-                    "name": "String",
-                    "printedName": "Swift.String",
-                    "usr": "s:SS"
+                    "name": "Optional",
+                    "printedName": "Swift.String?",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "String",
+                        "printedName": "Swift.String",
+                        "usr": "s:SS"
+                      }
+                    ],
+                    "usr": "s:Sq"
                   }
                 ],
                 "declKind": "Accessor",
-                "usr": "s:12UNComponents17UNBookPaymentViewP21counterpartyAccountIdSSvs",
-                "mangledName": "$s12UNComponents17UNBookPaymentViewP21counterpartyAccountIdSSvs",
+                "usr": "s:12UNComponents17UNBookPaymentViewP21counterpartyAccountIdSSSgvs",
+                "mangledName": "$s12UNComponents17UNBookPaymentViewP21counterpartyAccountIdSSSgvs",
                 "moduleName": "UNComponents",
                 "genericSig": "<τ_0_0 where τ_0_0 : UNComponents.UNBookPaymentView>",
                 "sugared_genericSig": "<Self where Self : UNComponents.UNBookPaymentView>",
@@ -24119,8 +26845,8 @@
                   }
                 ],
                 "declKind": "Accessor",
-                "usr": "s:12UNComponents17UNBookPaymentViewP21counterpartyAccountIdSSvM",
-                "mangledName": "$s12UNComponents17UNBookPaymentViewP21counterpartyAccountIdSSvM",
+                "usr": "s:12UNComponents17UNBookPaymentViewP21counterpartyAccountIdSSSgvM",
+                "mangledName": "$s12UNComponents17UNBookPaymentViewP21counterpartyAccountIdSSSgvM",
                 "moduleName": "UNComponents",
                 "genericSig": "<τ_0_0 where τ_0_0 : UNComponents.UNBookPaymentView>",
                 "sugared_genericSig": "<Self where Self : UNComponents.UNBookPaymentView>",
@@ -24362,6 +27088,90 @@
                 "declKind": "Accessor",
                 "usr": "s:12UNComponents33UNBookPaymentViewSettingsProtocolP11isAutoFocusSbvg",
                 "mangledName": "$s12UNComponents33UNBookPaymentViewSettingsProtocolP11isAutoFocusSbvg",
+                "moduleName": "UNComponents",
+                "genericSig": "<τ_0_0 where τ_0_0 : UNComponents.UNBookPaymentViewSettingsProtocol>",
+                "sugared_genericSig": "<Self where Self : UNComponents.UNBookPaymentViewSettingsProtocol>",
+                "protocolReq": true,
+                "reqNewWitnessTableEntry": true,
+                "accessorKind": "get"
+              }
+            ]
+          },
+          {
+            "kind": "Var",
+            "name": "initialStageBackButton",
+            "printedName": "initialStageBackButton",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Bool",
+                "printedName": "Swift.Bool",
+                "usr": "s:Sb"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "s:12UNComponents33UNBookPaymentViewSettingsProtocolP22initialStageBackButtonSbvp",
+            "mangledName": "$s12UNComponents33UNBookPaymentViewSettingsProtocolP22initialStageBackButtonSbvp",
+            "moduleName": "UNComponents",
+            "protocolReq": true,
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Bool",
+                    "printedName": "Swift.Bool",
+                    "usr": "s:Sb"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:12UNComponents33UNBookPaymentViewSettingsProtocolP22initialStageBackButtonSbvg",
+                "mangledName": "$s12UNComponents33UNBookPaymentViewSettingsProtocolP22initialStageBackButtonSbvg",
+                "moduleName": "UNComponents",
+                "genericSig": "<τ_0_0 where τ_0_0 : UNComponents.UNBookPaymentViewSettingsProtocol>",
+                "sugared_genericSig": "<Self where Self : UNComponents.UNBookPaymentViewSettingsProtocol>",
+                "protocolReq": true,
+                "reqNewWitnessTableEntry": true,
+                "accessorKind": "get"
+              }
+            ]
+          },
+          {
+            "kind": "Var",
+            "name": "finalStageDoneButton",
+            "printedName": "finalStageDoneButton",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Bool",
+                "printedName": "Swift.Bool",
+                "usr": "s:Sb"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "s:12UNComponents33UNBookPaymentViewSettingsProtocolP20finalStageDoneButtonSbvp",
+            "mangledName": "$s12UNComponents33UNBookPaymentViewSettingsProtocolP20finalStageDoneButtonSbvp",
+            "moduleName": "UNComponents",
+            "protocolReq": true,
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Bool",
+                    "printedName": "Swift.Bool",
+                    "usr": "s:Sb"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:12UNComponents33UNBookPaymentViewSettingsProtocolP20finalStageDoneButtonSbvg",
+                "mangledName": "$s12UNComponents33UNBookPaymentViewSettingsProtocolP20finalStageDoneButtonSbvg",
                 "moduleName": "UNComponents",
                 "genericSig": "<τ_0_0 where τ_0_0 : UNComponents.UNBookPaymentViewSettingsProtocol>",
                 "sugared_genericSig": "<Self where Self : UNComponents.UNBookPaymentViewSettingsProtocol>",
@@ -25461,6 +28271,48 @@
                 "accessorKind": "get"
               }
             ]
+          },
+          {
+            "kind": "Var",
+            "name": "showLeftToSpend",
+            "printedName": "showLeftToSpend",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Bool",
+                "printedName": "Swift.Bool",
+                "usr": "s:Sb"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "s:12UNComponents29UNAccountViewSettingsProtocolP15showLeftToSpendSbvp",
+            "mangledName": "$s12UNComponents29UNAccountViewSettingsProtocolP15showLeftToSpendSbvp",
+            "moduleName": "UNComponents",
+            "protocolReq": true,
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Bool",
+                    "printedName": "Swift.Bool",
+                    "usr": "s:Sb"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:12UNComponents29UNAccountViewSettingsProtocolP15showLeftToSpendSbvg",
+                "mangledName": "$s12UNComponents29UNAccountViewSettingsProtocolP15showLeftToSpendSbvg",
+                "moduleName": "UNComponents",
+                "genericSig": "<τ_0_0 where τ_0_0 : UNComponents.UNAccountViewSettingsProtocol>",
+                "sugared_genericSig": "<Self where Self : UNComponents.UNAccountViewSettingsProtocol>",
+                "protocolReq": true,
+                "reqNewWitnessTableEntry": true,
+                "accessorKind": "get"
+              }
+            ]
           }
         ],
         "declKind": "Protocol",
@@ -26488,9 +29340,17 @@
               },
               {
                 "kind": "TypeNominal",
-                "name": "String",
-                "printedName": "Swift.String",
-                "usr": "s:SS"
+                "name": "Optional",
+                "printedName": "Swift.String?",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "String",
+                    "printedName": "Swift.String",
+                    "usr": "s:SS"
+                  }
+                ],
+                "usr": "s:Sq"
               },
               {
                 "kind": "TypeNominal",
@@ -26554,8 +29414,8 @@
               }
             ],
             "declKind": "Constructor",
-            "usr": "s:12UNComponents20UNACHCreditComponentC9accountId18additionalSettings5theme8language9callbacksACSS_AA0b4ViewG8Protocol_pSSSgAJyAA0bC8CallbackOcSgtcfc",
-            "mangledName": "$s12UNComponents20UNACHCreditComponentC9accountId18additionalSettings5theme8language9callbacksACSS_AA0b4ViewG8Protocol_pSSSgAJyAA0bC8CallbackOcSgtcfc",
+            "usr": "s:12UNComponents20UNACHCreditComponentC9accountId18additionalSettings5theme8language9callbacksACSSSg_AA0b4ViewG8Protocol_pA2IyAA0bC8CallbackOcSgtcfc",
+            "mangledName": "$s12UNComponents20UNACHCreditComponentC9accountId18additionalSettings5theme8language9callbacksACSSSg_AA0b4ViewG8Protocol_pA2IyAA0bC8CallbackOcSgtcfc",
             "moduleName": "UNComponents",
             "declAttributes": [
               "Custom",
@@ -26644,14 +29504,22 @@
             "children": [
               {
                 "kind": "TypeNominal",
-                "name": "String",
-                "printedName": "Swift.String",
-                "usr": "s:SS"
+                "name": "Optional",
+                "printedName": "Swift.String?",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "String",
+                    "printedName": "Swift.String",
+                    "usr": "s:SS"
+                  }
+                ],
+                "usr": "s:Sq"
               }
             ],
             "declKind": "Var",
-            "usr": "s:12UNComponents20UNACHCreditComponentC9accountIdSSvp",
-            "mangledName": "$s12UNComponents20UNACHCreditComponentC9accountIdSSvp",
+            "usr": "s:12UNComponents20UNACHCreditComponentC9accountIdSSSgvp",
+            "mangledName": "$s12UNComponents20UNACHCreditComponentC9accountIdSSSgvp",
             "moduleName": "UNComponents",
             "declAttributes": [
               "Custom",
@@ -26666,14 +29534,22 @@
                 "children": [
                   {
                     "kind": "TypeNominal",
-                    "name": "String",
-                    "printedName": "Swift.String",
-                    "usr": "s:SS"
+                    "name": "Optional",
+                    "printedName": "Swift.String?",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "String",
+                        "printedName": "Swift.String",
+                        "usr": "s:SS"
+                      }
+                    ],
+                    "usr": "s:Sq"
                   }
                 ],
                 "declKind": "Accessor",
-                "usr": "s:12UNComponents20UNACHCreditComponentC9accountIdSSvg",
-                "mangledName": "$s12UNComponents20UNACHCreditComponentC9accountIdSSvg",
+                "usr": "s:12UNComponents20UNACHCreditComponentC9accountIdSSSgvg",
+                "mangledName": "$s12UNComponents20UNACHCreditComponentC9accountIdSSSgvg",
                 "moduleName": "UNComponents",
                 "isFromExtension": true,
                 "accessorKind": "get"
@@ -26690,14 +29566,22 @@
                   },
                   {
                     "kind": "TypeNominal",
-                    "name": "String",
-                    "printedName": "Swift.String",
-                    "usr": "s:SS"
+                    "name": "Optional",
+                    "printedName": "Swift.String?",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "String",
+                        "printedName": "Swift.String",
+                        "usr": "s:SS"
+                      }
+                    ],
+                    "usr": "s:Sq"
                   }
                 ],
                 "declKind": "Accessor",
-                "usr": "s:12UNComponents20UNACHCreditComponentC9accountIdSSvs",
-                "mangledName": "$s12UNComponents20UNACHCreditComponentC9accountIdSSvs",
+                "usr": "s:12UNComponents20UNACHCreditComponentC9accountIdSSSgvs",
+                "mangledName": "$s12UNComponents20UNACHCreditComponentC9accountIdSSSgvs",
                 "moduleName": "UNComponents",
                 "isFromExtension": true,
                 "accessorKind": "set"
@@ -26714,8 +29598,8 @@
                   }
                 ],
                 "declKind": "Accessor",
-                "usr": "s:12UNComponents20UNACHCreditComponentC9accountIdSSvM",
-                "mangledName": "$s12UNComponents20UNACHCreditComponentC9accountIdSSvM",
+                "usr": "s:12UNComponents20UNACHCreditComponentC9accountIdSSSgvM",
+                "mangledName": "$s12UNComponents20UNACHCreditComponentC9accountIdSSSgvM",
                 "moduleName": "UNComponents",
                 "implicit": true,
                 "isFromExtension": true,
@@ -35512,21 +38396,42 @@
       "kind": "IntegerLiteral",
       "offset": 366,
       "length": 1,
-      "value": "5"
+      "value": "6"
     },
     {
       "filePath": "\/Users\/runner\/work\/unit-ios-components\/unit-ios-components\/UnitWhiteLabelBanking\/UNComponents\/UI\/Components\/CheckDeposit\/UNCheckDepositComponent.swift",
       "kind": "StringLiteral",
-      "offset": 397,
+      "offset": 470,
       "length": 12,
       "value": "\"account-id\""
     },
     {
       "filePath": "\/Users\/runner\/work\/unit-ios-components\/unit-ios-components\/UnitWhiteLabelBanking\/UNComponents\/UI\/Components\/CheckDeposit\/UNCheckDepositComponent.swift",
       "kind": "StringLiteral",
-      "offset": 435,
+      "offset": 508,
       "length": 5,
       "value": "\"fee\""
+    },
+    {
+      "filePath": "\/Users\/runner\/work\/unit-ios-components\/unit-ios-components\/UnitWhiteLabelBanking\/UNComponents\/UI\/Components\/CheckDeposit\/UNCheckDepositComponent.swift",
+      "kind": "StringLiteral",
+      "offset": 558,
+      "length": 27,
+      "value": "\"initial-stage-back-button\""
+    },
+    {
+      "filePath": "\/Users\/runner\/work\/unit-ios-components\/unit-ios-components\/UnitWhiteLabelBanking\/UNComponents\/UI\/Components\/CheckDeposit\/UNCheckDepositComponent.swift",
+      "kind": "StringLiteral",
+      "offset": 628,
+      "length": 25,
+      "value": "\"final-stage-done-button\""
+    },
+    {
+      "filePath": "\/Users\/runner\/work\/unit-ios-components\/unit-ios-components\/UnitWhiteLabelBanking\/UNComponents\/UI\/Components\/CheckDeposit\/UNCheckDepositComponent.swift",
+      "kind": "StringLiteral",
+      "offset": 681,
+      "length": 7,
+      "value": "\"style\""
     },
     {
       "filePath": "\/Users\/runner\/work\/unit-ios-components\/unit-ios-components\/UnitWhiteLabelBanking\/UNComponents\/UI\/Components\/CheckDeposit\/UNCheckDepositComponent.swift",
@@ -35566,6 +38471,13 @@
     {
       "filePath": "\/Users\/runner\/work\/unit-ios-components\/unit-ios-components\/UnitWhiteLabelBanking\/UNComponents\/UI\/Components\/Account\/UNAccountComponent.swift",
       "kind": "StringLiteral",
+      "offset": 674,
+      "length": 20,
+      "value": "\"show-left-to-spend\""
+    },
+    {
+      "filePath": "\/Users\/runner\/work\/unit-ios-components\/unit-ios-components\/UnitWhiteLabelBanking\/UNComponents\/UI\/Components\/Account\/UNAccountComponent.swift",
+      "kind": "StringLiteral",
       "offset": 136,
       "length": 18,
       "value": "\"UNComponents.UNAccountComponent\""
@@ -35573,30 +38485,65 @@
     {
       "filePath": "\/Users\/runner\/work\/unit-ios-components\/unit-ios-components\/UnitWhiteLabelBanking\/UNComponents\/UI\/Components\/ACHDebit\/UNACHDebitComponent.swift",
       "kind": "StringLiteral",
-      "offset": 587,
+      "offset": 588,
       "length": 12,
       "value": "\"account-id\""
     },
     {
       "filePath": "\/Users\/runner\/work\/unit-ios-components\/unit-ios-components\/UnitWhiteLabelBanking\/UNComponents\/UI\/Components\/ACHDebit\/UNACHDebitComponent.swift",
       "kind": "StringLiteral",
-      "offset": 633,
+      "offset": 634,
       "length": 15,
       "value": "\"is-auto-focus\""
     },
     {
       "filePath": "\/Users\/runner\/work\/unit-ios-components\/unit-ios-components\/UnitWhiteLabelBanking\/UNComponents\/UI\/Components\/ACHDebit\/UNACHDebitComponent.swift",
       "kind": "StringLiteral",
-      "offset": 674,
+      "offset": 675,
       "length": 5,
       "value": "\"fee\""
     },
     {
       "filePath": "\/Users\/runner\/work\/unit-ios-components\/unit-ios-components\/UnitWhiteLabelBanking\/UNComponents\/UI\/Components\/ACHDebit\/UNACHDebitComponent.swift",
       "kind": "StringLiteral",
-      "offset": 709,
+      "offset": 710,
       "length": 10,
       "value": "\"same-day\""
+    },
+    {
+      "filePath": "\/Users\/runner\/work\/unit-ios-components\/unit-ios-components\/UnitWhiteLabelBanking\/UNComponents\/UI\/Components\/ACHDebit\/UNACHDebitComponent.swift",
+      "kind": "StringLiteral",
+      "offset": 762,
+      "length": 23,
+      "value": "\"plaid-account-filters\""
+    },
+    {
+      "filePath": "\/Users\/runner\/work\/unit-ios-components\/unit-ios-components\/UnitWhiteLabelBanking\/UNComponents\/UI\/Components\/ACHDebit\/UNACHDebitComponent.swift",
+      "kind": "StringLiteral",
+      "offset": 834,
+      "length": 31,
+      "value": "\"plaid-link-customization-name\""
+    },
+    {
+      "filePath": "\/Users\/runner\/work\/unit-ios-components\/unit-ios-components\/UnitWhiteLabelBanking\/UNComponents\/UI\/Components\/ACHDebit\/UNACHDebitComponent.swift",
+      "kind": "StringLiteral",
+      "offset": 910,
+      "length": 27,
+      "value": "\"initial-stage-back-button\""
+    },
+    {
+      "filePath": "\/Users\/runner\/work\/unit-ios-components\/unit-ios-components\/UnitWhiteLabelBanking\/UNComponents\/UI\/Components\/ACHDebit\/UNACHDebitComponent.swift",
+      "kind": "StringLiteral",
+      "offset": 980,
+      "length": 25,
+      "value": "\"final-stage-done-button\""
+    },
+    {
+      "filePath": "\/Users\/runner\/work\/unit-ios-components\/unit-ios-components\/UnitWhiteLabelBanking\/UNComponents\/UI\/Components\/ACHDebit\/UNACHDebitComponent.swift",
+      "kind": "StringLiteral",
+      "offset": 1033,
+      "length": 7,
+      "value": "\"style\""
     },
     {
       "filePath": "\/Users\/runner\/work\/unit-ios-components\/unit-ios-components\/UnitWhiteLabelBanking\/UNComponents\/UI\/Components\/ACHDebit\/UNACHDebitComponent.swift",
@@ -35629,28 +38576,49 @@
     {
       "filePath": "\/Users\/runner\/work\/unit-ios-components\/unit-ios-components\/UnitWhiteLabelBanking\/UNComponents\/Infra\/Builders\/Components\/Account\/UNAccountViewSettingsBuilder.swift",
       "kind": "BooleanLiteral",
-      "offset": 435,
+      "offset": 485,
       "length": 5,
       "value": "false"
     },
     {
       "filePath": "\/Users\/runner\/work\/unit-ios-components\/unit-ios-components\/UnitWhiteLabelBanking\/UNComponents\/Infra\/Builders\/Components\/Account\/UNAccountViewSettingsBuilder.swift",
       "kind": "BooleanLiteral",
-      "offset": 474,
+      "offset": 524,
+      "length": 5,
+      "value": "false"
+    },
+    {
+      "filePath": "\/Users\/runner\/work\/unit-ios-components\/unit-ios-components\/UnitWhiteLabelBanking\/UNComponents\/Infra\/Builders\/Components\/Account\/UNAccountViewSettingsBuilder.swift",
+      "kind": "BooleanLiteral",
+      "offset": 604,
       "length": 5,
       "value": "false"
     },
     {
       "filePath": "\/Users\/runner\/work\/unit-ios-components\/unit-ios-components\/UnitWhiteLabelBanking\/UNComponents\/Infra\/Builders\/Components\/ACHDebit\/UNACHDebitViewSettingsBuilder.swift",
       "kind": "BooleanLiteral",
-      "offset": 390,
+      "offset": 644,
       "length": 5,
       "value": "false"
     },
     {
       "filePath": "\/Users\/runner\/work\/unit-ios-components\/unit-ios-components\/UnitWhiteLabelBanking\/UNComponents\/Infra\/Builders\/Components\/ACHDebit\/UNACHDebitViewSettingsBuilder.swift",
       "kind": "BooleanLiteral",
-      "offset": 413,
+      "offset": 762,
+      "length": 5,
+      "value": "false"
+    },
+    {
+      "filePath": "\/Users\/runner\/work\/unit-ios-components\/unit-ios-components\/UnitWhiteLabelBanking\/UNComponents\/Infra\/Builders\/Components\/ACHDebit\/UNACHDebitViewSettingsBuilder.swift",
+      "kind": "BooleanLiteral",
+      "offset": 800,
+      "length": 5,
+      "value": "false"
+    },
+    {
+      "filePath": "\/Users\/runner\/work\/unit-ios-components\/unit-ios-components\/UnitWhiteLabelBanking\/UNComponents\/Infra\/Builders\/Components\/ACHDebit\/UNACHDebitViewSettingsBuilder.swift",
+      "kind": "BooleanLiteral",
+      "offset": 836,
       "length": 5,
       "value": "false"
     },
@@ -35851,6 +38819,20 @@
       "value": "[]"
     },
     {
+      "filePath": "\/Users\/runner\/work\/unit-ios-components\/unit-ios-components\/UnitWhiteLabelBanking\/UNComponents\/Infra\/Builders\/Components\/CheckDeposit\/UNCheckDepositViewSettingsBuilder.swift",
+      "kind": "BooleanLiteral",
+      "offset": 374,
+      "length": 5,
+      "value": "false"
+    },
+    {
+      "filePath": "\/Users\/runner\/work\/unit-ios-components\/unit-ios-components\/UnitWhiteLabelBanking\/UNComponents\/Infra\/Builders\/Components\/CheckDeposit\/UNCheckDepositViewSettingsBuilder.swift",
+      "kind": "BooleanLiteral",
+      "offset": 410,
+      "length": 5,
+      "value": "false"
+    },
+    {
       "filePath": "\/Users\/runner\/work\/unit-ios-components\/unit-ios-components\/UnitWhiteLabelBanking\/UNComponents\/UI\/WebComponent\/UNWebView.swift",
       "kind": "StringLiteral",
       "offset": 158,
@@ -35881,21 +38863,35 @@
     {
       "filePath": "\/Users\/runner\/work\/unit-ios-components\/unit-ios-components\/UnitWhiteLabelBanking\/UNComponents\/Infra\/Builders\/Components\/ACHCredit\/UNACHCreditViewSettingsBuilder.swift",
       "kind": "BooleanLiteral",
-      "offset": 439,
+      "offset": 688,
       "length": 5,
       "value": "false"
     },
     {
       "filePath": "\/Users\/runner\/work\/unit-ios-components\/unit-ios-components\/UnitWhiteLabelBanking\/UNComponents\/Infra\/Builders\/Components\/ACHCredit\/UNACHCreditViewSettingsBuilder.swift",
       "kind": "BooleanLiteral",
-      "offset": 465,
+      "offset": 714,
       "length": 5,
       "value": "false"
     },
     {
       "filePath": "\/Users\/runner\/work\/unit-ios-components\/unit-ios-components\/UnitWhiteLabelBanking\/UNComponents\/Infra\/Builders\/Components\/ACHCredit\/UNACHCreditViewSettingsBuilder.swift",
       "kind": "BooleanLiteral",
-      "offset": 488,
+      "offset": 832,
+      "length": 5,
+      "value": "false"
+    },
+    {
+      "filePath": "\/Users\/runner\/work\/unit-ios-components\/unit-ios-components\/UnitWhiteLabelBanking\/UNComponents\/Infra\/Builders\/Components\/ACHCredit\/UNACHCreditViewSettingsBuilder.swift",
+      "kind": "BooleanLiteral",
+      "offset": 870,
+      "length": 5,
+      "value": "false"
+    },
+    {
+      "filePath": "\/Users\/runner\/work\/unit-ios-components\/unit-ios-components\/UnitWhiteLabelBanking\/UNComponents\/Infra\/Builders\/Components\/ACHCredit\/UNACHCreditViewSettingsBuilder.swift",
+      "kind": "BooleanLiteral",
+      "offset": 906,
       "length": 5,
       "value": "false"
     },
@@ -36273,7 +39269,7 @@
     {
       "filePath": "\/Users\/runner\/work\/unit-ios-components\/unit-ios-components\/UnitWhiteLabelBanking\/UNComponents\/Infra\/Protocols\/Layers\/UI\/UNUIViews.swift",
       "kind": "BooleanLiteral",
-      "offset": 4006,
+      "offset": 4104,
       "length": 5,
       "value": "false"
     },
@@ -36840,14 +39836,14 @@
     {
       "filePath": "\/Users\/runner\/work\/unit-ios-components\/unit-ios-components\/UnitWhiteLabelBanking\/UNComponents\/Models\/Shared\/Payment\/UNPayments.swift",
       "kind": "StringLiteral",
-      "offset": 535,
+      "offset": 625,
       "length": 7,
       "value": "\"Plaid\""
     },
     {
       "filePath": "\/Users\/runner\/work\/unit-ios-components\/unit-ios-components\/UnitWhiteLabelBanking\/UNComponents\/Models\/Shared\/Payment\/UNPayments.swift",
       "kind": "StringLiteral",
-      "offset": 535,
+      "offset": 625,
       "length": 7,
       "value": "\"Plaid\""
     },
@@ -37029,14 +40025,28 @@
     {
       "filePath": "\/Users\/runner\/work\/unit-ios-components\/unit-ios-components\/UnitWhiteLabelBanking\/UNComponents\/UI\/Components\/BookPayment\/UNBookPaymentComponent.swift",
       "kind": "StringLiteral",
-      "offset": 505,
+      "offset": 522,
+      "length": 27,
+      "value": "\"initial-stage-back-button\""
+    },
+    {
+      "filePath": "\/Users\/runner\/work\/unit-ios-components\/unit-ios-components\/UnitWhiteLabelBanking\/UNComponents\/UI\/Components\/BookPayment\/UNBookPaymentComponent.swift",
+      "kind": "StringLiteral",
+      "offset": 592,
+      "length": 25,
+      "value": "\"final-stage-done-button\""
+    },
+    {
+      "filePath": "\/Users\/runner\/work\/unit-ios-components\/unit-ios-components\/UnitWhiteLabelBanking\/UNComponents\/UI\/Components\/BookPayment\/UNBookPaymentComponent.swift",
+      "kind": "StringLiteral",
+      "offset": 645,
       "length": 7,
       "value": "\"style\""
     },
     {
       "filePath": "\/Users\/runner\/work\/unit-ios-components\/unit-ios-components\/UnitWhiteLabelBanking\/UNComponents\/UI\/Components\/BookPayment\/UNBookPaymentComponent.swift",
       "kind": "Dictionary",
-      "offset": 874,
+      "offset": 1017,
       "length": 3,
       "value": "[]"
     },
@@ -37351,7 +40361,21 @@
     {
       "filePath": "\/Users\/runner\/work\/unit-ios-components\/unit-ios-components\/UnitWhiteLabelBanking\/UNComponents\/Infra\/Builders\/Components\/BookPayment\/UNBookPaymentViewSettingsBuilder.swift",
       "kind": "BooleanLiteral",
-      "offset": 297,
+      "offset": 409,
+      "length": 5,
+      "value": "false"
+    },
+    {
+      "filePath": "\/Users\/runner\/work\/unit-ios-components\/unit-ios-components\/UnitWhiteLabelBanking\/UNComponents\/Infra\/Builders\/Components\/BookPayment\/UNBookPaymentViewSettingsBuilder.swift",
+      "kind": "BooleanLiteral",
+      "offset": 447,
+      "length": 5,
+      "value": "false"
+    },
+    {
+      "filePath": "\/Users\/runner\/work\/unit-ios-components\/unit-ios-components\/UnitWhiteLabelBanking\/UNComponents\/Infra\/Builders\/Components\/BookPayment\/UNBookPaymentViewSettingsBuilder.swift",
+      "kind": "BooleanLiteral",
+      "offset": 483,
       "length": 5,
       "value": "false"
     },
@@ -38079,37 +41103,72 @@
     {
       "filePath": "\/Users\/runner\/work\/unit-ios-components\/unit-ios-components\/UnitWhiteLabelBanking\/UNComponents\/UI\/Components\/ACHCredit\/UNACHCreditComponent.swift",
       "kind": "StringLiteral",
-      "offset": 562,
+      "offset": 563,
       "length": 12,
       "value": "\"account-id\""
     },
     {
       "filePath": "\/Users\/runner\/work\/unit-ios-components\/unit-ios-components\/UnitWhiteLabelBanking\/UNComponents\/UI\/Components\/ACHCredit\/UNACHCreditComponent.swift",
       "kind": "StringLiteral",
-      "offset": 608,
+      "offset": 609,
       "length": 15,
       "value": "\"is-auto-focus\""
     },
     {
       "filePath": "\/Users\/runner\/work\/unit-ios-components\/unit-ios-components\/UnitWhiteLabelBanking\/UNComponents\/UI\/Components\/ACHCredit\/UNACHCreditComponent.swift",
       "kind": "StringLiteral",
-      "offset": 649,
+      "offset": 650,
       "length": 5,
       "value": "\"fee\""
     },
     {
       "filePath": "\/Users\/runner\/work\/unit-ios-components\/unit-ios-components\/UnitWhiteLabelBanking\/UNComponents\/UI\/Components\/ACHCredit\/UNACHCreditComponent.swift",
       "kind": "StringLiteral",
-      "offset": 686,
+      "offset": 687,
       "length": 12,
       "value": "\"with-plaid\""
     },
     {
       "filePath": "\/Users\/runner\/work\/unit-ios-components\/unit-ios-components\/UnitWhiteLabelBanking\/UNComponents\/UI\/Components\/ACHCredit\/UNACHCreditComponent.swift",
       "kind": "StringLiteral",
-      "offset": 728,
+      "offset": 741,
+      "length": 23,
+      "value": "\"plaid-account-filters\""
+    },
+    {
+      "filePath": "\/Users\/runner\/work\/unit-ios-components\/unit-ios-components\/UnitWhiteLabelBanking\/UNComponents\/UI\/Components\/ACHCredit\/UNACHCreditComponent.swift",
+      "kind": "StringLiteral",
+      "offset": 813,
+      "length": 31,
+      "value": "\"plaid-link-customization-name\""
+    },
+    {
+      "filePath": "\/Users\/runner\/work\/unit-ios-components\/unit-ios-components\/UnitWhiteLabelBanking\/UNComponents\/UI\/Components\/ACHCredit\/UNACHCreditComponent.swift",
+      "kind": "StringLiteral",
+      "offset": 874,
       "length": 10,
       "value": "\"same-day\""
+    },
+    {
+      "filePath": "\/Users\/runner\/work\/unit-ios-components\/unit-ios-components\/UnitWhiteLabelBanking\/UNComponents\/UI\/Components\/ACHCredit\/UNACHCreditComponent.swift",
+      "kind": "StringLiteral",
+      "offset": 929,
+      "length": 27,
+      "value": "\"initial-stage-back-button\""
+    },
+    {
+      "filePath": "\/Users\/runner\/work\/unit-ios-components\/unit-ios-components\/UnitWhiteLabelBanking\/UNComponents\/UI\/Components\/ACHCredit\/UNACHCreditComponent.swift",
+      "kind": "StringLiteral",
+      "offset": 999,
+      "length": 25,
+      "value": "\"final-stage-done-button\""
+    },
+    {
+      "filePath": "\/Users\/runner\/work\/unit-ios-components\/unit-ios-components\/UnitWhiteLabelBanking\/UNComponents\/UI\/Components\/ACHCredit\/UNACHCreditComponent.swift",
+      "kind": "StringLiteral",
+      "offset": 1052,
+      "length": 7,
+      "value": "\"style\""
     },
     {
       "filePath": "\/Users\/runner\/work\/unit-ios-components\/unit-ios-components\/UnitWhiteLabelBanking\/UNComponents\/UI\/Components\/ACHCredit\/UNACHCreditComponent.swift",

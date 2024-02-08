@@ -57,6 +57,8 @@ public enum UNCardMenuAction : Swift.String {
 public typealias UNCardComponentCallbacks = (_ callback: UNComponents.UNCardComponentCallback) -> Swift.Void
 public enum UNACHCreditComponentCallback {
   case onPaymentCreated(data: UNComponents.UNACHData)
+  case onInitialStageBackButtonClicked
+  case onFinalStageDoneButtonClicked
   case unitOnLoad(result: Swift.Result<UNComponents.UNACHCreditOnLoadResponse, UNComponents.UNError>)
 }
 public struct UNCounterpartyAccountData : Swift.Codable {
@@ -77,12 +79,12 @@ public struct UNCounterpartyAccountAttributes : Swift.Codable {
   public init(from decoder: Swift.Decoder) throws
 }
 @objc @_Concurrency.MainActor(unsafe) public class UNACHDebitComponent : UIKit.UIView {
-  @_Concurrency.MainActor(unsafe) public init(accountId: Swift.String, additionalSettings: UNComponents.UNACHDebitViewSettingsProtocol, theme: UNComponents.UNTheme?, language: UNComponents.UNLanguage?, callbacks: UNComponents.UNACHDebitComponentCallbacks?)
+  @_Concurrency.MainActor(unsafe) public init(accountId: Swift.String?, additionalSettings: UNComponents.UNACHDebitViewSettingsProtocol, theme: UNComponents.UNTheme?, language: UNComponents.UNLanguage?, callbacks: UNComponents.UNACHDebitComponentCallbacks?)
   @_Concurrency.MainActor(unsafe) @objc required dynamic public init?(coder aDecoder: Foundation.NSCoder)
   @objc deinit
 }
 extension UNComponents.UNACHDebitComponent : UNComponents.UNACHDebitView {
-  @_Concurrency.MainActor(unsafe) public var accountId: Swift.String {
+  @_Concurrency.MainActor(unsafe) public var accountId: Swift.String? {
     get
     set(newAccountId)
   }
@@ -110,6 +112,7 @@ public protocol UNServices {
 public enum UNAccountComponentCallback {
   case unitOnLoad(result: Swift.Result<[UNComponents.UNAccountData], UNComponents.UNError>)
   case onAccountChange(account: UNComponents.UNAccountData)
+  case onRequestLeftToSpendDetails(account: UNComponents.UNAccountData)
 }
 public enum UNAccountComponentMenuItems : Swift.String {
   case details
@@ -131,10 +134,14 @@ public class UNAccountViewSettingsBuilder : UNComponents.UNAccountViewSettingsPr
   public var menuItems: [UNComponents.UNAccountComponentMenuItems]? {
     get
   }
-  public init(hideActionsMenuButton: Swift.Bool = false, hideSelectionMenuButton: Swift.Bool = false, menuItems: [UNComponents.UNAccountComponentMenuItems]? = nil)
+  public var showLeftToSpend: Swift.Bool {
+    get
+  }
+  public init(hideActionsMenuButton: Swift.Bool = false, hideSelectionMenuButton: Swift.Bool = false, menuItems: [UNComponents.UNAccountComponentMenuItems]? = nil, showLeftToSpend: Swift.Bool = false)
   public func hideActionsMenuButton(_ hideActionsMenuButton: Swift.Bool) -> UNComponents.UNAccountViewSettingsBuilder
   public func hideSelectionMenuButton(_ hideSelectionMenuButton: Swift.Bool) -> UNComponents.UNAccountViewSettingsBuilder
   public func menuItems(_ menuItems: [UNComponents.UNAccountComponentMenuItems]) -> UNComponents.UNAccountViewSettingsBuilder
+  public func showLeftToSpend(_ showLeftToSpend: Swift.Bool) -> UNComponents.UNAccountViewSettingsBuilder
   @objc deinit
 }
 public enum UNMultipleCardsComponentCallback {
@@ -167,13 +174,29 @@ public class UNACHDebitViewSettingsBuilder : UNComponents.UNACHDebitViewSettings
   public var isAutoFocus: Swift.Bool {
     get
   }
+  public var initialStageBackButton: Swift.Bool {
+    get
+  }
+  public var finalStageDoneButton: Swift.Bool {
+    get
+  }
   public var sameDay: Swift.Bool {
     get
   }
-  public init(fee: Swift.Double? = nil, isAutoFocus: Swift.Bool = false, sameDay: Swift.Bool = false)
+  public var plaidAccountFilters: [UNComponents.UNPlaidAccountFilter]? {
+    get
+  }
+  public var plaidLinkCustomizationName: Swift.String? {
+    get
+  }
+  public init(fee: Swift.Double? = nil, isAutoFocus: Swift.Bool = false, plaidAccountFilters: [UNComponents.UNPlaidAccountFilter]? = nil, plaidLinkCustomizationName: Swift.String? = nil, sameDay: Swift.Bool = false, initialStageBackButton: Swift.Bool = false, finalStageDoneButton: Swift.Bool = false)
   public func fee(_ fee: Swift.Double) -> UNComponents.UNACHDebitViewSettingsBuilder
   public func isAutoFocus(_ isAutoFocus: Swift.Bool) -> UNComponents.UNACHDebitViewSettingsBuilder
   public func sameDay(_ sameDay: Swift.Bool) -> UNComponents.UNACHDebitViewSettingsBuilder
+  public func plaidAccountFilters(_ plaidAccountFilters: [UNComponents.UNPlaidAccountFilter]) -> UNComponents.UNACHDebitViewSettingsBuilder
+  public func plaidLinkCustomizationName(_ plaidLinkCustomizationName: Swift.String) -> UNComponents.UNACHDebitViewSettingsBuilder
+  public func initialStageBackButton(_ initialStageBackButton: Swift.Bool) -> UNComponents.UNACHDebitViewSettingsBuilder
+  public func finalStageDoneButton(_ finalStageDoneButton: Swift.Bool) -> UNComponents.UNACHDebitViewSettingsBuilder
   @objc deinit
 }
 public struct UNCheckCounterparty : Swift.Codable {
@@ -253,6 +276,18 @@ public struct UNACHRelationships : Swift.Codable {
   public func encode(to encoder: Swift.Encoder) throws
   public init(from decoder: Swift.Decoder) throws
 }
+public class UNCheckDepositViewSettingsBuilder : UNComponents.UNCheckDepositViewSettingsProtocol {
+  public var initialStageBackButton: Swift.Bool {
+    get
+  }
+  public var finalStageDoneButton: Swift.Bool {
+    get
+  }
+  public init(initialStageBackButton: Swift.Bool = false, finalStageDoneButton: Swift.Bool = false)
+  public func initialStageBackButton(_ initialStageBackButton: Swift.Bool) -> UNComponents.UNCheckDepositViewSettingsBuilder
+  public func finalStageDoneButton(_ finalStageDoneButton: Swift.Bool) -> UNComponents.UNCheckDepositViewSettingsBuilder
+  @objc deinit
+}
 public protocol UNUIFlows {
   func startPushProvisioning(for cardId: Swift.String, theme: UNComponents.UNTheme?, language: UNComponents.UNLanguage?)
 }
@@ -269,14 +304,30 @@ public class UNACHCreditViewSettingsBuilder : UNComponents.UNACHCreditViewSettin
   public var withPlaid: Swift.Bool {
     get
   }
+  public var plaidAccountFilters: [UNComponents.UNPlaidAccountFilter]? {
+    get
+  }
+  public var plaidLinkCustomizationName: Swift.String? {
+    get
+  }
   public var sameDay: Swift.Bool {
     get
   }
-  public init(fee: Swift.Double? = nil, isAutoFocus: Swift.Bool = false, withPlaid: Swift.Bool = false, sameDay: Swift.Bool = false)
+  public var initialStageBackButton: Swift.Bool {
+    get
+  }
+  public var finalStageDoneButton: Swift.Bool {
+    get
+  }
+  public init(fee: Swift.Double? = nil, isAutoFocus: Swift.Bool = false, withPlaid: Swift.Bool = false, plaidAccountFilters: [UNComponents.UNPlaidAccountFilter]? = nil, plaidLinkCustomizationName: Swift.String? = nil, sameDay: Swift.Bool = false, initialStageBackButton: Swift.Bool = false, finalStageDoneButton: Swift.Bool = false)
   public func fee(_ fee: Swift.Double) -> UNComponents.UNACHCreditViewSettingsBuilder
   public func isAutoFocus(_ isAutoFocus: Swift.Bool) -> UNComponents.UNACHCreditViewSettingsBuilder
   public func withPlaid(_ withPlaid: Swift.Bool) -> UNComponents.UNACHCreditViewSettingsBuilder
+  public func plaidAccountFilters(_ plaidAccountFilters: [UNComponents.UNPlaidAccountFilter]) -> UNComponents.UNACHCreditViewSettingsBuilder
+  public func plaidLinkCustomizationName(_ plaidLinkCustomizationName: Swift.String) -> UNComponents.UNACHCreditViewSettingsBuilder
   public func sameDay(_ sameDay: Swift.Bool) -> UNComponents.UNACHCreditViewSettingsBuilder
+  public func initialStageBackButton(_ initialStageBackButton: Swift.Bool) -> UNComponents.UNACHCreditViewSettingsBuilder
+  public func finalStageDoneButton(_ finalStageDoneButton: Swift.Bool) -> UNComponents.UNACHCreditViewSettingsBuilder
   @objc deinit
 }
 public protocol UNMultipleCardsView : UIKit.UIView {
@@ -302,23 +353,31 @@ public enum UNAccountMenuAction : Swift.String {
   }
 }
 public protocol UNACHCreditView : UIKit.UIView {
-  var accountId: Swift.String { get set }
+  var accountId: Swift.String? { get set }
   var additionalSettings: UNComponents.UNACHCreditViewSettingsProtocol { get set }
 }
 public protocol UNACHCreditViewSettingsProtocol {
   var fee: Swift.Double? { get }
   var isAutoFocus: Swift.Bool { get }
   var withPlaid: Swift.Bool { get }
+  var plaidAccountFilters: [UNComponents.UNPlaidAccountFilter]? { get }
+  var plaidLinkCustomizationName: Swift.String? { get }
   var sameDay: Swift.Bool { get }
+  var initialStageBackButton: Swift.Bool { get }
+  var finalStageDoneButton: Swift.Bool { get }
 }
 public protocol UNACHDebitView : UIKit.UIView {
-  var accountId: Swift.String { get set }
+  var accountId: Swift.String? { get set }
   var additionalSettings: UNComponents.UNACHDebitViewSettingsProtocol { get set }
 }
 public protocol UNACHDebitViewSettingsProtocol {
   var fee: Swift.Double? { get }
   var isAutoFocus: Swift.Bool { get }
   var sameDay: Swift.Bool { get }
+  var plaidAccountFilters: [UNComponents.UNPlaidAccountFilter]? { get }
+  var plaidLinkCustomizationName: Swift.String? { get }
+  var initialStageBackButton: Swift.Bool { get }
+  var finalStageDoneButton: Swift.Bool { get }
 }
 public typealias UNAccountComponentCallbacks = (_ callback: UNComponents.UNAccountComponentCallback) -> Swift.Void
 public typealias UNFonts = [UNComponents.UNFontFamilyName : [UNComponents.UNFontData]]
@@ -363,6 +422,8 @@ public enum UNActivityComponentPaginationType : Swift.String {
 }
 public enum UNACHDebitComponentCallback {
   case onPaymentCreated(data: UNComponents.UNACHData)
+  case onInitialStageBackButtonClicked
+  case onFinalStageDoneButtonClicked
   case unitOnLoad(result: Swift.Result<UNComponents.UNACHDebitOnLoadResponse, UNComponents.UNError>)
 }
 public struct UNCardData : Swift.Codable {
@@ -406,22 +467,22 @@ public protocol UNManagerProtocol : AnyObject {
 }
 public protocol UNUIViews {
   func getCardComponent(id: Swift.String, additionalSettings: UNComponents.UNCardViewSettingsProtocol?, theme: UNComponents.UNTheme?, language: UNComponents.UNLanguage?, callbacks: UNComponents.UNCardComponentCallbacks?) -> UNComponents.UNCardView
-  func getACHCreditComponent(accountId: Swift.String, additionalSettings: UNComponents.UNACHCreditViewSettingsProtocol?, theme: UNComponents.UNTheme?, language: UNComponents.UNLanguage?, callbacks: UNComponents.UNACHCreditComponentCallbacks?) -> UNComponents.UNACHCreditView
-  func getACHDebitComponent(accountId: Swift.String, additionalSettings: UNComponents.UNACHDebitViewSettingsProtocol?, theme: UNComponents.UNTheme?, language: UNComponents.UNLanguage?, callbacks: UNComponents.UNACHDebitComponentCallbacks?) -> UNComponents.UNACHDebitView
+  func getACHCreditComponent(accountId: Swift.String?, additionalSettings: UNComponents.UNACHCreditViewSettingsProtocol?, theme: UNComponents.UNTheme?, language: UNComponents.UNLanguage?, callbacks: UNComponents.UNACHCreditComponentCallbacks?) -> UNComponents.UNACHCreditView
+  func getACHDebitComponent(accountId: Swift.String?, additionalSettings: UNComponents.UNACHDebitViewSettingsProtocol?, theme: UNComponents.UNTheme?, language: UNComponents.UNLanguage?, callbacks: UNComponents.UNACHDebitComponentCallbacks?) -> UNComponents.UNACHDebitView
   func getActivityComponent(accountId: Swift.String?, additionalSettings: UNComponents.UNActivityViewSettingsProtocol?, theme: UNComponents.UNTheme?, language: UNComponents.UNLanguage?, callbacks: UNComponents.UNActivityComponentCallbacks?) -> UNComponents.UNActivityView
   func getAccountComponent(accountId: Swift.String?, additionalSettings: UNComponents.UNAccountViewSettingsProtocol?, theme: UNComponents.UNTheme?, language: UNComponents.UNLanguage?, callbacks: UNComponents.UNAccountComponentCallbacks?) -> UNComponents.UNAccountView
-  func getBookPaymentComponent(accountId: Swift.String, counterpartyAccountId: Swift.String, counterpartyName: Swift.String, isSameCustomer: Swift.Bool, additionalSettings: UNComponents.UNBookPaymentViewSettingsProtocol?, theme: UNComponents.UNTheme?, language: UNComponents.UNLanguage?, callbacks: UNComponents.UNBookPaymentComponentCallbacks?) -> UNComponents.UNBookPaymentView
-  func getCheckDepositComponent(accountId: Swift.String, fee: Swift.Double, theme: UNComponents.UNTheme?, language: UNComponents.UNLanguage?, callbacks: UNComponents.UNCheckDepositComponentCallbacks?) -> UNComponents.UNCheckDepositView
+  func getBookPaymentComponent(accountId: Swift.String?, counterpartyAccountId: Swift.String?, counterpartyName: Swift.String?, isSameCustomer: Swift.Bool, additionalSettings: UNComponents.UNBookPaymentViewSettingsProtocol?, theme: UNComponents.UNTheme?, language: UNComponents.UNLanguage?, callbacks: UNComponents.UNBookPaymentComponentCallbacks?) -> UNComponents.UNBookPaymentView
+  func getCheckDepositComponent(accountId: Swift.String, fee: Swift.Double?, additionalSettings: UNComponents.UNCheckDepositViewSettingsProtocol?, theme: UNComponents.UNTheme?, language: UNComponents.UNLanguage?, callbacks: UNComponents.UNCheckDepositComponentCallbacks?) -> UNComponents.UNCheckDepositView
   func getMultipleCardsComponent(additionalSettings: UNComponents.UNMultipleCardsViewSettingsProtocol?, theme: UNComponents.UNTheme?, language: UNComponents.UNLanguage?, callbacks: UNComponents.UNMultipleCardsComponentCallbacks?) -> UNComponents.UNMultipleCardsView
 }
 extension UNComponents.UNUIViews {
   public func getCardComponent(id: Swift.String, additionalSettings: UNComponents.UNCardViewSettingsProtocol? = nil, theme: UNComponents.UNTheme? = nil, language: UNComponents.UNLanguage? = nil, callbacks: UNComponents.UNCardComponentCallbacks? = nil) -> UNComponents.UNCardView
-  public func getACHCreditComponent(accountId: Swift.String, additionalSettings: UNComponents.UNACHCreditViewSettingsProtocol? = nil, theme: UNComponents.UNTheme? = nil, language: UNComponents.UNLanguage? = nil, callbacks: UNComponents.UNACHCreditComponentCallbacks? = nil) -> UNComponents.UNACHCreditView
-  public func getACHDebitComponent(accountId: Swift.String, additionalSettings: UNComponents.UNACHDebitViewSettingsProtocol? = nil, theme: UNComponents.UNTheme? = nil, language: UNComponents.UNLanguage? = nil, callbacks: UNComponents.UNACHDebitComponentCallbacks? = nil) -> UNComponents.UNACHDebitView
+  public func getACHCreditComponent(accountId: Swift.String? = nil, additionalSettings: UNComponents.UNACHCreditViewSettingsProtocol? = nil, theme: UNComponents.UNTheme? = nil, language: UNComponents.UNLanguage? = nil, callbacks: UNComponents.UNACHCreditComponentCallbacks? = nil) -> UNComponents.UNACHCreditView
+  public func getACHDebitComponent(accountId: Swift.String? = nil, additionalSettings: UNComponents.UNACHDebitViewSettingsProtocol? = nil, theme: UNComponents.UNTheme? = nil, language: UNComponents.UNLanguage? = nil, callbacks: UNComponents.UNACHDebitComponentCallbacks? = nil) -> UNComponents.UNACHDebitView
   public func getActivityComponent(accountId: Swift.String? = nil, additionalSettings: UNComponents.UNActivityViewSettingsProtocol? = nil, theme: UNComponents.UNTheme? = nil, language: UNComponents.UNLanguage? = nil, callbacks: UNComponents.UNActivityComponentCallbacks? = nil) -> UNComponents.UNActivityView
   public func getAccountComponent(accountId: Swift.String? = nil, additionalSettings: UNComponents.UNAccountViewSettingsProtocol? = nil, theme: UNComponents.UNTheme? = nil, language: UNComponents.UNLanguage? = nil, callbacks: UNComponents.UNAccountComponentCallbacks? = nil) -> UNComponents.UNAccountView
-  public func getBookPaymentComponent(accountId: Swift.String, counterpartyAccountId: Swift.String, counterpartyName: Swift.String, isSameCustomer: Swift.Bool = false, additionalSettings: UNComponents.UNBookPaymentViewSettingsProtocol? = nil, theme: UNComponents.UNTheme? = nil, language: UNComponents.UNLanguage? = nil, callbacks: UNComponents.UNBookPaymentComponentCallbacks? = nil) -> UNComponents.UNBookPaymentView
-  public func getCheckDepositComponent(accountId: Swift.String, fee: Swift.Double, theme: UNComponents.UNTheme? = nil, language: UNComponents.UNLanguage? = nil, callbacks: UNComponents.UNCheckDepositComponentCallbacks? = nil) -> UNComponents.UNCheckDepositView
+  public func getBookPaymentComponent(accountId: Swift.String? = nil, counterpartyAccountId: Swift.String? = nil, counterpartyName: Swift.String? = nil, isSameCustomer: Swift.Bool = false, additionalSettings: UNComponents.UNBookPaymentViewSettingsProtocol? = nil, theme: UNComponents.UNTheme? = nil, language: UNComponents.UNLanguage? = nil, callbacks: UNComponents.UNBookPaymentComponentCallbacks? = nil) -> UNComponents.UNBookPaymentView
+  public func getCheckDepositComponent(accountId: Swift.String, fee: Swift.Double? = nil, additionalSettings: UNComponents.UNCheckDepositViewSettingsProtocol? = nil, theme: UNComponents.UNTheme? = nil, language: UNComponents.UNLanguage? = nil, callbacks: UNComponents.UNCheckDepositComponentCallbacks? = nil) -> UNComponents.UNCheckDepositView
   public func getMultipleCardsComponent(additionalSettings: UNComponents.UNMultipleCardsViewSettingsProtocol? = nil, theme: UNComponents.UNTheme? = nil, language: UNComponents.UNLanguage? = nil, callbacks: UNComponents.UNMultipleCardsComponentCallbacks? = nil) -> UNComponents.UNMultipleCardsView
 }
 public class UNCardViewSettingsBuilder : UNComponents.UNCardViewSettingsProtocol {
@@ -455,11 +516,18 @@ public class UNCardViewSettingsBuilder : UNComponents.UNCardViewSettingsProtocol
 public enum UNCheckDepositComponentCallback {
   case unitCheckDepositCreated(data: UNComponents.UNCheckDepositData)
   case unitCheckDepositRestartRequest(data: UNComponents.UNCheckDepositData)
+  case onInitialStageBackButtonClicked
+  case onFinalStageDoneButtonClicked
   case unitOnLoad(result: Swift.Result<UNComponents.UNAccountData, UNComponents.UNError>)
 }
 public protocol UNCheckDepositView : UIKit.UIView {
   var accountId: Swift.String { get set }
-  var fee: Swift.Double { get set }
+  var fee: Swift.Double? { get set }
+  var additionalSettings: UNComponents.UNCheckDepositViewSettingsProtocol { get set }
+}
+public protocol UNCheckDepositViewSettingsProtocol {
+  var initialStageBackButton: Swift.Bool { get }
+  var finalStageDoneButton: Swift.Bool { get }
 }
 public struct UNBookPaymentData : Swift.Codable {
   public let type: Swift.String
@@ -520,6 +588,15 @@ public enum UNPaymentAccountType : Swift.String, Swift.Codable {
     get
   }
 }
+public enum UNPlaidAccountFilter : Swift.String, Swift.Codable {
+  case savings
+  case checking
+  public init?(rawValue: Swift.String)
+  public typealias RawValue = Swift.String
+  public var rawValue: Swift.String {
+    get
+  }
+}
 public enum UNCounterpartyVerificationMethod : Swift.String, Swift.Codable {
   case plaid
   public init?(rawValue: Swift.String)
@@ -530,6 +607,8 @@ public enum UNCounterpartyVerificationMethod : Swift.String, Swift.Codable {
 }
 public enum UNBookPaymentComponentCallback {
   case onPaymentCreated(data: UNComponents.UNBookPaymentData)
+  case onInitialStageBackButtonClicked
+  case onFinalStageDoneButtonClicked
   case unitOnLoad(result: Swift.Result<UNComponents.UNAccountData, UNComponents.UNError>)
 }
 public struct UNVPError : Swift.Error {
@@ -709,8 +788,16 @@ public class UNBookPaymentViewSettingsBuilder : UNComponents.UNBookPaymentViewSe
   public var isAutoFocus: Swift.Bool {
     get
   }
-  public init(isAutoFocus: Swift.Bool = false)
+  public var initialStageBackButton: Swift.Bool {
+    get
+  }
+  public var finalStageDoneButton: Swift.Bool {
+    get
+  }
+  public init(isAutoFocus: Swift.Bool = false, initialStageBackButton: Swift.Bool = false, finalStageDoneButton: Swift.Bool = false)
   public func isAutoFocus(_ isAutoFocus: Swift.Bool) -> UNComponents.UNBookPaymentViewSettingsBuilder
+  public func initialStageBackButton(_ initialStageBackButton: Swift.Bool) -> UNComponents.UNBookPaymentViewSettingsBuilder
+  public func finalStageDoneButton(_ finalStageDoneButton: Swift.Bool) -> UNComponents.UNBookPaymentViewSettingsBuilder
   @objc deinit
 }
 public struct UNPlaidLinkTokenAttributes : Swift.Codable {
@@ -729,14 +816,16 @@ public typealias UNCustomerToken = Swift.String
 public typealias UNTheme = Swift.String
 public typealias UNLanguage = Swift.String
 public protocol UNBookPaymentView : UIKit.UIView {
-  var accountId: Swift.String { get set }
-  var counterpartyName: Swift.String { get set }
-  var counterpartyAccountId: Swift.String { get set }
+  var accountId: Swift.String? { get set }
+  var counterpartyName: Swift.String? { get set }
+  var counterpartyAccountId: Swift.String? { get set }
   var isSameCustomer: Swift.Bool { get set }
   var additionalSetting: UNComponents.UNBookPaymentViewSettingsProtocol { get set }
 }
 public protocol UNBookPaymentViewSettingsProtocol {
   var isAutoFocus: Swift.Bool { get }
+  var initialStageBackButton: Swift.Bool { get }
+  var finalStageDoneButton: Swift.Bool { get }
 }
 public typealias UNACHCreditComponentCallbacks = (_ callback: UNComponents.UNACHCreditComponentCallback) -> Swift.Void
 public struct UNRelationshipData : Swift.Codable {
@@ -771,6 +860,7 @@ public protocol UNAccountViewSettingsProtocol {
   var hideActionsMenuButton: Swift.Bool { get }
   var hideSelectionMenuButton: Swift.Bool { get }
   var menuItems: [UNComponents.UNAccountComponentMenuItems]? { get }
+  var showLeftToSpend: Swift.Bool { get }
 }
 public enum UNEnvironment : Swift.Codable {
   case sandbox
@@ -813,12 +903,12 @@ public class UNMultipleCardsViewSettingsBuilder : UNComponents.UNMultipleCardsVi
   @objc deinit
 }
 @objc @_Concurrency.MainActor(unsafe) public class UNACHCreditComponent : UIKit.UIView {
-  @_Concurrency.MainActor(unsafe) public init(accountId: Swift.String, additionalSettings: UNComponents.UNACHCreditViewSettingsProtocol, theme: UNComponents.UNTheme?, language: UNComponents.UNLanguage?, callbacks: UNComponents.UNACHCreditComponentCallbacks?)
+  @_Concurrency.MainActor(unsafe) public init(accountId: Swift.String?, additionalSettings: UNComponents.UNACHCreditViewSettingsProtocol, theme: UNComponents.UNTheme?, language: UNComponents.UNLanguage?, callbacks: UNComponents.UNACHCreditComponentCallbacks?)
   @_Concurrency.MainActor(unsafe) @objc required dynamic public init?(coder aDecoder: Foundation.NSCoder)
   @objc deinit
 }
 extension UNComponents.UNACHCreditComponent : UNComponents.UNACHCreditView {
-  @_Concurrency.MainActor(unsafe) public var accountId: Swift.String {
+  @_Concurrency.MainActor(unsafe) public var accountId: Swift.String? {
     get
     set(newAccountId)
   }
@@ -950,6 +1040,9 @@ extension UNComponents.UNDirection : Swift.RawRepresentable {}
 extension UNComponents.UNPaymentAccountType : Swift.Equatable {}
 extension UNComponents.UNPaymentAccountType : Swift.Hashable {}
 extension UNComponents.UNPaymentAccountType : Swift.RawRepresentable {}
+extension UNComponents.UNPlaidAccountFilter : Swift.Equatable {}
+extension UNComponents.UNPlaidAccountFilter : Swift.Hashable {}
+extension UNComponents.UNPlaidAccountFilter : Swift.RawRepresentable {}
 extension UNComponents.UNCounterpartyVerificationMethod : Swift.Equatable {}
 extension UNComponents.UNCounterpartyVerificationMethod : Swift.Hashable {}
 extension UNComponents.UNCounterpartyVerificationMethod : Swift.RawRepresentable {}

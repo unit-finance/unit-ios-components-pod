@@ -58,6 +58,15 @@
               })
           });
         
+        window.addEventListener("unitPaymentInitialStageBackButtonClicked", (e) => {
+            postMessageToSDK({ type: "unit", action: 'unitPaymentInitialStageBackButtonClicked', details: e.detail })
+        });
+        
+        window.addEventListener("unitPaymentFinalStageDoneButtonClicked", (e) => {
+            postMessageToSDK({ type: "unit", action: 'unitPaymentFinalStageDoneButtonClicked', details: e.detail })
+        });
+        
+        
         window.addEventListener("unitCheckDepositCreated", (e) => {
             const response = e.detail
               response.then((data) => {
@@ -75,6 +84,10 @@
                 console.log(e)
               })
           });
+
+        window.addEventListener("unitRequestLeftToSpendDetails", (e) => {
+            postMessageToSDK({ type: "unit", action: 'unitRequestLeftToSpendDetails', details: e.detail })
+        });
         
         window.addEventListener("unitRequestRendering", (e) => {
             postMessageToSDK({ type: "unit", action: 'unitRequestRendering', details: e.detail })
