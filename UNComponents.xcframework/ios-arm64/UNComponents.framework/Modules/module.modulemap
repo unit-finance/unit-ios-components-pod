@@ -1,7 +1,7 @@
 framework module UNComponents {
   umbrella header "UNComponents.h"
-
   export *
+
   module * { export * }
 }
 
