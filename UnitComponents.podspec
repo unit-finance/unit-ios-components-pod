@@ -12,7 +12,7 @@ Pod::Spec.new do |s|
   s.summary          = 'Unit Components SDK'
   s.description      = 'This SDK allows you to integrate Unit Components into your iOS app.'
 
-  s.platform         = :ios
+  s.platform         = :ios, '14.0'
   s.homepage         = 'https://guides.unit.co/white-label-ui'
   s.license          = { :type => 'Mozilla', :file => 'LICENSE' }
   s.author           = { 'Alon Shprung' => 'alonshp1@gmail.com' }
@@ -26,7 +26,5 @@ Pod::Spec.new do |s|
   s.ios.vendored_frameworks = 'UNComponents.xcframework'
 
   # Dependencies
-  s.dependency 'RxSwift', '~> 6.5'
-  s.dependency 'RxCocoa', '~> 6.5'
-  s.dependency 'Plaid', '~> 4.1'
+  s.dependency 'Plaid', '~> 5.3'
 end
