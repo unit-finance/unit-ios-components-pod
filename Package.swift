@@ -12,10 +12,6 @@ let package = Package(
     dependencies: [
         // Here we define our package's external dependencies
         // and from where they can be fetched:
-        .package(
-            url: "https://github.com/plaid/plaid-link-ios.git",
-            .upToNextMinor(from: "5.3.0")
-        )
     ],
     targets: [
         .binaryTarget(
@@ -26,7 +22,6 @@ let package = Package(
             name: "UNComponentsSDKWrapperTarget",
             dependencies: [
                 .target(name: "UnitComponents", condition: .when(platforms: .some([.iOS]))),
-                "LinkKit"
             ],
             path: "UNComponentsSDKWrapperTarget"
         )

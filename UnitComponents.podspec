@@ -26,5 +26,4 @@ Pod::Spec.new do |s|
   s.ios.vendored_frameworks = 'UNComponents.xcframework'
 
   # Dependencies
-  s.dependency 'Plaid', '~> 5.3'
 end
