@@ -1,8 +1,22 @@
-framework module UNComponents {
-  umbrella header "UNComponents.h"
+//
+//  UNBridge.modulemap
+//  UNComponents
+//
+//  Created by daniel fadlon on 03/04/2024.
+//
 
-  export *
-  module * { export * }
+framework module UNComponents {
+    umbrella header "UNComponents.h"
+
+    export *
+    module * { export * }
+
+    explicit module UNPlaid {
+      header "UNPlaidService.h"
+      header "UNPlaidLinkData.h"
+      export *
+    }
+    
 }
 
 module UNComponents.Swift {
