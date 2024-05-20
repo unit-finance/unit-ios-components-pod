@@ -4525,6 +4525,115 @@
         ]
       },
       {
+        "kind": "TypeDecl",
+        "name": "UNHelpers",
+        "printedName": "UNHelpers",
+        "children": [
+          {
+            "kind": "Function",
+            "name": "setRedirectUri",
+            "printedName": "setRedirectUri(_:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Void",
+                "printedName": "()"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "String",
+                "printedName": "Swift.String",
+                "usr": "s:SS"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:12UNComponents9UNHelpersP14setRedirectUriyySSF",
+            "mangledName": "$s12UNComponents9UNHelpersP14setRedirectUriyySSF",
+            "moduleName": "UNComponents",
+            "genericSig": "<τ_0_0 where τ_0_0 : UNComponents.UNHelpers>",
+            "sugared_genericSig": "<Self where Self : UNComponents.UNHelpers>",
+            "protocolReq": true,
+            "reqNewWitnessTableEntry": true,
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Var",
+            "name": "redirectUri",
+            "printedName": "redirectUri",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Optional",
+                "printedName": "Swift.String?",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "String",
+                    "printedName": "Swift.String",
+                    "usr": "s:SS"
+                  }
+                ],
+                "usr": "s:Sq"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "s:12UNComponents9UNHelpersP11redirectUriSSSgvp",
+            "mangledName": "$s12UNComponents9UNHelpersP11redirectUriSSSgvp",
+            "moduleName": "UNComponents",
+            "protocolReq": true,
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Optional",
+                    "printedName": "Swift.String?",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "String",
+                        "printedName": "Swift.String",
+                        "usr": "s:SS"
+                      }
+                    ],
+                    "usr": "s:Sq"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:12UNComponents9UNHelpersP11redirectUriSSSgvg",
+                "mangledName": "$s12UNComponents9UNHelpersP11redirectUriSSSgvg",
+                "moduleName": "UNComponents",
+                "genericSig": "<τ_0_0 where τ_0_0 : UNComponents.UNHelpers>",
+                "sugared_genericSig": "<Self where Self : UNComponents.UNHelpers>",
+                "protocolReq": true,
+                "reqNewWitnessTableEntry": true,
+                "accessorKind": "get"
+              }
+            ]
+          }
+        ],
+        "declKind": "Protocol",
+        "usr": "s:12UNComponents9UNHelpersP",
+        "mangledName": "$s12UNComponents9UNHelpersP",
+        "moduleName": "UNComponents",
+        "declAttributes": [
+          "AccessControl"
+        ]
+      },
+      {
+        "kind": "Import",
+        "name": "Foundation",
+        "printedName": "Foundation",
+        "declKind": "Import",
+        "moduleName": "UNComponents",
+        "declAttributes": [
+          "RawDocComment"
+        ]
+      },
+      {
         "kind": "Import",
         "name": "UIKit",
         "printedName": "UIKit",
@@ -10158,6 +10267,16 @@
       },
       {
         "kind": "Import",
+        "name": "Foundation",
+        "printedName": "Foundation",
+        "declKind": "Import",
+        "moduleName": "UNComponents",
+        "declAttributes": [
+          "RawDocComment"
+        ]
+      },
+      {
+        "kind": "Import",
         "name": "UIKit",
         "printedName": "UIKit",
         "declKind": "Import",
@@ -10460,6 +10579,138 @@
         "moduleName": "UNComponents",
         "declAttributes": [
           "RawDocComment"
+        ]
+      },
+      {
+        "kind": "Import",
+        "name": "Foundation",
+        "printedName": "Foundation",
+        "declKind": "Import",
+        "moduleName": "UNComponents",
+        "declAttributes": [
+          "RawDocComment"
+        ]
+      },
+      {
+        "kind": "TypeDecl",
+        "name": "UNProgramDetailsViewSettingsBuilder",
+        "printedName": "UNProgramDetailsViewSettingsBuilder",
+        "children": [
+          {
+            "kind": "Var",
+            "name": "hideTitle",
+            "printedName": "hideTitle",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Bool",
+                "printedName": "Swift.Bool",
+                "usr": "s:Sb"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "s:12UNComponents35UNProgramDetailsViewSettingsBuilderC9hideTitleSbvp",
+            "mangledName": "$s12UNComponents35UNProgramDetailsViewSettingsBuilderC9hideTitleSbvp",
+            "moduleName": "UNComponents",
+            "declAttributes": [
+              "HasStorage",
+              "SetterAccess",
+              "AccessControl"
+            ],
+            "hasStorage": true,
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Bool",
+                    "printedName": "Swift.Bool",
+                    "usr": "s:Sb"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:12UNComponents35UNProgramDetailsViewSettingsBuilderC9hideTitleSbvg",
+                "mangledName": "$s12UNComponents35UNProgramDetailsViewSettingsBuilderC9hideTitleSbvg",
+                "moduleName": "UNComponents",
+                "implicit": true,
+                "accessorKind": "get"
+              }
+            ]
+          },
+          {
+            "kind": "Constructor",
+            "name": "init",
+            "printedName": "init(hideTitle:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "UNProgramDetailsViewSettingsBuilder",
+                "printedName": "UNComponents.UNProgramDetailsViewSettingsBuilder",
+                "usr": "s:12UNComponents35UNProgramDetailsViewSettingsBuilderC"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Bool",
+                "printedName": "Swift.Bool",
+                "hasDefaultArg": true,
+                "usr": "s:Sb"
+              }
+            ],
+            "declKind": "Constructor",
+            "usr": "s:12UNComponents35UNProgramDetailsViewSettingsBuilderC9hideTitleACSb_tcfc",
+            "mangledName": "$s12UNComponents35UNProgramDetailsViewSettingsBuilderC9hideTitleACSb_tcfc",
+            "moduleName": "UNComponents",
+            "declAttributes": [
+              "AccessControl"
+            ],
+            "init_kind": "Designated"
+          },
+          {
+            "kind": "Function",
+            "name": "hideTitle",
+            "printedName": "hideTitle(_:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "UNProgramDetailsViewSettingsProtocol",
+                "printedName": "any UNComponents.UNProgramDetailsViewSettingsProtocol",
+                "usr": "s:12UNComponents36UNProgramDetailsViewSettingsProtocolP"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Bool",
+                "printedName": "Swift.Bool",
+                "usr": "s:Sb"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:12UNComponents35UNProgramDetailsViewSettingsBuilderC9hideTitleyAA0bcdE8Protocol_pSbF",
+            "mangledName": "$s12UNComponents35UNProgramDetailsViewSettingsBuilderC9hideTitleyAA0bcdE8Protocol_pSbF",
+            "moduleName": "UNComponents",
+            "declAttributes": [
+              "AccessControl"
+            ],
+            "funcSelfKind": "NonMutating"
+          }
+        ],
+        "declKind": "Class",
+        "usr": "s:12UNComponents35UNProgramDetailsViewSettingsBuilderC",
+        "mangledName": "$s12UNComponents35UNProgramDetailsViewSettingsBuilderC",
+        "moduleName": "UNComponents",
+        "declAttributes": [
+          "AccessControl"
+        ],
+        "conformances": [
+          {
+            "kind": "Conformance",
+            "name": "UNProgramDetailsViewSettingsProtocol",
+            "printedName": "UNProgramDetailsViewSettingsProtocol",
+            "usr": "s:12UNComponents36UNProgramDetailsViewSettingsProtocolP",
+            "mangledName": "$s12UNComponents36UNProgramDetailsViewSettingsProtocolP"
+          }
         ]
       },
       {
@@ -12597,6 +12848,23 @@
       },
       {
         "kind": "Import",
+        "name": "Combine",
+        "printedName": "Combine",
+        "declKind": "Import",
+        "moduleName": "UNComponents"
+      },
+      {
+        "kind": "Import",
+        "name": "UIKit",
+        "printedName": "UIKit",
+        "declKind": "Import",
+        "moduleName": "UNComponents",
+        "declAttributes": [
+          "RawDocComment"
+        ]
+      },
+      {
+        "kind": "Import",
         "name": "Foundation",
         "printedName": "Foundation",
         "declKind": "Import",
@@ -12886,6 +13154,101 @@
             "usr": "s:SY",
             "mangledName": "$sSY"
           }
+        ]
+      },
+      {
+        "kind": "Import",
+        "name": "Foundation",
+        "printedName": "Foundation",
+        "declKind": "Import",
+        "moduleName": "UNComponents",
+        "declAttributes": [
+          "RawDocComment"
+        ]
+      },
+      {
+        "kind": "TypeDecl",
+        "name": "UNProgramDetailsComponentCallback",
+        "printedName": "UNProgramDetailsComponentCallback",
+        "children": [
+          {
+            "kind": "Var",
+            "name": "unitOnLoad",
+            "printedName": "unitOnLoad",
+            "children": [
+              {
+                "kind": "TypeFunc",
+                "name": "Function",
+                "printedName": "(UNComponents.UNProgramDetailsComponentCallback.Type) -> (Swift.Result<UNComponents.UNAccountData, UNComponents.UNError>) -> UNComponents.UNProgramDetailsComponentCallback",
+                "children": [
+                  {
+                    "kind": "TypeFunc",
+                    "name": "Function",
+                    "printedName": "(Swift.Result<UNComponents.UNAccountData, UNComponents.UNError>) -> UNComponents.UNProgramDetailsComponentCallback",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "UNProgramDetailsComponentCallback",
+                        "printedName": "UNComponents.UNProgramDetailsComponentCallback",
+                        "usr": "s:12UNComponents33UNProgramDetailsComponentCallbackO"
+                      },
+                      {
+                        "kind": "TypeNominal",
+                        "name": "Tuple",
+                        "printedName": "(result: Swift.Result<UNComponents.UNAccountData, UNComponents.UNError>)",
+                        "children": [
+                          {
+                            "kind": "TypeNominal",
+                            "name": "Result",
+                            "printedName": "Swift.Result<UNComponents.UNAccountData, UNComponents.UNError>",
+                            "children": [
+                              {
+                                "kind": "TypeNominal",
+                                "name": "UNAccountData",
+                                "printedName": "UNComponents.UNAccountData",
+                                "usr": "s:12UNComponents13UNAccountDataV"
+                              },
+                              {
+                                "kind": "TypeNominal",
+                                "name": "UNError",
+                                "printedName": "UNComponents.UNError",
+                                "usr": "s:12UNComponents7UNErrorO"
+                              }
+                            ],
+                            "usr": "s:s6ResultO"
+                          }
+                        ]
+                      }
+                    ]
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Metatype",
+                    "printedName": "UNComponents.UNProgramDetailsComponentCallback.Type",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "UNProgramDetailsComponentCallback",
+                        "printedName": "UNComponents.UNProgramDetailsComponentCallback",
+                        "usr": "s:12UNComponents33UNProgramDetailsComponentCallbackO"
+                      }
+                    ]
+                  }
+                ]
+              }
+            ],
+            "declKind": "EnumElement",
+            "usr": "s:12UNComponents33UNProgramDetailsComponentCallbackO10unitOnLoadyACs6ResultOyAA13UNAccountDataVAA7UNErrorOG_tcACmF",
+            "mangledName": "$s12UNComponents33UNProgramDetailsComponentCallbackO10unitOnLoadyACs6ResultOyAA13UNAccountDataVAA7UNErrorOG_tcACmF",
+            "moduleName": "UNComponents"
+          }
+        ],
+        "declKind": "Enum",
+        "usr": "s:12UNComponents33UNProgramDetailsComponentCallbackO",
+        "mangledName": "$s12UNComponents33UNProgramDetailsComponentCallbackO",
+        "moduleName": "UNComponents",
+        "declAttributes": [
+          "AccessControl"
         ]
       },
       {
@@ -14293,6 +14656,48 @@
             ]
           },
           {
+            "kind": "Var",
+            "name": "helpers",
+            "printedName": "helpers",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "UNHelpers",
+                "printedName": "any UNComponents.UNHelpers",
+                "usr": "s:12UNComponents9UNHelpersP"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "s:12UNComponents17UNManagerProtocolP7helpersAA9UNHelpers_pvp",
+            "mangledName": "$s12UNComponents17UNManagerProtocolP7helpersAA9UNHelpers_pvp",
+            "moduleName": "UNComponents",
+            "protocolReq": true,
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "UNHelpers",
+                    "printedName": "any UNComponents.UNHelpers",
+                    "usr": "s:12UNComponents9UNHelpersP"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:12UNComponents17UNManagerProtocolP7helpersAA9UNHelpers_pvg",
+                "mangledName": "$s12UNComponents17UNManagerProtocolP7helpersAA9UNHelpers_pvg",
+                "moduleName": "UNComponents",
+                "genericSig": "<τ_0_0 where τ_0_0 : UNComponents.UNManagerProtocol>",
+                "sugared_genericSig": "<Self where Self : UNComponents.UNManagerProtocol>",
+                "protocolReq": true,
+                "reqNewWitnessTableEntry": true,
+                "accessorKind": "get"
+              }
+            ]
+          },
+          {
             "kind": "Function",
             "name": "initialize",
             "printedName": "initialize(with:)",
@@ -15204,6 +15609,102 @@
           },
           {
             "kind": "Function",
+            "name": "getProgramDetailsComponent",
+            "printedName": "getProgramDetailsComponent(accountId:additionalSettings:theme:language:callbacks:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "UNProgramDetailsView",
+                "printedName": "any UNComponents.UNProgramDetailsView",
+                "usr": "s:12UNComponents20UNProgramDetailsViewP"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "String",
+                "printedName": "Swift.String",
+                "usr": "s:SS"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Optional",
+                "printedName": "(any UNComponents.UNProgramDetailsViewSettingsProtocol)?",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "UNProgramDetailsViewSettingsProtocol",
+                    "printedName": "any UNComponents.UNProgramDetailsViewSettingsProtocol",
+                    "usr": "s:12UNComponents36UNProgramDetailsViewSettingsProtocolP"
+                  }
+                ],
+                "usr": "s:Sq"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Optional",
+                "printedName": "Swift.String?",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "String",
+                    "printedName": "Swift.String",
+                    "usr": "s:SS"
+                  }
+                ],
+                "usr": "s:Sq"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Optional",
+                "printedName": "Swift.String?",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "String",
+                    "printedName": "Swift.String",
+                    "usr": "s:SS"
+                  }
+                ],
+                "usr": "s:Sq"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Optional",
+                "printedName": "((UNComponents.UNProgramDetailsComponentCallback) -> ())?",
+                "children": [
+                  {
+                    "kind": "TypeFunc",
+                    "name": "Function",
+                    "printedName": "(UNComponents.UNProgramDetailsComponentCallback) -> ()",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "Void",
+                        "printedName": "()"
+                      },
+                      {
+                        "kind": "TypeNominal",
+                        "name": "UNProgramDetailsComponentCallback",
+                        "printedName": "UNComponents.UNProgramDetailsComponentCallback",
+                        "usr": "s:12UNComponents33UNProgramDetailsComponentCallbackO"
+                      }
+                    ]
+                  }
+                ],
+                "usr": "s:Sq"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:12UNComponents9UNUIViewsP26getProgramDetailsComponent9accountId18additionalSettings5theme8language9callbacksAA09UNProgramE4View_pSS_AA0neoJ8Protocol_pSgSSSgAMyAA0neF8CallbackOcSgtF",
+            "mangledName": "$s12UNComponents9UNUIViewsP26getProgramDetailsComponent9accountId18additionalSettings5theme8language9callbacksAA09UNProgramE4View_pSS_AA0neoJ8Protocol_pSgSSSgAMyAA0neF8CallbackOcSgtF",
+            "moduleName": "UNComponents",
+            "genericSig": "<τ_0_0 where τ_0_0 : UNComponents.UNUIViews>",
+            "sugared_genericSig": "<Self where Self : UNComponents.UNUIViews>",
+            "protocolReq": true,
+            "reqNewWitnessTableEntry": true,
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Function",
             "name": "getCardComponent",
             "printedName": "getCardComponent(id:additionalSettings:theme:language:callbacks:)",
             "children": [
@@ -16079,6 +16580,105 @@
             "declKind": "Func",
             "usr": "s:12UNComponents9UNUIViewsPAAE25getMultipleCardsComponent18additionalSettings5theme8language9callbacksAA010UNMultipleE4View_pAA0lemH8Protocol_pSg_SSSgALyAA0leF8CallbackOcSgtF",
             "mangledName": "$s12UNComponents9UNUIViewsPAAE25getMultipleCardsComponent18additionalSettings5theme8language9callbacksAA010UNMultipleE4View_pAA0lemH8Protocol_pSg_SSSgALyAA0leF8CallbackOcSgtF",
+            "moduleName": "UNComponents",
+            "genericSig": "<τ_0_0 where τ_0_0 : UNComponents.UNUIViews>",
+            "sugared_genericSig": "<Self where Self : UNComponents.UNUIViews>",
+            "isFromExtension": true,
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Function",
+            "name": "getProgramDetailsComponent",
+            "printedName": "getProgramDetailsComponent(accountId:additionalSettings:theme:language:callbacks:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "UNProgramDetailsView",
+                "printedName": "any UNComponents.UNProgramDetailsView",
+                "usr": "s:12UNComponents20UNProgramDetailsViewP"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "String",
+                "printedName": "Swift.String",
+                "usr": "s:SS"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Optional",
+                "printedName": "(any UNComponents.UNProgramDetailsViewSettingsProtocol)?",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "UNProgramDetailsViewSettingsProtocol",
+                    "printedName": "any UNComponents.UNProgramDetailsViewSettingsProtocol",
+                    "usr": "s:12UNComponents36UNProgramDetailsViewSettingsProtocolP"
+                  }
+                ],
+                "hasDefaultArg": true,
+                "usr": "s:Sq"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Optional",
+                "printedName": "Swift.String?",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "String",
+                    "printedName": "Swift.String",
+                    "usr": "s:SS"
+                  }
+                ],
+                "hasDefaultArg": true,
+                "usr": "s:Sq"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Optional",
+                "printedName": "Swift.String?",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "String",
+                    "printedName": "Swift.String",
+                    "usr": "s:SS"
+                  }
+                ],
+                "hasDefaultArg": true,
+                "usr": "s:Sq"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Optional",
+                "printedName": "((UNComponents.UNProgramDetailsComponentCallback) -> ())?",
+                "children": [
+                  {
+                    "kind": "TypeFunc",
+                    "name": "Function",
+                    "printedName": "(UNComponents.UNProgramDetailsComponentCallback) -> ()",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "Void",
+                        "printedName": "()"
+                      },
+                      {
+                        "kind": "TypeNominal",
+                        "name": "UNProgramDetailsComponentCallback",
+                        "printedName": "UNComponents.UNProgramDetailsComponentCallback",
+                        "usr": "s:12UNComponents33UNProgramDetailsComponentCallbackO"
+                      }
+                    ]
+                  }
+                ],
+                "hasDefaultArg": true,
+                "usr": "s:Sq"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:12UNComponents9UNUIViewsPAAE26getProgramDetailsComponent9accountId18additionalSettings5theme8language9callbacksAA09UNProgramE4View_pSS_AA0neoJ8Protocol_pSgSSSgAMyAA0neF8CallbackOcSgtF",
+            "mangledName": "$s12UNComponents9UNUIViewsPAAE26getProgramDetailsComponent9accountId18additionalSettings5theme8language9callbacksAA09UNProgramE4View_pSS_AA0neoJ8Protocol_pSgSSSgAMyAA0neF8CallbackOcSgtF",
             "moduleName": "UNComponents",
             "genericSig": "<τ_0_0 where τ_0_0 : UNComponents.UNUIViews>",
             "sugared_genericSig": "<Self where Self : UNComponents.UNUIViews>",
@@ -18819,6 +19419,16 @@
             "usr": "s:SE",
             "mangledName": "$sSE"
           }
+        ]
+      },
+      {
+        "kind": "Import",
+        "name": "Foundation",
+        "printedName": "Foundation",
+        "declKind": "Import",
+        "moduleName": "UNComponents",
+        "declAttributes": [
+          "RawDocComment"
         ]
       },
       {
@@ -29400,6 +30010,186 @@
       },
       {
         "kind": "TypeDecl",
+        "name": "UNProgramDetailsView",
+        "printedName": "UNProgramDetailsView",
+        "children": [
+          {
+            "kind": "Var",
+            "name": "accountId",
+            "printedName": "accountId",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "String",
+                "printedName": "Swift.String",
+                "usr": "s:SS"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "s:12UNComponents20UNProgramDetailsViewP9accountIdSSvp",
+            "mangledName": "$s12UNComponents20UNProgramDetailsViewP9accountIdSSvp",
+            "moduleName": "UNComponents",
+            "protocolReq": true,
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "String",
+                    "printedName": "Swift.String",
+                    "usr": "s:SS"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:12UNComponents20UNProgramDetailsViewP9accountIdSSvg",
+                "mangledName": "$s12UNComponents20UNProgramDetailsViewP9accountIdSSvg",
+                "moduleName": "UNComponents",
+                "genericSig": "<τ_0_0 where τ_0_0 : UNComponents.UNProgramDetailsView>",
+                "sugared_genericSig": "<Self where Self : UNComponents.UNProgramDetailsView>",
+                "protocolReq": true,
+                "reqNewWitnessTableEntry": true,
+                "accessorKind": "get"
+              },
+              {
+                "kind": "Accessor",
+                "name": "Set",
+                "printedName": "Set()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Void",
+                    "printedName": "()"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "String",
+                    "printedName": "Swift.String",
+                    "usr": "s:SS"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:12UNComponents20UNProgramDetailsViewP9accountIdSSvs",
+                "mangledName": "$s12UNComponents20UNProgramDetailsViewP9accountIdSSvs",
+                "moduleName": "UNComponents",
+                "genericSig": "<τ_0_0 where τ_0_0 : UNComponents.UNProgramDetailsView>",
+                "sugared_genericSig": "<Self where Self : UNComponents.UNProgramDetailsView>",
+                "protocolReq": true,
+                "reqNewWitnessTableEntry": true,
+                "accessorKind": "set"
+              },
+              {
+                "kind": "Accessor",
+                "name": "Modify",
+                "printedName": "Modify()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Void",
+                    "printedName": "()"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:12UNComponents20UNProgramDetailsViewP9accountIdSSvM",
+                "mangledName": "$s12UNComponents20UNProgramDetailsViewP9accountIdSSvM",
+                "moduleName": "UNComponents",
+                "genericSig": "<τ_0_0 where τ_0_0 : UNComponents.UNProgramDetailsView>",
+                "sugared_genericSig": "<Self where Self : UNComponents.UNProgramDetailsView>",
+                "protocolReq": true,
+                "implicit": true,
+                "reqNewWitnessTableEntry": true,
+                "accessorKind": "_modify"
+              }
+            ]
+          }
+        ],
+        "declKind": "Protocol",
+        "usr": "s:12UNComponents20UNProgramDetailsViewP",
+        "mangledName": "$s12UNComponents20UNProgramDetailsViewP",
+        "moduleName": "UNComponents",
+        "genericSig": "<τ_0_0 : UIKit.UIView>",
+        "sugared_genericSig": "<Self : UIKit.UIView>",
+        "declAttributes": [
+          "AccessControl"
+        ]
+      },
+      {
+        "kind": "TypeDecl",
+        "name": "UNProgramDetailsViewSettingsProtocol",
+        "printedName": "UNProgramDetailsViewSettingsProtocol",
+        "children": [
+          {
+            "kind": "Var",
+            "name": "hideTitle",
+            "printedName": "hideTitle",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Bool",
+                "printedName": "Swift.Bool",
+                "usr": "s:Sb"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "s:12UNComponents36UNProgramDetailsViewSettingsProtocolP9hideTitleSbvp",
+            "mangledName": "$s12UNComponents36UNProgramDetailsViewSettingsProtocolP9hideTitleSbvp",
+            "moduleName": "UNComponents",
+            "protocolReq": true,
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Bool",
+                    "printedName": "Swift.Bool",
+                    "usr": "s:Sb"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:12UNComponents36UNProgramDetailsViewSettingsProtocolP9hideTitleSbvg",
+                "mangledName": "$s12UNComponents36UNProgramDetailsViewSettingsProtocolP9hideTitleSbvg",
+                "moduleName": "UNComponents",
+                "genericSig": "<τ_0_0 where τ_0_0 : UNComponents.UNProgramDetailsViewSettingsProtocol>",
+                "sugared_genericSig": "<Self where Self : UNComponents.UNProgramDetailsViewSettingsProtocol>",
+                "protocolReq": true,
+                "reqNewWitnessTableEntry": true,
+                "accessorKind": "get"
+              }
+            ]
+          }
+        ],
+        "declKind": "Protocol",
+        "usr": "s:12UNComponents36UNProgramDetailsViewSettingsProtocolP",
+        "mangledName": "$s12UNComponents36UNProgramDetailsViewSettingsProtocolP",
+        "moduleName": "UNComponents",
+        "declAttributes": [
+          "AccessControl"
+        ]
+      },
+      {
+        "kind": "Import",
+        "name": "Foundation",
+        "printedName": "Foundation",
+        "declKind": "Import",
+        "moduleName": "UNComponents",
+        "declAttributes": [
+          "RawDocComment"
+        ]
+      },
+      {
+        "kind": "Import",
+        "name": "UIKit",
+        "printedName": "UIKit",
+        "declKind": "Import",
+        "moduleName": "UNComponents"
+      },
+      {
+        "kind": "TypeDecl",
         "name": "UNACHCreditComponent",
         "printedName": "UNACHCreditComponent",
         "children": [
@@ -29863,6 +30653,16 @@
             "usr": "s:s8SendableP",
             "mangledName": "$ss8SendableP"
           }
+        ]
+      },
+      {
+        "kind": "Import",
+        "name": "Foundation",
+        "printedName": "Foundation",
+        "declKind": "Import",
+        "moduleName": "UNComponents",
+        "declAttributes": [
+          "RawDocComment"
         ]
       },
       {
@@ -38673,7 +39473,7 @@
       "kind": "IntegerLiteral",
       "offset": 366,
       "length": 1,
-      "value": "7"
+      "value": "8"
     },
     {
       "filePath": "\/Users\/runner\/work\/unit-ios-components\/unit-ios-components\/UnitWhiteLabelBanking\/UNComponents\/UI\/Components\/CheckDeposit\/UNCheckDepositComponent.swift",
@@ -39222,6 +40022,13 @@
       "value": "\"DownloadBankVerificationLetter\""
     },
     {
+      "filePath": "\/Users\/runner\/work\/unit-ios-components\/unit-ios-components\/UnitWhiteLabelBanking\/UNComponents\/Infra\/Builders\/Components\/ProgramDetails\/UNProgramDetailsViewSettingsBuilder.swift",
+      "kind": "BooleanLiteral",
+      "offset": 306,
+      "length": 5,
+      "value": "false"
+    },
+    {
       "filePath": "\/Users\/runner\/work\/unit-ios-components\/unit-ios-components\/UnitWhiteLabelBanking\/UNComponents\/Network\/Infrastructure\/UNNetworkServerTrustEvaluating.swift",
       "kind": "BooleanLiteral",
       "offset": 1330,
@@ -39411,6 +40218,27 @@
       "value": "\"TRACE\""
     },
     {
+      "filePath": "\/Users\/runner\/work\/unit-ios-components\/unit-ios-components\/UnitWhiteLabelBanking\/UNComponents\/UI\/Components\/ProgramDetails\/UNProgramDetailsComponent.swift",
+      "kind": "StringLiteral",
+      "offset": 398,
+      "length": 12,
+      "value": "\"account-id\""
+    },
+    {
+      "filePath": "\/Users\/runner\/work\/unit-ios-components\/unit-ios-components\/UnitWhiteLabelBanking\/UNComponents\/UI\/Components\/ProgramDetails\/UNProgramDetailsComponent.swift",
+      "kind": "StringLiteral",
+      "offset": 442,
+      "length": 12,
+      "value": "\"hide-title\""
+    },
+    {
+      "filePath": "\/Users\/runner\/work\/unit-ios-components\/unit-ios-components\/UnitWhiteLabelBanking\/UNComponents\/UI\/Components\/ProgramDetails\/UNProgramDetailsComponent.swift",
+      "kind": "StringLiteral",
+      "offset": 144,
+      "length": 25,
+      "value": "\"UNComponents.UNProgramDetailsComponent\""
+    },
+    {
       "filePath": "\/Users\/runner\/work\/unit-ios-components\/unit-ios-components\/UnitWhiteLabelBanking\/UNComponents\/UI\/Components\/Slot\/UNAddToWalletComponent.swift",
       "kind": "BooleanLiteral",
       "offset": 1165,
@@ -39546,7 +40374,7 @@
     {
       "filePath": "\/Users\/runner\/work\/unit-ios-components\/unit-ios-components\/UnitWhiteLabelBanking\/UNComponents\/Infra\/Protocols\/Layers\/UI\/UNUIViews.swift",
       "kind": "BooleanLiteral",
-      "offset": 4104,
+      "offset": 4330,
       "length": 5,
       "value": "false"
     },
@@ -39644,84 +40472,84 @@
     {
       "filePath": "\/Users\/runner\/work\/unit-ios-components\/unit-ios-components\/UnitWhiteLabelBanking\/UNComponents\/UI\/BottomSheetComponent\/UNBottomSheetComponent.swift",
       "kind": "BooleanLiteral",
-      "offset": 1013,
+      "offset": 1093,
       "length": 4,
       "value": "true"
     },
     {
       "filePath": "\/Users\/runner\/work\/unit-ios-components\/unit-ios-components\/UnitWhiteLabelBanking\/UNComponents\/UI\/BottomSheetComponent\/UNBottomSheetComponent.swift",
       "kind": "IntegerLiteral",
-      "offset": 1238,
+      "offset": 1318,
       "length": 2,
       "value": "15"
     },
     {
       "filePath": "\/Users\/runner\/work\/unit-ios-components\/unit-ios-components\/UnitWhiteLabelBanking\/UNComponents\/UI\/BottomSheetComponent\/UNBottomSheetComponent.swift",
       "kind": "IntegerLiteral",
-      "offset": 1291,
+      "offset": 1371,
       "length": 3,
       "value": "-15"
     },
     {
       "filePath": "\/Users\/runner\/work\/unit-ios-components\/unit-ios-components\/UnitWhiteLabelBanking\/UNComponents\/UI\/BottomSheetComponent\/UNBottomSheetComponent.swift",
       "kind": "IntegerLiteral",
-      "offset": 1327,
+      "offset": 1407,
       "length": 2,
       "value": "36"
     },
     {
       "filePath": "\/Users\/runner\/work\/unit-ios-components\/unit-ios-components\/UnitWhiteLabelBanking\/UNComponents\/UI\/BottomSheetComponent\/UNBottomSheetComponent.swift",
       "kind": "IntegerLiteral",
-      "offset": 1363,
+      "offset": 1443,
       "length": 2,
       "value": "36"
     },
     {
       "filePath": "\/Users\/runner\/work\/unit-ios-components\/unit-ios-components\/UnitWhiteLabelBanking\/UNComponents\/UI\/BottomSheetComponent\/UNBottomSheetComponent.swift",
       "kind": "FloatLiteral",
-      "offset": 1444,
+      "offset": 1524,
       "length": 3,
       "value": "0.6"
     },
     {
       "filePath": "\/Users\/runner\/work\/unit-ios-components\/unit-ios-components\/UnitWhiteLabelBanking\/UNComponents\/UI\/BottomSheetComponent\/UNBottomSheetComponent.swift",
       "kind": "IntegerLiteral",
-      "offset": 1571,
+      "offset": 1651,
       "length": 1,
       "value": "0"
     },
     {
       "filePath": "\/Users\/runner\/work\/unit-ios-components\/unit-ios-components\/UnitWhiteLabelBanking\/UNComponents\/UI\/BottomSheetComponent\/UNBottomSheetComponent.swift",
       "kind": "IntegerLiteral",
-      "offset": 1769,
+      "offset": 1849,
       "length": 2,
       "value": "18"
     },
     {
       "filePath": "\/Users\/runner\/work\/unit-ios-components\/unit-ios-components\/UnitWhiteLabelBanking\/UNComponents\/UI\/BottomSheetComponent\/UNBottomSheetComponent.swift",
       "kind": "BooleanLiteral",
-      "offset": 1818,
+      "offset": 1898,
       "length": 4,
       "value": "true"
     },
     {
       "filePath": "\/Users\/runner\/work\/unit-ios-components\/unit-ios-components\/UnitWhiteLabelBanking\/UNComponents\/UI\/BottomSheetComponent\/UNBottomSheetComponent.swift",
       "kind": "IntegerLiteral",
-      "offset": 2211,
+      "offset": 2291,
       "length": 2,
       "value": "16"
     },
     {
       "filePath": "\/Users\/runner\/work\/unit-ios-components\/unit-ios-components\/UnitWhiteLabelBanking\/UNComponents\/UI\/BottomSheetComponent\/UNBottomSheetComponent.swift",
       "kind": "IntegerLiteral",
-      "offset": 2247,
+      "offset": 2327,
       "length": 2,
       "value": "16"
     },
     {
       "filePath": "\/Users\/runner\/work\/unit-ios-components\/unit-ios-components\/UnitWhiteLabelBanking\/UNComponents\/UI\/BottomSheetComponent\/UNBottomSheetComponent.swift",
       "kind": "StringLiteral",
-      "offset": 2410,
+      "offset": 2490,
       "length": 17,
       "value": "\"un_close_button\""
     },
@@ -39847,7 +40675,14 @@
     {
       "filePath": "\/Users\/runner\/work\/unit-ios-components\/unit-ios-components\/UnitWhiteLabelBanking\/UNComponents\/UI\/WebComponent\/UNWebComponentType.swift",
       "kind": "StringLiteral",
-      "offset": 853,
+      "offset": 852,
+      "length": 31,
+      "value": "\"unit-elements-program-details\""
+    },
+    {
+      "filePath": "\/Users\/runner\/work\/unit-ios-components\/unit-ios-components\/UnitWhiteLabelBanking\/UNComponents\/UI\/WebComponent\/UNWebComponentType.swift",
+      "kind": "StringLiteral",
+      "offset": 907,
       "length": 27,
       "value": "\"unit-elements-card-action\""
     },
@@ -39917,7 +40752,14 @@
     {
       "filePath": "\/Users\/runner\/work\/unit-ios-components\/unit-ios-components\/UnitWhiteLabelBanking\/UNComponents\/UI\/WebComponent\/UNWebComponentType.swift",
       "kind": "StringLiteral",
-      "offset": 853,
+      "offset": 852,
+      "length": 31,
+      "value": "\"unit-elements-program-details\""
+    },
+    {
+      "filePath": "\/Users\/runner\/work\/unit-ios-components\/unit-ios-components\/UnitWhiteLabelBanking\/UNComponents\/UI\/WebComponent\/UNWebComponentType.swift",
+      "kind": "StringLiteral",
+      "offset": 907,
       "length": 27,
       "value": "\"unit-elements-card-action\""
     },

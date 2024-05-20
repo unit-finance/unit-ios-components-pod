@@ -161,6 +161,10 @@ public enum UNMultipleCardsComponentPaginationType : Swift.String {
     get
   }
 }
+public protocol UNHelpers {
+  func setRedirectUri(_ redirectUri: Swift.String)
+  var redirectUri: Swift.String? { get }
+}
 public enum UNError : Swift.Error {
   case onLoad(errors: [UNComponents.UNErrorResponse])
   case missingCustomerToken
@@ -368,6 +372,14 @@ public enum UNAccountMenuAction : Swift.String {
     get
   }
 }
+public class UNProgramDetailsViewSettingsBuilder : UNComponents.UNProgramDetailsViewSettingsProtocol {
+  public var hideTitle: Swift.Bool {
+    get
+  }
+  public init(hideTitle: Swift.Bool = false)
+  public func hideTitle(_ hideTitle: Swift.Bool) -> any UNComponents.UNProgramDetailsViewSettingsProtocol
+  @objc deinit
+}
 public protocol UNACHCreditView : UIKit.UIView {
   var accountId: Swift.String? { get set }
   var additionalSettings: any UNComponents.UNACHCreditViewSettingsProtocol { get set }
@@ -436,6 +448,9 @@ public enum UNActivityComponentPaginationType : Swift.String {
     get
   }
 }
+public enum UNProgramDetailsComponentCallback {
+  case unitOnLoad(result: Swift.Result<UNComponents.UNAccountData, UNComponents.UNError>)
+}
 public enum UNACHDebitComponentCallback {
   case onPaymentCreated(data: UNComponents.UNACHData)
   case onInitialStageBackButtonClicked
@@ -478,6 +493,7 @@ public protocol UNManagerProtocol : AnyObject {
   var customerToken: UNComponents.UNCustomerToken? { get set }
   var ui: any UNComponents.UNUI { get }
   var services: any UNComponents.UNServices { get }
+  var helpers: any UNComponents.UNHelpers { get }
   func initialize(with configurationSettings: any UNComponents.UNSDKConfigurationProtocol)
 }
 public protocol UNUIViews {
@@ -489,6 +505,7 @@ public protocol UNUIViews {
   func getBookPaymentComponent(accountId: Swift.String?, counterpartyAccountId: Swift.String?, counterpartyName: Swift.String?, isSameCustomer: Swift.Bool, additionalSettings: (any UNComponents.UNBookPaymentViewSettingsProtocol)?, theme: UNComponents.UNTheme?, language: UNComponents.UNLanguage?, callbacks: UNComponents.UNBookPaymentComponentCallbacks?) -> any UNComponents.UNBookPaymentView
   func getCheckDepositComponent(accountId: Swift.String, fee: Swift.Double?, additionalSettings: (any UNComponents.UNCheckDepositViewSettingsProtocol)?, theme: UNComponents.UNTheme?, language: UNComponents.UNLanguage?, callbacks: UNComponents.UNCheckDepositComponentCallbacks?) -> any UNComponents.UNCheckDepositView
   func getMultipleCardsComponent(additionalSettings: (any UNComponents.UNMultipleCardsViewSettingsProtocol)?, theme: UNComponents.UNTheme?, language: UNComponents.UNLanguage?, callbacks: UNComponents.UNMultipleCardsComponentCallbacks?) -> any UNComponents.UNMultipleCardsView
+  func getProgramDetailsComponent(accountId: Swift.String, additionalSettings: (any UNComponents.UNProgramDetailsViewSettingsProtocol)?, theme: UNComponents.UNTheme?, language: UNComponents.UNLanguage?, callbacks: UNComponents.UNProgramDetailsComponentCallbacks?) -> any UNComponents.UNProgramDetailsView
 }
 extension UNComponents.UNUIViews {
   public func getCardComponent(id: Swift.String, additionalSettings: (any UNComponents.UNCardViewSettingsProtocol)? = nil, theme: UNComponents.UNTheme? = nil, language: UNComponents.UNLanguage? = nil, callbacks: UNComponents.UNCardComponentCallbacks? = nil) -> any UNComponents.UNCardView
@@ -499,6 +516,7 @@ extension UNComponents.UNUIViews {
   public func getBookPaymentComponent(accountId: Swift.String? = nil, counterpartyAccountId: Swift.String? = nil, counterpartyName: Swift.String? = nil, isSameCustomer: Swift.Bool = false, additionalSettings: (any UNComponents.UNBookPaymentViewSettingsProtocol)? = nil, theme: UNComponents.UNTheme? = nil, language: UNComponents.UNLanguage? = nil, callbacks: UNComponents.UNBookPaymentComponentCallbacks? = nil) -> any UNComponents.UNBookPaymentView
   public func getCheckDepositComponent(accountId: Swift.String, fee: Swift.Double? = nil, additionalSettings: (any UNComponents.UNCheckDepositViewSettingsProtocol)? = nil, theme: UNComponents.UNTheme? = nil, language: UNComponents.UNLanguage? = nil, callbacks: UNComponents.UNCheckDepositComponentCallbacks? = nil) -> any UNComponents.UNCheckDepositView
   public func getMultipleCardsComponent(additionalSettings: (any UNComponents.UNMultipleCardsViewSettingsProtocol)? = nil, theme: UNComponents.UNTheme? = nil, language: UNComponents.UNLanguage? = nil, callbacks: UNComponents.UNMultipleCardsComponentCallbacks? = nil) -> any UNComponents.UNMultipleCardsView
+  public func getProgramDetailsComponent(accountId: Swift.String, additionalSettings: (any UNComponents.UNProgramDetailsViewSettingsProtocol)? = nil, theme: UNComponents.UNTheme? = nil, language: UNComponents.UNLanguage? = nil, callbacks: UNComponents.UNProgramDetailsComponentCallbacks? = nil) -> any UNComponents.UNProgramDetailsView
 }
 public class UNCardViewSettingsBuilder : UNComponents.UNCardViewSettingsProtocol {
   public var hideActionsMenuButton: Swift.Bool {
@@ -917,6 +935,12 @@ public class UNMultipleCardsViewSettingsBuilder : UNComponents.UNMultipleCardsVi
   public func queryFilter(_ queryFilter: Swift.String) -> UNComponents.UNMultipleCardsViewSettingsBuilder
   @objc deinit
 }
+public protocol UNProgramDetailsView : UIKit.UIView {
+  var accountId: Swift.String { get set }
+}
+public protocol UNProgramDetailsViewSettingsProtocol {
+  var hideTitle: Swift.Bool { get }
+}
 @objc @_Concurrency.MainActor(unsafe) public class UNACHCreditComponent : UIKit.UIView {
   @_Concurrency.MainActor(unsafe) public init(accountId: Swift.String?, additionalSettings: any UNComponents.UNACHCreditViewSettingsProtocol, theme: UNComponents.UNTheme?, language: UNComponents.UNLanguage?, callbacks: UNComponents.UNACHCreditComponentCallbacks?)
   @_Concurrency.MainActor(unsafe) @objc required dynamic public init?(coder aDecoder: Foundation.NSCoder)
@@ -933,6 +957,7 @@ extension UNComponents.UNACHCreditComponent : UNComponents.UNACHCreditView {
   }
 }
 public typealias UNCheckDepositComponentCallbacks = (_ callback: UNComponents.UNCheckDepositComponentCallback) -> Swift.Void
+public typealias UNProgramDetailsComponentCallbacks = (_ callback: UNComponents.UNProgramDetailsComponentCallback) -> Swift.Void
 public struct UNComponentResponse<T> : Swift.Codable where T : Swift.Decodable, T : Swift.Encodable {
   public func encode(to encoder: any Swift.Encoder) throws
   public init(from decoder: any Swift.Decoder) throws
