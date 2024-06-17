@@ -110,6 +110,15 @@ public protocol UNActivityViewSettingsProtocol {
   var paginationType: UNComponents.UNActivityComponentPaginationType { get }
   var transactionsPerPage: Swift.Int? { get }
 }
+public protocol UNFundAccountPaymentView : UIKit.UIView {
+  var accountId: Swift.String? { get set }
+}
+public protocol UNFundAccountPaymentViewSettingsProtocol {
+  var fee: Swift.Double? { get }
+  var isAutoFocus: Swift.Bool { get }
+  var initialStageBackButton: Swift.Bool { get }
+  var finalStageDoneButton: Swift.Bool { get }
+}
 public protocol UNServices {
   func setVisaProvider(_ provider: any UNComponents.UNVisaProviding)
 }
@@ -164,6 +173,7 @@ public enum UNMultipleCardsComponentPaginationType : Swift.String {
 public protocol UNHelpers {
   func setRedirectUri(_ redirectUri: Swift.String)
   var redirectUri: Swift.String? { get }
+  var unitSessionId: Swift.String { get }
 }
 public enum UNError : Swift.Error {
   case onLoad(errors: [UNComponents.UNErrorResponse])
@@ -436,6 +446,12 @@ public enum FontWeight {
     get
   }
 }
+public enum UNFundAccountPaymentComponentCallback {
+  case unitOnLoad(result: Swift.Result<UNComponents.UNFundAccountPaymentOnLoadResponse, UNComponents.UNError>)
+  case paymentCreated(data: UNComponents.UNFundAccountPaymentData)
+  case initialStageBackButtonClicked
+  case finalStageDoneButtonClicked
+}
 public enum UNActivityComponentCallback {
   case unitOnLoad(result: Swift.Result<Swift.Void, UNComponents.UNError>)
 }
@@ -477,6 +493,8 @@ public enum UNCardType : Swift.String, Swift.Codable {
   case businessDebitCard
   case individualVirtualDebitCard
   case businessVirtualDebitCard
+  case businessCreditCard
+  case businessVirtualCreditCard
   public var isVirtual: Swift.Bool {
     get
   }
@@ -506,6 +524,7 @@ public protocol UNUIViews {
   func getCheckDepositComponent(accountId: Swift.String, fee: Swift.Double?, additionalSettings: (any UNComponents.UNCheckDepositViewSettingsProtocol)?, theme: UNComponents.UNTheme?, language: UNComponents.UNLanguage?, callbacks: UNComponents.UNCheckDepositComponentCallbacks?) -> any UNComponents.UNCheckDepositView
   func getMultipleCardsComponent(additionalSettings: (any UNComponents.UNMultipleCardsViewSettingsProtocol)?, theme: UNComponents.UNTheme?, language: UNComponents.UNLanguage?, callbacks: UNComponents.UNMultipleCardsComponentCallbacks?) -> any UNComponents.UNMultipleCardsView
   func getProgramDetailsComponent(accountId: Swift.String, additionalSettings: (any UNComponents.UNProgramDetailsViewSettingsProtocol)?, theme: UNComponents.UNTheme?, language: UNComponents.UNLanguage?, callbacks: UNComponents.UNProgramDetailsComponentCallbacks?) -> any UNComponents.UNProgramDetailsView
+  func getFundAccountPaymentComponent(accountId: Swift.String?, additionalSettings: (any UNComponents.UNFundAccountPaymentViewSettingsProtocol)?, theme: UNComponents.UNTheme?, language: UNComponents.UNLanguage?, callbacks: UNComponents.UNFundAccountPaymentComponentCallbacks?) -> any UNComponents.UNFundAccountPaymentView
 }
 extension UNComponents.UNUIViews {
   public func getCardComponent(id: Swift.String, additionalSettings: (any UNComponents.UNCardViewSettingsProtocol)? = nil, theme: UNComponents.UNTheme? = nil, language: UNComponents.UNLanguage? = nil, callbacks: UNComponents.UNCardComponentCallbacks? = nil) -> any UNComponents.UNCardView
@@ -517,6 +536,7 @@ extension UNComponents.UNUIViews {
   public func getCheckDepositComponent(accountId: Swift.String, fee: Swift.Double? = nil, additionalSettings: (any UNComponents.UNCheckDepositViewSettingsProtocol)? = nil, theme: UNComponents.UNTheme? = nil, language: UNComponents.UNLanguage? = nil, callbacks: UNComponents.UNCheckDepositComponentCallbacks? = nil) -> any UNComponents.UNCheckDepositView
   public func getMultipleCardsComponent(additionalSettings: (any UNComponents.UNMultipleCardsViewSettingsProtocol)? = nil, theme: UNComponents.UNTheme? = nil, language: UNComponents.UNLanguage? = nil, callbacks: UNComponents.UNMultipleCardsComponentCallbacks? = nil) -> any UNComponents.UNMultipleCardsView
   public func getProgramDetailsComponent(accountId: Swift.String, additionalSettings: (any UNComponents.UNProgramDetailsViewSettingsProtocol)? = nil, theme: UNComponents.UNTheme? = nil, language: UNComponents.UNLanguage? = nil, callbacks: UNComponents.UNProgramDetailsComponentCallbacks? = nil) -> any UNComponents.UNProgramDetailsView
+  public func getFundAccountPaymentComponent(accountId: Swift.String? = nil, additionalSettings: (any UNComponents.UNFundAccountPaymentViewSettingsProtocol)? = nil, theme: UNComponents.UNTheme? = nil, language: UNComponents.UNLanguage? = nil, callbacks: UNComponents.UNFundAccountPaymentComponentCallbacks? = nil) -> any UNComponents.UNFundAccountPaymentView
 }
 public class UNCardViewSettingsBuilder : UNComponents.UNCardViewSettingsProtocol {
   public var hideActionsMenuButton: Swift.Bool {
@@ -637,6 +657,33 @@ public enum UNCounterpartyVerificationMethod : Swift.String, Swift.Codable {
   public var rawValue: Swift.String {
     get
   }
+}
+public enum UNFundAccountPaymentOnLoadResponse : Swift.Codable {
+  case astraExternalCard([UNComponents.UNAstraExternalCardData])
+  case accountCards([UNComponents.UNCardData])
+  public func encode(to encoder: any Swift.Encoder) throws
+  public init(from decoder: any Swift.Decoder) throws
+}
+public struct UNAstraExternalCardData : Swift.Codable {
+  public func encode(to encoder: any Swift.Encoder) throws
+  public init(from decoder: any Swift.Decoder) throws
+}
+public struct UNFundAccountPaymentData : Swift.Codable {
+  public func encode(to encoder: any Swift.Encoder) throws
+  public init(from decoder: any Swift.Decoder) throws
+}
+public struct UNFundAccountPaymentAttributes : Swift.Codable {
+  public func encode(to encoder: any Swift.Encoder) throws
+  public init(from decoder: any Swift.Decoder) throws
+}
+public struct UNFundAccountPaymentRelationships : Swift.Codable {
+  public let account: UNComponents.UNRelationshipData
+  public let customer: UNComponents.UNRelationshipData?
+  public let customers: UNComponents.UNRelationshipDataArray?
+  public let transaction: UNComponents.UNRelationshipDataArray?
+  public let card: UNComponents.UNRelationshipData
+  public func encode(to encoder: any Swift.Encoder) throws
+  public init(from decoder: any Swift.Decoder) throws
 }
 public enum UNBookPaymentComponentCallback {
   case onPaymentCreated(data: UNComponents.UNBookPaymentData)
@@ -986,6 +1033,7 @@ public enum UNWebVersioningStrategy {
   case upToNextMinor(major: Swift.Int, minor: Swift.Int)
   case upToNextMajor(major: Swift.Int)
 }
+public typealias UNFundAccountPaymentComponentCallbacks = (_ callback: UNComponents.UNFundAccountPaymentComponentCallback) -> Swift.Void
 public protocol UNUI {
   func setTheme(_ theme: UNComponents.UNTheme?)
   func setLanguage(_ language: UNComponents.UNLanguage?)
@@ -995,6 +1043,26 @@ public protocol UNUI {
   var theme: UNComponents.UNTheme? { get }
   var language: UNComponents.UNLanguage? { get }
   var fonts: UNComponents.UNFonts? { get }
+}
+public class UNFundAccountPaymentViewSettingsBuilder : UNComponents.UNFundAccountPaymentViewSettingsProtocol {
+  public var fee: Swift.Double? {
+    get
+  }
+  public var isAutoFocus: Swift.Bool {
+    get
+  }
+  public var initialStageBackButton: Swift.Bool {
+    get
+  }
+  public var finalStageDoneButton: Swift.Bool {
+    get
+  }
+  public init(fee: Swift.Double? = nil, isAutoFocus: Swift.Bool = false, initialStageBackButton: Swift.Bool = false, finalStageDoneButton: Swift.Bool = false)
+  public func fee(_ fee: Swift.Double?) -> UNComponents.UNFundAccountPaymentViewSettingsBuilder
+  public func isAutoFocus(_ isAutoFocus: Swift.Bool) -> UNComponents.UNFundAccountPaymentViewSettingsBuilder
+  public func initialStageBackButton(_ initialStageBackButton: Swift.Bool) -> UNComponents.UNFundAccountPaymentViewSettingsBuilder
+  public func finalStageDoneButton(_ finalStageDoneButton: Swift.Bool) -> UNComponents.UNFundAccountPaymentViewSettingsBuilder
+  @objc deinit
 }
 @_hasMissingDesignatedInitializers public class UnitSDK {
   public static var version: Swift.String
