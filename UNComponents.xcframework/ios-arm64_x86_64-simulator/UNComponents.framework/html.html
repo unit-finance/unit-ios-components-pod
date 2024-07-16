@@ -4,6 +4,7 @@
     <script>
         window.UnitMobileSDK = true
         window.UnitSessionStore = {}
+        window.UnitStore = {}
         window.UnitMobileSDKConfig = {
               os: 'ios',
               walletName: 'Apple'
@@ -124,6 +125,17 @@
             postMessageToSDK({ type: "unit", action: "requestExternalSdk", details: e.detail})
         });
         
+        window.addEventListener("unitMultiFactorAuthFinished", async (e) => {
+             const response = await event.detail.response;
+             const data = JSON.stringify({
+               token: response.data.attributes.token,
+               expiration: new Date().getTime() + response.data.attributes.expiresIn * 1000,
+             });
+             window.UnitStore["unitVerifiedCustomerToken"] = data;
+
+             postMessageToSDK({ type: "unit", action:"unitMultiFactorAuthFinished", details: data })
+        });
+        
         window.addEventListener("unitCardStatusChanged", (e) => {
             const response = e.detail
             response.then((data) => {
@@ -145,7 +157,7 @@
         window.addEventListener("unitAccountChanged", (e) => {
              const response = e.detail
              response.then((data) => {
-               postMessageToSDK({ type: "bottomSheetSharedEvents",action: "accountStatusChanged", details: data.data })
+               postMessageToSDK({ type: "bottomSheetSharedEvents", action: "accountStatusChanged", details: data.data })
              }).catch((e) => {
                console.log(e)
              })
