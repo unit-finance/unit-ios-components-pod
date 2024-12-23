@@ -126,13 +126,17 @@
         });
         
         window.addEventListener("unitMultiFactorAuthFinished", async (e) => {
-             const response = await event.detail.response;
-             const data = JSON.stringify({
+             const response = await e.detail.response;
+             const unitVerifiedCustomerToken = JSON.stringify({
                token: response.data.attributes.token,
                expiration: new Date().getTime() + response.data.attributes.expiresIn * 1000,
              });
-             window.UnitStore["unitVerifiedCustomerToken"] = data;
 
+             const data = {
+               unitVerifiedCustomerTokenString: unitVerifiedCustomerToken,
+               parentInstanceId: e.detail.parentInstanceId,
+               eventToContinue: e.detail.eventToContinue
+             }
              postMessageToSDK({ type: "unit", action:"unitMultiFactorAuthFinished", details: data })
         });
         
@@ -230,6 +234,9 @@
             document.querySelector(componentName).dispatchEvent(new CustomEvent("unitRequestShowSensitiveData"))
         }
 
-        
+        const dispatchEventToContinue = (details) => {
+            const event = new CustomEvent("unitEventToContinue",{ detail: details});
+            window.dispatchEvent(event);
+        }
     </script>
 </body>

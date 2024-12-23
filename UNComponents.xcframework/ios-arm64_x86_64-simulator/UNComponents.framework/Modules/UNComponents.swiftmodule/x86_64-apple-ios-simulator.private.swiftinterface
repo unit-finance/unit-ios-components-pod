@@ -1,6 +1,7 @@
 // swift-interface-format-version: 1.0
-// swift-compiler-version: Apple Swift version 5.10 (swiftlang-5.10.0.13 clang-1500.3.9.4)
+// swift-compiler-version: Apple Swift version 6.0 effective-5.10 (swiftlang-6.0.0.9.10 clang-1600.0.26.2)
 // swift-module-flags: -target x86_64-apple-ios14.0-simulator -enable-objc-interop -enable-library-evolution -swift-version 5 -enforce-exclusivity=checked -O -enable-bare-slash-regex -module-name UNComponents
+// swift-module-flags-ignorable: -no-verify-emitted-module-interface
 import AVFoundation
 import Combine
 import DeveloperToolsSupport
@@ -725,6 +726,16 @@ public enum UNVPErrorType {
   case walletProvisioningInconclusive
   case sdkLockout
   case invalidNonce
+  case reversedEngineered
+  case noBrowserFound
+  case TLCMFeatureNotSupported
+  case TLCMUnsupportedWallet
+  case TLCMDetailsNotFoundInPaySdk
+  case TLCMTokenStatusExists
+  case TLCMInvalidOperationInput
+  case TLCMInvalidRequest
+  case TLCMTokenNotFound
+  case TLCMUpdateStatusNotAllowed
   public static func == (a: UNComponents.UNVPErrorType, b: UNComponents.UNVPErrorType) -> Swift.Bool
   public func hash(into hasher: inout Swift.Hasher)
   public var hashValue: Swift.Int {
@@ -979,6 +990,7 @@ public protocol UNAccountViewSettingsProtocol {
 public enum UNEnvironment : Swift.Codable {
   case sandbox
   case production
+  case mock
   public static func == (a: UNComponents.UNEnvironment, b: UNComponents.UNEnvironment) -> Swift.Bool
   public func hash(into hasher: inout Swift.Hasher)
   public func encode(to encoder: any Swift.Encoder) throws
