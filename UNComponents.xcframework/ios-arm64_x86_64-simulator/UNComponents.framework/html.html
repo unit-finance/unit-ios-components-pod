@@ -47,10 +47,18 @@
         });
         
         window.addEventListener("unitOnLoad", (e) => {
-              postHeight();
-              postMessageToSDK({ type: "unit", action: "unitOnLoad", details: { ...e.detail, componentName: "<UN_COMPONENT_NAME>"  }})
-            });
-        
+            if (document.querySelector("unit-elements-account") !== null) {
+                // 10 milliseconds delay to render AccountComponent correctly
+                setTimeout(() => {
+                    postHeight()
+                }, 10);
+            } else {
+                postHeight()
+            }
+
+            postMessageToSDK({ type: "unit", action: "unitOnLoad", details: { ...e.detail, componentName: "<UN_COMPONENT_NAME>"  }})
+        });
+
         window.addEventListener("unitPaymentCreated", (e) => {
             const response = e.detail
               response.then((data) => {
@@ -171,6 +179,10 @@
             postMessageToSDK({ type: "bottomSheetSharedEvents", action: "activityFiltersChanged", details: e.detail })
         });
 
+        window.addEventListener("unitMultipleCardsFiltersChanged", (e) => {
+            postMessageToSDK({ type: "bottomSheetSharedEvents", action: "multipleCardsFiltersChanged", details: e.detail })
+        })
+
         window.addEventListener("unitMultipleCardsCardClicked", (e) => {
             const response = e.detail
             response.then((data) => {
@@ -179,7 +191,17 @@
               console.log(e)
             })
         });
-        
+
+        window.addEventListener("unitCardCreated", (e) => {
+            if (e.detail.fromSDK) { return } // avoid infinite loop
+            const response = e.detail
+            response.then((data) => {
+                postMessageToSDK({ type: "unit",action: "unitCardCreated", details: data.data })
+            }).catch((e) => {
+              console.log(e)
+            })
+        });
+
         const dispatchPlaidEvent = (token, metadata) => {
             const dataDetailsObj = {
                 data: {
@@ -213,7 +235,12 @@
             const event = new CustomEvent("unitActivityFiltersChanged",{ detail: details});
             window.dispatchEvent(event);
         }
-        
+
+        const dispatchMultipleCardsFiltersChanged = (details) => {
+            const event = new CustomEvent("unitMultipleCardsFiltersChanged",{ detail: details});
+            window.dispatchEvent(event);
+        }
+
         const dispatchOpenActionsMenu = (componentName) => {
             document.querySelector(componentName).dispatchEvent(new CustomEvent("unitRequestOpenActionsMenu"))
         }
@@ -236,6 +263,17 @@
 
         const dispatchEventToContinue = (details) => {
             const event = new CustomEvent("unitEventToContinue",{ detail: details});
+            window.dispatchEvent(event);
+        }
+
+        const dispatchCardCreated = (details) => {
+            // Add fromSDK to avoid infinite loop
+            const event = new CustomEvent("unitCardCreated",{ detail: { data: JSON.parse(details) ,fromSDK: true} });
+            window.dispatchEvent(event);
+        }
+
+        const dispatchCardStatusChanged = (card) => {
+            const event = new CustomEvent("unitCardStatusChanged",{ detail: { data: JSON.parse(card) }});
             window.dispatchEvent(event);
         }
     </script>
