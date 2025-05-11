@@ -8,7 +8,7 @@
 
 Pod::Spec.new do |s|
   s.name             = 'UnitComponents'
-  s.version          = '1.5.0'
+  s.version          = '2.0.0'
   s.summary          = 'Unit Components SDK'
   s.description      = 'This SDK allows you to integrate Unit Components into your iOS app.'
 
