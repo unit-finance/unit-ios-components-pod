@@ -164,6 +164,7 @@ public enum UNACHCreditComponentCallback {
   case unitOnLoad(result: Swift.Result<UNComponents.UNACHCreditOnLoadResponse, UNComponents.UNComponentsError>)
 }
 public struct UNCounterparty : Swift.Codable {
+  public let type: Swift.String?
   public let id: Swift.String
   public let attributes: UNComponents.UNCounterparty.Attributes
   public let relationships: UNComponents.UNCounterparty.Relationships
@@ -212,6 +213,7 @@ public enum UNCounterpartyPermission : Swift.String, Swift.Codable {
 public enum UNCounterpartyAccountType : Swift.String, Swift.Codable {
   case checking
   case savings
+  case loan
   public init?(rawValue: Swift.String)
   public typealias RawValue = Swift.String
   public var rawValue: Swift.String {
@@ -848,9 +850,6 @@ public enum UNComponentsError : Swift.Error {
 }
 public typealias UNMultipleCardsComponentCallbacks = (_ callback: UNComponents.UNMultipleCardsComponentCallback) -> Swift.Void
 public class UNACHDebitViewSettingsBuilder : UNComponents.UNACHDebitViewSettingsProtocol {
-  public var fee: Swift.Double? {
-    get
-  }
   public var isAutoFocus: Swift.Bool {
     get
   }
@@ -872,8 +871,10 @@ public class UNACHDebitViewSettingsBuilder : UNComponents.UNACHDebitViewSettings
   public var showSameDaySelection: Swift.Bool {
     get
   }
-  public init(fee: Swift.Double? = nil, isAutoFocus: Swift.Bool = false, plaidAccountFilters: [UNComponents.UNPlaidAccountFilter]? = nil, plaidLinkCustomizationName: Swift.String? = nil, sameDay: Swift.Bool = false, initialStageBackButton: Swift.Bool = false, finalStageDoneButton: Swift.Bool = false, showSameDaySelection: Swift.Bool = false)
-  public func fee(_ fee: Swift.Double) -> UNComponents.UNACHDebitViewSettingsBuilder
+  public var allowCounterpartyDelete: Swift.Bool {
+    get
+  }
+  public init(isAutoFocus: Swift.Bool = false, plaidAccountFilters: [UNComponents.UNPlaidAccountFilter]? = nil, plaidLinkCustomizationName: Swift.String? = nil, sameDay: Swift.Bool = false, initialStageBackButton: Swift.Bool = false, finalStageDoneButton: Swift.Bool = false, showSameDaySelection: Swift.Bool = false, allowCounterpartyDelete: Swift.Bool = false)
   public func isAutoFocus(_ isAutoFocus: Swift.Bool) -> UNComponents.UNACHDebitViewSettingsBuilder
   public func sameDay(_ sameDay: Swift.Bool) -> UNComponents.UNACHDebitViewSettingsBuilder
   public func plaidAccountFilters(_ plaidAccountFilters: [UNComponents.UNPlaidAccountFilter]) -> UNComponents.UNACHDebitViewSettingsBuilder
@@ -881,6 +882,7 @@ public class UNACHDebitViewSettingsBuilder : UNComponents.UNACHDebitViewSettings
   public func initialStageBackButton(_ initialStageBackButton: Swift.Bool) -> UNComponents.UNACHDebitViewSettingsBuilder
   public func finalStageDoneButton(_ finalStageDoneButton: Swift.Bool) -> UNComponents.UNACHDebitViewSettingsBuilder
   public func showSameDaySelection(_ showSameDaySelection: Swift.Bool) -> UNComponents.UNACHDebitViewSettingsBuilder
+  public func allowCounterpartyDelete(_ allowCounterpartyDelete: Swift.Bool) -> UNComponents.UNACHDebitViewSettingsBuilder
   @objc deinit
 }
 public struct UNCheckDepositTransaction : Swift.Codable {
@@ -1441,9 +1443,6 @@ public struct UNPaymentAdvance : Swift.Codable {
   public init(from decoder: any Swift.Decoder) throws
 }
 public class UNACHCreditViewSettingsBuilder : UNComponents.UNACHCreditViewSettingsProtocol {
-  public var fee: Swift.Double? {
-    get
-  }
   public var isAutoFocus: Swift.Bool {
     get
   }
@@ -1468,8 +1467,13 @@ public class UNACHCreditViewSettingsBuilder : UNComponents.UNACHCreditViewSettin
   public var showSameDaySelection: Swift.Bool {
     get
   }
-  public init(fee: Swift.Double? = nil, isAutoFocus: Swift.Bool = false, withPlaid: Swift.Bool = false, plaidAccountFilters: [UNComponents.UNPlaidAccountFilter]? = nil, plaidLinkCustomizationName: Swift.String? = nil, sameDay: Swift.Bool = false, initialStageBackButton: Swift.Bool = false, finalStageDoneButton: Swift.Bool = false, showSameDaySelection: Swift.Bool = false)
-  public func fee(_ fee: Swift.Double) -> UNComponents.UNACHCreditViewSettingsBuilder
+  public var allowCounterpartyDelete: Swift.Bool {
+    get
+  }
+  public var showAccountTypeSelector: Swift.Bool {
+    get
+  }
+  public init(isAutoFocus: Swift.Bool = false, withPlaid: Swift.Bool = false, plaidAccountFilters: [UNComponents.UNPlaidAccountFilter]? = nil, plaidLinkCustomizationName: Swift.String? = nil, sameDay: Swift.Bool = false, initialStageBackButton: Swift.Bool = false, finalStageDoneButton: Swift.Bool = false, showSameDaySelection: Swift.Bool = false, allowCounterpartyDelete: Swift.Bool = false, showAccountTypeSelector: Swift.Bool = false)
   public func isAutoFocus(_ isAutoFocus: Swift.Bool) -> UNComponents.UNACHCreditViewSettingsBuilder
   public func withPlaid(_ withPlaid: Swift.Bool) -> UNComponents.UNACHCreditViewSettingsBuilder
   public func plaidAccountFilters(_ plaidAccountFilters: [UNComponents.UNPlaidAccountFilter]) -> UNComponents.UNACHCreditViewSettingsBuilder
@@ -1478,6 +1482,8 @@ public class UNACHCreditViewSettingsBuilder : UNComponents.UNACHCreditViewSettin
   public func initialStageBackButton(_ initialStageBackButton: Swift.Bool) -> UNComponents.UNACHCreditViewSettingsBuilder
   public func finalStageDoneButton(_ finalStageDoneButton: Swift.Bool) -> UNComponents.UNACHCreditViewSettingsBuilder
   public func showSameDaySelection(_ showSameDaySelection: Swift.Bool) -> UNComponents.UNACHCreditViewSettingsBuilder
+  public func allowCounterpartyDelete(_ allowCounterpartyDelete: Swift.Bool) -> UNComponents.UNACHCreditViewSettingsBuilder
+  public func showAccountTypeSelector(_ showAccountTypeSelector: Swift.Bool) -> UNComponents.UNACHCreditViewSettingsBuilder
   @objc deinit
 }
 public struct UNAtm : Swift.Codable {
@@ -2099,7 +2105,6 @@ public protocol UNACHCreditView : UIKit.UIView {
   var additionalSettings: any UNComponents.UNACHCreditViewSettingsProtocol { get set }
 }
 public protocol UNACHCreditViewSettingsProtocol {
-  var fee: Swift.Double? { get }
   var isAutoFocus: Swift.Bool { get }
   var withPlaid: Swift.Bool { get }
   var plaidAccountFilters: [UNComponents.UNPlaidAccountFilter]? { get }
@@ -2108,6 +2113,8 @@ public protocol UNACHCreditViewSettingsProtocol {
   var initialStageBackButton: Swift.Bool { get }
   var finalStageDoneButton: Swift.Bool { get }
   var showSameDaySelection: Swift.Bool { get }
+  var allowCounterpartyDelete: Swift.Bool { get }
+  var showAccountTypeSelector: Swift.Bool { get }
 }
 public enum UNCreateCardComponentCallback {
   case unitOnLoad(result: Swift.Result<UNComponents.UNCreateCardComponentResources, UNComponents.UNComponentsError>)
@@ -2127,7 +2134,6 @@ public protocol UNACHDebitView : UIKit.UIView {
   var additionalSettings: any UNComponents.UNACHDebitViewSettingsProtocol { get set }
 }
 public protocol UNACHDebitViewSettingsProtocol {
-  var fee: Swift.Double? { get }
   var isAutoFocus: Swift.Bool { get }
   var sameDay: Swift.Bool { get }
   var plaidAccountFilters: [UNComponents.UNPlaidAccountFilter]? { get }
@@ -2135,6 +2141,7 @@ public protocol UNACHDebitViewSettingsProtocol {
   var initialStageBackButton: Swift.Bool { get }
   var finalStageDoneButton: Swift.Bool { get }
   var showSameDaySelection: Swift.Bool { get }
+  var allowCounterpartyDelete: Swift.Bool { get }
 }
 public typealias UNAccountComponentCallbacks = (_ callback: UNComponents.UNAccountComponentCallback) -> Swift.Void
 public typealias UNComponentsFonts = [UNComponents.UNComponentsFontFamilyName : [UNComponents.UNComponentsFontData]]
@@ -3350,7 +3357,6 @@ public enum UNSnapshotProtectionStrategy {
 }
 public protocol UNWirePaymentView : UIKit.UIView {
   var accountId: Swift.String? { get set }
-  var fee: Swift.Double? { get set }
   var additionalSettings: any UNComponents.UNWirePaymentViewSettingsProtocol { get set }
 }
 public protocol UNWirePaymentViewSettingsProtocol {
