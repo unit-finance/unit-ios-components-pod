@@ -59,6 +59,19 @@
             postMessageToSDK({ type: "unit", action: "unitOnLoad", details: { ...e.detail, componentName: "<UN_COMPONENT_NAME>"  }})
         });
 
+        window.addEventListener("unitWhiteLabelAppOnLoad", (e) => {            
+            const response = e.detail
+            response.then((data) => {
+                postMessageToSDK({
+                    type: "unit", 
+                    action: "unitWhiteLabelAppOnLoad", 
+                    details: data.data.attributes.customerToken
+                })
+            }).catch((e) => {
+                console.log(e)
+            })
+        });
+
         window.addEventListener("unitPaymentCreated", (e) => {
             const response = e.detail
               response.then((data) => {
@@ -283,6 +296,11 @@
 
         const dispatchCardStatusChanged = (card) => {
             const event = new CustomEvent("unitCardStatusChanged",{ detail: { data: JSON.parse(card) }});
+            window.dispatchEvent(event);
+        }
+        
+        const dispatchAccountStatusChanged = (account) => {
+            const event = new CustomEvent("unitAccountChanged",{ detail: { data: JSON.parse(account) }});
             window.dispatchEvent(event);
         }
         

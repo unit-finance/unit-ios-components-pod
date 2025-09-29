@@ -1,7 +1,7 @@
 // swift-interface-format-version: 1.0
-// swift-compiler-version: Apple Swift version 6.0 effective-5.10 (swiftlang-6.0.0.9.10 clang-1600.0.26.2)
-// swift-module-flags: -target arm64-apple-ios14.0 -enable-objc-interop -enable-library-evolution -swift-version 5 -enforce-exclusivity=checked -O -enable-bare-slash-regex -module-name UNComponents
-// swift-module-flags-ignorable: -no-verify-emitted-module-interface
+// swift-compiler-version: Apple Swift version 6.1.2 effective-5.10 (swiftlang-6.1.2.1.2 clang-1700.0.13.5)
+// swift-module-flags: -target arm64-apple-ios14.0 -enable-objc-interop -enable-library-evolution -swift-version 5 -enforce-exclusivity=checked -O -enable-experimental-feature DebugDescriptionMacro -enable-bare-slash-regex -module-name UNComponents
+// swift-module-flags-ignorable: -no-verify-emitted-module-interface -interface-compiler-version 6.1.2
 import AVFoundation
 import Combine
 import DeveloperToolsSupport
@@ -383,6 +383,7 @@ public protocol UNActivityViewSettingsProtocol {
   var queryFilter: Swift.String? { get }
   var paginationType: UNComponents.UNActivityComponentPaginationType { get }
   var transactionsPerPage: Swift.Int? { get }
+  var showDeclinedActivity: Swift.Bool { get }
 }
 public protocol UNComponentsServices {
   func setVisaProvider(_ provider: any UNComponents.UNVisaProviding)
@@ -1659,6 +1660,7 @@ public struct UNDispute : Swift.Codable {
   public init(from decoder: any Swift.Decoder) throws
 }
 public typealias UNBookPaymentComponentCallbacks = (_ callback: UNComponents.UNBookPaymentComponentCallback) -> Swift.Void
+public typealias UNWhiteLabelAppComponentCallbacks = (_ callback: UNComponents.UNWhiteLabelAppComponentCallback) -> Swift.Void
 public struct UNFee : Swift.Codable {
   public let type: UNComponents.UNTransactionTypes
   public let id: Swift.String
@@ -2733,6 +2735,7 @@ public protocol UNComponentsUIViews {
   func getProgramDetailsComponent(accountId: Swift.String, additionalSettings: (any UNComponents.UNProgramDetailsViewSettingsProtocol)?, theme: UNComponents.UNComponentsTheme?, language: UNComponents.UNComponentsLanguage?, callbacks: UNComponents.UNProgramDetailsComponentCallbacks?) -> any UNComponents.UNProgramDetailsView
   func getWirePaymentComponent(accountId: Swift.String?, fee: Swift.Double?, additionalSettings: (any UNComponents.UNWirePaymentViewSettingsProtocol)?, theme: UNComponents.UNComponentsTheme?, language: UNComponents.UNComponentsLanguage?, callbacks: UNComponents.UNWirePaymentComponentCallbacks?) -> any UNComponents.UNWirePaymentView
   func getCreateCardComponent(accountId: Swift.String?, additionalSettings: (any UNComponents.UNCreateCardViewSettingsProtocol)?, theme: UNComponents.UNComponentsTheme?, language: UNComponents.UNComponentsLanguage?, callbacks: UNComponents.UNCreateCardComponentCallbacks?) -> any UNComponents.UNCreateCardView
+  func getWhiteLabelAppComponent(token: UNComponents.UNWhiteLabelAppToken, additionalSettings: (any UNComponents.UNWhiteLabelAppViewSettingsProtocol)?, theme: UNComponents.UNComponentsTheme?, language: UNComponents.UNComponentsLanguage?, callbacks: UNComponents.UNWhiteLabelAppComponentCallbacks?) -> any UNComponents.UNWhiteLabelAppView
 }
 extension UNComponents.UNComponentsUIViews {
   public func getCardComponent(id: Swift.String, additionalSettings: (any UNComponents.UNCardViewSettingsProtocol)? = nil, theme: UNComponents.UNComponentsTheme? = nil, language: UNComponents.UNComponentsLanguage? = nil, callbacks: UNComponents.UNCardComponentCallbacks? = nil) -> any UNComponents.UNCardView
@@ -2746,6 +2749,7 @@ extension UNComponents.UNComponentsUIViews {
   public func getProgramDetailsComponent(accountId: Swift.String, additionalSettings: (any UNComponents.UNProgramDetailsViewSettingsProtocol)? = nil, theme: UNComponents.UNComponentsTheme? = nil, language: UNComponents.UNComponentsLanguage? = nil, callbacks: UNComponents.UNProgramDetailsComponentCallbacks? = nil) -> any UNComponents.UNProgramDetailsView
   public func getWirePaymentComponent(accountId: Swift.String? = nil, fee: Swift.Double? = nil, additionalSettings: (any UNComponents.UNWirePaymentViewSettingsProtocol)? = nil, theme: UNComponents.UNComponentsTheme? = nil, language: UNComponents.UNComponentsLanguage? = nil, callbacks: UNComponents.UNWirePaymentComponentCallbacks? = nil) -> any UNComponents.UNWirePaymentView
   public func getCreateCardComponent(accountId: Swift.String? = nil, additionalSettings: (any UNComponents.UNCreateCardViewSettingsProtocol)? = nil, theme: UNComponents.UNComponentsTheme? = nil, language: UNComponents.UNComponentsLanguage? = nil, callbacks: UNComponents.UNCreateCardComponentCallbacks? = nil) -> any UNComponents.UNCreateCardView
+  public func getWhiteLabelAppComponent(token: UNComponents.UNWhiteLabelAppToken, additionalSettings: (any UNComponents.UNWhiteLabelAppViewSettingsProtocol)? = nil, theme: UNComponents.UNComponentsTheme? = nil, language: UNComponents.UNComponentsLanguage? = nil, callbacks: UNComponents.UNWhiteLabelAppComponentCallbacks? = nil) -> any UNComponents.UNWhiteLabelAppView
 }
 public struct UNReceivedAch : Swift.Codable {
   public let type: UNComponents.UNTransactionTypes
@@ -3324,13 +3328,21 @@ public class UNActivityViewSettingsBuilder : UNComponents.UNActivityViewSettings
   public var queryFilter: Swift.String? {
     get
   }
-  public init(hideFilterButton: Swift.Bool = false, paginationType: UNComponents.UNActivityComponentPaginationType = .infiniteScroll, transactionsPerPage: Swift.Int? = nil, hideTitle: Swift.Bool = false, hideBackToTop: Swift.Bool = false, queryFilter: Swift.String? = nil)
+  public var showDeclinedActivity: Swift.Bool {
+    get
+  }
+  public init(hideFilterButton: Swift.Bool = false, paginationType: UNComponents.UNActivityComponentPaginationType = .infiniteScroll, transactionsPerPage: Swift.Int? = nil, hideTitle: Swift.Bool = false, hideBackToTop: Swift.Bool = false, queryFilter: Swift.String? = nil, showDeclinedActivity: Swift.Bool = false)
   public func hideFilterButton(_ hideFilterButton: Swift.Bool) -> UNComponents.UNActivityViewSettingsBuilder
   public func paginationType(_ paginationType: UNComponents.UNActivityComponentPaginationType) -> UNComponents.UNActivityViewSettingsBuilder
   public func transactionsPerPage(_ transactionsPerPage: Swift.Int) -> UNComponents.UNActivityViewSettingsBuilder
   public func hideTitle(_ hideTitle: Swift.Bool) -> UNComponents.UNActivityViewSettingsBuilder
   public func hideBackToTop(_ hideBackToTop: Swift.Bool) -> UNComponents.UNActivityViewSettingsBuilder
   public func queryFilter(_ queryFilter: Swift.String) -> UNComponents.UNActivityViewSettingsBuilder
+  public func showDeclinedActivity(_ showDeclinedActivity: Swift.Bool) -> UNComponents.UNActivityViewSettingsBuilder
+  @objc deinit
+}
+public class UNWhiteLabelAppViewSettingsBuilder : UNComponents.UNWhiteLabelAppViewSettingsProtocol {
+  public init()
   @objc deinit
 }
 public class UNWirePaymentViewSettingsBuilder : UNComponents.UNWirePaymentViewSettingsProtocol {
@@ -3354,6 +3366,10 @@ public enum UNSnapshotProtectionStrategy {
   case fullProtection(style: UIKit.UIBlurEffect.Style)
   case views(style: UIKit.UIBlurEffect.Style)
   public static func `default`() -> UNComponents.UNSnapshotProtectionStrategy
+}
+public enum UNWhiteLabelAppToken {
+  case jwtToken(Swift.String)
+  case customerToken(UNComponents.UNCustomerToken)
 }
 public protocol UNWirePaymentView : UIKit.UIView {
   var accountId: Swift.String? { get set }
@@ -4483,8 +4499,8 @@ public enum UNComponentsEnvironment : Swift.Codable {
   case production
   case mock
   public static func == (a: UNComponents.UNComponentsEnvironment, b: UNComponents.UNComponentsEnvironment) -> Swift.Bool
-  public func hash(into hasher: inout Swift.Hasher)
   public func encode(to encoder: any Swift.Encoder) throws
+  public func hash(into hasher: inout Swift.Hasher)
   public var hashValue: Swift.Int {
     get
   }
@@ -5232,6 +5248,8 @@ public struct UNMerchant : Swift.Codable {
   public func encode(to encoder: any Swift.Encoder) throws
   public init(from decoder: any Swift.Decoder) throws
 }
+public enum UNWhiteLabelAppComponentCallback {
+}
 public struct UNReward : Swift.Codable {
   public let type: UNComponents.UNTransactionTypes
   public let id: Swift.String
@@ -5487,6 +5505,12 @@ public protocol UNCardViewSettingsProtocol {
   var fee: Swift.Double? { get }
   var showCardTypeSubtitle: Swift.Bool { get }
   var showCardHolderSubtitle: Swift.Bool { get }
+}
+public protocol UNWhiteLabelAppView : UIKit.UIView {
+  var token: UNComponents.UNWhiteLabelAppToken { get set }
+  var additionalSetting: any UNComponents.UNWhiteLabelAppViewSettingsProtocol { get set }
+}
+public protocol UNWhiteLabelAppViewSettingsProtocol {
 }
 extension UNComponents.UNCardComponentMenuItems : Swift.Equatable {}
 extension UNComponents.UNCardComponentMenuItems : Swift.Hashable {}
