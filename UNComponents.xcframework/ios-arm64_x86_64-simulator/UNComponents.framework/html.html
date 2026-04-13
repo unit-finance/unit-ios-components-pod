@@ -126,7 +126,10 @@
         });
 
         window.addEventListener("unitRequestCloseFlow", (e) => {
-            postMessageToSDK({ type: "unit", action: 'unitRequestCloseFlow', details: e.detail })
+            // Add a delay of 200 milliseconds to allow the SDK to finish processing prior events that require a Promise before closing the flow
+            setTimeout(() => {
+                postMessageToSDK({ type: "unit", action: 'unitRequestCloseFlow', details: e.detail })
+            }, 200);
         });
         
         window.addEventListener("unitRequestDownload", (e) => {
@@ -143,22 +146,41 @@
         });
         
         window.addEventListener("unitRequestExternalSdk", (e) => {
+
             postMessageToSDK({ type: "unit", action: "requestExternalSdk", details: e.detail})
+        });
+
+        window.addEventListener("unitOpenPlaid", (e) => {
+            const response = e.detail;
+            response.then((data) => {
+                postMessageToSDK({ type: "unit", action: "unitOpenPlaid", details: data.data })
+            }).catch((e) => {
+                console.log(e)
+            })
         });
         
         window.addEventListener("unitMultiFactorAuthFinished", async (e) => {
-             const response = await e.detail.response;
-             const unitVerifiedCustomerToken = JSON.stringify({
-               token: response.data.attributes.token,
-               expiration: new Date().getTime() + response.data.attributes.expiresIn * 1000,
-             });
+            const response = await e.detail.response;
+            const attrs = response.data.attributes;
 
-             const data = {
-               unitVerifiedCustomerTokenString: unitVerifiedCustomerToken,
-               parentInstanceId: e.detail.parentInstanceId,
-               eventToContinue: e.detail.eventToContinue
-             }
-             postMessageToSDK({ type: "unit", action:"unitMultiFactorAuthFinished", details: data })
+            const isApplicationFormToken = !!attrs.applicationFormVerifiedToken;
+            const token = isApplicationFormToken ? attrs.applicationFormVerifiedToken : attrs.token;
+            const storeKey = isApplicationFormToken ? "unitVerifiedToken" : "unitVerifiedCustomerToken";
+
+            const tokenData = {
+                token: token,
+                expiration: attrs.expiresIn ? new Date().getTime() + attrs.expiresIn * 1000 : null,
+            };
+            const unitVerifiedCustomerTokenString = JSON.stringify(tokenData);
+            window.UnitStore[storeKey] = unitVerifiedCustomerTokenString;
+
+            const data = {
+                tokenString: unitVerifiedCustomerTokenString,
+                tokenStoreKey: storeKey,
+                parentInstanceId: e.detail.parentInstanceId,
+                eventToContinue: e.detail.eventToContinue
+            }
+            postMessageToSDK({ type: "unit", action: "unitMultiFactorAuthFinished", details: data })
         });
         
         window.addEventListener("unitCardStatusChanged", (e) => {
@@ -215,6 +237,17 @@
             })
         });
         
+        window.addEventListener("unitAccountCreated", (e) => {
+            if (e.detail?.fromSDK) { return }
+            postMessageToSDK({ type: "bottomSheetSharedEvents", action: "accountCreated" })
+        });
+
+        window.addEventListener("unitAccountCreationActionsOpenPlaidForLinkExternalAccount", (e) => {
+            if (e.detail?.fromSDK) { return }
+
+            postMessageToSDK({ type: "bottomSheetSharedEvents", action: "accountCreationActionsOpenPlaidForLinkExternalAccount" })
+        });
+
         window.addEventListener("unitCounterpartyDeleted", (e) => {
             const response = e.detail
             response.then((data) => {
@@ -283,6 +316,13 @@
             document.querySelector(componentName).dispatchEvent(new CustomEvent("unitRequestShowSensitiveData"))
         }
 
+        const dispatchOnDownload = (url, error) => {
+            const detail = { type: "unitOnDownload", url: url };
+            if (error) { detail.error = error; }
+            const event = new CustomEvent("unitOnDownload", { detail: detail });
+            window.dispatchEvent(event);
+        }
+
         const dispatchEventToContinue = (details) => {
             const event = new CustomEvent("unitEventToContinue",{ detail: details});
             window.dispatchEvent(event);
@@ -306,6 +346,16 @@
         
         const dispatchCounterpartyDeletedEvent = (details) => {
             const event = new CustomEvent("unitCounterpartyDeleted",{ detail: { data: JSON.parse(details) } });
+            window.dispatchEvent(event);
+        }
+
+        const dispatchAccountCreatedEvent = () => {
+            const event = new CustomEvent("unitAccountCreated", { detail: { fromSDK: true } });
+            window.dispatchEvent(event);
+        }
+
+        const dispatchAccountCreationActionsOpenPlaidForLinkExternalAccount = () => {
+            const event = new CustomEvent("unitAccountCreationActionsOpenPlaidForLinkExternalAccount", { detail: { fromSDK: true } });
             window.dispatchEvent(event);
         }
     </script>
