@@ -214,6 +214,57 @@
             postMessageToSDK({ type: "bottomSheetSharedEvents", action: "activityFiltersChanged", details: e.detail })
         });
 
+        window.addEventListener("unitBillsFiltersChanged", (e) => {
+            postMessageToSDK({ type: "bottomSheetSharedEvents", action: "billsFiltersChanged", details: e.detail })
+        });
+
+        window.addEventListener("unitRequestEditBill", (e) => {
+            if (e.detail?.fromSDK) { return }
+            postMessageToSDK({ type: "bottomSheetSharedEvents", action: "requestEditBill", details: JSON.stringify(e.detail) })
+        });
+
+        window.addEventListener("unitRequestCreateManualBillPay", (e) => {
+            if (e.detail?.fromSDK) { return }
+            postMessageToSDK({ type: "bottomSheetSharedEvents", action: "requestCreateManualBillPay" })
+        });
+
+        window.addEventListener("unitRequestOpenArchivedBills", (e) => {
+            if (e.detail?.fromSDK) { return }
+            postMessageToSDK({ type: "bottomSheetSharedEvents", action: "requestOpenArchivedBills" })
+        });
+
+        window.addEventListener("unitRequestOpenVendors", (e) => {
+            if (e.detail?.fromSDK) { return }
+            postMessageToSDK({ type: "bottomSheetSharedEvents", action: "requestOpenVendors" })
+        });
+
+        window.addEventListener("unitRequestOpenPaymentMethods", (e) => {
+            if (e.detail?.fromSDK) { return }
+            postMessageToSDK({ type: "bottomSheetSharedEvents", action: "requestOpenPaymentMethods" })
+        });
+
+        window.addEventListener("unitRequestDateRangeMenuValueChange", (e) => {
+            postMessageToSDK({ type: "bottomSheetSharedEvents", action: "unitRequestDateRangeMenuValueChange", details: e.detail })
+        });
+
+        window.addEventListener("unitVendorFormTrySubmit", (e) => {
+            if (e.detail?.fromSDK) { return }
+            postMessageToSDK({ type: "bottomSheetSharedEvents", action: "unitVendorFormTrySubmit" })
+        });
+
+        window.addEventListener("unitBillPayUnsavedChangesAction", (e) => {
+            if (e.detail?.fromSDK) { return }
+            postMessageToSDK({ type: "bottomSheetSharedEvents", action: "unitBillPayUnsavedChangesAction", details: JSON.stringify(e.detail) })
+        });
+
+        // Bill action result events — detail is the affected billId string. Forward slot -> native so the
+        // main WLA WebView can re-dispatch them and the bill pages can navigate/refresh.
+        ["unitBillArchived", "unitBillMarkAsPaid", "unitBillMarkAsUnpaid", "unitBillRescheduled", "unitBillCheckCancelled", "unitBillRefunded"].forEach((eventName) => {
+            window.addEventListener(eventName, (e) => {
+                postMessageToSDK({ type: "bottomSheetSharedEvents", action: eventName, details: e.detail })
+            });
+        });
+
         window.addEventListener("unitMultipleCardsFiltersChanged", (e) => {
             postMessageToSDK({ type: "bottomSheetSharedEvents", action: "multipleCardsFiltersChanged", details: e.detail })
         })
@@ -264,9 +315,16 @@
                     metadata: JSON.parse(metadata)
                 }
             }
-            
+
              const event = new CustomEvent("unitPlaidResponse",{ detail: dataDetailsObj })
              window.dispatchEvent(event)
+        }
+
+        const dispatchVeryfiEvent = (details) => {
+            const element = document.querySelector("unit-elements-check-deposit")
+            if (!element) return;
+            const event = new CustomEvent("unitVeryfiResponse",{ detail: details })
+            element.dispatchEvent(event)
         }
         
         const dispatchRenderingEvent = (details) => {
@@ -288,6 +346,38 @@
         
         const dispatchActivityFilterChangedEvent = (details) => {
             const event = new CustomEvent("unitActivityFiltersChanged",{ detail: details});
+            window.dispatchEvent(event);
+        }
+
+        const dispatchBillsFiltersChangedEvent = (details) => {
+            const event = new CustomEvent("unitBillsFiltersChanged",{ detail: details});
+            window.dispatchEvent(event);
+        }
+
+        const dispatchRequestEditBill = (details) => {
+            try {
+                const event = new CustomEvent("unitRequestEditBill", { detail: { ...JSON.parse(details), fromSDK: true } });
+                window.dispatchEvent(event);
+            } catch(e) {}
+        }
+
+        const dispatchRequestCreateManualBillPay = () => {
+            const event = new CustomEvent("unitRequestCreateManualBillPay", { detail: { fromSDK: true } });
+            window.dispatchEvent(event);
+        }
+
+        const dispatchRequestOpenArchivedBills = () => {
+            const event = new CustomEvent("unitRequestOpenArchivedBills", { detail: { fromSDK: true } });
+            window.dispatchEvent(event);
+        }
+
+        const dispatchRequestOpenVendors = () => {
+            const event = new CustomEvent("unitRequestOpenVendors", { detail: { fromSDK: true } });
+            window.dispatchEvent(event);
+        }
+
+        const dispatchRequestOpenPaymentMethods = () => {
+            const event = new CustomEvent("unitRequestOpenPaymentMethods", { detail: { fromSDK: true } });
             window.dispatchEvent(event);
         }
 
@@ -357,6 +447,25 @@
         const dispatchAccountCreationActionsOpenPlaidForLinkExternalAccount = () => {
             const event = new CustomEvent("unitAccountCreationActionsOpenPlaidForLinkExternalAccount", { detail: { fromSDK: true } });
             window.dispatchEvent(event);
+        }
+
+        const dispatchDateRangeMenuValueChangeEvent = (details) => {
+            const event = new CustomEvent("unitRequestDateRangeMenuValueChange", { detail: details });
+            window.dispatchEvent(event);
+        }
+
+        const dispatchVendorFormTrySubmit = () => {
+            const event = new CustomEvent("unitVendorFormTrySubmit", { detail: { fromSDK: true } });
+            window.dispatchEvent(event);
+        }
+
+        const dispatchUnsavedChangesAction = (details) => {
+            const event = new CustomEvent("unitBillPayUnsavedChangesAction", { detail: { ...JSON.parse(details), fromSDK: true } });
+            window.dispatchEvent(event);
+        }
+
+        const dispatchBillActionResult = (eventName, billId) => {
+            window.dispatchEvent(new CustomEvent(eventName, { detail: billId }));
         }
     </script>
 </body>

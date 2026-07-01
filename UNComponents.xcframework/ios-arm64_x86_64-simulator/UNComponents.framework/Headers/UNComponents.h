@@ -17,3 +17,5 @@ FOUNDATION_EXPORT const unsigned char UNComponentsVersionString[];
 
 #import "UNPlaidService.h"
 #import "UNPlaidLinkData.h"
+#import "UNVeryfiService.h"
+#import "UNVeryfiModels.h"

@@ -1,7 +1,7 @@
 // swift-interface-format-version: 1.0
-// swift-compiler-version: Apple Swift version 6.1.2 effective-5.10 (swiftlang-6.1.2.1.2 clang-1700.0.13.5)
+// swift-compiler-version: Apple Swift version 6.2.4 effective-5.10 (swiftlang-6.2.4.1.4 clang-1700.6.4.2)
 // swift-module-flags: -target x86_64-apple-ios14.0-simulator -enable-objc-interop -enable-library-evolution -swift-version 5 -enforce-exclusivity=checked -O -enable-experimental-feature DebugDescriptionMacro -enable-bare-slash-regex -module-name UNComponents
-// swift-module-flags-ignorable: -no-verify-emitted-module-interface -interface-compiler-version 6.1.2
+// swift-module-flags-ignorable: -no-verify-emitted-module-interface -formal-cxx-interoperability-mode=off -interface-compiler-version 6.2.4
 import AVFoundation
 import Combine
 import DeveloperToolsSupport
@@ -32,7 +32,9 @@ public enum UNCardComponentMenuItems : Swift.String {
   case replace
   case report
   case close
+  #if compiler(>=5.3) && $NonescapableTypes
   public init?(rawValue: Swift.String)
+  #endif
   public typealias RawValue = Swift.String
   public var rawValue: Swift.String {
     get
@@ -49,7 +51,9 @@ public enum UNCardMenuAction : Swift.String {
   case changePin
   case setPin
   case addToWallet
+  #if compiler(>=5.3) && $NonescapableTypes
   public init?(rawValue: Swift.String)
+  #endif
   public typealias RawValue = Swift.String
   public var rawValue: Swift.String {
     get
@@ -137,20 +141,30 @@ public struct UNFeeReversal : Swift.Codable {
   public init(from decoder: any Swift.Decoder) throws
 }
 public protocol UNCreateCardView : UIKit.UIView {
+  #if compiler(>=5.3) && $NonescapableTypes
   var accountId: Swift.String? { get set }
+  #endif
   var additionalSettings: any UNComponents.UNCreateCardViewSettingsProtocol { get set }
 }
 public protocol UNCreateCardViewSettingsProtocol {
+  #if compiler(>=5.3) && $NonescapableTypes
   var cardTypes: [UNComponents.UNCreateCardType]? { get }
+  #endif
+  #if compiler(>=5.3) && $NonescapableTypes
   var virtualCardFee: Swift.Double? { get }
+  #endif
+  #if compiler(>=5.3) && $NonescapableTypes
   var physicalCardFee: Swift.Double? { get }
+  #endif
 }
 public enum UNActivityType : Swift.String, Swift.Codable {
   case Transaction
   case Authorization
   case CheckDeposit
   case AchPayment
+  #if compiler(>=5.3) && $NonescapableTypes
   public init?(rawValue: Swift.String)
+  #endif
   public typealias RawValue = Swift.String
   public var rawValue: Swift.String {
     get
@@ -204,7 +218,9 @@ public enum UNCounterpartyPermission : Swift.String, Swift.Codable {
   case creditOnly
   case creditAndDebit
   case debitOnly
+  #if compiler(>=5.3) && $NonescapableTypes
   public init?(rawValue: Swift.String)
+  #endif
   public typealias RawValue = Swift.String
   public var rawValue: Swift.String {
     get
@@ -214,7 +230,9 @@ public enum UNCounterpartyAccountType : Swift.String, Swift.Codable {
   case checking
   case savings
   case loan
+  #if compiler(>=5.3) && $NonescapableTypes
   public init?(rawValue: Swift.String)
+  #endif
   public typealias RawValue = Swift.String
   public var rawValue: Swift.String {
     get
@@ -224,7 +242,9 @@ public enum UNCounterpartyType : Swift.String, Swift.Codable {
   case business
   case person
   case unknown
+  #if compiler(>=5.3) && $NonescapableTypes
   public init?(rawValue: Swift.String)
+  #endif
   public typealias RawValue = Swift.String
   public var rawValue: Swift.String {
     get
@@ -270,7 +290,9 @@ public enum UNConnectedAccountStatus : Swift.String, Swift.Codable {
   case pending
   case failed
   case verified
+  #if compiler(>=5.3) && $NonescapableTypes
   public init?(rawValue: Swift.String)
+  #endif
   public typealias RawValue = Swift.String
   public var rawValue: Swift.String {
     get
@@ -279,7 +301,9 @@ public enum UNConnectedAccountStatus : Swift.String, Swift.Codable {
 public enum UNConnectionAccountType : Swift.String, Swift.Codable {
   case sameDayMicroDeposit
   case instant
+  #if compiler(>=5.3) && $NonescapableTypes
   public init?(rawValue: Swift.String)
+  #endif
   public typealias RawValue = Swift.String
   public var rawValue: Swift.String {
     get
@@ -372,7 +396,9 @@ public protocol UNComponentsSDKConfigurationProtocol : AnyObject {
   var webVersioningStrategy: UNComponents.UNWebVersioningStrategy { get }
 }
 public protocol UNActivityView : UIKit.UIView {
+  #if compiler(>=5.3) && $NonescapableTypes
   var accountId: Swift.String? { get set }
+  #endif
   var additionalSettings: any UNComponents.UNActivityViewSettingsProtocol { get set }
   func refresh()
 }
@@ -380,14 +406,19 @@ public protocol UNActivityViewSettingsProtocol {
   var hideFilterButton: Swift.Bool { get }
   var hideTitle: Swift.Bool { get }
   var hideBackToTop: Swift.Bool { get }
+  #if compiler(>=5.3) && $NonescapableTypes
   var queryFilter: Swift.String? { get }
+  #endif
   var paginationType: UNComponents.UNActivityComponentPaginationType { get }
+  #if compiler(>=5.3) && $NonescapableTypes
   var transactionsPerPage: Swift.Int? { get }
+  #endif
   var showDeclinedActivity: Swift.Bool { get }
   var showCsvDownload: Swift.Bool { get }
 }
 public protocol UNComponentsServices {
   func setVisaProvider(_ provider: any UNComponents.UNVisaProviding)
+  func setVeryfiCredentials(_ credentials: UNComponents.UNVeryfiCredentials)
 }
 public enum UNAccountComponentCallback {
   case unitOnLoad(result: Swift.Result<[UNComponents.UNAccount], UNComponents.UNComponentsError>)
@@ -398,7 +429,9 @@ public enum UNAccountComponentMenuItems : Swift.String {
   case details
   case statements
   case bankVerification
+  #if compiler(>=5.3) && $NonescapableTypes
   public init?(rawValue: Swift.String)
+  #endif
   public typealias RawValue = Swift.String
   public var rawValue: Swift.String {
     get
@@ -407,7 +440,9 @@ public enum UNAccountComponentMenuItems : Swift.String {
 public enum UNAccountStatusPosition : Swift.String {
   case start
   case end
+  #if compiler(>=5.3) && $NonescapableTypes
   public init?(rawValue: Swift.String)
+  #endif
   public typealias RawValue = Swift.String
   public var rawValue: Swift.String {
     get
@@ -670,7 +705,9 @@ public class UNAccountViewSettingsBuilder : UNComponents.UNAccountViewSettingsPr
   public var accountStatusPosition: UNComponents.UNAccountStatusPosition? {
     get
   }
+  #if compiler(>=5.3) && $NonescapableTypes
   public init(hideActionsMenuButton: Swift.Bool = false, hideSelectionMenuButton: Swift.Bool = false, menuItems: [UNComponents.UNAccountComponentMenuItems]? = nil, showLeftToSpend: Swift.Bool = false, hideAccountStatus: Swift.Bool = false, hideAccountDetails: Swift.Bool = false, hideAccountCtaBanner: Swift.Bool = false, hideAccountButtons: Swift.Bool = false, enableFundAccountButton: Swift.Bool = false, enablePaySomeoneAccountButton: Swift.Bool = false, accountStatusPosition: UNComponents.UNAccountStatusPosition? = nil)
+  #endif
   public func hideActionsMenuButton(_ hideActionsMenuButton: Swift.Bool) -> UNComponents.UNAccountViewSettingsBuilder
   public func hideSelectionMenuButton(_ hideSelectionMenuButton: Swift.Bool) -> UNComponents.UNAccountViewSettingsBuilder
   public func menuItems(_ menuItems: [UNComponents.UNAccountComponentMenuItems]) -> UNComponents.UNAccountViewSettingsBuilder
@@ -681,7 +718,9 @@ public class UNAccountViewSettingsBuilder : UNComponents.UNAccountViewSettingsPr
   public func hideAccountButtons(_ hideAccountButtons: Swift.Bool) -> UNComponents.UNAccountViewSettingsBuilder
   public func enableFundAccountButton(_ enableFundAccountButton: Swift.Bool) -> UNComponents.UNAccountViewSettingsBuilder
   public func enablePaySomeoneAccountButton(_ enablePaySomeoneAccountButton: Swift.Bool) -> UNComponents.UNAccountViewSettingsBuilder
+  #if compiler(>=5.3) && $NonescapableTypes
   public func accountStatusPosition(_ accountStatusPosition: UNComponents.UNAccountStatusPosition?) -> UNComponents.UNAccountViewSettingsBuilder
+  #endif
   @objc deinit
 }
 public enum UNMultipleCardsComponentCallback {
@@ -691,7 +730,9 @@ public enum UNMultipleCardsComponentCallback {
 public enum UNMultipleCardsComponentPaginationType : Swift.String {
   case infiniteScroll
   case pagination
+  #if compiler(>=5.3) && $NonescapableTypes
   public init?(rawValue: Swift.String)
+  #endif
   public typealias RawValue = Swift.String
   public var rawValue: Swift.String {
     get
@@ -768,7 +809,9 @@ public struct UNCashDepositTransaction : Swift.Codable {
 }
 public protocol UNComponentsHelpers {
   func setRedirectUri(_ redirectUri: Swift.String)
+  #if compiler(>=5.3) && $NonescapableTypes
   var redirectUri: Swift.String? { get }
+  #endif
   var unitSessionId: Swift.String { get }
 }
 public struct UNNegativeBalanceCoverage : Swift.Codable {
@@ -876,7 +919,9 @@ public class UNACHDebitViewSettingsBuilder : UNComponents.UNACHDebitViewSettings
   public var allowCounterpartyDelete: Swift.Bool {
     get
   }
+  #if compiler(>=5.3) && $NonescapableTypes
   public init(isAutoFocus: Swift.Bool = false, plaidAccountFilters: [UNComponents.UNPlaidAccountFilter]? = nil, plaidLinkCustomizationName: Swift.String? = nil, sameDay: Swift.Bool = false, initialStageBackButton: Swift.Bool = false, finalStageDoneButton: Swift.Bool = false, showSameDaySelection: Swift.Bool = false, allowCounterpartyDelete: Swift.Bool = false)
+  #endif
   public func isAutoFocus(_ isAutoFocus: Swift.Bool) -> UNComponents.UNACHDebitViewSettingsBuilder
   public func sameDay(_ sameDay: Swift.Bool) -> UNComponents.UNACHDebitViewSettingsBuilder
   public func plaidAccountFilters(_ plaidAccountFilters: [UNComponents.UNPlaidAccountFilter]) -> UNComponents.UNACHDebitViewSettingsBuilder
@@ -1102,10 +1147,14 @@ public struct UNCardReversal : Swift.Codable {
   public init(from decoder: any Swift.Decoder) throws
 }
 public protocol UNComponentsUIFlows {
+  #if compiler(>=5.3) && $NonescapableTypes
   func startPushProvisioning(for cardId: Swift.String, theme: UNComponents.UNComponentsTheme?, language: UNComponents.UNComponentsLanguage?)
+  #endif
 }
 extension UNComponents.UNComponentsUIFlows {
+  #if compiler(>=5.3) && $NonescapableTypes
   public func startPushProvisioning(for cardId: Swift.String, theme: UNComponents.UNComponentsTheme? = nil, language: UNComponents.UNComponentsLanguage? = nil)
+  #endif
 }
 public struct UNPurchase : Swift.Codable {
   public let type: UNComponents.UNTransactionTypes
@@ -1191,7 +1240,9 @@ public class UNComponentsSDKConfigurationBuilder : UNComponents.UNComponentsSDKC
   public var webVersioningStrategy: UNComponents.UNWebVersioningStrategy {
     get
   }
+  #if compiler(>=5.3) && $NonescapableTypes
   public init(environment: UNComponents.UNComponentsEnvironment = UNComponentsEnvironment.sandbox, webVersioningStrategy: UNComponents.UNWebVersioningStrategy? = nil)
+  #endif
   public func environment(_ environment: UNComponents.UNComponentsEnvironment) -> UNComponents.UNComponentsSDKConfigurationBuilder
   public func webVersioningStrategy(_ webVersioningStrategy: UNComponents.UNWebVersioningStrategy) -> UNComponents.UNComponentsSDKConfigurationBuilder
   @objc deinit
@@ -1325,7 +1376,9 @@ public struct UNBusiness : Swift.Codable {
 public enum UNCustomerType : Swift.String, Swift.Codable {
   case individual
   case business
+  #if compiler(>=5.3) && $NonescapableTypes
   public init?(rawValue: Swift.String)
+  #endif
   public typealias RawValue = Swift.String
   public var rawValue: Swift.String {
     get
@@ -1334,7 +1387,9 @@ public enum UNCustomerType : Swift.String, Swift.Codable {
 public enum UNCustomerStatus : Swift.String, Swift.Codable {
   case active
   case archived
+  #if compiler(>=5.3) && $NonescapableTypes
   public init?(rawValue: Swift.String)
+  #endif
   public typealias RawValue = Swift.String
   public var rawValue: Swift.String {
     get
@@ -1349,7 +1404,9 @@ public enum UNArchiveReason : Swift.String, Swift.Codable {
   case fraudAccountActivity
   case fraudClientIdentified
   case fraudLinkedToFraudulentCustomer
+  #if compiler(>=5.3) && $NonescapableTypes
   public init?(rawValue: Swift.String)
+  #endif
   public typealias RawValue = Swift.String
   public var rawValue: Swift.String {
     get
@@ -1475,7 +1532,9 @@ public class UNACHCreditViewSettingsBuilder : UNComponents.UNACHCreditViewSettin
   public var showAccountTypeSelector: Swift.Bool {
     get
   }
+  #if compiler(>=5.3) && $NonescapableTypes
   public init(isAutoFocus: Swift.Bool = false, withPlaid: Swift.Bool = false, plaidAccountFilters: [UNComponents.UNPlaidAccountFilter]? = nil, plaidLinkCustomizationName: Swift.String? = nil, sameDay: Swift.Bool = false, initialStageBackButton: Swift.Bool = false, finalStageDoneButton: Swift.Bool = false, showSameDaySelection: Swift.Bool = false, allowCounterpartyDelete: Swift.Bool = false, showAccountTypeSelector: Swift.Bool = false)
+  #endif
   public func isAutoFocus(_ isAutoFocus: Swift.Bool) -> UNComponents.UNACHCreditViewSettingsBuilder
   public func withPlaid(_ withPlaid: Swift.Bool) -> UNComponents.UNACHCreditViewSettingsBuilder
   public func plaidAccountFilters(_ plaidAccountFilters: [UNComponents.UNPlaidAccountFilter]) -> UNComponents.UNACHCreditViewSettingsBuilder
@@ -1572,10 +1631,18 @@ public class UNCreateCardViewSettingsBuilder : UNComponents.UNCreateCardViewSett
   public var physicalCardFee: Swift.Double? {
     get
   }
+  #if compiler(>=5.3) && $NonescapableTypes
   public init(cardTypes: [UNComponents.UNCreateCardType]? = nil, virtualCardFee: Swift.Double? = nil, physicalCardFee: Swift.Double? = nil)
+  #endif
+  #if compiler(>=5.3) && $NonescapableTypes
   public func cardTypes(_ cardTypes: [UNComponents.UNCreateCardType]?) -> UNComponents.UNCreateCardViewSettingsBuilder
+  #endif
+  #if compiler(>=5.3) && $NonescapableTypes
   public func virtualCardFee(_ virtualCardFee: Swift.Double?) -> UNComponents.UNCreateCardViewSettingsBuilder
+  #endif
+  #if compiler(>=5.3) && $NonescapableTypes
   public func physicalCardFee(_ physicalCardFee: Swift.Double?) -> UNComponents.UNCreateCardViewSettingsBuilder
+  #endif
   @objc deinit
 }
 public protocol UNMultipleCardsView : UIKit.UIView {
@@ -1583,11 +1650,15 @@ public protocol UNMultipleCardsView : UIKit.UIView {
 }
 public protocol UNMultipleCardsViewSettingsProtocol {
   var paginationType: UNComponents.UNMultipleCardsComponentPaginationType { get }
+  #if compiler(>=5.3) && $NonescapableTypes
   var cardsPerPage: Swift.Int? { get }
+  #endif
   var disableCardClick: Swift.Bool { get }
   var hideTitle: Swift.Bool { get }
   var hideBackToTop: Swift.Bool { get }
+  #if compiler(>=5.3) && $NonescapableTypes
   var queryFilter: Swift.String? { get }
+  #endif
   var showSeeAllCardsLink: Swift.Bool { get }
   var isRowItemClickable: Swift.Bool { get }
 }
@@ -1747,7 +1818,9 @@ public enum UNAccountMenuAction : Swift.String {
   case openAccountDetails
   case openAccountStatements
   case downloadBankVerificationLetter
+  #if compiler(>=5.3) && $NonescapableTypes
   public init?(rawValue: Swift.String)
+  #endif
   public typealias RawValue = Swift.String
   public var rawValue: Swift.String {
     get
@@ -1985,7 +2058,9 @@ public struct UNSupportComponent : Swift.Codable {
 }
 public enum UNSupportType : Swift.String, Swift.Codable {
   case zendesk
+  #if compiler(>=5.3) && $NonescapableTypes
   public init?(rawValue: Swift.String)
+  #endif
   public typealias RawValue = Swift.String
   public var rawValue: Swift.String {
     get
@@ -2089,7 +2164,9 @@ public enum UNRiskRate : Swift.String, Swift.Codable {
   case low
   case medium
   case high
+  #if compiler(>=5.3) && $NonescapableTypes
   public init?(rawValue: Swift.String)
+  #endif
   public typealias RawValue = Swift.String
   public var rawValue: Swift.String {
     get
@@ -2104,14 +2181,20 @@ public class UNProgramDetailsViewSettingsBuilder : UNComponents.UNProgramDetails
   @objc deinit
 }
 public protocol UNACHCreditView : UIKit.UIView {
+  #if compiler(>=5.3) && $NonescapableTypes
   var accountId: Swift.String? { get set }
+  #endif
   var additionalSettings: any UNComponents.UNACHCreditViewSettingsProtocol { get set }
 }
 public protocol UNACHCreditViewSettingsProtocol {
   var isAutoFocus: Swift.Bool { get }
   var withPlaid: Swift.Bool { get }
+  #if compiler(>=5.3) && $NonescapableTypes
   var plaidAccountFilters: [UNComponents.UNPlaidAccountFilter]? { get }
+  #endif
+  #if compiler(>=5.3) && $NonescapableTypes
   var plaidLinkCustomizationName: Swift.String? { get }
+  #endif
   var sameDay: Swift.Bool { get }
   var initialStageBackButton: Swift.Bool { get }
   var finalStageDoneButton: Swift.Bool { get }
@@ -2126,21 +2209,29 @@ public enum UNCreateCardComponentCallback {
 public enum UNCreateCardType : Swift.String {
   case physical
   case virtual
+  #if compiler(>=5.3) && $NonescapableTypes
   public init?(rawValue: Swift.String)
+  #endif
   public typealias RawValue = Swift.String
   public var rawValue: Swift.String {
     get
   }
 }
 public protocol UNACHDebitView : UIKit.UIView {
+  #if compiler(>=5.3) && $NonescapableTypes
   var accountId: Swift.String? { get set }
+  #endif
   var additionalSettings: any UNComponents.UNACHDebitViewSettingsProtocol { get set }
 }
 public protocol UNACHDebitViewSettingsProtocol {
   var isAutoFocus: Swift.Bool { get }
   var sameDay: Swift.Bool { get }
+  #if compiler(>=5.3) && $NonescapableTypes
   var plaidAccountFilters: [UNComponents.UNPlaidAccountFilter]? { get }
+  #endif
+  #if compiler(>=5.3) && $NonescapableTypes
   var plaidLinkCustomizationName: Swift.String? { get }
+  #endif
   var initialStageBackButton: Swift.Bool { get }
   var finalStageDoneButton: Swift.Bool { get }
   var showSameDaySelection: Swift.Bool { get }
@@ -2157,7 +2248,9 @@ public struct UNComponentsFontData {
 public struct UNComponentsFontSource {
   public let fileName: Swift.String
   public let format: Swift.String?
+  #if compiler(>=5.3) && $NonescapableTypes
   public init(fileName: Swift.String, format: Swift.String? = nil)
+  #endif
 }
 public enum FontWeight {
   case thin
@@ -2262,7 +2355,9 @@ public enum UNActivityComponentCallback {
 public enum UNActivityComponentPaginationType : Swift.String {
   case infiniteScroll
   case pagination
+  #if compiler(>=5.3) && $NonescapableTypes
   public init?(rawValue: Swift.String)
+  #endif
   public typealias RawValue = Swift.String
   public var rawValue: Swift.String {
     get
@@ -2694,7 +2789,9 @@ public enum UNCardType : Swift.String, Swift.Codable {
   public var typeDescription: Swift.String {
     get
   }
+  #if compiler(>=5.3) && $NonescapableTypes
   public init?(rawValue: Swift.String)
+  #endif
   public typealias RawValue = Swift.String
   public var rawValue: Swift.String {
     get
@@ -2709,14 +2806,18 @@ public enum UNCardStatus : Swift.String, Swift.Codable {
   case closedByCustomer
   case suspectedFraud
   case activeForOnlineUse
+  #if compiler(>=5.3) && $NonescapableTypes
   public init?(rawValue: Swift.String)
+  #endif
   public typealias RawValue = Swift.String
   public var rawValue: Swift.String {
     get
   }
 }
 public protocol UNComponentsManagerProtocol : AnyObject {
+  #if compiler(>=5.3) && $NonescapableTypes
   var customerToken: UNComponents.UNCustomerToken? { get set }
+  #endif
   var securitySettings: any UNComponents.UNComponentsSecuritySettingsProtocol { get set }
   var ui: any UNComponents.UNComponentsUI { get }
   var authentication: any UNComponents.UNComponentsAuthentication { get }
@@ -2725,34 +2826,86 @@ public protocol UNComponentsManagerProtocol : AnyObject {
   func initialize(with configurationSettings: any UNComponents.UNComponentsSDKConfigurationProtocol)
 }
 public protocol UNComponentsUIViews {
+  #if compiler(>=5.3) && $NonescapableTypes
   func getCardComponent(id: Swift.String, additionalSettings: (any UNComponents.UNCardViewSettingsProtocol)?, theme: UNComponents.UNComponentsTheme?, language: UNComponents.UNComponentsLanguage?, callbacks: UNComponents.UNCardComponentCallbacks?) -> any UNComponents.UNCardView
+  #endif
+  #if compiler(>=5.3) && $NonescapableTypes
   func getACHCreditComponent(accountId: Swift.String?, additionalSettings: (any UNComponents.UNACHCreditViewSettingsProtocol)?, theme: UNComponents.UNComponentsTheme?, language: UNComponents.UNComponentsLanguage?, callbacks: UNComponents.UNACHCreditComponentCallbacks?) -> any UNComponents.UNACHCreditView
+  #endif
+  #if compiler(>=5.3) && $NonescapableTypes
   func getACHDebitComponent(accountId: Swift.String?, additionalSettings: (any UNComponents.UNACHDebitViewSettingsProtocol)?, theme: UNComponents.UNComponentsTheme?, language: UNComponents.UNComponentsLanguage?, callbacks: UNComponents.UNACHDebitComponentCallbacks?) -> any UNComponents.UNACHDebitView
+  #endif
+  #if compiler(>=5.3) && $NonescapableTypes
   func getActivityComponent(accountId: Swift.String?, additionalSettings: (any UNComponents.UNActivityViewSettingsProtocol)?, theme: UNComponents.UNComponentsTheme?, language: UNComponents.UNComponentsLanguage?, callbacks: UNComponents.UNActivityComponentCallbacks?) -> any UNComponents.UNActivityView
+  #endif
+  #if compiler(>=5.3) && $NonescapableTypes
   func getAccountComponent(accountId: Swift.String?, additionalSettings: (any UNComponents.UNAccountViewSettingsProtocol)?, theme: UNComponents.UNComponentsTheme?, language: UNComponents.UNComponentsLanguage?, callbacks: UNComponents.UNAccountComponentCallbacks?) -> any UNComponents.UNAccountView
+  #endif
+  #if compiler(>=5.3) && $NonescapableTypes
   func getBookPaymentComponent(accountId: Swift.String?, counterpartyAccountId: Swift.String?, counterpartyName: Swift.String?, isSameCustomer: Swift.Bool, additionalSettings: (any UNComponents.UNBookPaymentViewSettingsProtocol)?, theme: UNComponents.UNComponentsTheme?, language: UNComponents.UNComponentsLanguage?, callbacks: UNComponents.UNBookPaymentComponentCallbacks?) -> any UNComponents.UNBookPaymentView
-  func getCheckDepositComponent(accountId: Swift.String, fee: Swift.Double?, additionalSettings: (any UNComponents.UNCheckDepositViewSettingsProtocol)?, theme: UNComponents.UNComponentsTheme?, language: UNComponents.UNComponentsLanguage?, callbacks: UNComponents.UNCheckDepositComponentCallbacks?) -> any UNComponents.UNCheckDepositView
+  #endif
+  #if compiler(>=5.3) && $NonescapableTypes
+  func getCheckDepositComponent(accountId: Swift.String?, fee: Swift.Double?, additionalSettings: (any UNComponents.UNCheckDepositViewSettingsProtocol)?, theme: UNComponents.UNComponentsTheme?, language: UNComponents.UNComponentsLanguage?, callbacks: UNComponents.UNCheckDepositComponentCallbacks?) -> any UNComponents.UNCheckDepositView
+  #endif
+  #if compiler(>=5.3) && $NonescapableTypes
   func getCheckPaymentComponent(accountId: Swift.String?, additionalSettings: (any UNComponents.UNCheckPaymentViewSettingsProtocol)?, theme: UNComponents.UNComponentsTheme?, language: UNComponents.UNComponentsLanguage?, callbacks: UNComponents.UNCheckPaymentComponentCallbacks?) -> any UNComponents.UNCheckPaymentView
+  #endif
+  #if compiler(>=5.3) && $NonescapableTypes
   func getMultipleCardsComponent(additionalSettings: (any UNComponents.UNMultipleCardsViewSettingsProtocol)?, theme: UNComponents.UNComponentsTheme?, language: UNComponents.UNComponentsLanguage?, callbacks: UNComponents.UNMultipleCardsComponentCallbacks?) -> any UNComponents.UNMultipleCardsView
+  #endif
+  #if compiler(>=5.3) && $NonescapableTypes
   func getProgramDetailsComponent(accountId: Swift.String, additionalSettings: (any UNComponents.UNProgramDetailsViewSettingsProtocol)?, theme: UNComponents.UNComponentsTheme?, language: UNComponents.UNComponentsLanguage?, callbacks: UNComponents.UNProgramDetailsComponentCallbacks?) -> any UNComponents.UNProgramDetailsView
+  #endif
+  #if compiler(>=5.3) && $NonescapableTypes
   func getWirePaymentComponent(accountId: Swift.String?, fee: Swift.Double?, additionalSettings: (any UNComponents.UNWirePaymentViewSettingsProtocol)?, theme: UNComponents.UNComponentsTheme?, language: UNComponents.UNComponentsLanguage?, callbacks: UNComponents.UNWirePaymentComponentCallbacks?) -> any UNComponents.UNWirePaymentView
+  #endif
+  #if compiler(>=5.3) && $NonescapableTypes
   func getCreateCardComponent(accountId: Swift.String?, additionalSettings: (any UNComponents.UNCreateCardViewSettingsProtocol)?, theme: UNComponents.UNComponentsTheme?, language: UNComponents.UNComponentsLanguage?, callbacks: UNComponents.UNCreateCardComponentCallbacks?) -> any UNComponents.UNCreateCardView
+  #endif
+  #if compiler(>=5.3) && $NonescapableTypes
   func getWhiteLabelAppComponent(token: UNComponents.UNWhiteLabelAppToken, additionalSettings: (any UNComponents.UNWhiteLabelAppViewSettingsProtocol)?, theme: UNComponents.UNComponentsTheme?, language: UNComponents.UNComponentsLanguage?, callbacks: UNComponents.UNWhiteLabelAppComponentCallbacks?) -> any UNComponents.UNWhiteLabelAppView
+  #endif
 }
 extension UNComponents.UNComponentsUIViews {
+  #if compiler(>=5.3) && $NonescapableTypes
   public func getCardComponent(id: Swift.String, additionalSettings: (any UNComponents.UNCardViewSettingsProtocol)? = nil, theme: UNComponents.UNComponentsTheme? = nil, language: UNComponents.UNComponentsLanguage? = nil, callbacks: UNComponents.UNCardComponentCallbacks? = nil) -> any UNComponents.UNCardView
+  #endif
+  #if compiler(>=5.3) && $NonescapableTypes
   public func getACHCreditComponent(accountId: Swift.String? = nil, additionalSettings: (any UNComponents.UNACHCreditViewSettingsProtocol)? = nil, theme: UNComponents.UNComponentsTheme? = nil, language: UNComponents.UNComponentsLanguage? = nil, callbacks: UNComponents.UNACHCreditComponentCallbacks? = nil) -> any UNComponents.UNACHCreditView
+  #endif
+  #if compiler(>=5.3) && $NonescapableTypes
   public func getACHDebitComponent(accountId: Swift.String? = nil, additionalSettings: (any UNComponents.UNACHDebitViewSettingsProtocol)? = nil, theme: UNComponents.UNComponentsTheme? = nil, language: UNComponents.UNComponentsLanguage? = nil, callbacks: UNComponents.UNACHDebitComponentCallbacks? = nil) -> any UNComponents.UNACHDebitView
+  #endif
+  #if compiler(>=5.3) && $NonescapableTypes
   public func getActivityComponent(accountId: Swift.String? = nil, additionalSettings: (any UNComponents.UNActivityViewSettingsProtocol)? = nil, theme: UNComponents.UNComponentsTheme? = nil, language: UNComponents.UNComponentsLanguage? = nil, callbacks: UNComponents.UNActivityComponentCallbacks? = nil) -> any UNComponents.UNActivityView
+  #endif
+  #if compiler(>=5.3) && $NonescapableTypes
   public func getAccountComponent(accountId: Swift.String? = nil, additionalSettings: (any UNComponents.UNAccountViewSettingsProtocol)? = nil, theme: UNComponents.UNComponentsTheme? = nil, language: UNComponents.UNComponentsLanguage? = nil, callbacks: UNComponents.UNAccountComponentCallbacks? = nil) -> any UNComponents.UNAccountView
+  #endif
+  #if compiler(>=5.3) && $NonescapableTypes
   public func getBookPaymentComponent(accountId: Swift.String? = nil, counterpartyAccountId: Swift.String? = nil, counterpartyName: Swift.String? = nil, isSameCustomer: Swift.Bool = false, additionalSettings: (any UNComponents.UNBookPaymentViewSettingsProtocol)? = nil, theme: UNComponents.UNComponentsTheme? = nil, language: UNComponents.UNComponentsLanguage? = nil, callbacks: UNComponents.UNBookPaymentComponentCallbacks? = nil) -> any UNComponents.UNBookPaymentView
-  public func getCheckDepositComponent(accountId: Swift.String, fee: Swift.Double? = nil, additionalSettings: (any UNComponents.UNCheckDepositViewSettingsProtocol)? = nil, theme: UNComponents.UNComponentsTheme? = nil, language: UNComponents.UNComponentsLanguage? = nil, callbacks: UNComponents.UNCheckDepositComponentCallbacks? = nil) -> any UNComponents.UNCheckDepositView
+  #endif
+  #if compiler(>=5.3) && $NonescapableTypes
+  public func getCheckDepositComponent(accountId: Swift.String? = nil, fee: Swift.Double? = nil, additionalSettings: (any UNComponents.UNCheckDepositViewSettingsProtocol)? = nil, theme: UNComponents.UNComponentsTheme? = nil, language: UNComponents.UNComponentsLanguage? = nil, callbacks: UNComponents.UNCheckDepositComponentCallbacks? = nil) -> any UNComponents.UNCheckDepositView
+  #endif
+  #if compiler(>=5.3) && $NonescapableTypes
   public func getCheckPaymentComponent(accountId: Swift.String? = nil, additionalSettings: (any UNComponents.UNCheckPaymentViewSettingsProtocol)? = nil, theme: UNComponents.UNComponentsTheme? = nil, language: UNComponents.UNComponentsLanguage? = nil, callbacks: UNComponents.UNCheckPaymentComponentCallbacks? = nil) -> any UNComponents.UNCheckPaymentView
+  #endif
+  #if compiler(>=5.3) && $NonescapableTypes
   public func getMultipleCardsComponent(additionalSettings: (any UNComponents.UNMultipleCardsViewSettingsProtocol)? = nil, theme: UNComponents.UNComponentsTheme? = nil, language: UNComponents.UNComponentsLanguage? = nil, callbacks: UNComponents.UNMultipleCardsComponentCallbacks? = nil) -> any UNComponents.UNMultipleCardsView
+  #endif
+  #if compiler(>=5.3) && $NonescapableTypes
   public func getProgramDetailsComponent(accountId: Swift.String, additionalSettings: (any UNComponents.UNProgramDetailsViewSettingsProtocol)? = nil, theme: UNComponents.UNComponentsTheme? = nil, language: UNComponents.UNComponentsLanguage? = nil, callbacks: UNComponents.UNProgramDetailsComponentCallbacks? = nil) -> any UNComponents.UNProgramDetailsView
+  #endif
+  #if compiler(>=5.3) && $NonescapableTypes
   public func getWirePaymentComponent(accountId: Swift.String? = nil, fee: Swift.Double? = nil, additionalSettings: (any UNComponents.UNWirePaymentViewSettingsProtocol)? = nil, theme: UNComponents.UNComponentsTheme? = nil, language: UNComponents.UNComponentsLanguage? = nil, callbacks: UNComponents.UNWirePaymentComponentCallbacks? = nil) -> any UNComponents.UNWirePaymentView
+  #endif
+  #if compiler(>=5.3) && $NonescapableTypes
   public func getCreateCardComponent(accountId: Swift.String? = nil, additionalSettings: (any UNComponents.UNCreateCardViewSettingsProtocol)? = nil, theme: UNComponents.UNComponentsTheme? = nil, language: UNComponents.UNComponentsLanguage? = nil, callbacks: UNComponents.UNCreateCardComponentCallbacks? = nil) -> any UNComponents.UNCreateCardView
+  #endif
+  #if compiler(>=5.3) && $NonescapableTypes
   public func getWhiteLabelAppComponent(token: UNComponents.UNWhiteLabelAppToken, additionalSettings: (any UNComponents.UNWhiteLabelAppViewSettingsProtocol)? = nil, theme: UNComponents.UNComponentsTheme? = nil, language: UNComponents.UNComponentsLanguage? = nil, callbacks: UNComponents.UNWhiteLabelAppComponentCallbacks? = nil) -> any UNComponents.UNWhiteLabelAppView
+  #endif
 }
 public struct UNReceivedAch : Swift.Codable {
   public let type: UNComponents.UNTransactionTypes
@@ -2868,14 +3021,18 @@ public class UNCardViewSettingsBuilder : UNComponents.UNCardViewSettingsProtocol
   public var showCardHolderSubtitle: Swift.Bool {
     get
   }
+  #if compiler(>=5.3) && $NonescapableTypes
   public init(hideActionsMenuButton: Swift.Bool = false, hideCardTitle: Swift.Bool = false, hideSensitiveDataButton: Swift.Bool = false, enablePushProvisioning: Swift.Bool = false, learnMoreUrl: Swift.String = "", menuItems: [UNComponents.UNCardComponentMenuItems]? = nil, fee: Swift.Double? = nil, showCardTypeSubtitle: Swift.Bool = false, showCardHolderSubtitle: Swift.Bool = false)
+  #endif
   public func hideActionsMenuButton(_ hideActionsMenuButton: Swift.Bool) -> UNComponents.UNCardViewSettingsBuilder
   public func hideCardTitle(_ hideCardTitle: Swift.Bool) -> UNComponents.UNCardViewSettingsBuilder
   public func hideSensitiveDataButton(_ hideSensitiveDataButton: Swift.Bool) -> UNComponents.UNCardViewSettingsBuilder
   public func enablePushProvisioning(_ enablePushProvisioning: Swift.Bool) -> UNComponents.UNCardViewSettingsBuilder
   public func learnMoreUrl(_ learnMoreUrl: Swift.String) -> UNComponents.UNCardViewSettingsBuilder
   public func menuItems(_ menuItems: [UNComponents.UNCardComponentMenuItems]) -> UNComponents.UNCardViewSettingsBuilder
+  #if compiler(>=5.3) && $NonescapableTypes
   public func fee(_ fee: Swift.Double?) -> UNComponents.UNCardViewSettingsBuilder
+  #endif
   public func showCardTypeSubtitle(_ showCardTypeSubtitle: Swift.Bool) -> UNComponents.UNCardViewSettingsBuilder
   public func showCardHolderSubtitle(_ showCardHolderSubtitle: Swift.Bool) -> UNComponents.UNCardViewSettingsBuilder
   @objc deinit
@@ -2895,8 +3052,12 @@ public struct UNActivityOnLoadResponse : Swift.Codable {
   public init(from decoder: any Swift.Decoder) throws
 }
 public protocol UNCheckDepositView : UIKit.UIView {
-  var accountId: Swift.String { get set }
+  #if compiler(>=5.3) && $NonescapableTypes
+  var accountId: Swift.String? { get set }
+  #endif
+  #if compiler(>=5.3) && $NonescapableTypes
   var fee: Swift.Double? { get set }
+  #endif
   var additionalSettings: any UNComponents.UNCheckDepositViewSettingsProtocol { get set }
 }
 public protocol UNCheckDepositViewSettingsProtocol {
@@ -3070,7 +3231,9 @@ public enum UNPaymentType : Swift.String, Swift.Codable {
   case wirePayment
   case billPayment
   case checkPayment
+  #if compiler(>=5.3) && $NonescapableTypes
   public init?(rawValue: Swift.String)
+  #endif
   public typealias RawValue = Swift.String
   public var rawValue: Swift.String {
     get
@@ -3084,7 +3247,9 @@ public enum UNPaymentStatus : Swift.String, Swift.Codable {
   case canceled
   case returned
   case pendingReview
+  #if compiler(>=5.3) && $NonescapableTypes
   public init?(rawValue: Swift.String)
+  #endif
   public typealias RawValue = Swift.String
   public var rawValue: Swift.String {
     get
@@ -3093,7 +3258,9 @@ public enum UNPaymentStatus : Swift.String, Swift.Codable {
 public enum UNDirection : Swift.String, Swift.Codable {
   case debit
   case credit
+  #if compiler(>=5.3) && $NonescapableTypes
   public init?(rawValue: Swift.String)
+  #endif
   public typealias RawValue = Swift.String
   public var rawValue: Swift.String {
     get
@@ -3102,7 +3269,9 @@ public enum UNDirection : Swift.String, Swift.Codable {
 public enum UNPaymentAccountType : Swift.String, Swift.Codable {
   case savings
   case checking
+  #if compiler(>=5.3) && $NonescapableTypes
   public init?(rawValue: Swift.String)
+  #endif
   public typealias RawValue = Swift.String
   public var rawValue: Swift.String {
     get
@@ -3111,7 +3280,9 @@ public enum UNPaymentAccountType : Swift.String, Swift.Codable {
 public enum UNPlaidAccountFilter : Swift.String, Swift.Codable {
   case savings
   case checking
+  #if compiler(>=5.3) && $NonescapableTypes
   public init?(rawValue: Swift.String)
+  #endif
   public typealias RawValue = Swift.String
   public var rawValue: Swift.String {
     get
@@ -3119,7 +3290,9 @@ public enum UNPlaidAccountFilter : Swift.String, Swift.Codable {
 }
 public enum UNCounterpartyVerificationMethod : Swift.String, Swift.Codable {
   case plaid
+  #if compiler(>=5.3) && $NonescapableTypes
   public init?(rawValue: Swift.String)
+  #endif
   public typealias RawValue = Swift.String
   public var rawValue: Swift.String {
     get
@@ -3339,7 +3512,9 @@ public class UNActivityViewSettingsBuilder : UNComponents.UNActivityViewSettings
   public var showCsvDownload: Swift.Bool {
     get
   }
+  #if compiler(>=5.3) && $NonescapableTypes
   public init(hideFilterButton: Swift.Bool = false, paginationType: UNComponents.UNActivityComponentPaginationType = .infiniteScroll, transactionsPerPage: Swift.Int? = nil, hideTitle: Swift.Bool = false, hideBackToTop: Swift.Bool = false, queryFilter: Swift.String? = nil, showDeclinedActivity: Swift.Bool = false, showCsvDownload: Swift.Bool = false)
+  #endif
   public func hideFilterButton(_ hideFilterButton: Swift.Bool) -> UNComponents.UNActivityViewSettingsBuilder
   public func paginationType(_ paginationType: UNComponents.UNActivityComponentPaginationType) -> UNComponents.UNActivityViewSettingsBuilder
   public func transactionsPerPage(_ transactionsPerPage: Swift.Int) -> UNComponents.UNActivityViewSettingsBuilder
@@ -3381,7 +3556,9 @@ public enum UNWhiteLabelAppToken {
   case customerToken(UNComponents.UNCustomerToken)
 }
 public protocol UNWirePaymentView : UIKit.UIView {
+  #if compiler(>=5.3) && $NonescapableTypes
   var accountId: Swift.String? { get set }
+  #endif
   var additionalSettings: any UNComponents.UNWirePaymentViewSettingsProtocol { get set }
 }
 public protocol UNWirePaymentViewSettingsProtocol {
@@ -4043,7 +4220,9 @@ public enum UNAccountType : Swift.String, Swift.Codable {
   case depositAccount
   case batchAccount
   case creditAccount
+  #if compiler(>=5.3) && $NonescapableTypes
   public init?(rawValue: Swift.String)
+  #endif
   public typealias RawValue = Swift.String
   public var rawValue: Swift.String {
     get
@@ -4056,7 +4235,9 @@ public struct UNBankDetails : Swift.Codable {
 public enum UNCloseReason : Swift.String, Swift.Codable {
   case fraud
   case byCustomer
+  #if compiler(>=5.3) && $NonescapableTypes
   public init?(rawValue: Swift.String)
+  #endif
   public typealias RawValue = Swift.String
   public var rawValue: Swift.String {
     get
@@ -4071,7 +4252,9 @@ public enum UNFraudReason : Swift.String, Swift.Codable {
   case clientIdentified
   case identityTheft
   case linkedToFraudulentCustomer
+  #if compiler(>=5.3) && $NonescapableTypes
   public init?(rawValue: Swift.String)
+  #endif
   public typealias RawValue = Swift.String
   public var rawValue: Swift.String {
     get
@@ -4081,7 +4264,9 @@ public enum UNAccountStatus : Swift.String, Swift.Codable {
   case closed
   case open
   case frozen
+  #if compiler(>=5.3) && $NonescapableTypes
   public init?(rawValue: Swift.String)
+  #endif
   public typealias RawValue = Swift.String
   public var rawValue: Swift.String {
     get
@@ -4237,9 +4422,15 @@ public typealias UNCustomerToken = Swift.String
 public typealias UNComponentsTheme = Swift.String
 public typealias UNComponentsLanguage = Swift.String
 public protocol UNBookPaymentView : UIKit.UIView {
+  #if compiler(>=5.3) && $NonescapableTypes
   var accountId: Swift.String? { get set }
+  #endif
+  #if compiler(>=5.3) && $NonescapableTypes
   var counterpartyName: Swift.String? { get set }
+  #endif
+  #if compiler(>=5.3) && $NonescapableTypes
   var counterpartyAccountId: Swift.String? { get set }
+  #endif
   var isSameCustomer: Swift.Bool { get set }
   var additionalSetting: any UNComponents.UNBookPaymentViewSettingsProtocol { get set }
 }
@@ -4414,7 +4605,9 @@ public struct UNBillPay : Swift.Codable {
   public init(from decoder: any Swift.Decoder) throws
 }
 public protocol UNAccountView : UIKit.UIView {
+  #if compiler(>=5.3) && $NonescapableTypes
   var accountId: Swift.String? { get set }
+  #endif
   var additionalSetting: any UNComponents.UNAccountViewSettingsProtocol { get set }
   func openActionsMenu()
   func open(action: UNComponents.UNAccountMenuAction)
@@ -4423,7 +4616,9 @@ public protocol UNAccountView : UIKit.UIView {
 public protocol UNAccountViewSettingsProtocol {
   var hideActionsMenuButton: Swift.Bool { get }
   var hideSelectionMenuButton: Swift.Bool { get }
+  #if compiler(>=5.3) && $NonescapableTypes
   var menuItems: [UNComponents.UNAccountComponentMenuItems]? { get }
+  #endif
   var showLeftToSpend: Swift.Bool { get }
   var hideAccountStatus: Swift.Bool { get }
   var hideAccountDetails: Swift.Bool { get }
@@ -4431,7 +4626,9 @@ public protocol UNAccountViewSettingsProtocol {
   var hideAccountButtons: Swift.Bool { get }
   var enableFundAccountButton: Swift.Bool { get }
   var enablePaySomeoneAccountButton: Swift.Bool { get }
+  #if compiler(>=5.3) && $NonescapableTypes
   var accountStatusPosition: UNComponents.UNAccountStatusPosition? { get }
+  #endif
 }
 public struct UNWire : Swift.Codable {
   public let type: UNComponents.UNTransactionTypes
@@ -4771,7 +4968,9 @@ public class UNMultipleCardsViewSettingsBuilder : UNComponents.UNMultipleCardsVi
   public var isRowItemClickable: Swift.Bool {
     get
   }
+  #if compiler(>=5.3) && $NonescapableTypes
   public init(paginationType: UNComponents.UNMultipleCardsComponentPaginationType = .infiniteScroll, cardsPerPage: Swift.Int? = nil, disableCardClick: Swift.Bool = false, hideTitle: Swift.Bool = false, hideBackToTop: Swift.Bool = false, queryFilter: Swift.String? = nil, showSeeAllCardsLink: Swift.Bool = false, isRowItemClickable: Swift.Bool = false)
+  #endif
   public func paginationType(_ paginationType: UNComponents.UNMultipleCardsComponentPaginationType) -> UNComponents.UNMultipleCardsViewSettingsBuilder
   public func cardsPerPage(_ cardsPerPage: Swift.Int) -> UNComponents.UNMultipleCardsViewSettingsBuilder
   public func disableCardClick(_ disableCardClick: Swift.Bool) -> UNComponents.UNMultipleCardsViewSettingsBuilder
@@ -4784,6 +4983,7 @@ public class UNMultipleCardsViewSettingsBuilder : UNComponents.UNMultipleCardsVi
 }
 public protocol UNProgramDetailsView : UIKit.UIView {
   var accountId: Swift.String { get set }
+  var additionalSetting: any UNComponents.UNProgramDetailsViewSettingsProtocol { get set }
 }
 public protocol UNProgramDetailsViewSettingsProtocol {
   var hideTitle: Swift.Bool { get }
@@ -5204,7 +5404,9 @@ public enum UNTransactionTypes : Swift.String, Swift.Codable {
   case bankRepayment
   case customerRepayment
   case customerRepaymentReturned
+  #if compiler(>=5.3) && $NonescapableTypes
   public init?(rawValue: Swift.String)
+  #endif
   public typealias RawValue = Swift.String
   public var rawValue: Swift.String {
     get
@@ -5343,14 +5545,26 @@ public struct UNReward : Swift.Codable {
   public init(from decoder: any Swift.Decoder) throws
 }
 public protocol UNComponentsUI {
+  #if compiler(>=5.3) && $NonescapableTypes
   func setTheme(_ theme: UNComponents.UNComponentsTheme?)
+  #endif
+  #if compiler(>=5.3) && $NonescapableTypes
   func setLanguage(_ language: UNComponents.UNComponentsLanguage?)
+  #endif
+  #if compiler(>=5.3) && $NonescapableTypes
   func setFonts(_ fonts: UNComponents.UNComponentsFonts?)
+  #endif
   var views: any UNComponents.UNComponentsUIViews { get }
   var flows: any UNComponents.UNComponentsUIFlows { get }
+  #if compiler(>=5.3) && $NonescapableTypes
   var theme: UNComponents.UNComponentsTheme? { get }
+  #endif
+  #if compiler(>=5.3) && $NonescapableTypes
   var language: UNComponents.UNComponentsLanguage? { get }
+  #endif
+  #if compiler(>=5.3) && $NonescapableTypes
   var fonts: UNComponents.UNComponentsFonts? { get }
+  #endif
 }
 public protocol UNComponentsAuthentication {
   func cleanUserData()
@@ -5471,7 +5685,9 @@ public enum UNCheckDepositStatus : Swift.String, Swift.Codable {
   case sent
   case canceled
   case returned
+  #if compiler(>=5.3) && $NonescapableTypes
   public init?(rawValue: Swift.String)
+  #endif
   public typealias RawValue = Swift.String
   public var rawValue: Swift.String {
     get
@@ -5480,7 +5696,9 @@ public enum UNCheckDepositStatus : Swift.String, Swift.Codable {
 public enum UNCheckDepositVendors : Swift.String, Swift.Codable {
   case Ensenta
   case Smartpay
+  #if compiler(>=5.3) && $NonescapableTypes
   public init?(rawValue: Swift.String)
+  #endif
   public typealias RawValue = Swift.String
   public var rawValue: Swift.String {
     get
@@ -5492,7 +5710,9 @@ public struct UNStatusEvent : Swift.Codable {
   }
   public let updatedAt: Swift.String
   public let updatedBy: Swift.String?
+  #if compiler(>=5.3) && $NonescapableTypes
   public init(status: [Swift.String : Any], updatedAt: Swift.String, updatedBy: Swift.String?)
+  #endif
   public func encode(to encoder: any Swift.Encoder) throws
   public init(from decoder: any Swift.Decoder) throws
 }
@@ -5510,8 +5730,12 @@ public protocol UNCardViewSettingsProtocol {
   var hideSensitiveDataButton: Swift.Bool { get }
   var enablePushProvisioning: Swift.Bool { get }
   var learnMoreUrl: Swift.String { get }
+  #if compiler(>=5.3) && $NonescapableTypes
   var menuItems: [UNComponents.UNCardComponentMenuItems]? { get }
+  #endif
+  #if compiler(>=5.3) && $NonescapableTypes
   var fee: Swift.Double? { get }
+  #endif
   var showCardTypeSubtitle: Swift.Bool { get }
   var showCardHolderSubtitle: Swift.Bool { get }
 }
@@ -5589,7 +5813,9 @@ public struct UNCheckPaymentOnLoadResponse : Swift.Codable {
   public init(from decoder: any Swift.Decoder) throws
 }
 public protocol UNCheckPaymentView : UIKit.UIView {
+  #if compiler(>=5.3) && $NonescapableTypes
   var accountId: Swift.String? { get set }
+  #endif
   var additionalSettings: any UNComponents.UNCheckPaymentViewSettingsProtocol { get set }
 }
 public protocol UNCheckPaymentViewSettingsProtocol {
