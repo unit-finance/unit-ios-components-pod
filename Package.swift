@@ -4,7 +4,7 @@ import PackageDescription
 let package = Package(
     name: "UnitComponents",
     platforms: [
-        .iOS(.v14)
+        .iOS("16.4")
     ],
     products: [
         .library(name: "UnitComponents", targets: ["UNComponentsSDKWrapperTarget"])
