@@ -12,12 +12,12 @@ Pod::Spec.new do |s|
   s.summary          = 'Unit Components SDK'
   s.description      = 'This SDK allows you to integrate Unit Components into your iOS app.'
 
-  s.platform         = :ios, '14.0'
+  s.platform         = :ios, '16.4'
   s.homepage         = 'https://guides.unit.co/white-label-ui'
   s.license          = { :type => 'Mozilla', :file => 'LICENSE' }
   s.author           = { 'Alon Shprung' => 'alonshp1@gmail.com' }
 
-  s.ios.deployment_target = '11.0'
+  s.ios.deployment_target = '16.4'
 
   # Setting pod `BUILD_LIBRARY_FOR_DISTRIBUTION` to `YES`
   s.pod_target_xcconfig = { 'BUILD_LIBRARY_FOR_DISTRIBUTION' => 'YES' }
