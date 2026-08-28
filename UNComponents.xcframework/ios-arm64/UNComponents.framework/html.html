@@ -41,7 +41,27 @@
               postMessageToSDK({ type: "page", action: "height", details: height })
             })
           }
-        
+
+        const observePageHeight = () => {
+            if (!window.ResizeObserver) { return }
+            let lastPostedHeight = window.document.documentElement.getBoundingClientRect().height
+            let postHeightTimer = null
+            window.unitPageHeightObserver = new ResizeObserver(() => {
+              clearTimeout(postHeightTimer)
+              postHeightTimer = setTimeout(() => {
+                const height = window.document.documentElement.getBoundingClientRect().height
+                if (Math.abs(height - lastPostedHeight) < 2) { return }
+                lastPostedHeight = height
+                postMessageToSDK({ type: "page", action: "height", details: height })
+              }, 100)
+            })
+            window.unitPageHeightObserver.observe(window.document.documentElement)
+          }
+
+        if ("<UN_COMPONENT_NAME>" === "unit-elements-sdk-slot") {
+            observePageHeight()
+        }
+
         window.addEventListener('DOMContentLoaded', e => {
             postMessageToSDK({ type: "page", action: "loaded" })
         });
@@ -107,6 +127,10 @@
                 console.log(e)
               })
           });
+
+        window.addEventListener("unitOnError", (e) => {
+            postMessageToSDK({ type: "unit", action: 'unitOnError', details: e.detail })
+        });
 
         window.addEventListener("unitRequestLeftToSpendDetails", (e) => {
             postMessageToSDK({ type: "unit", action: 'unitRequestLeftToSpendDetails', details: e.detail })

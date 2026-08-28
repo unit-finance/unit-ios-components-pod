@@ -26248,6 +26248,205 @@
       },
       {
         "kind": "TypeDecl",
+        "name": "UNComponentsFlowError",
+        "printedName": "UNComponentsFlowError",
+        "children": [
+          {
+            "kind": "Var",
+            "name": "title",
+            "printedName": "title",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Optional",
+                "printedName": "Swift.String?",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "String",
+                    "printedName": "Swift.String",
+                    "usr": "s:SS"
+                  }
+                ],
+                "usr": "s:Sq"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "s:12UNComponents0A9FlowErrorV5titleSSSgvp",
+            "mangledName": "$s12UNComponents0A9FlowErrorV5titleSSSgvp",
+            "moduleName": "UNComponents",
+            "declAttributes": [
+              "HasStorage",
+              "AccessControl"
+            ],
+            "isLet": true,
+            "hasStorage": true,
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Optional",
+                    "printedName": "Swift.String?",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "String",
+                        "printedName": "Swift.String",
+                        "usr": "s:SS"
+                      }
+                    ],
+                    "usr": "s:Sq"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:12UNComponents0A9FlowErrorV5titleSSSgvg",
+                "mangledName": "$s12UNComponents0A9FlowErrorV5titleSSSgvg",
+                "moduleName": "UNComponents",
+                "implicit": true,
+                "accessorKind": "get"
+              }
+            ]
+          },
+          {
+            "kind": "Var",
+            "name": "message",
+            "printedName": "message",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "String",
+                "printedName": "Swift.String",
+                "usr": "s:SS"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "s:12UNComponents0A9FlowErrorV7messageSSvp",
+            "mangledName": "$s12UNComponents0A9FlowErrorV7messageSSvp",
+            "moduleName": "UNComponents",
+            "declAttributes": [
+              "HasStorage",
+              "AccessControl"
+            ],
+            "isLet": true,
+            "hasStorage": true,
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "String",
+                    "printedName": "Swift.String",
+                    "usr": "s:SS"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:12UNComponents0A9FlowErrorV7messageSSvg",
+                "mangledName": "$s12UNComponents0A9FlowErrorV7messageSSvg",
+                "moduleName": "UNComponents",
+                "implicit": true,
+                "accessorKind": "get"
+              }
+            ]
+          },
+          {
+            "kind": "Constructor",
+            "name": "init",
+            "printedName": "init(from:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "UNComponentsFlowError",
+                "printedName": "UNComponents.UNComponentsFlowError",
+                "usr": "s:12UNComponents0A9FlowErrorV"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Decoder",
+                "printedName": "any Swift.Decoder",
+                "usr": "s:s7DecoderP"
+              }
+            ],
+            "declKind": "Constructor",
+            "usr": "s:12UNComponents0A9FlowErrorV4fromACs7Decoder_p_tKcfc",
+            "mangledName": "$s12UNComponents0A9FlowErrorV4fromACs7Decoder_p_tKcfc",
+            "moduleName": "UNComponents",
+            "implicit": true,
+            "throwing": true,
+            "init_kind": "Designated"
+          },
+          {
+            "kind": "Function",
+            "name": "encode",
+            "printedName": "encode(to:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Void",
+                "printedName": "()"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Encoder",
+                "printedName": "any Swift.Encoder",
+                "usr": "s:s7EncoderP"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:12UNComponents0A9FlowErrorV6encode2toys7Encoder_p_tKF",
+            "mangledName": "$s12UNComponents0A9FlowErrorV6encode2toys7Encoder_p_tKF",
+            "moduleName": "UNComponents",
+            "implicit": true,
+            "throwing": true,
+            "funcSelfKind": "NonMutating"
+          }
+        ],
+        "declKind": "Struct",
+        "usr": "s:12UNComponents0A9FlowErrorV",
+        "mangledName": "$s12UNComponents0A9FlowErrorV",
+        "moduleName": "UNComponents",
+        "declAttributes": [
+          "AccessControl"
+        ],
+        "conformances": [
+          {
+            "kind": "Conformance",
+            "name": "Copyable",
+            "printedName": "Copyable",
+            "usr": "s:s8CopyableP",
+            "mangledName": "$ss8CopyableP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Escapable",
+            "printedName": "Escapable",
+            "usr": "s:s9EscapableP",
+            "mangledName": "$ss9EscapableP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Decodable",
+            "printedName": "Decodable",
+            "usr": "s:Se",
+            "mangledName": "$sSe"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Encodable",
+            "printedName": "Encodable",
+            "usr": "s:SE",
+            "mangledName": "$sSE"
+          }
+        ]
+      },
+      {
+        "kind": "TypeDecl",
         "name": "UNComponentsError",
         "printedName": "UNComponentsError",
         "children": [
@@ -68636,13 +68835,6 @@
       },
       {
         "kind": "Import",
-        "name": "Foundation",
-        "printedName": "Foundation",
-        "declKind": "Import",
-        "moduleName": "UNComponents"
-      },
-      {
-        "kind": "Import",
         "name": "UIKit",
         "printedName": "UIKit",
         "declKind": "Import",
@@ -89714,6 +89906,9 @@
             "genericSig": "<τ_0_0 where τ_0_0 : UNComponents.UNComponentsUIViews>",
             "sugared_genericSig": "<Self where Self : UNComponents.UNComponentsUIViews>",
             "protocolReq": true,
+            "declAttributes": [
+              "RawDocComment"
+            ],
             "reqNewWitnessTableEntry": true,
             "funcSelfKind": "NonMutating"
           },
@@ -95871,6 +96066,63 @@
             "declKind": "EnumElement",
             "usr": "s:12UNComponents31UNCheckDepositComponentCallbackO10unitOnLoadyACs6ResultOyAA9UNAccountOAA0A5ErrorOG_tcACmF",
             "mangledName": "$s12UNComponents31UNCheckDepositComponentCallbackO10unitOnLoadyACs6ResultOyAA9UNAccountOAA0A5ErrorOG_tcACmF",
+            "moduleName": "UNComponents"
+          },
+          {
+            "kind": "Var",
+            "name": "unitOnError",
+            "printedName": "unitOnError",
+            "children": [
+              {
+                "kind": "TypeFunc",
+                "name": "Function",
+                "printedName": "(UNComponents.UNCheckDepositComponentCallback.Type) -> (UNComponents.UNComponentsFlowError) -> UNComponents.UNCheckDepositComponentCallback",
+                "children": [
+                  {
+                    "kind": "TypeFunc",
+                    "name": "Function",
+                    "printedName": "(UNComponents.UNComponentsFlowError) -> UNComponents.UNCheckDepositComponentCallback",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "UNCheckDepositComponentCallback",
+                        "printedName": "UNComponents.UNCheckDepositComponentCallback",
+                        "usr": "s:12UNComponents31UNCheckDepositComponentCallbackO"
+                      },
+                      {
+                        "kind": "TypeNominal",
+                        "name": "Tuple",
+                        "printedName": "(error: UNComponents.UNComponentsFlowError)",
+                        "children": [
+                          {
+                            "kind": "TypeNominal",
+                            "name": "UNComponentsFlowError",
+                            "printedName": "UNComponents.UNComponentsFlowError",
+                            "usr": "s:12UNComponents0A9FlowErrorV"
+                          }
+                        ]
+                      }
+                    ]
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Metatype",
+                    "printedName": "UNComponents.UNCheckDepositComponentCallback.Type",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "UNCheckDepositComponentCallback",
+                        "printedName": "UNComponents.UNCheckDepositComponentCallback",
+                        "usr": "s:12UNComponents31UNCheckDepositComponentCallbackO"
+                      }
+                    ]
+                  }
+                ]
+              }
+            ],
+            "declKind": "EnumElement",
+            "usr": "s:12UNComponents31UNCheckDepositComponentCallbackO11unitOnErroryAcA0a4FlowH0V_tcACmF",
+            "mangledName": "$s12UNComponents31UNCheckDepositComponentCallbackO11unitOnErroryAcA0a4FlowH0V_tcACmF",
             "moduleName": "UNComponents"
           }
         ],
@@ -109426,80 +109678,6 @@
           },
           {
             "kind": "Var",
-            "name": "provisionedInCurrentDevice",
-            "printedName": "provisionedInCurrentDevice",
-            "children": [
-              {
-                "kind": "TypeFunc",
-                "name": "Function",
-                "printedName": "(UNComponents.UNVPProvisionStatus.Type) -> UNComponents.UNVPProvisionStatus",
-                "children": [
-                  {
-                    "kind": "TypeNominal",
-                    "name": "UNVPProvisionStatus",
-                    "printedName": "UNComponents.UNVPProvisionStatus",
-                    "usr": "s:12UNComponents19UNVPProvisionStatusO"
-                  },
-                  {
-                    "kind": "TypeNominal",
-                    "name": "Metatype",
-                    "printedName": "UNComponents.UNVPProvisionStatus.Type",
-                    "children": [
-                      {
-                        "kind": "TypeNominal",
-                        "name": "UNVPProvisionStatus",
-                        "printedName": "UNComponents.UNVPProvisionStatus",
-                        "usr": "s:12UNComponents19UNVPProvisionStatusO"
-                      }
-                    ]
-                  }
-                ]
-              }
-            ],
-            "declKind": "EnumElement",
-            "usr": "s:12UNComponents19UNVPProvisionStatusO26provisionedInCurrentDeviceyA2CmF",
-            "mangledName": "$s12UNComponents19UNVPProvisionStatusO26provisionedInCurrentDeviceyA2CmF",
-            "moduleName": "UNComponents"
-          },
-          {
-            "kind": "Var",
-            "name": "provisionedInPairedDevice",
-            "printedName": "provisionedInPairedDevice",
-            "children": [
-              {
-                "kind": "TypeFunc",
-                "name": "Function",
-                "printedName": "(UNComponents.UNVPProvisionStatus.Type) -> UNComponents.UNVPProvisionStatus",
-                "children": [
-                  {
-                    "kind": "TypeNominal",
-                    "name": "UNVPProvisionStatus",
-                    "printedName": "UNComponents.UNVPProvisionStatus",
-                    "usr": "s:12UNComponents19UNVPProvisionStatusO"
-                  },
-                  {
-                    "kind": "TypeNominal",
-                    "name": "Metatype",
-                    "printedName": "UNComponents.UNVPProvisionStatus.Type",
-                    "children": [
-                      {
-                        "kind": "TypeNominal",
-                        "name": "UNVPProvisionStatus",
-                        "printedName": "UNComponents.UNVPProvisionStatus",
-                        "usr": "s:12UNComponents19UNVPProvisionStatusO"
-                      }
-                    ]
-                  }
-                ]
-              }
-            ],
-            "declKind": "EnumElement",
-            "usr": "s:12UNComponents19UNVPProvisionStatusO25provisionedInPairedDeviceyA2CmF",
-            "mangledName": "$s12UNComponents19UNVPProvisionStatusO25provisionedInPairedDeviceyA2CmF",
-            "moduleName": "UNComponents"
-          },
-          {
-            "kind": "Var",
             "name": "notAvailable",
             "printedName": "notAvailable",
             "children": [
@@ -109706,14 +109884,22 @@
               },
               {
                 "kind": "TypeNominal",
-                "name": "UNVPReason",
-                "printedName": "UNComponents.UNVPReason",
-                "usr": "s:12UNComponents10UNVPReasonV"
+                "name": "Optional",
+                "printedName": "Swift.String?",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "String",
+                    "printedName": "Swift.String",
+                    "usr": "s:SS"
+                  }
+                ],
+                "usr": "s:Sq"
               }
             ],
             "declKind": "Constructor",
-            "usr": "s:12UNComponents19UNVPSupportedWalletV4name11description6status6reasonACSS_SSAA19UNVPProvisionStatusOAA10UNVPReasonVtcfc",
-            "mangledName": "$s12UNComponents19UNVPSupportedWalletV4name11description6status6reasonACSS_SSAA19UNVPProvisionStatusOAA10UNVPReasonVtcfc",
+            "usr": "s:12UNComponents19UNVPSupportedWalletV4name11description6status6reasonACSS_SSAA19UNVPProvisionStatusOSSSgtcfc",
+            "mangledName": "$s12UNComponents19UNVPSupportedWalletV4name11description6status6reasonACSS_SSAA19UNVPProvisionStatusOSSSgtcfc",
             "moduleName": "UNComponents",
             "declAttributes": [
               "AccessControl"
@@ -109724,69 +109910,6 @@
         "declKind": "Struct",
         "usr": "s:12UNComponents19UNVPSupportedWalletV",
         "mangledName": "$s12UNComponents19UNVPSupportedWalletV",
-        "moduleName": "UNComponents",
-        "declAttributes": [
-          "AccessControl"
-        ],
-        "conformances": [
-          {
-            "kind": "Conformance",
-            "name": "Copyable",
-            "printedName": "Copyable",
-            "usr": "s:s8CopyableP",
-            "mangledName": "$ss8CopyableP"
-          },
-          {
-            "kind": "Conformance",
-            "name": "Escapable",
-            "printedName": "Escapable",
-            "usr": "s:s9EscapableP",
-            "mangledName": "$ss9EscapableP"
-          }
-        ]
-      },
-      {
-        "kind": "TypeDecl",
-        "name": "UNVPReason",
-        "printedName": "UNVPReason",
-        "children": [
-          {
-            "kind": "Constructor",
-            "name": "init",
-            "printedName": "init(reason:description:)",
-            "children": [
-              {
-                "kind": "TypeNominal",
-                "name": "UNVPReason",
-                "printedName": "UNComponents.UNVPReason",
-                "usr": "s:12UNComponents10UNVPReasonV"
-              },
-              {
-                "kind": "TypeNominal",
-                "name": "String",
-                "printedName": "Swift.String",
-                "usr": "s:SS"
-              },
-              {
-                "kind": "TypeNominal",
-                "name": "String",
-                "printedName": "Swift.String",
-                "usr": "s:SS"
-              }
-            ],
-            "declKind": "Constructor",
-            "usr": "s:12UNComponents10UNVPReasonV6reason11descriptionACSS_SStcfc",
-            "mangledName": "$s12UNComponents10UNVPReasonV6reason11descriptionACSS_SStcfc",
-            "moduleName": "UNComponents",
-            "declAttributes": [
-              "AccessControl"
-            ],
-            "init_kind": "Designated"
-          }
-        ],
-        "declKind": "Struct",
-        "usr": "s:12UNComponents10UNVPReasonV",
-        "mangledName": "$s12UNComponents10UNVPReasonV",
         "moduleName": "UNComponents",
         "declAttributes": [
           "AccessControl"
@@ -171583,7 +171706,8 @@
             "mangledName": "$s12UNComponents13UNTransactionO4fromACs7Decoder_p_tKcfc",
             "moduleName": "UNComponents",
             "declAttributes": [
-              "AccessControl"
+              "AccessControl",
+              "RawDocComment"
             ],
             "throwing": true,
             "init_kind": "Designated"
@@ -171610,7 +171734,8 @@
             "mangledName": "$s12UNComponents13UNTransactionO6encode2toys7Encoder_p_tKF",
             "moduleName": "UNComponents",
             "declAttributes": [
-              "AccessControl"
+              "AccessControl",
+              "RawDocComment"
             ],
             "throwing": true,
             "funcSelfKind": "NonMutating"
@@ -193196,70 +193321,70 @@
     {
       "filePath": "\/Users\/runner\/work\/unit-ios-components\/unit-ios-components\/UnitWhiteLabelBanking\/UNComponents\/Models\/Shared\/Card\/MenuActions.swift",
       "kind": "StringLiteral",
-      "offset": 170,
+      "offset": 169,
       "length": 8,
       "value": "\"Freeze\""
     },
     {
       "filePath": "\/Users\/runner\/work\/unit-ios-components\/unit-ios-components\/UnitWhiteLabelBanking\/UNComponents\/Models\/Shared\/Card\/MenuActions.swift",
       "kind": "StringLiteral",
-      "offset": 200,
+      "offset": 199,
       "length": 11,
       "value": "\"ManagePin\""
     },
     {
       "filePath": "\/Users\/runner\/work\/unit-ios-components\/unit-ios-components\/UnitWhiteLabelBanking\/UNComponents\/Models\/Shared\/Card\/MenuActions.swift",
       "kind": "StringLiteral",
-      "offset": 231,
+      "offset": 230,
       "length": 9,
       "value": "\"Replace\""
     },
     {
       "filePath": "\/Users\/runner\/work\/unit-ios-components\/unit-ios-components\/UnitWhiteLabelBanking\/UNComponents\/Models\/Shared\/Card\/MenuActions.swift",
       "kind": "StringLiteral",
-      "offset": 259,
+      "offset": 258,
       "length": 8,
       "value": "\"Report\""
     },
     {
       "filePath": "\/Users\/runner\/work\/unit-ios-components\/unit-ios-components\/UnitWhiteLabelBanking\/UNComponents\/Models\/Shared\/Card\/MenuActions.swift",
       "kind": "StringLiteral",
-      "offset": 285,
+      "offset": 284,
       "length": 7,
       "value": "\"Close\""
     },
     {
       "filePath": "\/Users\/runner\/work\/unit-ios-components\/unit-ios-components\/UnitWhiteLabelBanking\/UNComponents\/Models\/Shared\/Card\/MenuActions.swift",
       "kind": "StringLiteral",
-      "offset": 313,
+      "offset": 312,
       "length": 10,
       "value": "\"Activate\""
     },
     {
       "filePath": "\/Users\/runner\/work\/unit-ios-components\/unit-ios-components\/UnitWhiteLabelBanking\/UNComponents\/Models\/Shared\/Card\/MenuActions.swift",
       "kind": "StringLiteral",
-      "offset": 344,
+      "offset": 343,
       "length": 10,
       "value": "\"Unfreeze\""
     },
     {
       "filePath": "\/Users\/runner\/work\/unit-ios-components\/unit-ios-components\/UnitWhiteLabelBanking\/UNComponents\/Models\/Shared\/Card\/MenuActions.swift",
       "kind": "StringLiteral",
-      "offset": 376,
+      "offset": 375,
       "length": 11,
       "value": "\"ChangePin\""
     },
     {
       "filePath": "\/Users\/runner\/work\/unit-ios-components\/unit-ios-components\/UnitWhiteLabelBanking\/UNComponents\/Models\/Shared\/Card\/MenuActions.swift",
       "kind": "StringLiteral",
-      "offset": 406,
+      "offset": 405,
       "length": 8,
       "value": "\"SetPin\""
     },
     {
       "filePath": "\/Users\/runner\/work\/unit-ios-components\/unit-ios-components\/UnitWhiteLabelBanking\/UNComponents\/Models\/Shared\/Card\/MenuActions.swift",
       "kind": "StringLiteral",
-      "offset": 438,
+      "offset": 437,
       "length": 13,
       "value": "\"AddToWallet\""
     },
@@ -193280,42 +193405,42 @@
     {
       "filePath": "\/Users\/runner\/work\/unit-ios-components\/unit-ios-components\/UnitWhiteLabelBanking\/UNComponents\/UI\/Components\/CheckDeposit\/UNCheckDepositComponent.swift",
       "kind": "StringLiteral",
-      "offset": 477,
+      "offset": 473,
       "length": 12,
       "value": "\"account-id\""
     },
     {
       "filePath": "\/Users\/runner\/work\/unit-ios-components\/unit-ios-components\/UnitWhiteLabelBanking\/UNComponents\/UI\/Components\/CheckDeposit\/UNCheckDepositComponent.swift",
       "kind": "StringLiteral",
-      "offset": 515,
+      "offset": 511,
       "length": 5,
       "value": "\"fee\""
     },
     {
       "filePath": "\/Users\/runner\/work\/unit-ios-components\/unit-ios-components\/UnitWhiteLabelBanking\/UNComponents\/UI\/Components\/CheckDeposit\/UNCheckDepositComponent.swift",
       "kind": "StringLiteral",
-      "offset": 550,
+      "offset": 546,
       "length": 9,
       "value": "\"version\""
     },
     {
       "filePath": "\/Users\/runner\/work\/unit-ios-components\/unit-ios-components\/UnitWhiteLabelBanking\/UNComponents\/UI\/Components\/CheckDeposit\/UNCheckDepositComponent.swift",
       "kind": "StringLiteral",
-      "offset": 604,
+      "offset": 600,
       "length": 27,
       "value": "\"initial-stage-back-button\""
     },
     {
       "filePath": "\/Users\/runner\/work\/unit-ios-components\/unit-ios-components\/UnitWhiteLabelBanking\/UNComponents\/UI\/Components\/CheckDeposit\/UNCheckDepositComponent.swift",
       "kind": "StringLiteral",
-      "offset": 674,
+      "offset": 670,
       "length": 25,
       "value": "\"final-stage-done-button\""
     },
     {
       "filePath": "\/Users\/runner\/work\/unit-ios-components\/unit-ios-components\/UnitWhiteLabelBanking\/UNComponents\/UI\/Components\/CheckDeposit\/UNCheckDepositComponent.swift",
       "kind": "StringLiteral",
-      "offset": 727,
+      "offset": 723,
       "length": 7,
       "value": "\"style\""
     },
@@ -193350,98 +193475,98 @@
     {
       "filePath": "\/Users\/runner\/work\/unit-ios-components\/unit-ios-components\/UnitWhiteLabelBanking\/UNComponents\/Models\/Shared\/Account\/UNCounterparty.swift",
       "kind": "StringLiteral",
-      "offset": 1119,
+      "offset": 1115,
       "length": 12,
       "value": "\"CreditOnly\""
     },
     {
       "filePath": "\/Users\/runner\/work\/unit-ios-components\/unit-ios-components\/UnitWhiteLabelBanking\/UNComponents\/Models\/Shared\/Account\/UNCounterparty.swift",
       "kind": "StringLiteral",
-      "offset": 1158,
+      "offset": 1154,
       "length": 16,
       "value": "\"CreditAndDebit\""
     },
     {
       "filePath": "\/Users\/runner\/work\/unit-ios-components\/unit-ios-components\/UnitWhiteLabelBanking\/UNComponents\/Models\/Shared\/Account\/UNCounterparty.swift",
       "kind": "StringLiteral",
-      "offset": 1196,
+      "offset": 1192,
       "length": 11,
       "value": "\"DebitOnly\""
     },
     {
       "filePath": "\/Users\/runner\/work\/unit-ios-components\/unit-ios-components\/UnitWhiteLabelBanking\/UNComponents\/Models\/Shared\/Account\/UNCounterparty.swift",
       "kind": "StringLiteral",
-      "offset": 1288,
+      "offset": 1284,
       "length": 10,
       "value": "\"Checking\""
     },
     {
       "filePath": "\/Users\/runner\/work\/unit-ios-components\/unit-ios-components\/UnitWhiteLabelBanking\/UNComponents\/Models\/Shared\/Account\/UNCounterparty.swift",
       "kind": "StringLiteral",
-      "offset": 1318,
+      "offset": 1314,
       "length": 9,
       "value": "\"Savings\""
     },
     {
       "filePath": "\/Users\/runner\/work\/unit-ios-components\/unit-ios-components\/UnitWhiteLabelBanking\/UNComponents\/Models\/Shared\/Account\/UNCounterparty.swift",
       "kind": "StringLiteral",
-      "offset": 1344,
+      "offset": 1340,
       "length": 6,
       "value": "\"Loan\""
     },
     {
       "filePath": "\/Users\/runner\/work\/unit-ios-components\/unit-ios-components\/UnitWhiteLabelBanking\/UNComponents\/Models\/Shared\/Account\/UNCounterparty.swift",
       "kind": "StringLiteral",
-      "offset": 1424,
+      "offset": 1420,
       "length": 10,
       "value": "\"Business\""
     },
     {
       "filePath": "\/Users\/runner\/work\/unit-ios-components\/unit-ios-components\/UnitWhiteLabelBanking\/UNComponents\/Models\/Shared\/Account\/UNCounterparty.swift",
       "kind": "StringLiteral",
-      "offset": 1453,
+      "offset": 1449,
       "length": 8,
       "value": "\"Person\""
     },
     {
       "filePath": "\/Users\/runner\/work\/unit-ios-components\/unit-ios-components\/UnitWhiteLabelBanking\/UNComponents\/Models\/Shared\/Account\/UNCounterparty.swift",
       "kind": "StringLiteral",
-      "offset": 1481,
+      "offset": 1477,
       "length": 9,
       "value": "\"Unknown\""
     },
     {
       "filePath": "\/Users\/runner\/work\/unit-ios-components\/unit-ios-components\/UnitWhiteLabelBanking\/UNComponents\/Models\/Shared\/Account\/UNCounterparty.swift",
       "kind": "StringLiteral",
-      "offset": 2429,
+      "offset": 2421,
       "length": 9,
       "value": "\"Pending\""
     },
     {
       "filePath": "\/Users\/runner\/work\/unit-ios-components\/unit-ios-components\/UnitWhiteLabelBanking\/UNComponents\/Models\/Shared\/Account\/UNCounterparty.swift",
       "kind": "StringLiteral",
-      "offset": 2457,
+      "offset": 2449,
       "length": 8,
       "value": "\"Failed\""
     },
     {
       "filePath": "\/Users\/runner\/work\/unit-ios-components\/unit-ios-components\/UnitWhiteLabelBanking\/UNComponents\/Models\/Shared\/Account\/UNCounterparty.swift",
       "kind": "StringLiteral",
-      "offset": 2486,
+      "offset": 2478,
       "length": 10,
       "value": "\"Verified\""
     },
     {
       "filePath": "\/Users\/runner\/work\/unit-ios-components\/unit-ios-components\/UnitWhiteLabelBanking\/UNComponents\/Models\/Shared\/Account\/UNCounterparty.swift",
       "kind": "StringLiteral",
-      "offset": 2586,
+      "offset": 2578,
       "length": 21,
       "value": "\"SameDayMicroDeposit\""
     },
     {
       "filePath": "\/Users\/runner\/work\/unit-ios-components\/unit-ios-components\/UnitWhiteLabelBanking\/UNComponents\/Models\/Shared\/Account\/UNCounterparty.swift",
       "kind": "StringLiteral",
-      "offset": 2627,
+      "offset": 2619,
       "length": 9,
       "value": "\"Instant\""
     },
@@ -193546,70 +193671,70 @@
     {
       "filePath": "\/Users\/runner\/work\/unit-ios-components\/unit-ios-components\/UnitWhiteLabelBanking\/UNComponents\/UI\/Components\/ACHDebit\/UNACHDebitComponent.swift",
       "kind": "StringLiteral",
-      "offset": 464,
+      "offset": 460,
       "length": 12,
       "value": "\"account-id\""
     },
     {
       "filePath": "\/Users\/runner\/work\/unit-ios-components\/unit-ios-components\/UnitWhiteLabelBanking\/UNComponents\/UI\/Components\/ACHDebit\/UNACHDebitComponent.swift",
       "kind": "StringLiteral",
-      "offset": 510,
+      "offset": 506,
       "length": 15,
       "value": "\"is-auto-focus\""
     },
     {
       "filePath": "\/Users\/runner\/work\/unit-ios-components\/unit-ios-components\/UnitWhiteLabelBanking\/UNComponents\/UI\/Components\/ACHDebit\/UNACHDebitComponent.swift",
       "kind": "StringLiteral",
-      "offset": 555,
+      "offset": 551,
       "length": 10,
       "value": "\"same-day\""
     },
     {
       "filePath": "\/Users\/runner\/work\/unit-ios-components\/unit-ios-components\/UnitWhiteLabelBanking\/UNComponents\/UI\/Components\/ACHDebit\/UNACHDebitComponent.swift",
       "kind": "StringLiteral",
-      "offset": 607,
+      "offset": 603,
       "length": 23,
       "value": "\"plaid-account-filters\""
     },
     {
       "filePath": "\/Users\/runner\/work\/unit-ios-components\/unit-ios-components\/UnitWhiteLabelBanking\/UNComponents\/UI\/Components\/ACHDebit\/UNACHDebitComponent.swift",
       "kind": "StringLiteral",
-      "offset": 679,
+      "offset": 675,
       "length": 31,
       "value": "\"plaid-link-customization-name\""
     },
     {
       "filePath": "\/Users\/runner\/work\/unit-ios-components\/unit-ios-components\/UnitWhiteLabelBanking\/UNComponents\/UI\/Components\/ACHDebit\/UNACHDebitComponent.swift",
       "kind": "StringLiteral",
-      "offset": 755,
+      "offset": 751,
       "length": 27,
       "value": "\"initial-stage-back-button\""
     },
     {
       "filePath": "\/Users\/runner\/work\/unit-ios-components\/unit-ios-components\/UnitWhiteLabelBanking\/UNComponents\/UI\/Components\/ACHDebit\/UNACHDebitComponent.swift",
       "kind": "StringLiteral",
-      "offset": 825,
+      "offset": 821,
       "length": 25,
       "value": "\"final-stage-done-button\""
     },
     {
       "filePath": "\/Users\/runner\/work\/unit-ios-components\/unit-ios-components\/UnitWhiteLabelBanking\/UNComponents\/UI\/Components\/ACHDebit\/UNACHDebitComponent.swift",
       "kind": "StringLiteral",
-      "offset": 878,
+      "offset": 874,
       "length": 7,
       "value": "\"style\""
     },
     {
       "filePath": "\/Users\/runner\/work\/unit-ios-components\/unit-ios-components\/UnitWhiteLabelBanking\/UNComponents\/UI\/Components\/ACHDebit\/UNACHDebitComponent.swift",
       "kind": "StringLiteral",
-      "offset": 928,
+      "offset": 924,
       "length": 25,
       "value": "\"show-same-day-selection\""
     },
     {
       "filePath": "\/Users\/runner\/work\/unit-ios-components\/unit-ios-components\/UnitWhiteLabelBanking\/UNComponents\/UI\/Components\/ACHDebit\/UNACHDebitComponent.swift",
       "kind": "StringLiteral",
-      "offset": 999,
+      "offset": 995,
       "length": 27,
       "value": "\"allow-counterparty-delete\""
     },
@@ -193658,98 +193783,98 @@
     {
       "filePath": "\/Users\/runner\/work\/unit-ios-components\/unit-ios-components\/UnitWhiteLabelBanking\/UNComponents\/Infra\/Builders\/Components\/Account\/UNAccountViewSettingsBuilder.swift",
       "kind": "BooleanLiteral",
-      "offset": 1101,
+      "offset": 1102,
       "length": 5,
       "value": "false"
     },
     {
       "filePath": "\/Users\/runner\/work\/unit-ios-components\/unit-ios-components\/UnitWhiteLabelBanking\/UNComponents\/Infra\/Builders\/Components\/Account\/UNAccountViewSettingsBuilder.swift",
       "kind": "BooleanLiteral",
-      "offset": 1142,
+      "offset": 1143,
       "length": 5,
       "value": "false"
     },
     {
       "filePath": "\/Users\/runner\/work\/unit-ios-components\/unit-ios-components\/UnitWhiteLabelBanking\/UNComponents\/Infra\/Builders\/Components\/Account\/UNAccountViewSettingsBuilder.swift",
       "kind": "BooleanLiteral",
-      "offset": 1184,
+      "offset": 1185,
       "length": 5,
       "value": "false"
     },
     {
       "filePath": "\/Users\/runner\/work\/unit-ios-components\/unit-ios-components\/UnitWhiteLabelBanking\/UNComponents\/Infra\/Builders\/Components\/Account\/UNAccountViewSettingsBuilder.swift",
       "kind": "BooleanLiteral",
-      "offset": 1228,
+      "offset": 1229,
       "length": 5,
       "value": "false"
     },
     {
       "filePath": "\/Users\/runner\/work\/unit-ios-components\/unit-ios-components\/UnitWhiteLabelBanking\/UNComponents\/Infra\/Builders\/Components\/Account\/UNAccountViewSettingsBuilder.swift",
       "kind": "BooleanLiteral",
-      "offset": 1270,
+      "offset": 1271,
       "length": 5,
       "value": "false"
     },
     {
       "filePath": "\/Users\/runner\/work\/unit-ios-components\/unit-ios-components\/UnitWhiteLabelBanking\/UNComponents\/Infra\/Builders\/Components\/Account\/UNAccountViewSettingsBuilder.swift",
       "kind": "BooleanLiteral",
-      "offset": 1317,
+      "offset": 1318,
       "length": 5,
       "value": "false"
     },
     {
       "filePath": "\/Users\/runner\/work\/unit-ios-components\/unit-ios-components\/UnitWhiteLabelBanking\/UNComponents\/Infra\/Builders\/Components\/Account\/UNAccountViewSettingsBuilder.swift",
       "kind": "BooleanLiteral",
-      "offset": 1370,
+      "offset": 1371,
       "length": 5,
       "value": "false"
     },
     {
       "filePath": "\/Users\/runner\/work\/unit-ios-components\/unit-ios-components\/UnitWhiteLabelBanking\/UNComponents\/Infra\/Builders\/Components\/Account\/UNAccountViewSettingsBuilder.swift",
       "kind": "BooleanLiteral",
-      "offset": 1413,
+      "offset": 1414,
       "length": 5,
       "value": "false"
     },
     {
       "filePath": "\/Users\/runner\/work\/unit-ios-components\/unit-ios-components\/UnitWhiteLabelBanking\/UNComponents\/Infra\/Builders\/Components\/ACHDebit\/UNACHDebitViewSettingsBuilder.swift",
       "kind": "BooleanLiteral",
-      "offset": 692,
+      "offset": 700,
       "length": 5,
       "value": "false"
     },
     {
       "filePath": "\/Users\/runner\/work\/unit-ios-components\/unit-ios-components\/UnitWhiteLabelBanking\/UNComponents\/Infra\/Builders\/Components\/ACHDebit\/UNACHDebitViewSettingsBuilder.swift",
       "kind": "BooleanLiteral",
-      "offset": 810,
+      "offset": 842,
       "length": 5,
       "value": "false"
     },
     {
       "filePath": "\/Users\/runner\/work\/unit-ios-components\/unit-ios-components\/UnitWhiteLabelBanking\/UNComponents\/Infra\/Builders\/Components\/ACHDebit\/UNACHDebitViewSettingsBuilder.swift",
       "kind": "BooleanLiteral",
-      "offset": 848,
+      "offset": 888,
       "length": 5,
       "value": "false"
     },
     {
       "filePath": "\/Users\/runner\/work\/unit-ios-components\/unit-ios-components\/UnitWhiteLabelBanking\/UNComponents\/Infra\/Builders\/Components\/ACHDebit\/UNACHDebitViewSettingsBuilder.swift",
       "kind": "BooleanLiteral",
-      "offset": 884,
+      "offset": 932,
       "length": 5,
       "value": "false"
     },
     {
       "filePath": "\/Users\/runner\/work\/unit-ios-components\/unit-ios-components\/UnitWhiteLabelBanking\/UNComponents\/Infra\/Builders\/Components\/ACHDebit\/UNACHDebitViewSettingsBuilder.swift",
       "kind": "BooleanLiteral",
-      "offset": 920,
+      "offset": 976,
       "length": 5,
       "value": "false"
     },
     {
       "filePath": "\/Users\/runner\/work\/unit-ios-components\/unit-ios-components\/UnitWhiteLabelBanking\/UNComponents\/Infra\/Builders\/Components\/ACHDebit\/UNACHDebitViewSettingsBuilder.swift",
       "kind": "BooleanLiteral",
-      "offset": 959,
+      "offset": 1023,
       "length": 5,
       "value": "false"
     },
@@ -193917,63 +194042,63 @@
     {
       "filePath": "\/Users\/runner\/work\/unit-ios-components\/unit-ios-components\/UnitWhiteLabelBanking\/UNComponents\/Infra\/Builders\/Components\/ACHCredit\/UNACHCreditViewSettingsBuilder.swift",
       "kind": "BooleanLiteral",
-      "offset": 798,
+      "offset": 807,
       "length": 5,
       "value": "false"
     },
     {
       "filePath": "\/Users\/runner\/work\/unit-ios-components\/unit-ios-components\/UnitWhiteLabelBanking\/UNComponents\/Infra\/Builders\/Components\/ACHCredit\/UNACHCreditViewSettingsBuilder.swift",
       "kind": "BooleanLiteral",
-      "offset": 824,
+      "offset": 840,
       "length": 5,
       "value": "false"
     },
     {
       "filePath": "\/Users\/runner\/work\/unit-ios-components\/unit-ios-components\/UnitWhiteLabelBanking\/UNComponents\/Infra\/Builders\/Components\/ACHCredit\/UNACHCreditViewSettingsBuilder.swift",
       "kind": "BooleanLiteral",
-      "offset": 942,
+      "offset": 982,
       "length": 5,
       "value": "false"
     },
     {
       "filePath": "\/Users\/runner\/work\/unit-ios-components\/unit-ios-components\/UnitWhiteLabelBanking\/UNComponents\/Infra\/Builders\/Components\/ACHCredit\/UNACHCreditViewSettingsBuilder.swift",
       "kind": "BooleanLiteral",
-      "offset": 980,
+      "offset": 1028,
       "length": 5,
       "value": "false"
     },
     {
       "filePath": "\/Users\/runner\/work\/unit-ios-components\/unit-ios-components\/UnitWhiteLabelBanking\/UNComponents\/Infra\/Builders\/Components\/ACHCredit\/UNACHCreditViewSettingsBuilder.swift",
       "kind": "BooleanLiteral",
-      "offset": 1016,
+      "offset": 1072,
       "length": 5,
       "value": "false"
     },
     {
       "filePath": "\/Users\/runner\/work\/unit-ios-components\/unit-ios-components\/UnitWhiteLabelBanking\/UNComponents\/Infra\/Builders\/Components\/ACHCredit\/UNACHCreditViewSettingsBuilder.swift",
       "kind": "BooleanLiteral",
-      "offset": 1052,
+      "offset": 1116,
       "length": 5,
       "value": "false"
     },
     {
       "filePath": "\/Users\/runner\/work\/unit-ios-components\/unit-ios-components\/UnitWhiteLabelBanking\/UNComponents\/Infra\/Builders\/Components\/ACHCredit\/UNACHCreditViewSettingsBuilder.swift",
       "kind": "BooleanLiteral",
-      "offset": 1091,
+      "offset": 1163,
       "length": 5,
       "value": "false"
     },
     {
       "filePath": "\/Users\/runner\/work\/unit-ios-components\/unit-ios-components\/UnitWhiteLabelBanking\/UNComponents\/Infra\/Builders\/Components\/ACHCredit\/UNACHCreditViewSettingsBuilder.swift",
       "kind": "BooleanLiteral",
-      "offset": 1130,
+      "offset": 1210,
       "length": 5,
       "value": "false"
     },
     {
       "filePath": "\/Users\/runner\/work\/unit-ios-components\/unit-ios-components\/UnitWhiteLabelBanking\/UNComponents\/Network\/Infrastructure\/UNNetworkEventMonitor.swift",
       "kind": "StringLiteral",
-      "offset": 17438,
+      "offset": 17493,
       "length": 37,
       "value": "\"UnitSDKNetworkCompositeEventMonitor\""
     },
@@ -194064,119 +194189,119 @@
     {
       "filePath": "\/Users\/runner\/work\/unit-ios-components\/unit-ios-components\/UnitWhiteLabelBanking\/UNComponents\/Network\/Infrastructure\/UNNetworkServerTrustEvaluating.swift",
       "kind": "BooleanLiteral",
-      "offset": 1330,
+      "offset": 1363,
       "length": 4,
       "value": "true"
     },
     {
       "filePath": "\/Users\/runner\/work\/unit-ios-components\/unit-ios-components\/UnitWhiteLabelBanking\/UNComponents\/Network\/Infrastructure\/UNNetworkServerTrustEvaluating.swift",
       "kind": "BooleanLiteral",
-      "offset": 3714,
+      "offset": 3747,
       "length": 4,
       "value": "true"
     },
     {
       "filePath": "\/Users\/runner\/work\/unit-ios-components\/unit-ios-components\/UnitWhiteLabelBanking\/UNComponents\/Network\/Infrastructure\/UNNetworkServerTrustEvaluating.swift",
       "kind": "BooleanLiteral",
-      "offset": 7696,
+      "offset": 7729,
       "length": 4,
       "value": "true"
     },
     {
       "filePath": "\/Users\/runner\/work\/unit-ios-components\/unit-ios-components\/UnitWhiteLabelBanking\/UNComponents\/Network\/Infrastructure\/UNNetworkServerTrustEvaluating.swift",
       "kind": "BooleanLiteral",
-      "offset": 7723,
+      "offset": 7756,
       "length": 4,
       "value": "true"
     },
     {
       "filePath": "\/Users\/runner\/work\/unit-ios-components\/unit-ios-components\/UnitWhiteLabelBanking\/UNComponents\/Network\/Infrastructure\/UNNetworkServerTrustEvaluating.swift",
       "kind": "BooleanLiteral",
-      "offset": 10082,
+      "offset": 10115,
       "length": 4,
       "value": "true"
     },
     {
       "filePath": "\/Users\/runner\/work\/unit-ios-components\/unit-ios-components\/UnitWhiteLabelBanking\/UNComponents\/Network\/Infrastructure\/UNNetworkServerTrustEvaluating.swift",
       "kind": "BooleanLiteral",
-      "offset": 10144,
+      "offset": 10177,
       "length": 4,
       "value": "true"
     },
     {
       "filePath": "\/Users\/runner\/work\/unit-ios-components\/unit-ios-components\/UnitWhiteLabelBanking\/UNComponents\/Network\/Infrastructure\/UNNetworkServerTrustEvaluating.swift",
       "kind": "BooleanLiteral",
-      "offset": 12517,
+      "offset": 12550,
       "length": 5,
       "value": "false"
     },
     {
       "filePath": "\/Users\/runner\/work\/unit-ios-components\/unit-ios-components\/UnitWhiteLabelBanking\/UNComponents\/Network\/Infrastructure\/UNNetworkServerTrustEvaluating.swift",
       "kind": "BooleanLiteral",
-      "offset": 12566,
+      "offset": 12599,
       "length": 4,
       "value": "true"
     },
     {
       "filePath": "\/Users\/runner\/work\/unit-ios-components\/unit-ios-components\/UnitWhiteLabelBanking\/UNComponents\/Network\/Infrastructure\/UNNetworkServerTrustEvaluating.swift",
       "kind": "BooleanLiteral",
-      "offset": 12602,
+      "offset": 12635,
       "length": 4,
       "value": "true"
     },
     {
       "filePath": "\/Users\/runner\/work\/unit-ios-components\/unit-ios-components\/UnitWhiteLabelBanking\/UNComponents\/Network\/Infrastructure\/UNNetworkServerTrustEvaluating.swift",
       "kind": "BooleanLiteral",
-      "offset": 15812,
+      "offset": 15845,
       "length": 5,
       "value": "false"
     },
     {
       "filePath": "\/Users\/runner\/work\/unit-ios-components\/unit-ios-components\/UnitWhiteLabelBanking\/UNComponents\/Network\/Infrastructure\/UNNetworkServerTrustEvaluating.swift",
       "kind": "BooleanLiteral",
-      "offset": 15887,
+      "offset": 15920,
       "length": 4,
       "value": "true"
     },
     {
       "filePath": "\/Users\/runner\/work\/unit-ios-components\/unit-ios-components\/UnitWhiteLabelBanking\/UNComponents\/Network\/Infrastructure\/UNNetworkServerTrustEvaluating.swift",
       "kind": "BooleanLiteral",
-      "offset": 15949,
+      "offset": 15982,
       "length": 4,
       "value": "true"
     },
     {
       "filePath": "\/Users\/runner\/work\/unit-ios-components\/unit-ios-components\/UnitWhiteLabelBanking\/UNComponents\/Network\/Infrastructure\/UNNetworkServerTrustEvaluating.swift",
       "kind": "BooleanLiteral",
-      "offset": 18137,
+      "offset": 18170,
       "length": 4,
       "value": "true"
     },
     {
       "filePath": "\/Users\/runner\/work\/unit-ios-components\/unit-ios-components\/UnitWhiteLabelBanking\/UNComponents\/Network\/Infrastructure\/UNNetworkServerTrustEvaluating.swift",
       "kind": "BooleanLiteral",
-      "offset": 18173,
+      "offset": 18206,
       "length": 4,
       "value": "true"
     },
     {
       "filePath": "\/Users\/runner\/work\/unit-ios-components\/unit-ios-components\/UnitWhiteLabelBanking\/UNComponents\/Network\/Infrastructure\/UNNetworkServerTrustEvaluating.swift",
       "kind": "BooleanLiteral",
-      "offset": 21005,
+      "offset": 21038,
       "length": 4,
       "value": "true"
     },
     {
       "filePath": "\/Users\/runner\/work\/unit-ios-components\/unit-ios-components\/UnitWhiteLabelBanking\/UNComponents\/Network\/Infrastructure\/UNNetworkServerTrustEvaluating.swift",
       "kind": "BooleanLiteral",
-      "offset": 21059,
+      "offset": 21092,
       "length": 4,
       "value": "true"
     },
     {
       "filePath": "\/Users\/runner\/work\/unit-ios-components\/unit-ios-components\/UnitWhiteLabelBanking\/UNComponents\/Network\/Infrastructure\/UNNetworkServerTrustEvaluating.swift",
       "kind": "BooleanLiteral",
-      "offset": 32748,
+      "offset": 32781,
       "length": 4,
       "value": "true"
     },
@@ -194253,21 +194378,21 @@
     {
       "filePath": "\/Users\/runner\/work\/unit-ios-components\/unit-ios-components\/UnitWhiteLabelBanking\/UNComponents\/UI\/Components\/ProgramDetails\/UNProgramDetailsComponent.swift",
       "kind": "FloatLiteral",
-      "offset": 450,
+      "offset": 446,
       "length": 3,
       "value": "0.0"
     },
     {
       "filePath": "\/Users\/runner\/work\/unit-ios-components\/unit-ios-components\/UnitWhiteLabelBanking\/UNComponents\/UI\/Components\/ProgramDetails\/UNProgramDetailsComponent.swift",
       "kind": "StringLiteral",
-      "offset": 602,
+      "offset": 598,
       "length": 12,
       "value": "\"account-id\""
     },
     {
       "filePath": "\/Users\/runner\/work\/unit-ios-components\/unit-ios-components\/UnitWhiteLabelBanking\/UNComponents\/UI\/Components\/ProgramDetails\/UNProgramDetailsComponent.swift",
       "kind": "StringLiteral",
-      "offset": 646,
+      "offset": 642,
       "length": 12,
       "value": "\"hide-title\""
     },
@@ -194288,266 +194413,266 @@
     {
       "filePath": "\/Users\/runner\/work\/unit-ios-components\/unit-ios-components\/UnitWhiteLabelBanking\/UNComponents\/UI\/Components\/Slot\/UNAddToWalletComponent.swift",
       "kind": "BooleanLiteral",
-      "offset": 1275,
+      "offset": 1271,
       "length": 4,
       "value": "true"
     },
     {
       "filePath": "\/Users\/runner\/work\/unit-ios-components\/unit-ios-components\/UnitWhiteLabelBanking\/UNComponents\/UI\/Components\/Activity\/UNActivityComponent.swift",
       "kind": "StringLiteral",
-      "offset": 521,
+      "offset": 513,
       "length": 12,
       "value": "\"account-id\""
     },
     {
       "filePath": "\/Users\/runner\/work\/unit-ios-components\/unit-ios-components\/UnitWhiteLabelBanking\/UNComponents\/UI\/Components\/Activity\/UNActivityComponent.swift",
       "kind": "StringLiteral",
-      "offset": 572,
+      "offset": 564,
       "length": 20,
       "value": "\"hide-filter-button\""
     },
     {
       "filePath": "\/Users\/runner\/work\/unit-ios-components\/unit-ios-components\/UnitWhiteLabelBanking\/UNComponents\/UI\/Components\/Activity\/UNActivityComponent.swift",
       "kind": "StringLiteral",
-      "offset": 629,
+      "offset": 621,
       "length": 17,
       "value": "\"pagination-type\""
     },
     {
       "filePath": "\/Users\/runner\/work\/unit-ios-components\/unit-ios-components\/UnitWhiteLabelBanking\/UNComponents\/UI\/Components\/Activity\/UNActivityComponent.swift",
       "kind": "StringLiteral",
-      "offset": 688,
+      "offset": 680,
       "length": 23,
       "value": "\"transactions-per-page\""
     },
     {
       "filePath": "\/Users\/runner\/work\/unit-ios-components\/unit-ios-components\/UnitWhiteLabelBanking\/UNComponents\/UI\/Components\/Activity\/UNActivityComponent.swift",
       "kind": "StringLiteral",
-      "offset": 745,
+      "offset": 737,
       "length": 14,
       "value": "\"query-filter\""
     },
     {
       "filePath": "\/Users\/runner\/work\/unit-ios-components\/unit-ios-components\/UnitWhiteLabelBanking\/UNComponents\/UI\/Components\/Activity\/UNActivityComponent.swift",
       "kind": "StringLiteral",
-      "offset": 791,
+      "offset": 783,
       "length": 12,
       "value": "\"hide-title\""
     },
     {
       "filePath": "\/Users\/runner\/work\/unit-ios-components\/unit-ios-components\/UnitWhiteLabelBanking\/UNComponents\/UI\/Components\/Activity\/UNActivityComponent.swift",
       "kind": "StringLiteral",
-      "offset": 839,
+      "offset": 831,
       "length": 18,
       "value": "\"hide-back-to-top\""
     },
     {
       "filePath": "\/Users\/runner\/work\/unit-ios-components\/unit-ios-components\/UnitWhiteLabelBanking\/UNComponents\/UI\/Components\/Activity\/UNActivityComponent.swift",
       "kind": "StringLiteral",
-      "offset": 900,
+      "offset": 892,
       "length": 24,
       "value": "\"show-declined-activity\""
     },
     {
       "filePath": "\/Users\/runner\/work\/unit-ios-components\/unit-ios-components\/UnitWhiteLabelBanking\/UNComponents\/UI\/Components\/Activity\/UNActivityComponent.swift",
       "kind": "StringLiteral",
-      "offset": 962,
+      "offset": 954,
       "length": 19,
       "value": "\"show-csv-download\""
     },
     {
       "filePath": "\/Users\/runner\/work\/unit-ios-components\/unit-ios-components\/UnitWhiteLabelBanking\/UNComponents\/UI\/Components\/Activity\/UNActivityComponent.swift",
       "kind": "StringLiteral",
-      "offset": 1009,
+      "offset": 1001,
       "length": 7,
       "value": "\"style\""
     },
     {
       "filePath": "\/Users\/runner\/work\/unit-ios-components\/unit-ios-components\/UnitWhiteLabelBanking\/UNComponents\/UI\/Components\/Activity\/UNActivityComponent.swift",
       "kind": "IntegerLiteral",
-      "offset": 1096,
+      "offset": 1088,
       "length": 3,
       "value": "300"
     },
     {
       "filePath": "\/Users\/runner\/work\/unit-ios-components\/unit-ios-components\/UnitWhiteLabelBanking\/UNComponents\/Models\/Shared\/Card\/UNCard.swift",
       "kind": "StringLiteral",
-      "offset": 11379,
+      "offset": 11363,
       "length": 10,
       "value": "\"Inactive\""
     },
     {
       "filePath": "\/Users\/runner\/work\/unit-ios-components\/unit-ios-components\/UnitWhiteLabelBanking\/UNComponents\/Models\/Shared\/Card\/UNCard.swift",
       "kind": "StringLiteral",
-      "offset": 11408,
+      "offset": 11392,
       "length": 8,
       "value": "\"Active\""
     },
     {
       "filePath": "\/Users\/runner\/work\/unit-ios-components\/unit-ios-components\/UnitWhiteLabelBanking\/UNComponents\/Models\/Shared\/Card\/UNCard.swift",
       "kind": "StringLiteral",
-      "offset": 11435,
+      "offset": 11419,
       "length": 8,
       "value": "\"Stolen\""
     },
     {
       "filePath": "\/Users\/runner\/work\/unit-ios-components\/unit-ios-components\/UnitWhiteLabelBanking\/UNComponents\/Models\/Shared\/Card\/UNCard.swift",
       "kind": "StringLiteral",
-      "offset": 11460,
+      "offset": 11444,
       "length": 6,
       "value": "\"Lost\""
     },
     {
       "filePath": "\/Users\/runner\/work\/unit-ios-components\/unit-ios-components\/UnitWhiteLabelBanking\/UNComponents\/Models\/Shared\/Card\/UNCard.swift",
       "kind": "StringLiteral",
-      "offset": 11485,
+      "offset": 11469,
       "length": 8,
       "value": "\"Frozen\""
     },
     {
       "filePath": "\/Users\/runner\/work\/unit-ios-components\/unit-ios-components\/UnitWhiteLabelBanking\/UNComponents\/Models\/Shared\/Card\/UNCard.swift",
       "kind": "StringLiteral",
-      "offset": 11522,
+      "offset": 11506,
       "length": 18,
       "value": "\"ClosedByCustomer\""
     },
     {
       "filePath": "\/Users\/runner\/work\/unit-ios-components\/unit-ios-components\/UnitWhiteLabelBanking\/UNComponents\/Models\/Shared\/Card\/UNCard.swift",
       "kind": "StringLiteral",
-      "offset": 11567,
+      "offset": 11551,
       "length": 16,
       "value": "\"SuspectedFraud\""
     },
     {
       "filePath": "\/Users\/runner\/work\/unit-ios-components\/unit-ios-components\/UnitWhiteLabelBanking\/UNComponents\/Models\/Shared\/Card\/UNCard.swift",
       "kind": "StringLiteral",
-      "offset": 11614,
+      "offset": 11598,
       "length": 20,
       "value": "\"ActiveForOnlineUse\""
     },
     {
       "filePath": "\/Users\/runner\/work\/unit-ios-components\/unit-ios-components\/UnitWhiteLabelBanking\/UNComponents\/Network\/Infrastructure\/UNNetworkAuthenticationInterceptor.swift",
       "kind": "FloatLiteral",
-      "offset": 10736,
+      "offset": 10779,
       "length": 4,
       "value": "30.0"
     },
     {
       "filePath": "\/Users\/runner\/work\/unit-ios-components\/unit-ios-components\/UnitWhiteLabelBanking\/UNComponents\/Network\/Infrastructure\/UNNetworkAuthenticationInterceptor.swift",
       "kind": "IntegerLiteral",
-      "offset": 10765,
+      "offset": 10808,
       "length": 1,
       "value": "5"
     },
     {
       "filePath": "\/Users\/runner\/work\/unit-ios-components\/unit-ios-components\/UnitWhiteLabelBanking\/UNComponents\/Network\/Infrastructure\/UNNetworkAuthenticationInterceptor.swift",
       "kind": "BooleanLiteral",
-      "offset": 11299,
+      "offset": 11342,
       "length": 5,
       "value": "false"
     },
     {
       "filePath": "\/Users\/runner\/work\/unit-ios-components\/unit-ios-components\/UnitWhiteLabelBanking\/UNComponents\/Network\/Infrastructure\/UNNetworkAuthenticationInterceptor.swift",
       "kind": "Array",
-      "offset": 11353,
+      "offset": 11396,
       "length": 2,
       "value": "[]"
     },
     {
       "filePath": "\/Users\/runner\/work\/unit-ios-components\/unit-ios-components\/UnitWhiteLabelBanking\/UNComponents\/Network\/Infrastructure\/UNNetworkAuthenticationInterceptor.swift",
       "kind": "Array",
-      "offset": 11447,
+      "offset": 11490,
       "length": 2,
       "value": "[]"
     },
     {
       "filePath": "\/Users\/runner\/work\/unit-ios-components\/unit-ios-components\/UnitWhiteLabelBanking\/UNComponents\/Network\/Infrastructure\/UNNetworkAuthenticationInterceptor.swift",
       "kind": "Array",
-      "offset": 11514,
+      "offset": 11557,
       "length": 2,
       "value": "[]"
     },
     {
       "filePath": "\/Users\/runner\/work\/unit-ios-components\/unit-ios-components\/UnitWhiteLabelBanking\/UNComponents\/Network\/Infrastructure\/UNNetworkAuthenticationInterceptor.swift",
       "kind": "StringLiteral",
-      "offset": 11817,
+      "offset": 11860,
       "length": 39,
       "value": "\"UnitSDKNetworkAuthenticationInspector\""
     },
     {
       "filePath": "\/Users\/runner\/work\/unit-ios-components\/unit-ios-components\/UnitWhiteLabelBanking\/UNComponents\/Infra\/Protocols\/Layers\/UI\/UNComponentsUIViews.swift",
       "kind": "BooleanLiteral",
-      "offset": 5592,
+      "offset": 6795,
       "length": 5,
       "value": "false"
     },
     {
       "filePath": "\/Users\/runner\/work\/unit-ios-components\/unit-ios-components\/UnitWhiteLabelBanking\/UNComponents\/Infra\/Builders\/Components\/Card\/UNCardViewSettingsBuilder.swift",
       "kind": "BooleanLiteral",
-      "offset": 730,
+      "offset": 738,
       "length": 5,
       "value": "false"
     },
     {
       "filePath": "\/Users\/runner\/work\/unit-ios-components\/unit-ios-components\/UnitWhiteLabelBanking\/UNComponents\/Infra\/Builders\/Components\/Card\/UNCardViewSettingsBuilder.swift",
       "kind": "BooleanLiteral",
-      "offset": 759,
+      "offset": 775,
       "length": 5,
       "value": "false"
     },
     {
       "filePath": "\/Users\/runner\/work\/unit-ios-components\/unit-ios-components\/UnitWhiteLabelBanking\/UNComponents\/Infra\/Builders\/Components\/Card\/UNCardViewSettingsBuilder.swift",
       "kind": "BooleanLiteral",
-      "offset": 798,
+      "offset": 822,
       "length": 5,
       "value": "false"
     },
     {
       "filePath": "\/Users\/runner\/work\/unit-ios-components\/unit-ios-components\/UnitWhiteLabelBanking\/UNComponents\/Infra\/Builders\/Components\/Card\/UNCardViewSettingsBuilder.swift",
       "kind": "BooleanLiteral",
-      "offset": 836,
+      "offset": 868,
       "length": 5,
       "value": "false"
     },
     {
       "filePath": "\/Users\/runner\/work\/unit-ios-components\/unit-ios-components\/UnitWhiteLabelBanking\/UNComponents\/Infra\/Builders\/Components\/Card\/UNCardViewSettingsBuilder.swift",
       "kind": "StringLiteral",
-      "offset": 866,
+      "offset": 906,
       "length": 2,
       "value": "\"\""
     },
     {
       "filePath": "\/Users\/runner\/work\/unit-ios-components\/unit-ios-components\/UnitWhiteLabelBanking\/UNComponents\/Infra\/Builders\/Components\/Card\/UNCardViewSettingsBuilder.swift",
       "kind": "BooleanLiteral",
-      "offset": 964,
+      "offset": 1029,
       "length": 5,
       "value": "false"
     },
     {
       "filePath": "\/Users\/runner\/work\/unit-ios-components\/unit-ios-components\/UnitWhiteLabelBanking\/UNComponents\/Infra\/Builders\/Components\/Card\/UNCardViewSettingsBuilder.swift",
       "kind": "BooleanLiteral",
-      "offset": 1002,
+      "offset": 1075,
       "length": 5,
       "value": "false"
     },
     {
       "filePath": "\/Users\/runner\/work\/unit-ios-components\/unit-ios-components\/UnitWhiteLabelBanking\/UNComponents\/Models\/Internal\/UNStore.swift",
       "kind": "StringLiteral",
-      "offset": 205,
+      "offset": 204,
       "length": 27,
       "value": "\"unitVerifiedCustomerToken\""
     },
     {
       "filePath": "\/Users\/runner\/work\/unit-ios-components\/unit-ios-components\/UnitWhiteLabelBanking\/UNComponents\/Models\/Internal\/UNStore.swift",
       "kind": "StringLiteral",
-      "offset": 277,
+      "offset": 276,
       "length": 19,
       "value": "\"unitVerifiedToken\""
     },
     {
       "filePath": "\/Users\/runner\/work\/unit-ios-components\/unit-ios-components\/UnitWhiteLabelBanking\/UNComponents\/UI\/UNSnapKit\/UNConstraint.swift",
       "kind": "BooleanLiteral",
-      "offset": 8465,
+      "offset": 8448,
       "length": 5,
       "value": "false"
     },
@@ -194596,98 +194721,98 @@
     {
       "filePath": "\/Users\/runner\/work\/unit-ios-components\/unit-ios-components\/UnitWhiteLabelBanking\/UNComponents\/UI\/BottomSheetComponent\/UNBottomSheetComponent.swift",
       "kind": "IntegerLiteral",
-      "offset": 639,
+      "offset": 635,
       "length": 3,
       "value": "200"
     },
     {
       "filePath": "\/Users\/runner\/work\/unit-ios-components\/unit-ios-components\/UnitWhiteLabelBanking\/UNComponents\/UI\/BottomSheetComponent\/UNBottomSheetComponent.swift",
       "kind": "IntegerLiteral",
-      "offset": 680,
+      "offset": 676,
       "length": 3,
       "value": "200"
     },
     {
       "filePath": "\/Users\/runner\/work\/unit-ios-components\/unit-ios-components\/UnitWhiteLabelBanking\/UNComponents\/UI\/BottomSheetComponent\/UNBottomSheetComponent.swift",
       "kind": "IntegerLiteral",
-      "offset": 789,
+      "offset": 781,
       "length": 3,
       "value": "300"
     },
     {
       "filePath": "\/Users\/runner\/work\/unit-ios-components\/unit-ios-components\/UnitWhiteLabelBanking\/UNComponents\/UI\/BottomSheetComponent\/UNBottomSheetComponent.swift",
       "kind": "BooleanLiteral",
-      "offset": 1013,
+      "offset": 997,
       "length": 4,
       "value": "true"
     },
     {
       "filePath": "\/Users\/runner\/work\/unit-ios-components\/unit-ios-components\/UnitWhiteLabelBanking\/UNComponents\/UI\/BottomSheetComponent\/UNBottomSheetComponent.swift",
       "kind": "BooleanLiteral",
-      "offset": 1063,
+      "offset": 1043,
       "length": 5,
       "value": "false"
     },
     {
       "filePath": "\/Users\/runner\/work\/unit-ios-components\/unit-ios-components\/UnitWhiteLabelBanking\/UNComponents\/UI\/BottomSheetComponent\/UNBottomSheetComponent.swift",
       "kind": "IntegerLiteral",
-      "offset": 1311,
+      "offset": 1287,
       "length": 2,
       "value": "16"
     },
     {
       "filePath": "\/Users\/runner\/work\/unit-ios-components\/unit-ios-components\/UnitWhiteLabelBanking\/UNComponents\/UI\/BottomSheetComponent\/UNBottomSheetComponent.swift",
       "kind": "BooleanLiteral",
-      "offset": 1423,
+      "offset": 1399,
       "length": 4,
       "value": "true"
     },
     {
       "filePath": "\/Users\/runner\/work\/unit-ios-components\/unit-ios-components\/UnitWhiteLabelBanking\/UNComponents\/UI\/BottomSheetComponent\/UNBottomSheetComponent.swift",
       "kind": "FloatLiteral",
-      "offset": 1915,
+      "offset": 1887,
       "length": 3,
       "value": "0.6"
     },
     {
       "filePath": "\/Users\/runner\/work\/unit-ios-components\/unit-ios-components\/UnitWhiteLabelBanking\/UNComponents\/UI\/BottomSheetComponent\/UNBottomSheetComponent.swift",
       "kind": "IntegerLiteral",
-      "offset": 2042,
+      "offset": 2014,
       "length": 1,
       "value": "0"
     },
     {
       "filePath": "\/Users\/runner\/work\/unit-ios-components\/unit-ios-components\/UnitWhiteLabelBanking\/UNComponents\/UI\/BottomSheetComponent\/UNBottomSheetComponent.swift",
       "kind": "IntegerLiteral",
-      "offset": 2240,
+      "offset": 2208,
       "length": 2,
       "value": "18"
     },
     {
       "filePath": "\/Users\/runner\/work\/unit-ios-components\/unit-ios-components\/UnitWhiteLabelBanking\/UNComponents\/UI\/BottomSheetComponent\/UNBottomSheetComponent.swift",
       "kind": "BooleanLiteral",
-      "offset": 2289,
+      "offset": 2257,
       "length": 4,
       "value": "true"
     },
     {
       "filePath": "\/Users\/runner\/work\/unit-ios-components\/unit-ios-components\/UnitWhiteLabelBanking\/UNComponents\/UI\/BottomSheetComponent\/UNBottomSheetComponent.swift",
       "kind": "IntegerLiteral",
-      "offset": 2682,
+      "offset": 2642,
       "length": 2,
       "value": "16"
     },
     {
       "filePath": "\/Users\/runner\/work\/unit-ios-components\/unit-ios-components\/UnitWhiteLabelBanking\/UNComponents\/UI\/BottomSheetComponent\/UNBottomSheetComponent.swift",
       "kind": "IntegerLiteral",
-      "offset": 2718,
+      "offset": 2678,
       "length": 2,
       "value": "16"
     },
     {
       "filePath": "\/Users\/runner\/work\/unit-ios-components\/unit-ios-components\/UnitWhiteLabelBanking\/UNComponents\/UI\/BottomSheetComponent\/UNBottomSheetComponent.swift",
       "kind": "StringLiteral",
-      "offset": 2881,
+      "offset": 2837,
       "length": 17,
       "value": "\"un_close_button\""
     },
@@ -194715,21 +194840,21 @@
     {
       "filePath": "\/Users\/runner\/work\/unit-ios-components\/unit-ios-components\/UnitWhiteLabelBanking\/UNComponents\/UI\/UNSnapKit\/UNConstraintDescription.swift",
       "kind": "FloatLiteral",
-      "offset": 492,
+      "offset": 491,
       "length": 3,
       "value": "1.0"
     },
     {
       "filePath": "\/Users\/runner\/work\/unit-ios-components\/unit-ios-components\/UnitWhiteLabelBanking\/UNComponents\/UI\/UNSnapKit\/UNConstraintDescription.swift",
       "kind": "FloatLiteral",
-      "offset": 543,
+      "offset": 542,
       "length": 3,
       "value": "0.0"
     },
     {
       "filePath": "\/Users\/runner\/work\/unit-ios-components\/unit-ios-components\/UnitWhiteLabelBanking\/UNComponents\/UI\/UNSnapKit\/UNConstraintDescription.swift",
       "kind": "FloatLiteral",
-      "offset": 594,
+      "offset": 593,
       "length": 6,
       "value": "1000.0"
     },
@@ -194848,77 +194973,77 @@
     {
       "filePath": "\/Users\/runner\/work\/unit-ios-components\/unit-ios-components\/UnitWhiteLabelBanking\/UNComponents\/Network\/Infrastructure\/UNNetworkReachabilityManager.swift",
       "kind": "StringLiteral",
-      "offset": 2917,
+      "offset": 2960,
       "length": 33,
       "value": "\"UnitSDKNetworkReachabilityQueue\""
     },
     {
       "filePath": "\/Users\/runner\/work\/unit-ios-components\/unit-ios-components\/UnitWhiteLabelBanking\/UNComponents\/UI\/UNSnapKit\/UNConstraintDSL.swift",
       "kind": "IntegerLiteral",
-      "offset": 322,
+      "offset": 318,
       "length": 1,
       "value": "0"
     },
     {
       "filePath": "\/Users\/runner\/work\/unit-ios-components\/unit-ios-components\/UnitWhiteLabelBanking\/UNComponents\/Network\/Infrastructure\/UNNetworkURLEncodedFormEncoder.swift",
       "kind": "BooleanLiteral",
-      "offset": 14852,
+      "offset": 14885,
       "length": 4,
       "value": "true"
     },
     {
       "filePath": "\/Users\/runner\/work\/unit-ios-components\/unit-ios-components\/UnitWhiteLabelBanking\/UNComponents\/Network\/Infrastructure\/UNNetworkURLEncodedFormEncoder.swift",
       "kind": "Array",
-      "offset": 18300,
+      "offset": 18333,
       "length": 2,
       "value": "[]"
     },
     {
       "filePath": "\/Users\/runner\/work\/unit-ios-components\/unit-ios-components\/UnitWhiteLabelBanking\/UNComponents\/Network\/Infrastructure\/UNNetworkURLEncodedFormEncoder.swift",
       "kind": "BooleanLiteral",
-      "offset": 28754,
+      "offset": 28787,
       "length": 4,
       "value": "true"
     },
     {
       "filePath": "\/Users\/runner\/work\/unit-ios-components\/unit-ios-components\/UnitWhiteLabelBanking\/UNComponents\/Network\/Infrastructure\/UNNetworkURLEncodedFormEncoder.swift",
       "kind": "IntegerLiteral",
-      "offset": 33592,
+      "offset": 33625,
       "length": 1,
       "value": "0"
     },
     {
       "filePath": "\/Users\/runner\/work\/unit-ios-components\/unit-ios-components\/UnitWhiteLabelBanking\/UNComponents\/Network\/Infrastructure\/UNNetworkURLEncodedFormEncoder.swift",
       "kind": "StringLiteral",
-      "offset": 41125,
+      "offset": 41158,
       "length": 7,
       "value": "\":#[]@\""
     },
     {
       "filePath": "\/Users\/runner\/work\/unit-ios-components\/unit-ios-components\/UnitWhiteLabelBanking\/UNComponents\/Network\/Infrastructure\/UNNetworkURLEncodedFormEncoder.swift",
       "kind": "StringLiteral",
-      "offset": 41230,
+      "offset": 41263,
       "length": 13,
       "value": "\"!$&'()*+,;=\""
     },
     {
       "filePath": "\/Users\/runner\/work\/unit-ios-components\/unit-ios-components\/UnitWhiteLabelBanking\/UNComponents\/Network\/Infrastructure\/UNNetworkURLEncodedFormEncoder.swift",
       "kind": "StringLiteral",
-      "offset": 41305,
+      "offset": 41338,
       "length": 54,
       "value": "\"\""
     },
     {
       "filePath": "\/Users\/runner\/work\/unit-ios-components\/unit-ios-components\/UnitWhiteLabelBanking\/UNComponents\/Network\/Infrastructure\/UNNetworkURLEncodedFormEncoder.swift",
       "kind": "StringLiteral",
-      "offset": 41334,
+      "offset": 41367,
       "length": 1,
       "value": "\"\""
     },
     {
       "filePath": "\/Users\/runner\/work\/unit-ios-components\/unit-ios-components\/UnitWhiteLabelBanking\/UNComponents\/Network\/Infrastructure\/UNNetworkURLEncodedFormEncoder.swift",
       "kind": "StringLiteral",
-      "offset": 41358,
+      "offset": 41391,
       "length": 2,
       "value": "\"\""
     },
@@ -195156,35 +195281,35 @@
     {
       "filePath": "\/Users\/runner\/work\/unit-ios-components\/unit-ios-components\/UnitWhiteLabelBanking\/UNComponents\/Infra\/Builders\/Components\/Activity\/UNActivityViewSettingBuilder.swift",
       "kind": "BooleanLiteral",
-      "offset": 681,
+      "offset": 677,
       "length": 5,
       "value": "false"
     },
     {
       "filePath": "\/Users\/runner\/work\/unit-ios-components\/unit-ios-components\/UnitWhiteLabelBanking\/UNComponents\/Infra\/Builders\/Components\/Activity\/UNActivityViewSettingBuilder.swift",
       "kind": "BooleanLiteral",
-      "offset": 856,
+      "offset": 852,
       "length": 5,
       "value": "false"
     },
     {
       "filePath": "\/Users\/runner\/work\/unit-ios-components\/unit-ios-components\/UnitWhiteLabelBanking\/UNComponents\/Infra\/Builders\/Components\/Activity\/UNActivityViewSettingBuilder.swift",
       "kind": "BooleanLiteral",
-      "offset": 901,
+      "offset": 897,
       "length": 5,
       "value": "false"
     },
     {
       "filePath": "\/Users\/runner\/work\/unit-ios-components\/unit-ios-components\/UnitWhiteLabelBanking\/UNComponents\/Infra\/Builders\/Components\/Activity\/UNActivityViewSettingBuilder.swift",
       "kind": "BooleanLiteral",
-      "offset": 997,
+      "offset": 993,
       "length": 5,
       "value": "false"
     },
     {
       "filePath": "\/Users\/runner\/work\/unit-ios-components\/unit-ios-components\/UnitWhiteLabelBanking\/UNComponents\/Infra\/Builders\/Components\/Activity\/UNActivityViewSettingBuilder.swift",
       "kind": "BooleanLiteral",
-      "offset": 1044,
+      "offset": 1040,
       "length": 5,
       "value": "false"
     },
@@ -195268,14 +195393,14 @@
     {
       "filePath": "\/Users\/runner\/work\/unit-ios-components\/unit-ios-components\/UnitWhiteLabelBanking\/UNComponents\/UI\/Components\/BookPayment\/UNBookPaymentComponent.swift",
       "kind": "Dictionary",
-      "offset": 1037,
+      "offset": 1025,
       "length": 3,
       "value": "[]"
     },
     {
       "filePath": "\/Users\/runner\/work\/unit-ios-components\/unit-ios-components\/UnitWhiteLabelBanking\/UNComponents\/UI\/Components\/BookPayment\/UNBookPaymentComponent.swift",
       "kind": "FloatLiteral",
-      "offset": 1081,
+      "offset": 1069,
       "length": 3,
       "value": "0.0"
     },
@@ -195289,189 +195414,189 @@
     {
       "filePath": "\/Users\/runner\/work\/unit-ios-components\/unit-ios-components\/UnitWhiteLabelBanking\/UNComponents\/UI\/UNSnapKit\/Debugging.swift",
       "kind": "StringLiteral",
-      "offset": 422,
+      "offset": 406,
       "length": 37,
       "value": "\" \""
     },
     {
       "filePath": "\/Users\/runner\/work\/unit-ios-components\/unit-ios-components\/UnitWhiteLabelBanking\/UNComponents\/UI\/UNSnapKit\/Debugging.swift",
       "kind": "StringLiteral",
-      "offset": 458,
+      "offset": 442,
       "length": 1,
       "value": "\"\""
     },
     {
       "filePath": "\/Users\/runner\/work\/unit-ios-components\/unit-ios-components\/UnitWhiteLabelBanking\/UNComponents\/UI\/UNSnapKit\/Debugging.swift",
       "kind": "StringLiteral",
-      "offset": 558,
+      "offset": 534,
       "length": 50,
       "value": "\".\""
     },
     {
       "filePath": "\/Users\/runner\/work\/unit-ios-components\/unit-ios-components\/UnitWhiteLabelBanking\/UNComponents\/UI\/UNSnapKit\/Debugging.swift",
       "kind": "StringLiteral",
-      "offset": 607,
+      "offset": 583,
       "length": 1,
       "value": "\"\""
     },
     {
       "filePath": "\/Users\/runner\/work\/unit-ios-components\/unit-ios-components\/UnitWhiteLabelBanking\/UNComponents\/UI\/UNSnapKit\/Debugging.swift",
       "kind": "StringLiteral",
-      "offset": 651,
+      "offset": 619,
       "length": 43,
       "value": "\" \""
     },
     {
       "filePath": "\/Users\/runner\/work\/unit-ios-components\/unit-ios-components\/UnitWhiteLabelBanking\/UNComponents\/UI\/UNSnapKit\/Debugging.swift",
       "kind": "StringLiteral",
-      "offset": 693,
+      "offset": 661,
       "length": 1,
       "value": "\"\""
     },
     {
       "filePath": "\/Users\/runner\/work\/unit-ios-components\/unit-ios-components\/UnitWhiteLabelBanking\/UNComponents\/UI\/UNSnapKit\/Debugging.swift",
       "kind": "StringLiteral",
-      "offset": 777,
+      "offset": 737,
       "length": 38,
       "value": "\" \""
     },
     {
       "filePath": "\/Users\/runner\/work\/unit-ios-components\/unit-ios-components\/UnitWhiteLabelBanking\/UNComponents\/UI\/UNSnapKit\/Debugging.swift",
       "kind": "StringLiteral",
-      "offset": 814,
+      "offset": 774,
       "length": 1,
       "value": "\"\""
     },
     {
       "filePath": "\/Users\/runner\/work\/unit-ios-components\/unit-ios-components\/UnitWhiteLabelBanking\/UNComponents\/UI\/UNSnapKit\/Debugging.swift",
       "kind": "StringLiteral",
-      "offset": 915,
+      "offset": 867,
       "length": 51,
       "value": "\".\""
     },
     {
       "filePath": "\/Users\/runner\/work\/unit-ios-components\/unit-ios-components\/UnitWhiteLabelBanking\/UNComponents\/UI\/UNSnapKit\/Debugging.swift",
       "kind": "StringLiteral",
-      "offset": 965,
+      "offset": 917,
       "length": 1,
       "value": "\"\""
     },
     {
       "filePath": "\/Users\/runner\/work\/unit-ios-components\/unit-ios-components\/UnitWhiteLabelBanking\/UNComponents\/UI\/UNSnapKit\/Debugging.swift",
       "kind": "FloatLiteral",
-      "offset": 1016,
+      "offset": 960,
       "length": 3,
       "value": "1.0"
     },
     {
       "filePath": "\/Users\/runner\/work\/unit-ios-components\/unit-ios-components\/UnitWhiteLabelBanking\/UNComponents\/UI\/UNSnapKit\/Debugging.swift",
       "kind": "StringLiteral",
-      "offset": 1049,
+      "offset": 993,
       "length": 23,
       "value": "\" * \""
     },
     {
       "filePath": "\/Users\/runner\/work\/unit-ios-components\/unit-ios-components\/UnitWhiteLabelBanking\/UNComponents\/UI\/UNSnapKit\/Debugging.swift",
       "kind": "StringLiteral",
-      "offset": 1071,
+      "offset": 1015,
       "length": 1,
       "value": "\"\""
     },
     {
       "filePath": "\/Users\/runner\/work\/unit-ios-components\/unit-ios-components\/UnitWhiteLabelBanking\/UNComponents\/UI\/UNSnapKit\/Debugging.swift",
       "kind": "StringLiteral",
-      "offset": 1172,
+      "offset": 1108,
       "length": 19,
       "value": "\" \""
     },
     {
       "filePath": "\/Users\/runner\/work\/unit-ios-components\/unit-ios-components\/UnitWhiteLabelBanking\/UNComponents\/UI\/UNSnapKit\/Debugging.swift",
       "kind": "StringLiteral",
-      "offset": 1190,
+      "offset": 1126,
       "length": 1,
       "value": "\"\""
     },
     {
       "filePath": "\/Users\/runner\/work\/unit-ios-components\/unit-ios-components\/UnitWhiteLabelBanking\/UNComponents\/UI\/UNSnapKit\/Debugging.swift",
       "kind": "FloatLiteral",
-      "offset": 1240,
+      "offset": 1176,
       "length": 3,
       "value": "0.0"
     },
     {
       "filePath": "\/Users\/runner\/work\/unit-ios-components\/unit-ios-components\/UnitWhiteLabelBanking\/UNComponents\/UI\/UNSnapKit\/Debugging.swift",
       "kind": "StringLiteral",
-      "offset": 1277,
+      "offset": 1213,
       "length": 21,
       "value": "\" + \""
     },
     {
       "filePath": "\/Users\/runner\/work\/unit-ios-components\/unit-ios-components\/UnitWhiteLabelBanking\/UNComponents\/UI\/UNSnapKit\/Debugging.swift",
       "kind": "StringLiteral",
-      "offset": 1297,
+      "offset": 1233,
       "length": 1,
       "value": "\"\""
     },
     {
       "filePath": "\/Users\/runner\/work\/unit-ios-components\/unit-ios-components\/UnitWhiteLabelBanking\/UNComponents\/UI\/UNSnapKit\/Debugging.swift",
       "kind": "FloatLiteral",
-      "offset": 1337,
+      "offset": 1273,
       "length": 3,
       "value": "0.0"
     },
     {
       "filePath": "\/Users\/runner\/work\/unit-ios-components\/unit-ios-components\/UnitWhiteLabelBanking\/UNComponents\/UI\/UNSnapKit\/Debugging.swift",
       "kind": "StringLiteral",
-      "offset": 1374,
+      "offset": 1310,
       "length": 26,
       "value": "\" - \""
     },
     {
       "filePath": "\/Users\/runner\/work\/unit-ios-components\/unit-ios-components\/UnitWhiteLabelBanking\/UNComponents\/UI\/UNSnapKit\/Debugging.swift",
       "kind": "StringLiteral",
-      "offset": 1399,
+      "offset": 1335,
       "length": 1,
       "value": "\"\""
     },
     {
       "filePath": "\/Users\/runner\/work\/unit-ios-components\/unit-ios-components\/UnitWhiteLabelBanking\/UNComponents\/UI\/UNSnapKit\/Debugging.swift",
       "kind": "FloatLiteral",
-      "offset": 1471,
+      "offset": 1399,
       "length": 6,
       "value": "1000.0"
     },
     {
       "filePath": "\/Users\/runner\/work\/unit-ios-components\/unit-ios-components\/UnitWhiteLabelBanking\/UNComponents\/UI\/UNSnapKit\/Debugging.swift",
       "kind": "StringLiteral",
-      "offset": 1507,
+      "offset": 1435,
       "length": 20,
       "value": "\" ^\""
     },
     {
       "filePath": "\/Users\/runner\/work\/unit-ios-components\/unit-ios-components\/UnitWhiteLabelBanking\/UNComponents\/UI\/UNSnapKit\/Debugging.swift",
       "kind": "StringLiteral",
-      "offset": 1526,
+      "offset": 1454,
       "length": 1,
       "value": "\"\""
     },
     {
       "filePath": "\/Users\/runner\/work\/unit-ios-components\/unit-ios-components\/UnitWhiteLabelBanking\/UNComponents\/UI\/UNSnapKit\/Debugging.swift",
       "kind": "StringLiteral",
-      "offset": 1570,
+      "offset": 1490,
       "length": 3,
       "value": "\">\""
     },
     {
       "filePath": "\/Users\/runner\/work\/unit-ios-components\/unit-ios-components\/UnitWhiteLabelBanking\/UNComponents\/Network\/UNNetworkAPI.swift",
       "kind": "StringLiteral",
-      "offset": 759,
+      "offset": 755,
       "length": 19,
       "value": "\"UNSDKNetworkQueue\""
     },
     {
       "filePath": "\/Users\/runner\/work\/unit-ios-components\/unit-ios-components\/UnitWhiteLabelBanking\/UNComponents\/UI\/UNSnapKit\/UNLayoutConstraintItem.swift",
       "kind": "IntegerLiteral",
-      "offset": 357,
+      "offset": 355,
       "length": 1,
       "value": "0"
     },
@@ -195485,1085 +195610,1085 @@
     {
       "filePath": "\/Users\/runner\/work\/unit-ios-components\/unit-ios-components\/UnitWhiteLabelBanking\/UNComponents\/Services\/UNBottomSheetService.swift",
       "kind": "FloatLiteral",
-      "offset": 944,
+      "offset": 940,
       "length": 4,
       "value": "0.33"
     },
     {
       "filePath": "\/Users\/runner\/work\/unit-ios-components\/unit-ios-components\/UnitWhiteLabelBanking\/UNComponents\/Services\/UNBottomSheetService.swift",
       "kind": "FloatLiteral",
-      "offset": 1078,
+      "offset": 1074,
       "length": 4,
       "value": "72.0"
     },
     {
       "filePath": "\/Users\/runner\/work\/unit-ios-components\/unit-ios-components\/UnitWhiteLabelBanking\/UNComponents\/Services\/UNBottomSheetService.swift",
       "kind": "IntegerLiteral",
-      "offset": 1268,
+      "offset": 1264,
       "length": 1,
       "value": "0"
     },
     {
       "filePath": "\/Users\/runner\/work\/unit-ios-components\/unit-ios-components\/UnitWhiteLabelBanking\/UNComponents\/Services\/UNBottomSheetService.swift",
       "kind": "BooleanLiteral",
-      "offset": 1652,
+      "offset": 1648,
       "length": 5,
       "value": "false"
     },
     {
       "filePath": "\/Users\/runner\/work\/unit-ios-components\/unit-ios-components\/UnitWhiteLabelBanking\/UNComponents\/Services\/UNBottomSheetService.swift",
       "kind": "BooleanLiteral",
-      "offset": 1703,
+      "offset": 1695,
       "length": 4,
       "value": "true"
     },
     {
       "filePath": "\/Users\/runner\/work\/unit-ios-components\/unit-ios-components\/UnitWhiteLabelBanking\/UNComponents\/Services\/UNBottomSheetService.swift",
       "kind": "StringLiteral",
-      "offset": 1899,
+      "offset": 1891,
       "length": 80,
       "value": "\"    document.getElementById('\""
     },
     {
       "filePath": "\/Users\/runner\/work\/unit-ios-components\/unit-ios-components\/UnitWhiteLabelBanking\/UNComponents\/Services\/UNBottomSheetService.swift",
       "kind": "StringLiteral",
-      "offset": 1948,
+      "offset": 1940,
       "length": 23,
       "value": "\"').style.height = null;\""
     },
     {
       "filePath": "\/Users\/runner\/work\/unit-ios-components\/unit-ios-components\/UnitWhiteLabelBanking\/UNComponents\/Services\/UNBottomSheetService.swift",
       "kind": "FloatLiteral",
-      "offset": 2041,
+      "offset": 2033,
       "length": 3,
       "value": "0.9"
     },
     {
       "filePath": "\/Users\/runner\/work\/unit-ios-components\/unit-ios-components\/UnitWhiteLabelBanking\/UNComponents\/UI\/Components\/Card\/UNCardComponent.swift",
       "kind": "FloatLiteral",
-      "offset": 491,
+      "offset": 483,
       "length": 3,
       "value": "0.0"
     },
     {
       "filePath": "\/Users\/runner\/work\/unit-ios-components\/unit-ios-components\/UnitWhiteLabelBanking\/UNComponents\/UI\/Components\/Card\/UNCardComponent.swift",
       "kind": "StringLiteral",
-      "offset": 636,
+      "offset": 628,
       "length": 9,
       "value": "\"card-id\""
     },
     {
       "filePath": "\/Users\/runner\/work\/unit-ios-components\/unit-ios-components\/UnitWhiteLabelBanking\/UNComponents\/UI\/Components\/Card\/UNCardComponent.swift",
       "kind": "StringLiteral",
-      "offset": 689,
+      "offset": 681,
       "length": 26,
       "value": "\"hide-actions-menu-button\""
     },
     {
       "filePath": "\/Users\/runner\/work\/unit-ios-components\/unit-ios-components\/UnitWhiteLabelBanking\/UNComponents\/UI\/Components\/Card\/UNCardComponent.swift",
       "kind": "StringLiteral",
-      "offset": 751,
+      "offset": 743,
       "length": 17,
       "value": "\"hide-card-title\""
     },
     {
       "filePath": "\/Users\/runner\/work\/unit-ios-components\/unit-ios-components\/UnitWhiteLabelBanking\/UNComponents\/UI\/Components\/Card\/UNCardComponent.swift",
       "kind": "StringLiteral",
-      "offset": 814,
+      "offset": 806,
       "length": 28,
       "value": "\"hide-sensitive-data-button\""
     },
     {
       "filePath": "\/Users\/runner\/work\/unit-ios-components\/unit-ios-components\/UnitWhiteLabelBanking\/UNComponents\/UI\/Components\/Card\/UNCardComponent.swift",
       "kind": "StringLiteral",
-      "offset": 887,
+      "offset": 879,
       "length": 22,
       "value": "\"enable-mobile-wallet\""
     },
     {
       "filePath": "\/Users\/runner\/work\/unit-ios-components\/unit-ios-components\/UnitWhiteLabelBanking\/UNComponents\/UI\/Components\/Card\/UNCardComponent.swift",
       "kind": "StringLiteral",
-      "offset": 943,
+      "offset": 935,
       "length": 16,
       "value": "\"learn-more-url\""
     },
     {
       "filePath": "\/Users\/runner\/work\/unit-ios-components\/unit-ios-components\/UnitWhiteLabelBanking\/UNComponents\/UI\/Components\/Card\/UNCardComponent.swift",
       "kind": "StringLiteral",
-      "offset": 991,
+      "offset": 983,
       "length": 12,
       "value": "\"menu-items\""
     },
     {
       "filePath": "\/Users\/runner\/work\/unit-ios-components\/unit-ios-components\/UnitWhiteLabelBanking\/UNComponents\/UI\/Components\/Card\/UNCardComponent.swift",
       "kind": "StringLiteral",
-      "offset": 1029,
+      "offset": 1021,
       "length": 5,
       "value": "\"fee\""
     },
     {
       "filePath": "\/Users\/runner\/work\/unit-ios-components\/unit-ios-components\/UnitWhiteLabelBanking\/UNComponents\/UI\/Components\/Card\/UNCardComponent.swift",
       "kind": "StringLiteral",
-      "offset": 1077,
+      "offset": 1069,
       "length": 25,
       "value": "\"show-card-type-subtitle\""
     },
     {
       "filePath": "\/Users\/runner\/work\/unit-ios-components\/unit-ios-components\/UnitWhiteLabelBanking\/UNComponents\/UI\/Components\/Card\/UNCardComponent.swift",
       "kind": "StringLiteral",
-      "offset": 1147,
+      "offset": 1139,
       "length": 27,
       "value": "\"show-card-holder-subtitle\""
     },
     {
       "filePath": "\/Users\/runner\/work\/unit-ios-components\/unit-ios-components\/UnitWhiteLabelBanking\/UNComponents\/UI\/Components\/WhiteLabelApp\/UNWhiteLabelAppComponent.swift",
       "kind": "StringLiteral",
-      "offset": 541,
+      "offset": 537,
       "length": 11,
       "value": "\"jwt-token\""
     },
     {
       "filePath": "\/Users\/runner\/work\/unit-ios-components\/unit-ios-components\/UnitWhiteLabelBanking\/UNComponents\/UI\/Components\/WhiteLabelApp\/UNWhiteLabelAppComponent.swift",
       "kind": "StringLiteral",
-      "offset": 588,
+      "offset": 584,
       "length": 16,
       "value": "\"customer-token\""
     },
     {
       "filePath": "\/Users\/runner\/work\/unit-ios-components\/unit-ios-components\/UnitWhiteLabelBanking\/UNComponents\/Models\/Shared\/Account\/UNAccount.swift",
       "kind": "StringLiteral",
-      "offset": 6466,
+      "offset": 6458,
       "length": 7,
       "value": "\"Fraud\""
     },
     {
       "filePath": "\/Users\/runner\/work\/unit-ios-components\/unit-ios-components\/UnitWhiteLabelBanking\/UNComponents\/Models\/Shared\/Account\/UNAccount.swift",
       "kind": "StringLiteral",
-      "offset": 6496,
+      "offset": 6488,
       "length": 12,
       "value": "\"ByCustomer\""
     },
     {
       "filePath": "\/Users\/runner\/work\/unit-ios-components\/unit-ios-components\/UnitWhiteLabelBanking\/UNComponents\/Models\/Shared\/Account\/UNAccount.swift",
       "kind": "StringLiteral",
-      "offset": 6580,
+      "offset": 6572,
       "length": 13,
       "value": "\"ACHActivity\""
     },
     {
       "filePath": "\/Users\/runner\/work\/unit-ios-components\/unit-ios-components\/UnitWhiteLabelBanking\/UNComponents\/Models\/Shared\/Account\/UNAccount.swift",
       "kind": "StringLiteral",
-      "offset": 6618,
+      "offset": 6610,
       "length": 14,
       "value": "\"CardActivity\""
     },
     {
       "filePath": "\/Users\/runner\/work\/unit-ios-components\/unit-ios-components\/UnitWhiteLabelBanking\/UNComponents\/Models\/Shared\/Account\/UNAccount.swift",
       "kind": "StringLiteral",
-      "offset": 6658,
+      "offset": 6650,
       "length": 15,
       "value": "\"CheckActivity\""
     },
     {
       "filePath": "\/Users\/runner\/work\/unit-ios-components\/unit-ios-components\/UnitWhiteLabelBanking\/UNComponents\/Models\/Shared\/Account\/UNAccount.swift",
       "kind": "StringLiteral",
-      "offset": 6704,
+      "offset": 6696,
       "length": 20,
       "value": "\"ApplicationHistory\""
     },
     {
       "filePath": "\/Users\/runner\/work\/unit-ios-components\/unit-ios-components\/UnitWhiteLabelBanking\/UNComponents\/Models\/Shared\/Account\/UNAccount.swift",
       "kind": "StringLiteral",
-      "offset": 6752,
+      "offset": 6744,
       "length": 17,
       "value": "\"AccountActivity\""
     },
     {
       "filePath": "\/Users\/runner\/work\/unit-ios-components\/unit-ios-components\/UnitWhiteLabelBanking\/UNComponents\/Models\/Shared\/Account\/UNAccount.swift",
       "kind": "StringLiteral",
-      "offset": 6798,
+      "offset": 6790,
       "length": 18,
       "value": "\"ClientIdentified\""
     },
     {
       "filePath": "\/Users\/runner\/work\/unit-ios-components\/unit-ios-components\/UnitWhiteLabelBanking\/UNComponents\/Models\/Shared\/Account\/UNAccount.swift",
       "kind": "StringLiteral",
-      "offset": 6842,
+      "offset": 6834,
       "length": 15,
       "value": "\"IdentityTheft\""
     },
     {
       "filePath": "\/Users\/runner\/work\/unit-ios-components\/unit-ios-components\/UnitWhiteLabelBanking\/UNComponents\/Models\/Shared\/Account\/UNAccount.swift",
       "kind": "StringLiteral",
-      "offset": 6896,
+      "offset": 6888,
       "length": 28,
       "value": "\"LinkedToFraudulentCustomer\""
     },
     {
       "filePath": "\/Users\/runner\/work\/unit-ios-components\/unit-ios-components\/UnitWhiteLabelBanking\/UNComponents\/Models\/Shared\/Account\/UNAccount.swift",
       "kind": "StringLiteral",
-      "offset": 6993,
+      "offset": 6985,
       "length": 8,
       "value": "\"Closed\""
     },
     {
       "filePath": "\/Users\/runner\/work\/unit-ios-components\/unit-ios-components\/UnitWhiteLabelBanking\/UNComponents\/Models\/Shared\/Account\/UNAccount.swift",
       "kind": "StringLiteral",
-      "offset": 7018,
+      "offset": 7010,
       "length": 6,
       "value": "\"Open\""
     },
     {
       "filePath": "\/Users\/runner\/work\/unit-ios-components\/unit-ios-components\/UnitWhiteLabelBanking\/UNComponents\/Models\/Shared\/Account\/UNAccount.swift",
       "kind": "StringLiteral",
-      "offset": 7043,
+      "offset": 7035,
       "length": 8,
       "value": "\"Frozen\""
     },
     {
       "filePath": "\/Users\/runner\/work\/unit-ios-components\/unit-ios-components\/UnitWhiteLabelBanking\/UNComponents\/Infra\/Builders\/Components\/BookPayment\/UNBookPaymentViewSettingsBuilder.swift",
       "kind": "BooleanLiteral",
-      "offset": 409,
+      "offset": 408,
       "length": 5,
       "value": "false"
     },
     {
       "filePath": "\/Users\/runner\/work\/unit-ios-components\/unit-ios-components\/UnitWhiteLabelBanking\/UNComponents\/Infra\/Builders\/Components\/BookPayment\/UNBookPaymentViewSettingsBuilder.swift",
       "kind": "BooleanLiteral",
-      "offset": 447,
+      "offset": 446,
       "length": 5,
       "value": "false"
     },
     {
       "filePath": "\/Users\/runner\/work\/unit-ios-components\/unit-ios-components\/UnitWhiteLabelBanking\/UNComponents\/Infra\/Builders\/Components\/BookPayment\/UNBookPaymentViewSettingsBuilder.swift",
       "kind": "BooleanLiteral",
-      "offset": 483,
+      "offset": 482,
       "length": 5,
       "value": "false"
     },
     {
       "filePath": "\/Users\/runner\/work\/unit-ios-components\/unit-ios-components\/UnitWhiteLabelBanking\/UNComponents\/Network\/Infrastructure\/UNNetworkRequest.swift",
       "kind": "Array",
-      "offset": 4219,
+      "offset": 4286,
       "length": 2,
       "value": "[]"
     },
     {
       "filePath": "\/Users\/runner\/work\/unit-ios-components\/unit-ios-components\/UnitWhiteLabelBanking\/UNComponents\/Network\/Infrastructure\/UNNetworkRequest.swift",
       "kind": "Array",
-      "offset": 4388,
+      "offset": 4455,
       "length": 2,
       "value": "[]"
     },
     {
       "filePath": "\/Users\/runner\/work\/unit-ios-components\/unit-ios-components\/UnitWhiteLabelBanking\/UNComponents\/Network\/Infrastructure\/UNNetworkRequest.swift",
       "kind": "BooleanLiteral",
-      "offset": 4506,
+      "offset": 4573,
       "length": 5,
       "value": "false"
     },
     {
       "filePath": "\/Users\/runner\/work\/unit-ios-components\/unit-ios-components\/UnitWhiteLabelBanking\/UNComponents\/Network\/Infrastructure\/UNNetworkRequest.swift",
       "kind": "Array",
-      "offset": 4731,
+      "offset": 4798,
       "length": 2,
       "value": "[]"
     },
     {
       "filePath": "\/Users\/runner\/work\/unit-ios-components\/unit-ios-components\/UnitWhiteLabelBanking\/UNComponents\/Network\/Infrastructure\/UNNetworkRequest.swift",
       "kind": "Array",
-      "offset": 4855,
+      "offset": 4922,
       "length": 2,
       "value": "[]"
     },
     {
       "filePath": "\/Users\/runner\/work\/unit-ios-components\/unit-ios-components\/UnitWhiteLabelBanking\/UNComponents\/Network\/Infrastructure\/UNNetworkRequest.swift",
       "kind": "Array",
-      "offset": 5065,
+      "offset": 5132,
       "length": 2,
       "value": "[]"
     },
     {
       "filePath": "\/Users\/runner\/work\/unit-ios-components\/unit-ios-components\/UnitWhiteLabelBanking\/UNComponents\/Network\/Infrastructure\/UNNetworkRequest.swift",
       "kind": "IntegerLiteral",
-      "offset": 5166,
+      "offset": 5233,
       "length": 1,
       "value": "0"
     },
     {
       "filePath": "\/Users\/runner\/work\/unit-ios-components\/unit-ios-components\/UnitWhiteLabelBanking\/UNComponents\/Network\/Infrastructure\/UNNetworkRequest.swift",
       "kind": "BooleanLiteral",
-      "offset": 5530,
+      "offset": 5597,
       "length": 5,
       "value": "false"
     },
     {
       "filePath": "\/Users\/runner\/work\/unit-ios-components\/unit-ios-components\/UnitWhiteLabelBanking\/UNComponents\/Network\/Infrastructure\/UNNetworkRequest.swift",
       "kind": "Array",
-      "offset": 5663,
+      "offset": 5730,
       "length": 2,
       "value": "[]"
     },
     {
       "filePath": "\/Users\/runner\/work\/unit-ios-components\/unit-ios-components\/UnitWhiteLabelBanking\/UNComponents\/Network\/Infrastructure\/UNNetworkRequest.swift",
       "kind": "IntegerLiteral",
-      "offset": 6735,
+      "offset": 6802,
       "length": 1,
       "value": "0"
     },
     {
       "filePath": "\/Users\/runner\/work\/unit-ios-components\/unit-ios-components\/UnitWhiteLabelBanking\/UNComponents\/Network\/Infrastructure\/UNNetworkRequest.swift",
       "kind": "IntegerLiteral",
-      "offset": 6889,
+      "offset": 6956,
       "length": 1,
       "value": "0"
     },
     {
       "filePath": "\/Users\/runner\/work\/unit-ios-components\/unit-ios-components\/UnitWhiteLabelBanking\/UNComponents\/Network\/Infrastructure\/UNNetworkRequest.swift",
       "kind": "Array",
-      "offset": 8538,
+      "offset": 8605,
       "length": 2,
       "value": "[]"
     },
     {
       "filePath": "\/Users\/runner\/work\/unit-ios-components\/unit-ios-components\/UnitWhiteLabelBanking\/UNComponents\/Network\/Infrastructure\/UNNetworkRequest.swift",
       "kind": "StringLiteral",
-      "offset": 38422,
+      "offset": 38489,
       "length": 37,
       "value": "\"$ curl command could not be created\""
     },
     {
       "filePath": "\/Users\/runner\/work\/unit-ios-components\/unit-ios-components\/UnitWhiteLabelBanking\/UNComponents\/Network\/Infrastructure\/UNNetworkRequest.swift",
       "kind": "Array",
-      "offset": 38488,
+      "offset": 38555,
       "length": 13,
       "value": "[\"$ curl -v\"]"
     },
     {
       "filePath": "\/Users\/runner\/work\/unit-ios-components\/unit-ios-components\/UnitWhiteLabelBanking\/UNComponents\/Network\/Infrastructure\/UNNetworkRequest.swift",
       "kind": "StringLiteral",
-      "offset": 38529,
+      "offset": 38596,
       "length": 14,
       "value": "\"-X \""
     },
     {
       "filePath": "\/Users\/runner\/work\/unit-ios-components\/unit-ios-components\/UnitWhiteLabelBanking\/UNComponents\/Network\/Infrastructure\/UNNetworkRequest.swift",
       "kind": "StringLiteral",
-      "offset": 38542,
+      "offset": 38609,
       "length": 2,
       "value": "\"\""
     },
     {
       "filePath": "\/Users\/runner\/work\/unit-ios-components\/unit-ios-components\/UnitWhiteLabelBanking\/UNComponents\/Network\/Infrastructure\/UNNetworkRequest.swift",
       "kind": "IntegerLiteral",
-      "offset": 38771,
+      "offset": 38838,
       "length": 1,
       "value": "0"
     },
     {
       "filePath": "\/Users\/runner\/work\/unit-ios-components\/unit-ios-components\/UnitWhiteLabelBanking\/UNComponents\/Network\/Infrastructure\/UNNetworkRequest.swift",
       "kind": "StringLiteral",
-      "offset": 39315,
+      "offset": 39382,
       "length": 24,
       "value": "\"-u \""
     },
     {
       "filePath": "\/Users\/runner\/work\/unit-ios-components\/unit-ios-components\/UnitWhiteLabelBanking\/UNComponents\/Network\/Infrastructure\/UNNetworkRequest.swift",
       "kind": "StringLiteral",
-      "offset": 39326,
+      "offset": 39393,
       "length": 1,
       "value": "\":\""
     },
     {
       "filePath": "\/Users\/runner\/work\/unit-ios-components\/unit-ios-components\/UnitWhiteLabelBanking\/UNComponents\/Network\/Infrastructure\/UNNetworkRequest.swift",
       "kind": "StringLiteral",
-      "offset": 39338,
+      "offset": 39405,
       "length": 2,
       "value": "\"\""
     },
     {
       "filePath": "\/Users\/runner\/work\/unit-ios-components\/unit-ios-components\/UnitWhiteLabelBanking\/UNComponents\/Network\/Infrastructure\/UNNetworkRequest.swift",
       "kind": "StringLiteral",
-      "offset": 39531,
+      "offset": 39598,
       "length": 24,
       "value": "\"-u \""
     },
     {
       "filePath": "\/Users\/runner\/work\/unit-ios-components\/unit-ios-components\/UnitWhiteLabelBanking\/UNComponents\/Network\/Infrastructure\/UNNetworkRequest.swift",
       "kind": "StringLiteral",
-      "offset": 39542,
+      "offset": 39609,
       "length": 1,
       "value": "\":\""
     },
     {
       "filePath": "\/Users\/runner\/work\/unit-ios-components\/unit-ios-components\/UnitWhiteLabelBanking\/UNComponents\/Network\/Infrastructure\/UNNetworkRequest.swift",
       "kind": "StringLiteral",
-      "offset": 39554,
+      "offset": 39621,
       "length": 2,
       "value": "\"\""
     },
     {
       "filePath": "\/Users\/runner\/work\/unit-ios-components\/unit-ios-components\/UnitWhiteLabelBanking\/UNComponents\/Network\/Infrastructure\/UNNetworkRequest.swift",
       "kind": "StringLiteral",
-      "offset": 39913,
+      "offset": 39980,
       "length": 24,
       "value": "\"\""
     },
     {
       "filePath": "\/Users\/runner\/work\/unit-ios-components\/unit-ios-components\/UnitWhiteLabelBanking\/UNComponents\/Network\/Infrastructure\/UNNetworkRequest.swift",
       "kind": "StringLiteral",
-      "offset": 39924,
+      "offset": 39991,
       "length": 1,
       "value": "\"=\""
     },
     {
       "filePath": "\/Users\/runner\/work\/unit-ios-components\/unit-ios-components\/UnitWhiteLabelBanking\/UNComponents\/Network\/Infrastructure\/UNNetworkRequest.swift",
       "kind": "StringLiteral",
-      "offset": 39936,
+      "offset": 40003,
       "length": 23,
       "value": "\"\""
     },
     {
       "filePath": "\/Users\/runner\/work\/unit-ios-components\/unit-ios-components\/UnitWhiteLabelBanking\/UNComponents\/Network\/Infrastructure\/UNNetworkRequest.swift",
       "kind": "StringLiteral",
-      "offset": 39958,
+      "offset": 40025,
       "length": 3,
       "value": "\";\""
     },
     {
       "filePath": "\/Users\/runner\/work\/unit-ios-components\/unit-ios-components\/UnitWhiteLabelBanking\/UNComponents\/Network\/Infrastructure\/UNNetworkRequest.swift",
       "kind": "StringLiteral",
-      "offset": 39998,
+      "offset": 40065,
       "length": 22,
       "value": "\"-b \"\""
     },
     {
       "filePath": "\/Users\/runner\/work\/unit-ios-components\/unit-ios-components\/UnitWhiteLabelBanking\/UNComponents\/Network\/Infrastructure\/UNNetworkRequest.swift",
       "kind": "StringLiteral",
-      "offset": 40017,
+      "offset": 40084,
       "length": 1,
       "value": "\"\"\""
     },
     {
       "filePath": "\/Users\/runner\/work\/unit-ios-components\/unit-ios-components\/UnitWhiteLabelBanking\/UNComponents\/Network\/Infrastructure\/UNNetworkRequest.swift",
       "kind": "StringLiteral",
-      "offset": 40228,
+      "offset": 40295,
       "length": 8,
       "value": "\"Cookie\""
     },
     {
       "filePath": "\/Users\/runner\/work\/unit-ios-components\/unit-ios-components\/UnitWhiteLabelBanking\/UNComponents\/Network\/Infrastructure\/UNNetworkRequest.swift",
       "kind": "StringLiteral",
-      "offset": 40375,
+      "offset": 40442,
       "length": 8,
       "value": "\"Cookie\""
     },
     {
       "filePath": "\/Users\/runner\/work\/unit-ios-components\/unit-ios-components\/UnitWhiteLabelBanking\/UNComponents\/Network\/Infrastructure\/UNNetworkRequest.swift",
       "kind": "StringLiteral",
-      "offset": 40546,
+      "offset": 40613,
       "length": 4,
       "value": "\"\"\""
     },
     {
       "filePath": "\/Users\/runner\/work\/unit-ios-components\/unit-ios-components\/UnitWhiteLabelBanking\/UNComponents\/Network\/Infrastructure\/UNNetworkRequest.swift",
       "kind": "StringLiteral",
-      "offset": 40558,
+      "offset": 40625,
       "length": 6,
       "value": "\"\\\"\""
     },
     {
       "filePath": "\/Users\/runner\/work\/unit-ios-components\/unit-ios-components\/UnitWhiteLabelBanking\/UNComponents\/Network\/Infrastructure\/UNNetworkRequest.swift",
       "kind": "StringLiteral",
-      "offset": 40596,
+      "offset": 40663,
       "length": 40,
       "value": "\"-H \"\""
     },
     {
       "filePath": "\/Users\/runner\/work\/unit-ios-components\/unit-ios-components\/UnitWhiteLabelBanking\/UNComponents\/Network\/Infrastructure\/UNNetworkRequest.swift",
       "kind": "StringLiteral",
-      "offset": 40616,
+      "offset": 40683,
       "length": 1,
       "value": "\": \""
     },
     {
       "filePath": "\/Users\/runner\/work\/unit-ios-components\/unit-ios-components\/UnitWhiteLabelBanking\/UNComponents\/Network\/Infrastructure\/UNNetworkRequest.swift",
       "kind": "StringLiteral",
-      "offset": 40633,
+      "offset": 40700,
       "length": 1,
       "value": "\"\"\""
     },
     {
       "filePath": "\/Users\/runner\/work\/unit-ios-components\/unit-ios-components\/UnitWhiteLabelBanking\/UNComponents\/Network\/Infrastructure\/UNNetworkRequest.swift",
       "kind": "StringLiteral",
-      "offset": 40835,
+      "offset": 40902,
       "length": 6,
       "value": "\"\\\"\""
     },
     {
       "filePath": "\/Users\/runner\/work\/unit-ios-components\/unit-ios-components\/UnitWhiteLabelBanking\/UNComponents\/Network\/Infrastructure\/UNNetworkRequest.swift",
       "kind": "StringLiteral",
-      "offset": 40849,
+      "offset": 40916,
       "length": 8,
       "value": "\"\\\\\"\""
     },
     {
       "filePath": "\/Users\/runner\/work\/unit-ios-components\/unit-ios-components\/UnitWhiteLabelBanking\/UNComponents\/Network\/Infrastructure\/UNNetworkRequest.swift",
       "kind": "StringLiteral",
-      "offset": 40922,
+      "offset": 40989,
       "length": 4,
       "value": "\"\"\""
     },
     {
       "filePath": "\/Users\/runner\/work\/unit-ios-components\/unit-ios-components\/UnitWhiteLabelBanking\/UNComponents\/Network\/Infrastructure\/UNNetworkRequest.swift",
       "kind": "StringLiteral",
-      "offset": 40934,
+      "offset": 41001,
       "length": 6,
       "value": "\"\\\"\""
     },
     {
       "filePath": "\/Users\/runner\/work\/unit-ios-components\/unit-ios-components\/UnitWhiteLabelBanking\/UNComponents\/Network\/Infrastructure\/UNNetworkRequest.swift",
       "kind": "StringLiteral",
-      "offset": 40973,
+      "offset": 41040,
       "length": 23,
       "value": "\"-d \"\""
     },
     {
       "filePath": "\/Users\/runner\/work\/unit-ios-components\/unit-ios-components\/UnitWhiteLabelBanking\/UNComponents\/Network\/Infrastructure\/UNNetworkRequest.swift",
       "kind": "StringLiteral",
-      "offset": 40993,
+      "offset": 41060,
       "length": 1,
       "value": "\"\"\""
     },
     {
       "filePath": "\/Users\/runner\/work\/unit-ios-components\/unit-ios-components\/UnitWhiteLabelBanking\/UNComponents\/Network\/Infrastructure\/UNNetworkRequest.swift",
       "kind": "StringLiteral",
-      "offset": 41035,
+      "offset": 41102,
       "length": 27,
       "value": "\"\"\""
     },
     {
       "filePath": "\/Users\/runner\/work\/unit-ios-components\/unit-ios-components\/UnitWhiteLabelBanking\/UNComponents\/Network\/Infrastructure\/UNNetworkRequest.swift",
       "kind": "StringLiteral",
-      "offset": 41059,
+      "offset": 41126,
       "length": 1,
       "value": "\"\"\""
     },
     {
       "filePath": "\/Users\/runner\/work\/unit-ios-components\/unit-ios-components\/UnitWhiteLabelBanking\/UNComponents\/Network\/Infrastructure\/UNNetworkRequest.swift",
       "kind": "StringLiteral",
-      "offset": 41109,
+      "offset": 41176,
       "length": 9,
       "value": "\" \\\n\t\""
     },
     {
       "filePath": "\/Users\/runner\/work\/unit-ios-components\/unit-ios-components\/UnitWhiteLabelBanking\/UNComponents\/Network\/Infrastructure\/UNNetworkRequest.swift",
       "kind": "Array",
-      "offset": 49977,
+      "offset": 50044,
       "length": 2,
       "value": "[]"
     },
     {
       "filePath": "\/Users\/runner\/work\/unit-ios-components\/unit-ios-components\/UnitWhiteLabelBanking\/UNComponents\/Network\/Infrastructure\/UNNetworkRequest.swift",
       "kind": "IntegerLiteral",
-      "offset": 50156,
+      "offset": 50223,
       "length": 1,
       "value": "0"
     },
     {
       "filePath": "\/Users\/runner\/work\/unit-ios-components\/unit-ios-components\/UnitWhiteLabelBanking\/UNComponents\/Network\/Infrastructure\/UNNetworkRequest.swift",
       "kind": "Array",
-      "offset": 50284,
+      "offset": 50351,
       "length": 2,
       "value": "[]"
     },
     {
       "filePath": "\/Users\/runner\/work\/unit-ios-components\/unit-ios-components\/UnitWhiteLabelBanking\/UNComponents\/Network\/Infrastructure\/UNNetworkRequest.swift",
       "kind": "IntegerLiteral",
-      "offset": 55290,
+      "offset": 55357,
       "length": 4,
       "value": "1024"
     },
     {
       "filePath": "\/Users\/runner\/work\/unit-ios-components\/unit-ios-components\/UnitWhiteLabelBanking\/UNComponents\/Network\/Infrastructure\/UNNetworkRequest.swift",
       "kind": "IntegerLiteral",
-      "offset": 58846,
+      "offset": 58913,
       "length": 1,
       "value": "1"
     },
     {
       "filePath": "\/Users\/runner\/work\/unit-ios-components\/unit-ios-components\/UnitWhiteLabelBanking\/UNComponents\/Network\/Infrastructure\/UNNetworkRequest.swift",
       "kind": "IntegerLiteral",
-      "offset": 58851,
+      "offset": 58918,
       "length": 1,
       "value": "0"
     },
     {
       "filePath": "\/Users\/runner\/work\/unit-ios-components\/unit-ios-components\/UnitWhiteLabelBanking\/UNComponents\/Network\/Infrastructure\/UNNetworkRequest.swift",
       "kind": "IntegerLiteral",
-      "offset": 59001,
+      "offset": 59068,
       "length": 1,
       "value": "1"
     },
     {
       "filePath": "\/Users\/runner\/work\/unit-ios-components\/unit-ios-components\/UnitWhiteLabelBanking\/UNComponents\/Network\/Infrastructure\/UNNetworkRequest.swift",
       "kind": "IntegerLiteral",
-      "offset": 59006,
+      "offset": 59073,
       "length": 1,
       "value": "1"
     },
     {
       "filePath": "\/Users\/runner\/work\/unit-ios-components\/unit-ios-components\/UnitWhiteLabelBanking\/UNComponents\/Network\/Infrastructure\/UNNetworkRequest.swift",
       "kind": "Array",
-      "offset": 60861,
+      "offset": 60928,
       "length": 2,
       "value": "[]"
     },
     {
       "filePath": "\/Users\/runner\/work\/unit-ios-components\/unit-ios-components\/UnitWhiteLabelBanking\/UNComponents\/Network\/Infrastructure\/UNNetworkRequest.swift",
       "kind": "Array",
-      "offset": 61622,
+      "offset": 61689,
       "length": 2,
       "value": "[]"
     },
     {
       "filePath": "\/Users\/runner\/work\/unit-ios-components\/unit-ios-components\/UnitWhiteLabelBanking\/UNComponents\/Network\/Infrastructure\/UNNetworkRequest.swift",
       "kind": "StringLiteral",
-      "offset": 61864,
+      "offset": 61931,
       "length": 34,
       "value": "\"UnitSDK_\""
     },
     {
       "filePath": "\/Users\/runner\/work\/unit-ios-components\/unit-ios-components\/UnitWhiteLabelBanking\/UNComponents\/Network\/Infrastructure\/UNNetworkRequest.swift",
       "kind": "StringLiteral",
-      "offset": 61897,
+      "offset": 61964,
       "length": 1,
       "value": "\"\""
     },
     {
       "filePath": "\/Users\/runner\/work\/unit-ios-components\/unit-ios-components\/UnitWhiteLabelBanking\/UNComponents\/UI\/UNSnapKit\/UNConstraintAttributes.swift",
       "kind": "IntegerLiteral",
-      "offset": 1182,
+      "offset": 1165,
       "length": 1,
       "value": "0"
     },
     {
       "filePath": "\/Users\/runner\/work\/unit-ios-components\/unit-ios-components\/UnitWhiteLabelBanking\/UNComponents\/UI\/UNSnapKit\/UNConstraintAttributes.swift",
       "kind": "IntegerLiteral",
-      "offset": 1258,
+      "offset": 1241,
       "length": 1,
       "value": "1"
     },
     {
       "filePath": "\/Users\/runner\/work\/unit-ios-components\/unit-ios-components\/UnitWhiteLabelBanking\/UNComponents\/UI\/UNSnapKit\/UNConstraintAttributes.swift",
       "kind": "IntegerLiteral",
-      "offset": 1264,
+      "offset": 1247,
       "length": 1,
       "value": "0"
     },
     {
       "filePath": "\/Users\/runner\/work\/unit-ios-components\/unit-ios-components\/UnitWhiteLabelBanking\/UNComponents\/UI\/UNSnapKit\/UNConstraintAttributes.swift",
       "kind": "IntegerLiteral",
-      "offset": 1340,
+      "offset": 1323,
       "length": 1,
       "value": "1"
     },
     {
       "filePath": "\/Users\/runner\/work\/unit-ios-components\/unit-ios-components\/UnitWhiteLabelBanking\/UNComponents\/UI\/UNSnapKit\/UNConstraintAttributes.swift",
       "kind": "IntegerLiteral",
-      "offset": 1346,
+      "offset": 1329,
       "length": 1,
       "value": "1"
     },
     {
       "filePath": "\/Users\/runner\/work\/unit-ios-components\/unit-ios-components\/UnitWhiteLabelBanking\/UNComponents\/UI\/UNSnapKit\/UNConstraintAttributes.swift",
       "kind": "IntegerLiteral",
-      "offset": 1424,
+      "offset": 1407,
       "length": 1,
       "value": "1"
     },
     {
       "filePath": "\/Users\/runner\/work\/unit-ios-components\/unit-ios-components\/UnitWhiteLabelBanking\/UNComponents\/UI\/UNSnapKit\/UNConstraintAttributes.swift",
       "kind": "IntegerLiteral",
-      "offset": 1430,
+      "offset": 1413,
       "length": 1,
       "value": "2"
     },
     {
       "filePath": "\/Users\/runner\/work\/unit-ios-components\/unit-ios-components\/UnitWhiteLabelBanking\/UNComponents\/UI\/UNSnapKit\/UNConstraintAttributes.swift",
       "kind": "IntegerLiteral",
-      "offset": 1509,
+      "offset": 1492,
       "length": 1,
       "value": "1"
     },
     {
       "filePath": "\/Users\/runner\/work\/unit-ios-components\/unit-ios-components\/UnitWhiteLabelBanking\/UNComponents\/UI\/UNSnapKit\/UNConstraintAttributes.swift",
       "kind": "IntegerLiteral",
-      "offset": 1515,
+      "offset": 1498,
       "length": 1,
       "value": "3"
     },
     {
       "filePath": "\/Users\/runner\/work\/unit-ios-components\/unit-ios-components\/UnitWhiteLabelBanking\/UNComponents\/UI\/UNSnapKit\/UNConstraintAttributes.swift",
       "kind": "IntegerLiteral",
-      "offset": 1595,
+      "offset": 1578,
       "length": 1,
       "value": "1"
     },
     {
       "filePath": "\/Users\/runner\/work\/unit-ios-components\/unit-ios-components\/UnitWhiteLabelBanking\/UNComponents\/UI\/UNSnapKit\/UNConstraintAttributes.swift",
       "kind": "IntegerLiteral",
-      "offset": 1601,
+      "offset": 1584,
       "length": 1,
       "value": "4"
     },
     {
       "filePath": "\/Users\/runner\/work\/unit-ios-components\/unit-ios-components\/UnitWhiteLabelBanking\/UNComponents\/UI\/UNSnapKit\/UNConstraintAttributes.swift",
       "kind": "IntegerLiteral",
-      "offset": 1682,
+      "offset": 1665,
       "length": 1,
       "value": "1"
     },
     {
       "filePath": "\/Users\/runner\/work\/unit-ios-components\/unit-ios-components\/UnitWhiteLabelBanking\/UNComponents\/UI\/UNSnapKit\/UNConstraintAttributes.swift",
       "kind": "IntegerLiteral",
-      "offset": 1688,
+      "offset": 1671,
       "length": 1,
       "value": "5"
     },
     {
       "filePath": "\/Users\/runner\/work\/unit-ios-components\/unit-ios-components\/UnitWhiteLabelBanking\/UNComponents\/UI\/UNSnapKit\/UNConstraintAttributes.swift",
       "kind": "IntegerLiteral",
-      "offset": 1766,
+      "offset": 1749,
       "length": 1,
       "value": "1"
     },
     {
       "filePath": "\/Users\/runner\/work\/unit-ios-components\/unit-ios-components\/UnitWhiteLabelBanking\/UNComponents\/UI\/UNSnapKit\/UNConstraintAttributes.swift",
       "kind": "IntegerLiteral",
-      "offset": 1772,
+      "offset": 1755,
       "length": 1,
       "value": "6"
     },
     {
       "filePath": "\/Users\/runner\/work\/unit-ios-components\/unit-ios-components\/UnitWhiteLabelBanking\/UNComponents\/UI\/UNSnapKit\/UNConstraintAttributes.swift",
       "kind": "IntegerLiteral",
-      "offset": 1851,
+      "offset": 1834,
       "length": 1,
       "value": "1"
     },
     {
       "filePath": "\/Users\/runner\/work\/unit-ios-components\/unit-ios-components\/UnitWhiteLabelBanking\/UNComponents\/UI\/UNSnapKit\/UNConstraintAttributes.swift",
       "kind": "IntegerLiteral",
-      "offset": 1857,
+      "offset": 1840,
       "length": 1,
       "value": "7"
     },
     {
       "filePath": "\/Users\/runner\/work\/unit-ios-components\/unit-ios-components\/UnitWhiteLabelBanking\/UNComponents\/UI\/UNSnapKit\/UNConstraintAttributes.swift",
       "kind": "IntegerLiteral",
-      "offset": 1937,
+      "offset": 1920,
       "length": 1,
       "value": "1"
     },
     {
       "filePath": "\/Users\/runner\/work\/unit-ios-components\/unit-ios-components\/UnitWhiteLabelBanking\/UNComponents\/UI\/UNSnapKit\/UNConstraintAttributes.swift",
       "kind": "IntegerLiteral",
-      "offset": 1943,
+      "offset": 1926,
       "length": 1,
       "value": "8"
     },
     {
       "filePath": "\/Users\/runner\/work\/unit-ios-components\/unit-ios-components\/UnitWhiteLabelBanking\/UNComponents\/UI\/UNSnapKit\/UNConstraintAttributes.swift",
       "kind": "IntegerLiteral",
-      "offset": 2023,
+      "offset": 2006,
       "length": 1,
       "value": "1"
     },
     {
       "filePath": "\/Users\/runner\/work\/unit-ios-components\/unit-ios-components\/UnitWhiteLabelBanking\/UNComponents\/UI\/UNSnapKit\/UNConstraintAttributes.swift",
       "kind": "IntegerLiteral",
-      "offset": 2029,
+      "offset": 2012,
       "length": 1,
       "value": "9"
     },
     {
       "filePath": "\/Users\/runner\/work\/unit-ios-components\/unit-ios-components\/UnitWhiteLabelBanking\/UNComponents\/UI\/UNSnapKit\/UNConstraintAttributes.swift",
       "kind": "IntegerLiteral",
-      "offset": 2114,
+      "offset": 2097,
       "length": 1,
       "value": "1"
     },
     {
       "filePath": "\/Users\/runner\/work\/unit-ios-components\/unit-ios-components\/UnitWhiteLabelBanking\/UNComponents\/UI\/UNSnapKit\/UNConstraintAttributes.swift",
       "kind": "IntegerLiteral",
-      "offset": 2120,
+      "offset": 2103,
       "length": 2,
       "value": "10"
     },
     {
       "filePath": "\/Users\/runner\/work\/unit-ios-components\/unit-ios-components\/UnitWhiteLabelBanking\/UNComponents\/UI\/UNSnapKit\/UNConstraintAttributes.swift",
       "kind": "IntegerLiteral",
-      "offset": 2207,
+      "offset": 2190,
       "length": 1,
       "value": "1"
     },
     {
       "filePath": "\/Users\/runner\/work\/unit-ios-components\/unit-ios-components\/UnitWhiteLabelBanking\/UNComponents\/UI\/UNSnapKit\/UNConstraintAttributes.swift",
       "kind": "IntegerLiteral",
-      "offset": 2213,
+      "offset": 2196,
       "length": 2,
       "value": "11"
     },
     {
       "filePath": "\/Users\/runner\/work\/unit-ios-components\/unit-ios-components\/UnitWhiteLabelBanking\/UNComponents\/UI\/UNSnapKit\/UNConstraintAttributes.swift",
       "kind": "IntegerLiteral",
-      "offset": 2302,
+      "offset": 2281,
       "length": 1,
       "value": "1"
     },
     {
       "filePath": "\/Users\/runner\/work\/unit-ios-components\/unit-ios-components\/UnitWhiteLabelBanking\/UNComponents\/UI\/UNSnapKit\/UNConstraintAttributes.swift",
       "kind": "IntegerLiteral",
-      "offset": 2308,
+      "offset": 2287,
       "length": 2,
       "value": "12"
     },
     {
       "filePath": "\/Users\/runner\/work\/unit-ios-components\/unit-ios-components\/UnitWhiteLabelBanking\/UNComponents\/UI\/UNSnapKit\/UNConstraintAttributes.swift",
       "kind": "IntegerLiteral",
-      "offset": 2398,
+      "offset": 2373,
       "length": 1,
       "value": "1"
     },
     {
       "filePath": "\/Users\/runner\/work\/unit-ios-components\/unit-ios-components\/UnitWhiteLabelBanking\/UNComponents\/UI\/UNSnapKit\/UNConstraintAttributes.swift",
       "kind": "IntegerLiteral",
-      "offset": 2404,
+      "offset": 2379,
       "length": 2,
       "value": "13"
     },
     {
       "filePath": "\/Users\/runner\/work\/unit-ios-components\/unit-ios-components\/UnitWhiteLabelBanking\/UNComponents\/UI\/UNSnapKit\/UNConstraintAttributes.swift",
       "kind": "IntegerLiteral",
-      "offset": 2492,
+      "offset": 2463,
       "length": 1,
       "value": "1"
     },
     {
       "filePath": "\/Users\/runner\/work\/unit-ios-components\/unit-ios-components\/UnitWhiteLabelBanking\/UNComponents\/UI\/UNSnapKit\/UNConstraintAttributes.swift",
       "kind": "IntegerLiteral",
-      "offset": 2498,
+      "offset": 2469,
       "length": 2,
       "value": "14"
     },
     {
       "filePath": "\/Users\/runner\/work\/unit-ios-components\/unit-ios-components\/UnitWhiteLabelBanking\/UNComponents\/UI\/UNSnapKit\/UNConstraintAttributes.swift",
       "kind": "IntegerLiteral",
-      "offset": 2589,
+      "offset": 2556,
       "length": 1,
       "value": "1"
     },
     {
       "filePath": "\/Users\/runner\/work\/unit-ios-components\/unit-ios-components\/UnitWhiteLabelBanking\/UNComponents\/UI\/UNSnapKit\/UNConstraintAttributes.swift",
       "kind": "IntegerLiteral",
-      "offset": 2595,
+      "offset": 2562,
       "length": 2,
       "value": "15"
     },
     {
       "filePath": "\/Users\/runner\/work\/unit-ios-components\/unit-ios-components\/UnitWhiteLabelBanking\/UNComponents\/UI\/UNSnapKit\/UNConstraintAttributes.swift",
       "kind": "IntegerLiteral",
-      "offset": 2687,
+      "offset": 2650,
       "length": 1,
       "value": "1"
     },
     {
       "filePath": "\/Users\/runner\/work\/unit-ios-components\/unit-ios-components\/UnitWhiteLabelBanking\/UNComponents\/UI\/UNSnapKit\/UNConstraintAttributes.swift",
       "kind": "IntegerLiteral",
-      "offset": 2693,
+      "offset": 2656,
       "length": 2,
       "value": "16"
     },
     {
       "filePath": "\/Users\/runner\/work\/unit-ios-components\/unit-ios-components\/UnitWhiteLabelBanking\/UNComponents\/UI\/UNSnapKit\/UNConstraintAttributes.swift",
       "kind": "IntegerLiteral",
-      "offset": 2786,
+      "offset": 2745,
       "length": 1,
       "value": "1"
     },
     {
       "filePath": "\/Users\/runner\/work\/unit-ios-components\/unit-ios-components\/UnitWhiteLabelBanking\/UNComponents\/UI\/UNSnapKit\/UNConstraintAttributes.swift",
       "kind": "IntegerLiteral",
-      "offset": 2792,
+      "offset": 2751,
       "length": 2,
       "value": "17"
     },
     {
       "filePath": "\/Users\/runner\/work\/unit-ios-components\/unit-ios-components\/UnitWhiteLabelBanking\/UNComponents\/UI\/UNSnapKit\/UNConstraintAttributes.swift",
       "kind": "IntegerLiteral",
-      "offset": 2891,
+      "offset": 2846,
       "length": 1,
       "value": "1"
     },
     {
       "filePath": "\/Users\/runner\/work\/unit-ios-components\/unit-ios-components\/UnitWhiteLabelBanking\/UNComponents\/UI\/UNSnapKit\/UNConstraintAttributes.swift",
       "kind": "IntegerLiteral",
-      "offset": 2897,
+      "offset": 2852,
       "length": 2,
       "value": "18"
     },
     {
       "filePath": "\/Users\/runner\/work\/unit-ios-components\/unit-ios-components\/UnitWhiteLabelBanking\/UNComponents\/UI\/UNSnapKit\/UNConstraintAttributes.swift",
       "kind": "IntegerLiteral",
-      "offset": 2996,
+      "offset": 2947,
       "length": 1,
       "value": "1"
     },
     {
       "filePath": "\/Users\/runner\/work\/unit-ios-components\/unit-ios-components\/UnitWhiteLabelBanking\/UNComponents\/UI\/UNSnapKit\/UNConstraintAttributes.swift",
       "kind": "IntegerLiteral",
-      "offset": 3002,
+      "offset": 2953,
       "length": 2,
       "value": "19"
     },
     {
       "filePath": "\/Users\/runner\/work\/unit-ios-components\/unit-ios-components\/UnitWhiteLabelBanking\/UNComponents\/Services\/UNPushProvisioningService.swift",
       "kind": "BooleanLiteral",
-      "offset": 1448,
+      "offset": 1439,
       "length": 5,
       "value": "false"
     },
     {
       "filePath": "\/Users\/runner\/work\/unit-ios-components\/unit-ios-components\/UnitWhiteLabelBanking\/UNComponents\/Services\/UNPushProvisioningService.swift",
       "kind": "BooleanLiteral",
-      "offset": 1495,
+      "offset": 1486,
       "length": 5,
       "value": "false"
     },
     {
       "filePath": "\/Users\/runner\/work\/unit-ios-components\/unit-ios-components\/UnitWhiteLabelBanking\/UNComponents\/Services\/UNPushProvisioningService.swift",
       "kind": "BooleanLiteral",
-      "offset": 1543,
+      "offset": 1534,
       "length": 5,
       "value": "false"
     },
     {
       "filePath": "\/Users\/runner\/work\/unit-ios-components\/unit-ios-components\/UnitWhiteLabelBanking\/UNComponents\/Network\/Infrastructure\/UNNetworkConcurrency.swift",
       "kind": "BooleanLiteral",
-      "offset": 6749,
+      "offset": 6782,
       "length": 5,
       "value": "false"
     },
     {
       "filePath": "\/Users\/runner\/work\/unit-ios-components\/unit-ios-components\/UnitWhiteLabelBanking\/UNComponents\/Network\/Infrastructure\/UNNetworkConcurrency.swift",
       "kind": "BooleanLiteral",
-      "offset": 8850,
+      "offset": 8883,
       "length": 5,
       "value": "false"
     },
     {
       "filePath": "\/Users\/runner\/work\/unit-ios-components\/unit-ios-components\/UnitWhiteLabelBanking\/UNComponents\/Network\/Infrastructure\/UNNetworkConcurrency.swift",
       "kind": "BooleanLiteral",
-      "offset": 11303,
+      "offset": 11336,
       "length": 5,
       "value": "false"
     },
     {
       "filePath": "\/Users\/runner\/work\/unit-ios-components\/unit-ios-components\/UnitWhiteLabelBanking\/UNComponents\/Network\/Infrastructure\/UNNetworkConcurrency.swift",
       "kind": "BooleanLiteral",
-      "offset": 13115,
+      "offset": 13148,
       "length": 5,
       "value": "false"
     },
     {
       "filePath": "\/Users\/runner\/work\/unit-ios-components\/unit-ios-components\/UnitWhiteLabelBanking\/UNComponents\/Network\/Infrastructure\/UNNetworkConcurrency.swift",
       "kind": "BooleanLiteral",
-      "offset": 14335,
+      "offset": 14368,
       "length": 5,
       "value": "false"
     },
     {
       "filePath": "\/Users\/runner\/work\/unit-ios-components\/unit-ios-components\/UnitWhiteLabelBanking\/UNComponents\/Network\/Infrastructure\/UNNetworkConcurrency.swift",
       "kind": "BooleanLiteral",
-      "offset": 18089,
+      "offset": 18122,
       "length": 5,
       "value": "false"
     },
     {
       "filePath": "\/Users\/runner\/work\/unit-ios-components\/unit-ios-components\/UnitWhiteLabelBanking\/UNComponents\/Network\/Infrastructure\/UNNetworkConcurrency.swift",
       "kind": "BooleanLiteral",
-      "offset": 20322,
+      "offset": 20355,
       "length": 5,
       "value": "false"
     },
     {
       "filePath": "\/Users\/runner\/work\/unit-ios-components\/unit-ios-components\/UnitWhiteLabelBanking\/UNComponents\/Network\/Infrastructure\/UNNetworkConcurrency.swift",
       "kind": "BooleanLiteral",
-      "offset": 22055,
+      "offset": 22088,
       "length": 5,
       "value": "false"
     },
     {
       "filePath": "\/Users\/runner\/work\/unit-ios-components\/unit-ios-components\/UnitWhiteLabelBanking\/UNComponents\/Network\/Infrastructure\/UNNetworkConcurrency.swift",
       "kind": "BooleanLiteral",
-      "offset": 23576,
+      "offset": 23609,
       "length": 5,
       "value": "false"
     },
     {
       "filePath": "\/Users\/runner\/work\/unit-ios-components\/unit-ios-components\/UnitWhiteLabelBanking\/UNComponents\/Network\/Infrastructure\/UNNetworkConcurrency.swift",
       "kind": "BooleanLiteral",
-      "offset": 25408,
+      "offset": 25441,
       "length": 5,
       "value": "false"
     },
     {
       "filePath": "\/Users\/runner\/work\/unit-ios-components\/unit-ios-components\/UnitWhiteLabelBanking\/UNComponents\/Network\/Infrastructure\/UNNetworkConcurrency.swift",
       "kind": "BooleanLiteral",
-      "offset": 26672,
+      "offset": 26705,
       "length": 5,
       "value": "false"
     },
     {
       "filePath": "\/Users\/runner\/work\/unit-ios-components\/unit-ios-components\/UnitWhiteLabelBanking\/UNComponents\/Network\/Infrastructure\/UNNetworkConcurrency.swift",
       "kind": "BooleanLiteral",
-      "offset": 28744,
+      "offset": 28777,
       "length": 4,
       "value": "true"
     },
     {
       "filePath": "\/Users\/runner\/work\/unit-ios-components\/unit-ios-components\/UnitWhiteLabelBanking\/UNComponents\/Network\/Infrastructure\/UNNetworkConcurrency.swift",
       "kind": "BooleanLiteral",
-      "offset": 29682,
+      "offset": 29715,
       "length": 4,
       "value": "true"
     },
     {
       "filePath": "\/Users\/runner\/work\/unit-ios-components\/unit-ios-components\/UnitWhiteLabelBanking\/UNComponents\/Network\/Infrastructure\/UNNetworkConcurrency.swift",
       "kind": "BooleanLiteral",
-      "offset": 30826,
+      "offset": 30859,
       "length": 4,
       "value": "true"
     },
     {
       "filePath": "\/Users\/runner\/work\/unit-ios-components\/unit-ios-components\/UnitWhiteLabelBanking\/UNComponents\/Network\/Infrastructure\/UNNetworkConcurrency.swift",
       "kind": "BooleanLiteral",
-      "offset": 32109,
+      "offset": 32142,
       "length": 4,
       "value": "true"
     },
     {
       "filePath": "\/Users\/runner\/work\/unit-ios-components\/unit-ios-components\/UnitWhiteLabelBanking\/UNComponents\/Network\/Infrastructure\/UNNetworkConcurrency.swift",
       "kind": "BooleanLiteral",
-      "offset": 32808,
+      "offset": 32841,
       "length": 4,
       "value": "true"
     },
     {
       "filePath": "\/Users\/runner\/work\/unit-ios-components\/unit-ios-components\/UnitWhiteLabelBanking\/UNComponents\/Network\/Infrastructure\/UNNetworkConcurrency.swift",
       "kind": "StringLiteral",
-      "offset": 34338,
+      "offset": 34371,
       "length": 43,
       "value": "\"UnitSDKNetworkConcurrencySingleEventQueue\""
     },
@@ -196605,77 +196730,77 @@
     {
       "filePath": "\/Users\/runner\/work\/unit-ios-components\/unit-ios-components\/UnitWhiteLabelBanking\/UNComponents\/Services\/UNComponentsSDKConfigurationService.swift",
       "kind": "BooleanLiteral",
-      "offset": 1863,
+      "offset": 1847,
       "length": 5,
       "value": "false"
     },
     {
       "filePath": "\/Users\/runner\/work\/unit-ios-components\/unit-ios-components\/UnitWhiteLabelBanking\/UNComponents\/Infra\/Builders\/Components\/MultipleCards\/UNMultipleCardsViewSettingsBuilder.swift",
       "kind": "BooleanLiteral",
-      "offset": 825,
+      "offset": 824,
       "length": 5,
       "value": "false"
     },
     {
       "filePath": "\/Users\/runner\/work\/unit-ios-components\/unit-ios-components\/UnitWhiteLabelBanking\/UNComponents\/Infra\/Builders\/Components\/MultipleCards\/UNMultipleCardsViewSettingsBuilder.swift",
       "kind": "BooleanLiteral",
-      "offset": 866,
+      "offset": 865,
       "length": 5,
       "value": "false"
     },
     {
       "filePath": "\/Users\/runner\/work\/unit-ios-components\/unit-ios-components\/UnitWhiteLabelBanking\/UNComponents\/Infra\/Builders\/Components\/MultipleCards\/UNMultipleCardsViewSettingsBuilder.swift",
       "kind": "BooleanLiteral",
-      "offset": 911,
+      "offset": 910,
       "length": 5,
       "value": "false"
     },
     {
       "filePath": "\/Users\/runner\/work\/unit-ios-components\/unit-ios-components\/UnitWhiteLabelBanking\/UNComponents\/Infra\/Builders\/Components\/MultipleCards\/UNMultipleCardsViewSettingsBuilder.swift",
       "kind": "BooleanLiteral",
-      "offset": 1006,
+      "offset": 1005,
       "length": 5,
       "value": "false"
     },
     {
       "filePath": "\/Users\/runner\/work\/unit-ios-components\/unit-ios-components\/UnitWhiteLabelBanking\/UNComponents\/Infra\/Builders\/Components\/MultipleCards\/UNMultipleCardsViewSettingsBuilder.swift",
       "kind": "BooleanLiteral",
-      "offset": 1056,
+      "offset": 1055,
       "length": 5,
       "value": "false"
     },
     {
       "filePath": "\/Users\/runner\/work\/unit-ios-components\/unit-ios-components\/UnitWhiteLabelBanking\/UNComponents\/UI\/WebComponent\/UNWebComponent.swift",
       "kind": "FloatLiteral",
-      "offset": 1034,
+      "offset": 1018,
       "length": 3,
       "value": "0.0"
     },
     {
       "filePath": "\/Users\/runner\/work\/unit-ios-components\/unit-ios-components\/UnitWhiteLabelBanking\/UNComponents\/UI\/WebComponent\/UNWebComponent.swift",
       "kind": "BooleanLiteral",
-      "offset": 1308,
+      "offset": 1288,
       "length": 5,
       "value": "false"
     },
     {
       "filePath": "\/Users\/runner\/work\/unit-ios-components\/unit-ios-components\/UnitWhiteLabelBanking\/UNComponents\/UI\/WebComponent\/UNWebComponent.swift",
       "kind": "BooleanLiteral",
-      "offset": 1441,
+      "offset": 1413,
       "length": 5,
       "value": "false"
     },
     {
       "filePath": "\/Users\/runner\/work\/unit-ios-components\/unit-ios-components\/UnitWhiteLabelBanking\/UNComponents\/UI\/WebComponent\/UNWebComponent.swift",
       "kind": "BooleanLiteral",
-      "offset": 1518,
+      "offset": 1490,
       "length": 4,
       "value": "true"
     },
     {
       "filePath": "\/Users\/runner\/work\/unit-ios-components\/unit-ios-components\/UnitWhiteLabelBanking\/UNComponents\/UI\/WebComponent\/UNWebComponent.swift",
       "kind": "Dictionary",
-      "offset": 2409,
+      "offset": 2381,
       "length": 3,
       "value": "[]"
     },
@@ -196717,84 +196842,84 @@
     {
       "filePath": "\/Users\/runner\/work\/unit-ios-components\/unit-ios-components\/UnitWhiteLabelBanking\/UNComponents\/UI\/Components\/ACHCredit\/UNACHCreditComponent.swift",
       "kind": "StringLiteral",
-      "offset": 459,
+      "offset": 455,
       "length": 12,
       "value": "\"account-id\""
     },
     {
       "filePath": "\/Users\/runner\/work\/unit-ios-components\/unit-ios-components\/UnitWhiteLabelBanking\/UNComponents\/UI\/Components\/ACHCredit\/UNACHCreditComponent.swift",
       "kind": "StringLiteral",
-      "offset": 505,
+      "offset": 501,
       "length": 15,
       "value": "\"is-auto-focus\""
     },
     {
       "filePath": "\/Users\/runner\/work\/unit-ios-components\/unit-ios-components\/UnitWhiteLabelBanking\/UNComponents\/UI\/Components\/ACHCredit\/UNACHCreditComponent.swift",
       "kind": "StringLiteral",
-      "offset": 552,
+      "offset": 548,
       "length": 12,
       "value": "\"with-plaid\""
     },
     {
       "filePath": "\/Users\/runner\/work\/unit-ios-components\/unit-ios-components\/UnitWhiteLabelBanking\/UNComponents\/UI\/Components\/ACHCredit\/UNACHCreditComponent.swift",
       "kind": "StringLiteral",
-      "offset": 606,
+      "offset": 602,
       "length": 23,
       "value": "\"plaid-account-filters\""
     },
     {
       "filePath": "\/Users\/runner\/work\/unit-ios-components\/unit-ios-components\/UnitWhiteLabelBanking\/UNComponents\/UI\/Components\/ACHCredit\/UNACHCreditComponent.swift",
       "kind": "StringLiteral",
-      "offset": 678,
+      "offset": 674,
       "length": 31,
       "value": "\"plaid-link-customization-name\""
     },
     {
       "filePath": "\/Users\/runner\/work\/unit-ios-components\/unit-ios-components\/UnitWhiteLabelBanking\/UNComponents\/UI\/Components\/ACHCredit\/UNACHCreditComponent.swift",
       "kind": "StringLiteral",
-      "offset": 739,
+      "offset": 735,
       "length": 10,
       "value": "\"same-day\""
     },
     {
       "filePath": "\/Users\/runner\/work\/unit-ios-components\/unit-ios-components\/UnitWhiteLabelBanking\/UNComponents\/UI\/Components\/ACHCredit\/UNACHCreditComponent.swift",
       "kind": "StringLiteral",
-      "offset": 794,
+      "offset": 790,
       "length": 27,
       "value": "\"initial-stage-back-button\""
     },
     {
       "filePath": "\/Users\/runner\/work\/unit-ios-components\/unit-ios-components\/UnitWhiteLabelBanking\/UNComponents\/UI\/Components\/ACHCredit\/UNACHCreditComponent.swift",
       "kind": "StringLiteral",
-      "offset": 864,
+      "offset": 860,
       "length": 25,
       "value": "\"final-stage-done-button\""
     },
     {
       "filePath": "\/Users\/runner\/work\/unit-ios-components\/unit-ios-components\/UnitWhiteLabelBanking\/UNComponents\/UI\/Components\/ACHCredit\/UNACHCreditComponent.swift",
       "kind": "StringLiteral",
-      "offset": 917,
+      "offset": 913,
       "length": 7,
       "value": "\"style\""
     },
     {
       "filePath": "\/Users\/runner\/work\/unit-ios-components\/unit-ios-components\/UnitWhiteLabelBanking\/UNComponents\/UI\/Components\/ACHCredit\/UNACHCreditComponent.swift",
       "kind": "StringLiteral",
-      "offset": 967,
+      "offset": 963,
       "length": 25,
       "value": "\"show-same-day-selection\""
     },
     {
       "filePath": "\/Users\/runner\/work\/unit-ios-components\/unit-ios-components\/UnitWhiteLabelBanking\/UNComponents\/UI\/Components\/ACHCredit\/UNACHCreditComponent.swift",
       "kind": "StringLiteral",
-      "offset": 1038,
+      "offset": 1034,
       "length": 27,
       "value": "\"allow-counterparty-delete\""
     },
     {
       "filePath": "\/Users\/runner\/work\/unit-ios-components\/unit-ios-components\/UnitWhiteLabelBanking\/UNComponents\/UI\/Components\/ACHCredit\/UNACHCreditComponent.swift",
       "kind": "StringLiteral",
-      "offset": 1111,
+      "offset": 1107,
       "length": 28,
       "value": "\"show-account-type-selector\""
     },
@@ -196948,553 +197073,546 @@
     {
       "filePath": "\/Users\/runner\/work\/unit-ios-components\/unit-ios-components\/UnitWhiteLabelBanking\/UNComponents\/Network\/Infrastructure\/UNNetworkHTTPHeaders.swift",
       "kind": "StringLiteral",
-      "offset": 12710,
-      "length": 7,
-      "value": "\"9.9.9\""
-    },
-    {
-      "filePath": "\/Users\/runner\/work\/unit-ios-components\/unit-ios-components\/UnitWhiteLabelBanking\/UNComponents\/Network\/Infrastructure\/UNNetworkHTTPHeaders.swift",
-      "kind": "StringLiteral",
-      "offset": 12785,
+      "offset": 12725,
       "length": 30,
       "value": "\"UnitSDKNetwork\/\""
     },
     {
       "filePath": "\/Users\/runner\/work\/unit-ios-components\/unit-ios-components\/UnitWhiteLabelBanking\/UNComponents\/Network\/Infrastructure\/UNNetworkHTTPHeaders.swift",
       "kind": "StringLiteral",
-      "offset": 12814,
+      "offset": 12754,
       "length": 1,
       "value": "\"\""
     },
     {
       "filePath": "\/Users\/runner\/work\/unit-ios-components\/unit-ios-components\/UnitWhiteLabelBanking\/UNComponents\/Network\/Infrastructure\/UNNetworkHTTPHeaders.swift",
       "kind": "StringLiteral",
-      "offset": 12841,
+      "offset": 12781,
       "length": 93,
       "value": "\"\""
     },
     {
       "filePath": "\/Users\/runner\/work\/unit-ios-components\/unit-ios-components\/UnitWhiteLabelBanking\/UNComponents\/Network\/Infrastructure\/UNNetworkHTTPHeaders.swift",
       "kind": "StringLiteral",
-      "offset": 12855,
+      "offset": 12795,
       "length": 1,
       "value": "\"\/\""
     },
     {
       "filePath": "\/Users\/runner\/work\/unit-ios-components\/unit-ios-components\/UnitWhiteLabelBanking\/UNComponents\/Network\/Infrastructure\/UNNetworkHTTPHeaders.swift",
       "kind": "StringLiteral",
-      "offset": 12869,
+      "offset": 12809,
       "length": 1,
       "value": "\" (\""
     },
     {
       "filePath": "\/Users\/runner\/work\/unit-ios-components\/unit-ios-components\/UnitWhiteLabelBanking\/UNComponents\/Network\/Infrastructure\/UNNetworkHTTPHeaders.swift",
       "kind": "StringLiteral",
-      "offset": 12880,
+      "offset": 12820,
       "length": 1,
       "value": "\"; build:\""
     },
     {
       "filePath": "\/Users\/runner\/work\/unit-ios-components\/unit-ios-components\/UnitWhiteLabelBanking\/UNComponents\/Network\/Infrastructure\/UNNetworkHTTPHeaders.swift",
       "kind": "StringLiteral",
-      "offset": 12899,
+      "offset": 12839,
       "length": 1,
       "value": "\"; \""
     },
     {
       "filePath": "\/Users\/runner\/work\/unit-ios-components\/unit-ios-components\/UnitWhiteLabelBanking\/UNComponents\/Network\/Infrastructure\/UNNetworkHTTPHeaders.swift",
       "kind": "StringLiteral",
-      "offset": 12917,
+      "offset": 12857,
       "length": 1,
       "value": "\") \""
     },
     {
       "filePath": "\/Users\/runner\/work\/unit-ios-components\/unit-ios-components\/UnitWhiteLabelBanking\/UNComponents\/Network\/Infrastructure\/UNNetworkHTTPHeaders.swift",
       "kind": "StringLiteral",
-      "offset": 12933,
+      "offset": 12873,
       "length": 1,
       "value": "\"\""
     },
     {
       "filePath": "\/Users\/runner\/work\/unit-ios-components\/unit-ios-components\/UnitWhiteLabelBanking\/UNComponents\/Network\/Infrastructure\/UNNetworkRequestTaskMap.swift",
       "kind": "Dictionary",
-      "offset": 647,
+      "offset": 680,
       "length": 3,
       "value": "[]"
     },
     {
       "filePath": "\/Users\/runner\/work\/unit-ios-components\/unit-ios-components\/UnitWhiteLabelBanking\/UNComponents\/Network\/Infrastructure\/UNNetworkRequestTaskMap.swift",
       "kind": "Dictionary",
-      "offset": 715,
+      "offset": 748,
       "length": 3,
       "value": "[]"
     },
     {
       "filePath": "\/Users\/runner\/work\/unit-ios-components\/unit-ios-components\/UnitWhiteLabelBanking\/UNComponents\/Network\/Infrastructure\/UNNetworkRequestTaskMap.swift",
       "kind": "Dictionary",
-      "offset": 802,
+      "offset": 835,
       "length": 3,
       "value": "[]"
     },
     {
       "filePath": "\/Users\/runner\/work\/unit-ios-components\/unit-ios-components\/UnitWhiteLabelBanking\/UNComponents\/Models\/Shared\/OnLoad\/UNComponentsOnLoadResponse.swift",
       "kind": "StringLiteral",
-      "offset": 6760,
+      "offset": 6918,
       "length": 18,
       "value": "\"astraCardsResult\""
     },
     {
       "filePath": "\/Users\/runner\/work\/unit-ios-components\/unit-ios-components\/UnitWhiteLabelBanking\/UNComponents\/Models\/Shared\/OnLoad\/UNComponentsOnLoadResponse.swift",
       "kind": "StringLiteral",
-      "offset": 6807,
+      "offset": 6965,
       "length": 20,
       "value": "\"accountCardsResult\""
     },
     {
       "filePath": "\/Users\/runner\/work\/unit-ios-components\/unit-ios-components\/UnitWhiteLabelBanking\/UNComponents\/Network\/Infrastructure\/UNNetworkRetryPolicy.swift",
       "kind": "IntegerLiteral",
-      "offset": 432,
+      "offset": 465,
       "length": 1,
       "value": "2"
     },
     {
       "filePath": "\/Users\/runner\/work\/unit-ios-components\/unit-ios-components\/UnitWhiteLabelBanking\/UNComponents\/Network\/Infrastructure\/UNNetworkRetryPolicy.swift",
       "kind": "IntegerLiteral",
-      "offset": 578,
+      "offset": 611,
       "length": 1,
       "value": "2"
     },
     {
       "filePath": "\/Users\/runner\/work\/unit-ios-components\/unit-ios-components\/UnitWhiteLabelBanking\/UNComponents\/Network\/Infrastructure\/UNNetworkRetryPolicy.swift",
       "kind": "FloatLiteral",
-      "offset": 703,
+      "offset": 736,
       "length": 3,
       "value": "0.5"
     },
     {
       "filePath": "\/Users\/runner\/work\/unit-ios-components\/unit-ios-components\/UnitWhiteLabelBanking\/UNComponents\/Network\/Infrastructure\/UNNetworkRetryPolicy.swift",
       "kind": "Array",
-      "offset": 2164,
+      "offset": 2197,
       "length": 716,
       "value": "[408, 500, 502, 503, 504]"
     },
     {
       "filePath": "\/Users\/runner\/work\/unit-ios-components\/unit-ios-components\/UnitWhiteLabelBanking\/UNComponents\/Network\/Infrastructure\/UNNetworkSession.swift",
       "kind": "Array",
-      "offset": 3404,
+      "offset": 3459,
       "length": 2,
       "value": "[]"
     },
     {
       "filePath": "\/Users\/runner\/work\/unit-ios-components\/unit-ios-components\/UnitWhiteLabelBanking\/UNComponents\/Network\/Infrastructure\/UNNetworkSession.swift",
       "kind": "Dictionary",
-      "offset": 3526,
+      "offset": 3581,
       "length": 3,
       "value": "[]"
     },
     {
       "filePath": "\/Users\/runner\/work\/unit-ios-components\/unit-ios-components\/UnitWhiteLabelBanking\/UNComponents\/Network\/Infrastructure\/UNNetworkSession.swift",
       "kind": "BooleanLiteral",
-      "offset": 6558,
+      "offset": 6613,
       "length": 4,
       "value": "true"
     },
     {
       "filePath": "\/Users\/runner\/work\/unit-ios-components\/unit-ios-components\/UnitWhiteLabelBanking\/UNComponents\/Network\/Infrastructure\/UNNetworkSession.swift",
       "kind": "Array",
-      "offset": 6963,
+      "offset": 7018,
       "length": 2,
       "value": "[]"
     },
     {
       "filePath": "\/Users\/runner\/work\/unit-ios-components\/unit-ios-components\/UnitWhiteLabelBanking\/UNComponents\/Network\/Infrastructure\/UNNetworkSession.swift",
       "kind": "StringLiteral",
-      "offset": 11587,
+      "offset": 11642,
       "length": 38,
       "value": "\"org.UnitSDKNetwork.session.rootQueue\""
     },
     {
       "filePath": "\/Users\/runner\/work\/unit-ios-components\/unit-ios-components\/UnitWhiteLabelBanking\/UNComponents\/Network\/Infrastructure\/UNNetworkSession.swift",
       "kind": "BooleanLiteral",
-      "offset": 11682,
+      "offset": 11737,
       "length": 4,
       "value": "true"
     },
     {
       "filePath": "\/Users\/runner\/work\/unit-ios-components\/unit-ios-components\/UnitWhiteLabelBanking\/UNComponents\/Network\/Infrastructure\/UNNetworkSession.swift",
       "kind": "Array",
-      "offset": 12171,
+      "offset": 12226,
       "length": 2,
       "value": "[]"
     },
     {
       "filePath": "\/Users\/runner\/work\/unit-ios-components\/unit-ios-components\/UnitWhiteLabelBanking\/UNComponents\/Network\/Infrastructure\/UNNetworkSession.swift",
       "kind": "BooleanLiteral",
-      "offset": 24043,
+      "offset": 24098,
       "length": 5,
       "value": "false"
     },
     {
       "filePath": "\/Users\/runner\/work\/unit-ios-components\/unit-ios-components\/UnitWhiteLabelBanking\/UNComponents\/Network\/Infrastructure\/UNNetworkSession.swift",
       "kind": "BooleanLiteral",
-      "offset": 26295,
+      "offset": 26350,
       "length": 5,
       "value": "false"
     },
     {
       "filePath": "\/Users\/runner\/work\/unit-ios-components\/unit-ios-components\/UnitWhiteLabelBanking\/UNComponents\/Network\/Infrastructure\/UNNetworkSession.swift",
       "kind": "BooleanLiteral",
-      "offset": 28038,
+      "offset": 28093,
       "length": 5,
       "value": "false"
     },
     {
       "filePath": "\/Users\/runner\/work\/unit-ios-components\/unit-ios-components\/UnitWhiteLabelBanking\/UNComponents\/Network\/Infrastructure\/UNNetworkSession.swift",
       "kind": "BooleanLiteral",
-      "offset": 64665,
+      "offset": 64720,
       "length": 4,
       "value": "true"
     },
     {
       "filePath": "\/Users\/runner\/work\/unit-ios-components\/unit-ios-components\/UnitWhiteLabelBanking\/UNComponents\/UI\/UNSnapKit\/UNConstraintRelation.swift",
       "kind": "IntegerLiteral",
-      "offset": 214,
+      "offset": 213,
       "length": 1,
       "value": "1"
     },
     {
       "filePath": "\/Users\/runner\/work\/unit-ios-components\/unit-ios-components\/UnitWhiteLabelBanking\/UNComponents\/UI\/UNSnapKit\/UNConstraintRelation.swift",
       "kind": "IntegerLiteral",
-      "offset": 225,
+      "offset": 224,
       "length": 15,
       "value": "2"
     },
     {
       "filePath": "\/Users\/runner\/work\/unit-ios-components\/unit-ios-components\/UnitWhiteLabelBanking\/UNComponents\/UI\/UNSnapKit\/UNConstraintRelation.swift",
       "kind": "IntegerLiteral",
-      "offset": 250,
+      "offset": 249,
       "length": 18,
       "value": "3"
     },
     {
       "filePath": "\/Users\/runner\/work\/unit-ios-components\/unit-ios-components\/UnitWhiteLabelBanking\/UNComponents\/Models\/Shared\/Activity\/Transaction\/UNTransaction.swift",
       "kind": "StringLiteral",
-      "offset": 9110,
+      "offset": 9207,
       "length": 16,
       "value": "\"atmTransaction\""
     },
     {
       "filePath": "\/Users\/runner\/work\/unit-ios-components\/unit-ios-components\/UnitWhiteLabelBanking\/UNComponents\/Models\/Shared\/Activity\/Transaction\/UNTransaction.swift",
       "kind": "StringLiteral",
-      "offset": 9149,
+      "offset": 9246,
       "length": 23,
       "value": "\"adjustmentTransaction\""
     },
     {
       "filePath": "\/Users\/runner\/work\/unit-ios-components\/unit-ios-components\/UnitWhiteLabelBanking\/UNComponents\/Models\/Shared\/Activity\/Transaction\/UNTransaction.swift",
       "kind": "StringLiteral",
-      "offset": 9192,
+      "offset": 9289,
       "length": 20,
       "value": "\"billPayTransaction\""
     },
     {
       "filePath": "\/Users\/runner\/work\/unit-ios-components\/unit-ios-components\/UnitWhiteLabelBanking\/UNComponents\/Models\/Shared\/Activity\/Transaction\/UNTransaction.swift",
       "kind": "StringLiteral",
-      "offset": 9229,
+      "offset": 9326,
       "length": 17,
       "value": "\"bookTransaction\""
     },
     {
       "filePath": "\/Users\/runner\/work\/unit-ios-components\/unit-ios-components\/UnitWhiteLabelBanking\/UNComponents\/Models\/Shared\/Activity\/Transaction\/UNTransaction.swift",
       "kind": "StringLiteral",
-      "offset": 9263,
+      "offset": 9360,
       "length": 17,
       "value": "\"cardTransaction\""
     },
     {
       "filePath": "\/Users\/runner\/work\/unit-ios-components\/unit-ios-components\/UnitWhiteLabelBanking\/UNComponents\/Models\/Shared\/Activity\/Transaction\/UNTransaction.swift",
       "kind": "StringLiteral",
-      "offset": 9305,
+      "offset": 9402,
       "length": 25,
       "value": "\"cardReversalTransaction\""
     },
     {
       "filePath": "\/Users\/runner\/work\/unit-ios-components\/unit-ios-components\/UnitWhiteLabelBanking\/UNComponents\/Models\/Shared\/Activity\/Transaction\/UNTransaction.swift",
       "kind": "StringLiteral",
-      "offset": 9353,
+      "offset": 9450,
       "length": 23,
       "value": "\"chargebackTransaction\""
     },
     {
       "filePath": "\/Users\/runner\/work\/unit-ios-components\/unit-ios-components\/UnitWhiteLabelBanking\/UNComponents\/Models\/Shared\/Activity\/Transaction\/UNTransaction.swift",
       "kind": "StringLiteral",
-      "offset": 9401,
+      "offset": 9498,
       "length": 25,
       "value": "\"checkDepositTransaction\""
     },
     {
       "filePath": "\/Users\/runner\/work\/unit-ios-components\/unit-ios-components\/UnitWhiteLabelBanking\/UNComponents\/Models\/Shared\/Activity\/Transaction\/UNTransaction.swift",
       "kind": "StringLiteral",
-      "offset": 9452,
+      "offset": 9549,
       "length": 26,
       "value": "\"dishonoredAchTransaction\""
     },
     {
       "filePath": "\/Users\/runner\/work\/unit-ios-components\/unit-ios-components\/UnitWhiteLabelBanking\/UNComponents\/Models\/Shared\/Activity\/Transaction\/UNTransaction.swift",
       "kind": "StringLiteral",
-      "offset": 9498,
+      "offset": 9595,
       "length": 20,
       "value": "\"disputeTransaction\""
     },
     {
       "filePath": "\/Users\/runner\/work\/unit-ios-components\/unit-ios-components\/UnitWhiteLabelBanking\/UNComponents\/Models\/Shared\/Activity\/Transaction\/UNTransaction.swift",
       "kind": "StringLiteral",
-      "offset": 9548,
+      "offset": 9645,
       "length": 30,
       "value": "\"disputeSettlementTransaction\""
     },
     {
       "filePath": "\/Users\/runner\/work\/unit-ios-components\/unit-ios-components\/UnitWhiteLabelBanking\/UNComponents\/Models\/Shared\/Activity\/Transaction\/UNTransaction.swift",
       "kind": "StringLiteral",
-      "offset": 9594,
+      "offset": 9691,
       "length": 16,
       "value": "\"feeTransaction\""
     },
     {
       "filePath": "\/Users\/runner\/work\/unit-ios-components\/unit-ios-components\/UnitWhiteLabelBanking\/UNComponents\/Models\/Shared\/Activity\/Transaction\/UNTransaction.swift",
       "kind": "StringLiteral",
-      "offset": 9634,
+      "offset": 9731,
       "length": 24,
       "value": "\"feeReversalTransaction\""
     },
     {
       "filePath": "\/Users\/runner\/work\/unit-ios-components\/unit-ios-components\/UnitWhiteLabelBanking\/UNComponents\/Models\/Shared\/Activity\/Transaction\/UNTransaction.swift",
       "kind": "StringLiteral",
-      "offset": 9687,
+      "offset": 9784,
       "length": 29,
       "value": "\"interchangeShareTransaction\""
     },
     {
       "filePath": "\/Users\/runner\/work\/unit-ios-components\/unit-ios-components\/UnitWhiteLabelBanking\/UNComponents\/Models\/Shared\/Activity\/Transaction\/UNTransaction.swift",
       "kind": "StringLiteral",
-      "offset": 9737,
+      "offset": 9834,
       "length": 21,
       "value": "\"interestTransaction\""
     },
     {
       "filePath": "\/Users\/runner\/work\/unit-ios-components\/unit-ios-components\/UnitWhiteLabelBanking\/UNComponents\/Models\/Shared\/Activity\/Transaction\/UNTransaction.swift",
       "kind": "StringLiteral",
-      "offset": 9784,
+      "offset": 9881,
       "length": 26,
       "value": "\"interestShareTransaction\""
     },
     {
       "filePath": "\/Users\/runner\/work\/unit-ios-components\/unit-ios-components\/UnitWhiteLabelBanking\/UNComponents\/Models\/Shared\/Activity\/Transaction\/UNTransaction.swift",
       "kind": "StringLiteral",
-      "offset": 9846,
+      "offset": 9943,
       "length": 36,
       "value": "\"negativeBalanceCoverageTransaction\""
     },
     {
       "filePath": "\/Users\/runner\/work\/unit-ios-components\/unit-ios-components\/UnitWhiteLabelBanking\/UNComponents\/Models\/Shared\/Activity\/Transaction\/UNTransaction.swift",
       "kind": "StringLiteral",
-      "offset": 9908,
+      "offset": 10005,
       "length": 26,
       "value": "\"originatedAchTransaction\""
     },
     {
       "filePath": "\/Users\/runner\/work\/unit-ios-components\/unit-ios-components\/UnitWhiteLabelBanking\/UNComponents\/Models\/Shared\/Activity\/Transaction\/UNTransaction.swift",
       "kind": "StringLiteral",
-      "offset": 9961,
+      "offset": 10058,
       "length": 27,
       "value": "\"paymentAdvanceTransaction\""
     },
     {
       "filePath": "\/Users\/runner\/work\/unit-ios-components\/unit-ios-components\/UnitWhiteLabelBanking\/UNComponents\/Models\/Shared\/Activity\/Transaction\/UNTransaction.swift",
       "kind": "StringLiteral",
-      "offset": 10016,
+      "offset": 10113,
       "length": 28,
       "value": "\"paymentCanceledTransaction\""
     },
     {
       "filePath": "\/Users\/runner\/work\/unit-ios-components\/unit-ios-components\/UnitWhiteLabelBanking\/UNComponents\/Models\/Shared\/Activity\/Transaction\/UNTransaction.swift",
       "kind": "StringLiteral",
-      "offset": 10065,
+      "offset": 10162,
       "length": 21,
       "value": "\"purchaseTransaction\""
     },
     {
       "filePath": "\/Users\/runner\/work\/unit-ios-components\/unit-ios-components\/UnitWhiteLabelBanking\/UNComponents\/Models\/Shared\/Activity\/Transaction\/UNTransaction.swift",
       "kind": "StringLiteral",
-      "offset": 10110,
+      "offset": 10207,
       "length": 24,
       "value": "\"receivedAchTransaction\""
     },
     {
       "filePath": "\/Users\/runner\/work\/unit-ios-components\/unit-ios-components\/UnitWhiteLabelBanking\/UNComponents\/Models\/Shared\/Activity\/Transaction\/UNTransaction.swift",
       "kind": "StringLiteral",
-      "offset": 10154,
+      "offset": 10251,
       "length": 20,
       "value": "\"releaseTransaction\""
     },
     {
       "filePath": "\/Users\/runner\/work\/unit-ios-components\/unit-ios-components\/UnitWhiteLabelBanking\/UNComponents\/Models\/Shared\/Activity\/Transaction\/UNTransaction.swift",
       "kind": "StringLiteral",
-      "offset": 10207,
+      "offset": 10304,
       "length": 33,
       "value": "\"repaidPaymentAdvanceTransaction\""
     },
     {
       "filePath": "\/Users\/runner\/work\/unit-ios-components\/unit-ios-components\/UnitWhiteLabelBanking\/UNComponents\/Models\/Shared\/Activity\/Transaction\/UNTransaction.swift",
       "kind": "StringLiteral",
-      "offset": 10264,
+      "offset": 10361,
       "length": 24,
       "value": "\"returnedAchTransaction\""
     },
     {
       "filePath": "\/Users\/runner\/work\/unit-ios-components\/unit-ios-components\/UnitWhiteLabelBanking\/UNComponents\/Models\/Shared\/Activity\/Transaction\/UNTransaction.swift",
       "kind": "StringLiteral",
-      "offset": 10321,
+      "offset": 10418,
       "length": 33,
       "value": "\"returnedCheckDepositTransaction\""
     },
     {
       "filePath": "\/Users\/runner\/work\/unit-ios-components\/unit-ios-components\/UnitWhiteLabelBanking\/UNComponents\/Models\/Shared\/Activity\/Transaction\/UNTransaction.swift",
       "kind": "StringLiteral",
-      "offset": 10386,
+      "offset": 10483,
       "length": 32,
       "value": "\"returnedReceivedAchTransaction\""
     },
     {
       "filePath": "\/Users\/runner\/work\/unit-ios-components\/unit-ios-components\/UnitWhiteLabelBanking\/UNComponents\/Models\/Shared\/Activity\/Transaction\/UNTransaction.swift",
       "kind": "StringLiteral",
-      "offset": 10437,
+      "offset": 10534,
       "length": 19,
       "value": "\"rewardTransaction\""
     },
     {
       "filePath": "\/Users\/runner\/work\/unit-ios-components\/unit-ios-components\/UnitWhiteLabelBanking\/UNComponents\/Models\/Shared\/Activity\/Transaction\/UNTransaction.swift",
       "kind": "StringLiteral",
-      "offset": 10479,
+      "offset": 10576,
       "length": 23,
       "value": "\"settlementTransaction\""
     },
     {
       "filePath": "\/Users\/runner\/work\/unit-ios-components\/unit-ios-components\/UnitWhiteLabelBanking\/UNComponents\/Models\/Shared\/Activity\/Transaction\/UNTransaction.swift",
       "kind": "StringLiteral",
-      "offset": 10532,
+      "offset": 10629,
       "length": 30,
       "value": "\"sponsoredInterestTransaction\""
     },
     {
       "filePath": "\/Users\/runner\/work\/unit-ios-components\/unit-ios-components\/UnitWhiteLabelBanking\/UNComponents\/Models\/Shared\/Activity\/Transaction\/UNTransaction.swift",
       "kind": "StringLiteral",
-      "offset": 10579,
+      "offset": 10676,
       "length": 17,
       "value": "\"wireTransaction\""
     },
     {
       "filePath": "\/Users\/runner\/work\/unit-ios-components\/unit-ios-components\/UnitWhiteLabelBanking\/UNComponents\/Models\/Shared\/Activity\/Transaction\/UNTransaction.swift",
       "kind": "StringLiteral",
-      "offset": 10633,
+      "offset": 10730,
       "length": 37,
       "value": "\"accountLowBalanceClosureTransaction\""
     },
     {
       "filePath": "\/Users\/runner\/work\/unit-ios-components\/unit-ios-components\/UnitWhiteLabelBanking\/UNComponents\/Models\/Shared\/Activity\/Transaction\/UNTransaction.swift",
       "kind": "StringLiteral",
-      "offset": 10694,
+      "offset": 10791,
       "length": 24,
       "value": "\"cashDepositTransaction\""
     },
     {
       "filePath": "\/Users\/runner\/work\/unit-ios-components\/unit-ios-components\/UnitWhiteLabelBanking\/UNComponents\/Models\/Shared\/Activity\/Transaction\/UNTransaction.swift",
       "kind": "StringLiteral",
-      "offset": 10744,
+      "offset": 10841,
       "length": 26,
       "value": "\"bankRepaymentTransaction\""
     },
     {
       "filePath": "\/Users\/runner\/work\/unit-ios-components\/unit-ios-components\/UnitWhiteLabelBanking\/UNComponents\/Models\/Shared\/Activity\/Transaction\/UNTransaction.swift",
       "kind": "StringLiteral",
-      "offset": 10800,
+      "offset": 10897,
       "length": 30,
       "value": "\"CustomerRepaymentTransaction\""
     },
     {
       "filePath": "\/Users\/runner\/work\/unit-ios-components\/unit-ios-components\/UnitWhiteLabelBanking\/UNComponents\/Models\/Shared\/Activity\/Transaction\/UNTransaction.swift",
       "kind": "StringLiteral",
-      "offset": 10868,
+      "offset": 10965,
       "length": 38,
       "value": "\"CustomerRepaymentReturnedTransaction\""
     },
     {
       "filePath": "\/Users\/runner\/work\/unit-ios-components\/unit-ios-components\/UnitWhiteLabelBanking\/UNComponents\/UI\/WebComponent\/UNScriptMessage.swift",
       "kind": "StringLiteral",
-      "offset": 1054,
+      "offset": 1034,
       "length": 25,
       "value": "\"unitCounterpartyDeleted\""
     },
     {
       "filePath": "\/Users\/runner\/work\/unit-ios-components\/unit-ios-components\/UnitWhiteLabelBanking\/UNComponents\/UI\/WebComponent\/UNScriptMessage.swift",
       "kind": "StringLiteral",
-      "offset": 1539,
+      "offset": 1519,
       "length": 37,
       "value": "\"unitRequestDateRangeMenuValueChange\""
     },
     {
       "filePath": "\/Users\/runner\/work\/unit-ios-components\/unit-ios-components\/UnitWhiteLabelBanking\/UNComponents\/UI\/WebComponent\/UNScriptMessage.swift",
       "kind": "StringLiteral",
-      "offset": 1635,
+      "offset": 1615,
       "length": 25,
       "value": "\"unitVendorFormTrySubmit\""
     },
     {
       "filePath": "\/Users\/runner\/work\/unit-ios-components\/unit-ios-components\/UnitWhiteLabelBanking\/UNComponents\/UI\/WebComponent\/UNScriptMessage.swift",
       "kind": "StringLiteral",
-      "offset": 1731,
+      "offset": 1711,
       "length": 33,
       "value": "\"unitBillPayUnsavedChangesAction\""
     },
     {
       "filePath": "\/Users\/runner\/work\/unit-ios-components\/unit-ios-components\/UnitWhiteLabelBanking\/UNComponents\/UI\/WebComponent\/UNScriptMessage.swift",
       "kind": "StringLiteral",
-      "offset": 1824,
+      "offset": 1804,
       "length": 18,
       "value": "\"unitBillArchived\""
     },
     {
       "filePath": "\/Users\/runner\/work\/unit-ios-components\/unit-ios-components\/UnitWhiteLabelBanking\/UNComponents\/UI\/WebComponent\/UNScriptMessage.swift",
       "kind": "StringLiteral",
-      "offset": 1873,
+      "offset": 1853,
       "length": 20,
       "value": "\"unitBillMarkAsPaid\""
     },
     {
       "filePath": "\/Users\/runner\/work\/unit-ios-components\/unit-ios-components\/UnitWhiteLabelBanking\/UNComponents\/UI\/WebComponent\/UNScriptMessage.swift",
       "kind": "StringLiteral",
-      "offset": 1926,
+      "offset": 1906,
       "length": 22,
       "value": "\"unitBillMarkAsUnpaid\""
     },
     {
       "filePath": "\/Users\/runner\/work\/unit-ios-components\/unit-ios-components\/UnitWhiteLabelBanking\/UNComponents\/UI\/WebComponent\/UNScriptMessage.swift",
       "kind": "StringLiteral",
-      "offset": 1980,
+      "offset": 1960,
       "length": 21,
       "value": "\"unitBillRescheduled\""
     },
     {
       "filePath": "\/Users\/runner\/work\/unit-ios-components\/unit-ios-components\/UnitWhiteLabelBanking\/UNComponents\/UI\/WebComponent\/UNScriptMessage.swift",
       "kind": "StringLiteral",
-      "offset": 2036,
+      "offset": 2016,
       "length": 24,
       "value": "\"unitBillCheckCancelled\""
     },
     {
       "filePath": "\/Users\/runner\/work\/unit-ios-components\/unit-ios-components\/UnitWhiteLabelBanking\/UNComponents\/UI\/WebComponent\/UNScriptMessage.swift",
       "kind": "StringLiteral",
-      "offset": 2089,
+      "offset": 2069,
       "length": 18,
       "value": "\"unitBillRefunded\""
     },

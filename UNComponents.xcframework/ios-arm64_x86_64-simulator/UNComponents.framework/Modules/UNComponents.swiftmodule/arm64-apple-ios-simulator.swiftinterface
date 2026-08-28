@@ -887,6 +887,12 @@ public struct UNNegativeBalanceCoverage : Swift.Codable {
   public func encode(to encoder: any Swift.Encoder) throws
   public init(from decoder: any Swift.Decoder) throws
 }
+public struct UNComponentsFlowError : Swift.Codable {
+  public let title: Swift.String?
+  public let message: Swift.String
+  public func encode(to encoder: any Swift.Encoder) throws
+  public init(from decoder: any Swift.Decoder) throws
+}
 public enum UNComponentsError : Swift.Error {
   case onLoad(errors: [UNComponents.UNComponentsErrorResponse])
   case missingCustomerToken
@@ -3047,6 +3053,7 @@ public enum UNCheckDepositComponentCallback {
   case onInitialStageBackButtonClicked
   case onFinalStageDoneButtonClicked
   case unitOnLoad(result: Swift.Result<UNComponents.UNAccount, UNComponents.UNComponentsError>)
+  case unitOnError(error: UNComponents.UNComponentsFlowError)
 }
 public protocol UNComponentsSecuritySettingsProtocol : AnyObject {
   var snapshotProtectionStrategy: UNComponents.UNSnapshotProtectionStrategy { get }
@@ -3473,8 +3480,6 @@ public enum UNVPErrorType {
 public enum UNVPProvisionStatus {
   case readyToProvision
   case alreadyProvisioned
-  case provisionedInCurrentDevice
-  case provisionedInPairedDevice
   case notAvailable
   public static func == (a: UNComponents.UNVPProvisionStatus, b: UNComponents.UNVPProvisionStatus) -> Swift.Bool
   public func hash(into hasher: inout Swift.Hasher)
@@ -3483,10 +3488,9 @@ public enum UNVPProvisionStatus {
   }
 }
 public struct UNVPSupportedWallet {
-  public init(name: Swift.String, description: Swift.String, status: UNComponents.UNVPProvisionStatus, reason: UNComponents.UNVPReason)
-}
-public struct UNVPReason {
-  public init(reason: Swift.String, description: Swift.String)
+  #if compiler(>=5.3) && $NonescapableTypes
+  public init(name: Swift.String, description: Swift.String, status: UNComponents.UNVPProvisionStatus, reason: Swift.String?)
+  #endif
 }
 public struct UNVPCardProvisioningResponse {
   public init(walletStatus: UNComponents.UNVPProvisionStatus)
