@@ -12259,12 +12259,12 @@
               {
                 "kind": "TypeFunc",
                 "name": "Function",
-                "printedName": "(UNComponents.UNAccountComponentCallback.Type) -> (Swift.Result<[UNComponents.UNAccount], UNComponents.UNComponentsError>) -> UNComponents.UNAccountComponentCallback",
+                "printedName": "(UNComponents.UNAccountComponentCallback.Type) -> (Swift.Result<[UNComponents.UNAccount]?, UNComponents.UNComponentsError>) -> UNComponents.UNAccountComponentCallback",
                 "children": [
                   {
                     "kind": "TypeFunc",
                     "name": "Function",
-                    "printedName": "(Swift.Result<[UNComponents.UNAccount], UNComponents.UNComponentsError>) -> UNComponents.UNAccountComponentCallback",
+                    "printedName": "(Swift.Result<[UNComponents.UNAccount]?, UNComponents.UNComponentsError>) -> UNComponents.UNAccountComponentCallback",
                     "children": [
                       {
                         "kind": "TypeNominal",
@@ -12275,26 +12275,34 @@
                       {
                         "kind": "TypeNominal",
                         "name": "Tuple",
-                        "printedName": "(result: Swift.Result<[UNComponents.UNAccount], UNComponents.UNComponentsError>)",
+                        "printedName": "(result: Swift.Result<[UNComponents.UNAccount]?, UNComponents.UNComponentsError>)",
                         "children": [
                           {
                             "kind": "TypeNominal",
                             "name": "Result",
-                            "printedName": "Swift.Result<[UNComponents.UNAccount], UNComponents.UNComponentsError>",
+                            "printedName": "Swift.Result<[UNComponents.UNAccount]?, UNComponents.UNComponentsError>",
                             "children": [
                               {
                                 "kind": "TypeNominal",
-                                "name": "Array",
-                                "printedName": "[UNComponents.UNAccount]",
+                                "name": "Optional",
+                                "printedName": "[UNComponents.UNAccount]?",
                                 "children": [
                                   {
                                     "kind": "TypeNominal",
-                                    "name": "UNAccount",
-                                    "printedName": "UNComponents.UNAccount",
-                                    "usr": "s:12UNComponents9UNAccountO"
+                                    "name": "Array",
+                                    "printedName": "[UNComponents.UNAccount]",
+                                    "children": [
+                                      {
+                                        "kind": "TypeNominal",
+                                        "name": "UNAccount",
+                                        "printedName": "UNComponents.UNAccount",
+                                        "usr": "s:12UNComponents9UNAccountO"
+                                      }
+                                    ],
+                                    "usr": "s:Sa"
                                   }
                                 ],
-                                "usr": "s:Sa"
+                                "usr": "s:Sq"
                               },
                               {
                                 "kind": "TypeNominal",
@@ -12326,8 +12334,8 @@
               }
             ],
             "declKind": "EnumElement",
-            "usr": "s:12UNComponents26UNAccountComponentCallbackO10unitOnLoadyACs6ResultOySayAA0B0OGAA0A5ErrorOG_tcACmF",
-            "mangledName": "$s12UNComponents26UNAccountComponentCallbackO10unitOnLoadyACs6ResultOySayAA0B0OGAA0A5ErrorOG_tcACmF",
+            "usr": "s:12UNComponents26UNAccountComponentCallbackO10unitOnLoadyACs6ResultOySayAA0B0OGSgAA0A5ErrorOG_tcACmF",
+            "mangledName": "$s12UNComponents26UNAccountComponentCallbackO10unitOnLoadyACs6ResultOySayAA0B0OGSgAA0A5ErrorOG_tcACmF",
             "moduleName": "UNComponents"
           },
           {
@@ -21242,12 +21250,12 @@
               {
                 "kind": "TypeFunc",
                 "name": "Function",
-                "printedName": "(UNComponents.UNMultipleCardsComponentCallback.Type) -> (Swift.Result<[UNComponents.UNCard], UNComponents.UNComponentsError>) -> UNComponents.UNMultipleCardsComponentCallback",
+                "printedName": "(UNComponents.UNMultipleCardsComponentCallback.Type) -> (Swift.Result<[UNComponents.UNCard]?, UNComponents.UNComponentsError>) -> UNComponents.UNMultipleCardsComponentCallback",
                 "children": [
                   {
                     "kind": "TypeFunc",
                     "name": "Function",
-                    "printedName": "(Swift.Result<[UNComponents.UNCard], UNComponents.UNComponentsError>) -> UNComponents.UNMultipleCardsComponentCallback",
+                    "printedName": "(Swift.Result<[UNComponents.UNCard]?, UNComponents.UNComponentsError>) -> UNComponents.UNMultipleCardsComponentCallback",
                     "children": [
                       {
                         "kind": "TypeNominal",
@@ -21258,26 +21266,34 @@
                       {
                         "kind": "TypeNominal",
                         "name": "Tuple",
-                        "printedName": "(result: Swift.Result<[UNComponents.UNCard], UNComponents.UNComponentsError>)",
+                        "printedName": "(result: Swift.Result<[UNComponents.UNCard]?, UNComponents.UNComponentsError>)",
                         "children": [
                           {
                             "kind": "TypeNominal",
                             "name": "Result",
-                            "printedName": "Swift.Result<[UNComponents.UNCard], UNComponents.UNComponentsError>",
+                            "printedName": "Swift.Result<[UNComponents.UNCard]?, UNComponents.UNComponentsError>",
                             "children": [
                               {
                                 "kind": "TypeNominal",
-                                "name": "Array",
-                                "printedName": "[UNComponents.UNCard]",
+                                "name": "Optional",
+                                "printedName": "[UNComponents.UNCard]?",
                                 "children": [
                                   {
                                     "kind": "TypeNominal",
-                                    "name": "UNCard",
-                                    "printedName": "UNComponents.UNCard",
-                                    "usr": "s:12UNComponents6UNCardO"
+                                    "name": "Array",
+                                    "printedName": "[UNComponents.UNCard]",
+                                    "children": [
+                                      {
+                                        "kind": "TypeNominal",
+                                        "name": "UNCard",
+                                        "printedName": "UNComponents.UNCard",
+                                        "usr": "s:12UNComponents6UNCardO"
+                                      }
+                                    ],
+                                    "usr": "s:Sa"
                                   }
                                 ],
-                                "usr": "s:Sa"
+                                "usr": "s:Sq"
                               },
                               {
                                 "kind": "TypeNominal",
@@ -21309,8 +21325,8 @@
               }
             ],
             "declKind": "EnumElement",
-            "usr": "s:12UNComponents32UNMultipleCardsComponentCallbackO10unitOnLoadyACs6ResultOySayAA6UNCardOGAA0A5ErrorOG_tcACmF",
-            "mangledName": "$s12UNComponents32UNMultipleCardsComponentCallbackO10unitOnLoadyACs6ResultOySayAA6UNCardOGAA0A5ErrorOG_tcACmF",
+            "usr": "s:12UNComponents32UNMultipleCardsComponentCallbackO10unitOnLoadyACs6ResultOySayAA6UNCardOGSgAA0A5ErrorOG_tcACmF",
+            "mangledName": "$s12UNComponents32UNMultipleCardsComponentCallbackO10unitOnLoadyACs6ResultOySayAA6UNCardOGSgAA0A5ErrorOG_tcACmF",
             "moduleName": "UNComponents"
           },
           {
@@ -68454,12 +68470,12 @@
               {
                 "kind": "TypeFunc",
                 "name": "Function",
-                "printedName": "(UNComponents.UNCreateCardComponentCallback.Type) -> (Swift.Result<UNComponents.UNCreateCardComponentResources, UNComponents.UNComponentsError>) -> UNComponents.UNCreateCardComponentCallback",
+                "printedName": "(UNComponents.UNCreateCardComponentCallback.Type) -> (Swift.Result<UNComponents.UNCreateCardComponentResources?, UNComponents.UNComponentsError>) -> UNComponents.UNCreateCardComponentCallback",
                 "children": [
                   {
                     "kind": "TypeFunc",
                     "name": "Function",
-                    "printedName": "(Swift.Result<UNComponents.UNCreateCardComponentResources, UNComponents.UNComponentsError>) -> UNComponents.UNCreateCardComponentCallback",
+                    "printedName": "(Swift.Result<UNComponents.UNCreateCardComponentResources?, UNComponents.UNComponentsError>) -> UNComponents.UNCreateCardComponentCallback",
                     "children": [
                       {
                         "kind": "TypeNominal",
@@ -68470,18 +68486,26 @@
                       {
                         "kind": "TypeNominal",
                         "name": "Tuple",
-                        "printedName": "(result: Swift.Result<UNComponents.UNCreateCardComponentResources, UNComponents.UNComponentsError>)",
+                        "printedName": "(result: Swift.Result<UNComponents.UNCreateCardComponentResources?, UNComponents.UNComponentsError>)",
                         "children": [
                           {
                             "kind": "TypeNominal",
                             "name": "Result",
-                            "printedName": "Swift.Result<UNComponents.UNCreateCardComponentResources, UNComponents.UNComponentsError>",
+                            "printedName": "Swift.Result<UNComponents.UNCreateCardComponentResources?, UNComponents.UNComponentsError>",
                             "children": [
                               {
                                 "kind": "TypeNominal",
-                                "name": "UNCreateCardComponentResources",
-                                "printedName": "UNComponents.UNCreateCardComponentResources",
-                                "usr": "s:12UNComponents30UNCreateCardComponentResourcesV"
+                                "name": "Optional",
+                                "printedName": "UNComponents.UNCreateCardComponentResources?",
+                                "children": [
+                                  {
+                                    "kind": "TypeNominal",
+                                    "name": "UNCreateCardComponentResources",
+                                    "printedName": "UNComponents.UNCreateCardComponentResources",
+                                    "usr": "s:12UNComponents30UNCreateCardComponentResourcesV"
+                                  }
+                                ],
+                                "usr": "s:Sq"
                               },
                               {
                                 "kind": "TypeNominal",
@@ -68513,8 +68537,8 @@
               }
             ],
             "declKind": "EnumElement",
-            "usr": "s:12UNComponents29UNCreateCardComponentCallbackO10unitOnLoadyACs6ResultOyAA0bcD9ResourcesVAA0A5ErrorOG_tcACmF",
-            "mangledName": "$s12UNComponents29UNCreateCardComponentCallbackO10unitOnLoadyACs6ResultOyAA0bcD9ResourcesVAA0A5ErrorOG_tcACmF",
+            "usr": "s:12UNComponents29UNCreateCardComponentCallbackO10unitOnLoadyACs6ResultOyAA0bcD9ResourcesVSgAA0A5ErrorOG_tcACmF",
+            "mangledName": "$s12UNComponents29UNCreateCardComponentCallbackO10unitOnLoadyACs6ResultOyAA0bcD9ResourcesVSgAA0A5ErrorOG_tcACmF",
             "moduleName": "UNComponents"
           },
           {
@@ -110746,25 +110770,103 @@
         "printedName": "UNWhiteLabelAppViewSettingsBuilder",
         "children": [
           {
+            "kind": "Var",
+            "name": "enablePushProvisioning",
+            "printedName": "enablePushProvisioning",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Bool",
+                "printedName": "Swift.Bool",
+                "usr": "s:Sb"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "s:12UNComponents34UNWhiteLabelAppViewSettingsBuilderC22enablePushProvisioningSbvp",
+            "mangledName": "$s12UNComponents34UNWhiteLabelAppViewSettingsBuilderC22enablePushProvisioningSbvp",
+            "moduleName": "UNComponents",
+            "declAttributes": [
+              "HasStorage",
+              "SetterAccess",
+              "AccessControl"
+            ],
+            "hasStorage": true,
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Bool",
+                    "printedName": "Swift.Bool",
+                    "usr": "s:Sb"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:12UNComponents34UNWhiteLabelAppViewSettingsBuilderC22enablePushProvisioningSbvg",
+                "mangledName": "$s12UNComponents34UNWhiteLabelAppViewSettingsBuilderC22enablePushProvisioningSbvg",
+                "moduleName": "UNComponents",
+                "implicit": true,
+                "accessorKind": "get"
+              }
+            ]
+          },
+          {
             "kind": "Constructor",
             "name": "init",
-            "printedName": "init()",
+            "printedName": "init(enablePushProvisioning:)",
             "children": [
               {
                 "kind": "TypeNominal",
                 "name": "UNWhiteLabelAppViewSettingsBuilder",
                 "printedName": "UNComponents.UNWhiteLabelAppViewSettingsBuilder",
                 "usr": "s:12UNComponents34UNWhiteLabelAppViewSettingsBuilderC"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Bool",
+                "printedName": "Swift.Bool",
+                "hasDefaultArg": true,
+                "usr": "s:Sb"
               }
             ],
             "declKind": "Constructor",
-            "usr": "s:12UNComponents34UNWhiteLabelAppViewSettingsBuilderCACycfc",
-            "mangledName": "$s12UNComponents34UNWhiteLabelAppViewSettingsBuilderCACycfc",
+            "usr": "s:12UNComponents34UNWhiteLabelAppViewSettingsBuilderC22enablePushProvisioningACSb_tcfc",
+            "mangledName": "$s12UNComponents34UNWhiteLabelAppViewSettingsBuilderC22enablePushProvisioningACSb_tcfc",
             "moduleName": "UNComponents",
             "declAttributes": [
               "AccessControl"
             ],
             "init_kind": "Designated"
+          },
+          {
+            "kind": "Function",
+            "name": "enablePushProvisioning",
+            "printedName": "enablePushProvisioning(_:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "UNWhiteLabelAppViewSettingsBuilder",
+                "printedName": "UNComponents.UNWhiteLabelAppViewSettingsBuilder",
+                "usr": "s:12UNComponents34UNWhiteLabelAppViewSettingsBuilderC"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Bool",
+                "printedName": "Swift.Bool",
+                "usr": "s:Sb"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:12UNComponents34UNWhiteLabelAppViewSettingsBuilderC22enablePushProvisioningyACSbF",
+            "mangledName": "$s12UNComponents34UNWhiteLabelAppViewSettingsBuilderC22enablePushProvisioningyACSbF",
+            "moduleName": "UNComponents",
+            "declAttributes": [
+              "AccessControl"
+            ],
+            "funcSelfKind": "NonMutating"
           }
         ],
         "declKind": "Class",
@@ -184273,6 +184375,50 @@
         "kind": "TypeDecl",
         "name": "UNWhiteLabelAppViewSettingsProtocol",
         "printedName": "UNWhiteLabelAppViewSettingsProtocol",
+        "children": [
+          {
+            "kind": "Var",
+            "name": "enablePushProvisioning",
+            "printedName": "enablePushProvisioning",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Bool",
+                "printedName": "Swift.Bool",
+                "usr": "s:Sb"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "s:12UNComponents35UNWhiteLabelAppViewSettingsProtocolP22enablePushProvisioningSbvp",
+            "mangledName": "$s12UNComponents35UNWhiteLabelAppViewSettingsProtocolP22enablePushProvisioningSbvp",
+            "moduleName": "UNComponents",
+            "protocolReq": true,
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Bool",
+                    "printedName": "Swift.Bool",
+                    "usr": "s:Sb"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:12UNComponents35UNWhiteLabelAppViewSettingsProtocolP22enablePushProvisioningSbvg",
+                "mangledName": "$s12UNComponents35UNWhiteLabelAppViewSettingsProtocolP22enablePushProvisioningSbvg",
+                "moduleName": "UNComponents",
+                "genericSig": "<τ_0_0 where τ_0_0 : UNComponents.UNWhiteLabelAppViewSettingsProtocol>",
+                "sugared_genericSig": "<Self where Self : UNComponents.UNWhiteLabelAppViewSettingsProtocol>",
+                "protocolReq": true,
+                "reqNewWitnessTableEntry": true,
+                "accessorKind": "get"
+              }
+            ]
+          }
+        ],
         "declKind": "Protocol",
         "usr": "s:12UNComponents35UNWhiteLabelAppViewSettingsProtocolP",
         "mangledName": "$s12UNComponents35UNWhiteLabelAppViewSettingsProtocolP",
@@ -193400,7 +193546,7 @@
       "kind": "IntegerLiteral",
       "offset": 386,
       "length": 1,
-      "value": "2"
+      "value": "3"
     },
     {
       "filePath": "\/Users\/runner\/work\/unit-ios-components\/unit-ios-components\/UnitWhiteLabelBanking\/UNComponents\/UI\/Components\/CheckDeposit\/UNCheckDepositComponent.swift",
@@ -195314,6 +195460,13 @@
       "value": "false"
     },
     {
+      "filePath": "\/Users\/runner\/work\/unit-ios-components\/unit-ios-components\/UnitWhiteLabelBanking\/UNComponents\/Infra\/Builders\/Components\/WhiteLabelApp\/UNWhiteLabelAppViewSettingsBuilder.swift",
+      "kind": "BooleanLiteral",
+      "offset": 310,
+      "length": 5,
+      "value": "false"
+    },
+    {
       "filePath": "\/Users\/runner\/work\/unit-ios-components\/unit-ios-components\/UnitWhiteLabelBanking\/UNComponents\/Infra\/Builders\/Components\/WirePayment\/UNWirePaymentViewSettingsBuilder.swift",
       "kind": "BooleanLiteral",
       "offset": 413,
@@ -195753,6 +195906,13 @@
       "offset": 584,
       "length": 16,
       "value": "\"customer-token\""
+    },
+    {
+      "filePath": "\/Users\/runner\/work\/unit-ios-components\/unit-ios-components\/UnitWhiteLabelBanking\/UNComponents\/UI\/Components\/WhiteLabelApp\/UNWhiteLabelAppComponent.swift",
+      "kind": "StringLiteral",
+      "offset": 645,
+      "length": 22,
+      "value": "\"enable-mobile-wallet\""
     },
     {
       "filePath": "\/Users\/runner\/work\/unit-ios-components\/unit-ios-components\/UnitWhiteLabelBanking\/UNComponents\/Models\/Shared\/Account\/UNAccount.swift",
@@ -197157,14 +197317,14 @@
     {
       "filePath": "\/Users\/runner\/work\/unit-ios-components\/unit-ios-components\/UnitWhiteLabelBanking\/UNComponents\/Models\/Shared\/OnLoad\/UNComponentsOnLoadResponse.swift",
       "kind": "StringLiteral",
-      "offset": 6918,
+      "offset": 6811,
       "length": 18,
       "value": "\"astraCardsResult\""
     },
     {
       "filePath": "\/Users\/runner\/work\/unit-ios-components\/unit-ios-components\/UnitWhiteLabelBanking\/UNComponents\/Models\/Shared\/OnLoad\/UNComponentsOnLoadResponse.swift",
       "kind": "StringLiteral",
-      "offset": 6965,
+      "offset": 6858,
       "length": 20,
       "value": "\"accountCardsResult\""
     },
@@ -197757,7 +197917,7 @@
       "value": "\"final-stage-done-button\""
     },
     {
-      "filePath": "\/Users\/runner\/Library\/Developer\/Xcode\/DerivedData\/UnitWhiteLabelBanking-dvytakrehlrcwadklhjtphligiyb\/Build\/Intermediates.noindex\/ArchiveIntermediates\/UNComponents\/IntermediateBuildFilesPath\/UnitWhiteLabelBanking.build\/Release-iphonesimulator\/UNComponents.build\/DerivedSources\/GeneratedAssetSymbols.swift",
+      "filePath": "\/Users\/runner\/Library\/Developer\/Xcode\/DerivedData\/UnitWhiteLabelBanking-ezatldnqubgkbrerdowudqzkauzy\/Build\/Intermediates.noindex\/ArchiveIntermediates\/UNComponents\/IntermediateBuildFilesPath\/UnitWhiteLabelBanking.build\/Release-iphonesimulator\/UNComponents.build\/DerivedSources\/GeneratedAssetSymbols.swift",
       "kind": "StringLiteral",
       "offset": 741,
       "length": 17,

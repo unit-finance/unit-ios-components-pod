@@ -368,6 +368,10 @@
             window.dispatchEvent(event);
         }
         
+        const dispatchRefreshEventToComponent = (componentName) => {
+            document.querySelector(componentName).dispatchEvent(new CustomEvent("unitRequestRefresh", { detail: { fromSDK: true } }))
+        }
+
         const dispatchActivityFilterChangedEvent = (details) => {
             const event = new CustomEvent("unitActivityFiltersChanged",{ detail: details});
             window.dispatchEvent(event);

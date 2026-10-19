@@ -421,7 +421,7 @@ public protocol UNComponentsServices {
   func setVeryfiCredentials(_ credentials: UNComponents.UNVeryfiCredentials)
 }
 public enum UNAccountComponentCallback {
-  case unitOnLoad(result: Swift.Result<[UNComponents.UNAccount], UNComponents.UNComponentsError>)
+  case unitOnLoad(result: Swift.Result<[UNComponents.UNAccount]?, UNComponents.UNComponentsError>)
   case onAccountChange(account: UNComponents.UNAccount)
   case onRequestLeftToSpendDetails(account: UNComponents.UNAccount)
 }
@@ -728,7 +728,7 @@ public class UNAccountViewSettingsBuilder : UNComponents.UNAccountViewSettingsPr
   @objc deinit
 }
 public enum UNMultipleCardsComponentCallback {
-  case unitOnLoad(result: Swift.Result<[UNComponents.UNCard], UNComponents.UNComponentsError>)
+  case unitOnLoad(result: Swift.Result<[UNComponents.UNCard]?, UNComponents.UNComponentsError>)
   case cardClicked(card: UNComponents.UNCard)
 }
 public enum UNMultipleCardsComponentPaginationType : Swift.String {
@@ -2213,7 +2213,7 @@ public protocol UNACHCreditViewSettingsProtocol {
   var showAccountTypeSelector: Swift.Bool { get }
 }
 public enum UNCreateCardComponentCallback {
-  case unitOnLoad(result: Swift.Result<UNComponents.UNCreateCardComponentResources, UNComponents.UNComponentsError>)
+  case unitOnLoad(result: Swift.Result<UNComponents.UNCreateCardComponentResources?, UNComponents.UNComponentsError>)
   case cardCreated(data: UNComponents.UNCard)
 }
 public enum UNCreateCardType : Swift.String {
@@ -3534,7 +3534,11 @@ public class UNActivityViewSettingsBuilder : UNComponents.UNActivityViewSettings
   @objc deinit
 }
 public class UNWhiteLabelAppViewSettingsBuilder : UNComponents.UNWhiteLabelAppViewSettingsProtocol {
-  public init()
+  public var enablePushProvisioning: Swift.Bool {
+    get
+  }
+  public init(enablePushProvisioning: Swift.Bool = false)
+  public func enablePushProvisioning(_ enablePushProvisioning: Swift.Bool) -> UNComponents.UNWhiteLabelAppViewSettingsBuilder
   @objc deinit
 }
 public class UNWirePaymentViewSettingsBuilder : UNComponents.UNWirePaymentViewSettingsProtocol {
@@ -5753,6 +5757,7 @@ public protocol UNWhiteLabelAppView : UIKit.UIView {
   var additionalSetting: any UNComponents.UNWhiteLabelAppViewSettingsProtocol { get set }
 }
 public protocol UNWhiteLabelAppViewSettingsProtocol {
+  var enablePushProvisioning: Swift.Bool { get }
 }
 public struct UNCheckPayment : Swift.Codable {
   public let type: UNComponents.UNPaymentType
