@@ -10,8 +10,7 @@ let package = Package(
         .library(name: "UnitComponents", targets: ["UNComponentsSDKWrapperTarget"])
     ],
     dependencies: [
-        // Here we define our package's external dependencies
-        // and from where they can be fetched:
+        .package(url: "https://github.com/unit-finance/unit-ios-sdk", from: "1.2.0")
     ],
     targets: [
         .binaryTarget(
@@ -22,6 +21,7 @@ let package = Package(
             name: "UNComponentsSDKWrapperTarget",
             dependencies: [
                 .target(name: "UnitComponents", condition: .when(platforms: .some([.iOS]))),
+                .product(name: "UnitCommon", package: "unit-ios-sdk"),
             ],
             path: "UNComponentsSDKWrapperTarget"
         )
