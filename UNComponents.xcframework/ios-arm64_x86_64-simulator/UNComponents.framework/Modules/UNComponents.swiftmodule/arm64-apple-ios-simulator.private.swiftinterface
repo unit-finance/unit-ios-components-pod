@@ -16,6 +16,7 @@ import SystemConfiguration
 import UIKit
 @_exported import UNComponents
 import UniformTypeIdentifiers
+import UnitCommon
 import WebKit
 import _Concurrency
 import _StringProcessing
@@ -417,7 +418,7 @@ public protocol UNActivityViewSettingsProtocol {
   var showCsvDownload: Swift.Bool { get }
 }
 public protocol UNComponentsServices {
-  func setVisaProvider(_ provider: any UNComponents.UNVisaProviding)
+  func configureVisa(visaAppId: Swift.String)
   func setVeryfiCredentials(_ credentials: UNComponents.UNVeryfiCredentials)
 }
 public enum UNAccountComponentCallback {
@@ -897,7 +898,7 @@ public enum UNComponentsError : Swift.Error {
   case onLoad(errors: [UNComponents.UNComponentsErrorResponse])
   case missingCustomerToken
   case notInitialized
-  case missingVisaProvider
+  case pushProvisioningUnavailable
   case jailbrokeDevice
   public var description: Swift.String {
     get
@@ -3429,72 +3430,6 @@ public enum UNBookPaymentComponentCallback {
   case onFinalStageDoneButtonClicked
   case unitOnLoad(result: Swift.Result<[UNComponents.UNAccount], UNComponents.UNComponentsError>)
 }
-public struct UNVPError : Swift.Error {
-  public let code: Swift.String
-  public let description: Swift.String
-  public let type: UNComponents.UNVPErrorType
-  public let correlationId: Swift.String
-  public init(code: Swift.String, description: Swift.String, type: UNComponents.UNVPErrorType, correlationId: Swift.String)
-}
-public enum UNVPErrorType {
-  case emptyAppId
-  case emptyEnvironment
-  case deviceAuthenticationFailed
-  case deviceRootDetection
-  case emptyEncryptedPayload
-  case invalidCardLast4Digits
-  case noWallets
-  case unsupportedCard
-  case cancelledByUser
-  case cancelledBySystem
-  case passKitUnknown
-  case unableToCreatePaymentPassView
-  case validCertificatesNotFound
-  case provisioningNotAllowed
-  case networkFailure
-  case sessionExpired
-  case invalidCardInfo
-  case payloadDecryptionFailed
-  case apiError
-  case navigationBarMissing
-  case walletProvisioningError
-  case walletProvisioningInconclusive
-  case sdkLockout
-  case invalidNonce
-  case reversedEngineered
-  case noBrowserFound
-  case TLCMFeatureNotSupported
-  case TLCMUnsupportedWallet
-  case TLCMDetailsNotFoundInPaySdk
-  case TLCMTokenStatusExists
-  case TLCMInvalidOperationInput
-  case TLCMInvalidRequest
-  case TLCMTokenNotFound
-  case TLCMUpdateStatusNotAllowed
-  public static func == (a: UNComponents.UNVPErrorType, b: UNComponents.UNVPErrorType) -> Swift.Bool
-  public func hash(into hasher: inout Swift.Hasher)
-  public var hashValue: Swift.Int {
-    get
-  }
-}
-public enum UNVPProvisionStatus {
-  case readyToProvision
-  case alreadyProvisioned
-  case notAvailable
-  public static func == (a: UNComponents.UNVPProvisionStatus, b: UNComponents.UNVPProvisionStatus) -> Swift.Bool
-  public func hash(into hasher: inout Swift.Hasher)
-  public var hashValue: Swift.Int {
-    get
-  }
-}
-public struct UNVPSupportedWallet {
-  #if compiler(>=5.3) && $NonescapableTypes
-  public init(name: Swift.String, description: Swift.String, status: UNComponents.UNVPProvisionStatus, reason: Swift.String?)
-  #endif
-}
-public struct UNVPCardProvisioningResponse {
-  public init(walletStatus: UNComponents.UNVPProvisionStatus)
-}
 public class UNActivityViewSettingsBuilder : UNComponents.UNActivityViewSettingsProtocol {
   public var paginationType: UNComponents.UNActivityComponentPaginationType {
     get
@@ -4422,14 +4357,6 @@ public struct UNCodeablePlaidLinkTokenAttributes : Swift.Codable {
   public func encode(to encoder: any Swift.Encoder) throws
   public init(from decoder: any Swift.Decoder) throws
 }
-public protocol UNVisaProviding {
-  func initialize(completion: @escaping UNComponents.UNVisaInitializationCompletion)
-  func getSupportedWallets(for payload: Swift.String, completion: @escaping UNComponents.UNVisaSupportedWalletsCompletion)
-  func startCardProvisioning(for walletName: Swift.String, in vc: UIKit.UIViewController, completion: @escaping UNComponents.UNVisaCardProvisioningCompletion)
-}
-public typealias UNVisaInitializationCompletion = (_ signedNonce: Swift.String?, _ error: UNComponents.UNVPError?) -> Swift.Void
-public typealias UNVisaSupportedWalletsCompletion = (_ wallets: [UNComponents.UNVPSupportedWallet]?, _ error: UNComponents.UNVPError?) -> Swift.Void
-public typealias UNVisaCardProvisioningCompletion = (_ response: UNComponents.UNVPCardProvisioningResponse?, _ error: UNComponents.UNVPError?) -> Swift.Void
 public typealias UNCustomerToken = Swift.String
 public typealias UNComponentsTheme = Swift.String
 public typealias UNComponentsLanguage = Swift.String
@@ -5855,6 +5782,268 @@ public class UNCheckPaymentViewSettingsBuilder : UNComponents.UNCheckPaymentView
   public func finalStageDoneButton(_ finalStageDoneButton: Swift.Bool) -> UNComponents.UNCheckPaymentViewSettingsBuilder
   @objc deinit
 }
+final public class UNComponentRef<Component> : Foundation.ObservableObject {
+  #if compiler(>=5.3) && $NonescapableTypes
+  final public var component: Component? {
+    get
+  }
+  #endif
+  public init()
+  public typealias ObjectWillChangePublisher = Combine.ObservableObjectPublisher
+  @objc deinit
+}
+@_Concurrency.MainActor @preconcurrency public struct UNCardComponentView : SwiftUICore.View {
+  @_Concurrency.MainActor @preconcurrency public init(cardId: Swift.String)
+  @_Concurrency.MainActor @preconcurrency public var body: some SwiftUICore.View {
+    get
+  }
+  public typealias Body = @_opaqueReturnTypeOf("$s12UNComponents19UNCardComponentViewV4bodyQrvp", 0) __
+}
+extension UNComponents.UNCardComponentView {
+  @_Concurrency.MainActor @preconcurrency public func additionalSettings(_ additionalSettings: any UNComponents.UNCardViewSettingsProtocol) -> UNComponents.UNCardComponentView
+  #if compiler(>=5.3) && $NonescapableTypes
+  @_Concurrency.MainActor @preconcurrency public func theme(_ theme: UNComponents.UNComponentsTheme?) -> UNComponents.UNCardComponentView
+  #endif
+  #if compiler(>=5.3) && $NonescapableTypes
+  @_Concurrency.MainActor @preconcurrency public func language(_ language: UNComponents.UNComponentsLanguage?) -> UNComponents.UNCardComponentView
+  #endif
+  @_Concurrency.MainActor @preconcurrency public func callbacks(_ callbacks: @escaping UNComponents.UNCardComponentCallbacks) -> UNComponents.UNCardComponentView
+  @_Concurrency.MainActor @preconcurrency public func ref(_ ref: UNComponents.UNComponentRef<any UNComponents.UNCardView>) -> UNComponents.UNCardComponentView
+}
+@_Concurrency.MainActor @preconcurrency public struct UNAccountComponentView : SwiftUICore.View {
+  #if compiler(>=5.3) && $NonescapableTypes
+  @_Concurrency.MainActor @preconcurrency public init(accountId: Swift.String? = nil)
+  #endif
+  @_Concurrency.MainActor @preconcurrency public var body: some SwiftUICore.View {
+    get
+  }
+  public typealias Body = @_opaqueReturnTypeOf("$s12UNComponents22UNAccountComponentViewV4bodyQrvp", 0) __
+}
+extension UNComponents.UNAccountComponentView {
+  @_Concurrency.MainActor @preconcurrency public func additionalSettings(_ additionalSettings: any UNComponents.UNAccountViewSettingsProtocol) -> UNComponents.UNAccountComponentView
+  #if compiler(>=5.3) && $NonescapableTypes
+  @_Concurrency.MainActor @preconcurrency public func theme(_ theme: UNComponents.UNComponentsTheme?) -> UNComponents.UNAccountComponentView
+  #endif
+  #if compiler(>=5.3) && $NonescapableTypes
+  @_Concurrency.MainActor @preconcurrency public func language(_ language: UNComponents.UNComponentsLanguage?) -> UNComponents.UNAccountComponentView
+  #endif
+  @_Concurrency.MainActor @preconcurrency public func callbacks(_ callbacks: @escaping UNComponents.UNAccountComponentCallbacks) -> UNComponents.UNAccountComponentView
+  @_Concurrency.MainActor @preconcurrency public func ref(_ ref: UNComponents.UNComponentRef<any UNComponents.UNAccountView>) -> UNComponents.UNAccountComponentView
+}
+@_Concurrency.MainActor @preconcurrency public struct UNActivityComponentView : SwiftUICore.View {
+  #if compiler(>=5.3) && $NonescapableTypes
+  @_Concurrency.MainActor @preconcurrency public init(accountId: Swift.String? = nil)
+  #endif
+  @_Concurrency.MainActor @preconcurrency public var body: some SwiftUICore.View {
+    get
+  }
+  public typealias Body = @_opaqueReturnTypeOf("$s12UNComponents23UNActivityComponentViewV4bodyQrvp", 0) __
+}
+extension UNComponents.UNActivityComponentView {
+  @_Concurrency.MainActor @preconcurrency public func additionalSettings(_ additionalSettings: any UNComponents.UNActivityViewSettingsProtocol) -> UNComponents.UNActivityComponentView
+  #if compiler(>=5.3) && $NonescapableTypes
+  @_Concurrency.MainActor @preconcurrency public func theme(_ theme: UNComponents.UNComponentsTheme?) -> UNComponents.UNActivityComponentView
+  #endif
+  #if compiler(>=5.3) && $NonescapableTypes
+  @_Concurrency.MainActor @preconcurrency public func language(_ language: UNComponents.UNComponentsLanguage?) -> UNComponents.UNActivityComponentView
+  #endif
+  @_Concurrency.MainActor @preconcurrency public func callbacks(_ callbacks: @escaping UNComponents.UNActivityComponentCallbacks) -> UNComponents.UNActivityComponentView
+  @_Concurrency.MainActor @preconcurrency public func ref(_ ref: UNComponents.UNComponentRef<any UNComponents.UNActivityView>) -> UNComponents.UNActivityComponentView
+}
+@_Concurrency.MainActor @preconcurrency public struct UNACHCreditComponentView : SwiftUICore.View {
+  #if compiler(>=5.3) && $NonescapableTypes
+  @_Concurrency.MainActor @preconcurrency public init(accountId: Swift.String? = nil)
+  #endif
+  @_Concurrency.MainActor @preconcurrency public var body: some SwiftUICore.View {
+    get
+  }
+  public typealias Body = @_opaqueReturnTypeOf("$s12UNComponents24UNACHCreditComponentViewV4bodyQrvp", 0) __
+}
+extension UNComponents.UNACHCreditComponentView {
+  @_Concurrency.MainActor @preconcurrency public func additionalSettings(_ additionalSettings: any UNComponents.UNACHCreditViewSettingsProtocol) -> UNComponents.UNACHCreditComponentView
+  #if compiler(>=5.3) && $NonescapableTypes
+  @_Concurrency.MainActor @preconcurrency public func theme(_ theme: UNComponents.UNComponentsTheme?) -> UNComponents.UNACHCreditComponentView
+  #endif
+  #if compiler(>=5.3) && $NonescapableTypes
+  @_Concurrency.MainActor @preconcurrency public func language(_ language: UNComponents.UNComponentsLanguage?) -> UNComponents.UNACHCreditComponentView
+  #endif
+  @_Concurrency.MainActor @preconcurrency public func callbacks(_ callbacks: @escaping UNComponents.UNACHCreditComponentCallbacks) -> UNComponents.UNACHCreditComponentView
+  @_Concurrency.MainActor @preconcurrency public func ref(_ ref: UNComponents.UNComponentRef<any UNComponents.UNACHCreditView>) -> UNComponents.UNACHCreditComponentView
+}
+@_Concurrency.MainActor @preconcurrency public struct UNACHDebitComponentView : SwiftUICore.View {
+  #if compiler(>=5.3) && $NonescapableTypes
+  @_Concurrency.MainActor @preconcurrency public init(accountId: Swift.String? = nil)
+  #endif
+  @_Concurrency.MainActor @preconcurrency public var body: some SwiftUICore.View {
+    get
+  }
+  public typealias Body = @_opaqueReturnTypeOf("$s12UNComponents23UNACHDebitComponentViewV4bodyQrvp", 0) __
+}
+extension UNComponents.UNACHDebitComponentView {
+  @_Concurrency.MainActor @preconcurrency public func additionalSettings(_ additionalSettings: any UNComponents.UNACHDebitViewSettingsProtocol) -> UNComponents.UNACHDebitComponentView
+  #if compiler(>=5.3) && $NonescapableTypes
+  @_Concurrency.MainActor @preconcurrency public func theme(_ theme: UNComponents.UNComponentsTheme?) -> UNComponents.UNACHDebitComponentView
+  #endif
+  #if compiler(>=5.3) && $NonescapableTypes
+  @_Concurrency.MainActor @preconcurrency public func language(_ language: UNComponents.UNComponentsLanguage?) -> UNComponents.UNACHDebitComponentView
+  #endif
+  @_Concurrency.MainActor @preconcurrency public func callbacks(_ callbacks: @escaping UNComponents.UNACHDebitComponentCallbacks) -> UNComponents.UNACHDebitComponentView
+  @_Concurrency.MainActor @preconcurrency public func ref(_ ref: UNComponents.UNComponentRef<any UNComponents.UNACHDebitView>) -> UNComponents.UNACHDebitComponentView
+}
+@_Concurrency.MainActor @preconcurrency public struct UNWirePaymentComponentView : SwiftUICore.View {
+  #if compiler(>=5.3) && $NonescapableTypes
+  @_Concurrency.MainActor @preconcurrency public init(accountId: Swift.String? = nil)
+  #endif
+  @_Concurrency.MainActor @preconcurrency public var body: some SwiftUICore.View {
+    get
+  }
+  public typealias Body = @_opaqueReturnTypeOf("$s12UNComponents26UNWirePaymentComponentViewV4bodyQrvp", 0) __
+}
+extension UNComponents.UNWirePaymentComponentView {
+  @_Concurrency.MainActor @preconcurrency public func additionalSettings(_ additionalSettings: any UNComponents.UNWirePaymentViewSettingsProtocol) -> UNComponents.UNWirePaymentComponentView
+  #if compiler(>=5.3) && $NonescapableTypes
+  @_Concurrency.MainActor @preconcurrency public func theme(_ theme: UNComponents.UNComponentsTheme?) -> UNComponents.UNWirePaymentComponentView
+  #endif
+  #if compiler(>=5.3) && $NonescapableTypes
+  @_Concurrency.MainActor @preconcurrency public func language(_ language: UNComponents.UNComponentsLanguage?) -> UNComponents.UNWirePaymentComponentView
+  #endif
+  @_Concurrency.MainActor @preconcurrency public func callbacks(_ callbacks: @escaping UNComponents.UNWirePaymentComponentCallbacks) -> UNComponents.UNWirePaymentComponentView
+  @_Concurrency.MainActor @preconcurrency public func ref(_ ref: UNComponents.UNComponentRef<any UNComponents.UNWirePaymentView>) -> UNComponents.UNWirePaymentComponentView
+}
+@_Concurrency.MainActor @preconcurrency public struct UNCheckPaymentComponentView : SwiftUICore.View {
+  #if compiler(>=5.3) && $NonescapableTypes
+  @_Concurrency.MainActor @preconcurrency public init(accountId: Swift.String? = nil)
+  #endif
+  @_Concurrency.MainActor @preconcurrency public var body: some SwiftUICore.View {
+    get
+  }
+  public typealias Body = @_opaqueReturnTypeOf("$s12UNComponents27UNCheckPaymentComponentViewV4bodyQrvp", 0) __
+}
+extension UNComponents.UNCheckPaymentComponentView {
+  @_Concurrency.MainActor @preconcurrency public func additionalSettings(_ additionalSettings: any UNComponents.UNCheckPaymentViewSettingsProtocol) -> UNComponents.UNCheckPaymentComponentView
+  #if compiler(>=5.3) && $NonescapableTypes
+  @_Concurrency.MainActor @preconcurrency public func theme(_ theme: UNComponents.UNComponentsTheme?) -> UNComponents.UNCheckPaymentComponentView
+  #endif
+  #if compiler(>=5.3) && $NonescapableTypes
+  @_Concurrency.MainActor @preconcurrency public func language(_ language: UNComponents.UNComponentsLanguage?) -> UNComponents.UNCheckPaymentComponentView
+  #endif
+  @_Concurrency.MainActor @preconcurrency public func callbacks(_ callbacks: @escaping UNComponents.UNCheckPaymentComponentCallbacks) -> UNComponents.UNCheckPaymentComponentView
+  @_Concurrency.MainActor @preconcurrency public func ref(_ ref: UNComponents.UNComponentRef<any UNComponents.UNCheckPaymentView>) -> UNComponents.UNCheckPaymentComponentView
+}
+@_Concurrency.MainActor @preconcurrency public struct UNBookPaymentComponentView : SwiftUICore.View {
+  #if compiler(>=5.3) && $NonescapableTypes
+  @_Concurrency.MainActor @preconcurrency public init(accountId: Swift.String? = nil, counterpartyAccountId: Swift.String? = nil, counterpartyName: Swift.String? = nil, isSameCustomer: Swift.Bool = false)
+  #endif
+  @_Concurrency.MainActor @preconcurrency public var body: some SwiftUICore.View {
+    get
+  }
+  public typealias Body = @_opaqueReturnTypeOf("$s12UNComponents26UNBookPaymentComponentViewV4bodyQrvp", 0) __
+}
+extension UNComponents.UNBookPaymentComponentView {
+  @_Concurrency.MainActor @preconcurrency public func additionalSettings(_ additionalSettings: any UNComponents.UNBookPaymentViewSettingsProtocol) -> UNComponents.UNBookPaymentComponentView
+  #if compiler(>=5.3) && $NonescapableTypes
+  @_Concurrency.MainActor @preconcurrency public func theme(_ theme: UNComponents.UNComponentsTheme?) -> UNComponents.UNBookPaymentComponentView
+  #endif
+  #if compiler(>=5.3) && $NonescapableTypes
+  @_Concurrency.MainActor @preconcurrency public func language(_ language: UNComponents.UNComponentsLanguage?) -> UNComponents.UNBookPaymentComponentView
+  #endif
+  @_Concurrency.MainActor @preconcurrency public func callbacks(_ callbacks: @escaping UNComponents.UNBookPaymentComponentCallbacks) -> UNComponents.UNBookPaymentComponentView
+  @_Concurrency.MainActor @preconcurrency public func ref(_ ref: UNComponents.UNComponentRef<any UNComponents.UNBookPaymentView>) -> UNComponents.UNBookPaymentComponentView
+}
+@_Concurrency.MainActor @preconcurrency public struct UNCheckDepositComponentView : SwiftUICore.View {
+  #if compiler(>=5.3) && $NonescapableTypes
+  @_Concurrency.MainActor @preconcurrency public init(accountId: Swift.String? = nil, fee: Swift.Double? = nil)
+  #endif
+  @_Concurrency.MainActor @preconcurrency public var body: some SwiftUICore.View {
+    get
+  }
+  public typealias Body = @_opaqueReturnTypeOf("$s12UNComponents27UNCheckDepositComponentViewV4bodyQrvp", 0) __
+}
+extension UNComponents.UNCheckDepositComponentView {
+  @_Concurrency.MainActor @preconcurrency public func additionalSettings(_ additionalSettings: any UNComponents.UNCheckDepositViewSettingsProtocol) -> UNComponents.UNCheckDepositComponentView
+  #if compiler(>=5.3) && $NonescapableTypes
+  @_Concurrency.MainActor @preconcurrency public func theme(_ theme: UNComponents.UNComponentsTheme?) -> UNComponents.UNCheckDepositComponentView
+  #endif
+  #if compiler(>=5.3) && $NonescapableTypes
+  @_Concurrency.MainActor @preconcurrency public func language(_ language: UNComponents.UNComponentsLanguage?) -> UNComponents.UNCheckDepositComponentView
+  #endif
+  @_Concurrency.MainActor @preconcurrency public func callbacks(_ callbacks: @escaping UNComponents.UNCheckDepositComponentCallbacks) -> UNComponents.UNCheckDepositComponentView
+  @_Concurrency.MainActor @preconcurrency public func ref(_ ref: UNComponents.UNComponentRef<any UNComponents.UNCheckDepositView>) -> UNComponents.UNCheckDepositComponentView
+}
+@_Concurrency.MainActor @preconcurrency public struct UNProgramDetailsComponentView : SwiftUICore.View {
+  @_Concurrency.MainActor @preconcurrency public init(accountId: Swift.String)
+  @_Concurrency.MainActor @preconcurrency public var body: some SwiftUICore.View {
+    get
+  }
+  public typealias Body = @_opaqueReturnTypeOf("$s12UNComponents29UNProgramDetailsComponentViewV4bodyQrvp", 0) __
+}
+extension UNComponents.UNProgramDetailsComponentView {
+  @_Concurrency.MainActor @preconcurrency public func additionalSettings(_ additionalSettings: any UNComponents.UNProgramDetailsViewSettingsProtocol) -> UNComponents.UNProgramDetailsComponentView
+  #if compiler(>=5.3) && $NonescapableTypes
+  @_Concurrency.MainActor @preconcurrency public func theme(_ theme: UNComponents.UNComponentsTheme?) -> UNComponents.UNProgramDetailsComponentView
+  #endif
+  #if compiler(>=5.3) && $NonescapableTypes
+  @_Concurrency.MainActor @preconcurrency public func language(_ language: UNComponents.UNComponentsLanguage?) -> UNComponents.UNProgramDetailsComponentView
+  #endif
+  @_Concurrency.MainActor @preconcurrency public func callbacks(_ callbacks: @escaping UNComponents.UNProgramDetailsComponentCallbacks) -> UNComponents.UNProgramDetailsComponentView
+  @_Concurrency.MainActor @preconcurrency public func ref(_ ref: UNComponents.UNComponentRef<any UNComponents.UNProgramDetailsView>) -> UNComponents.UNProgramDetailsComponentView
+}
+@_Concurrency.MainActor @preconcurrency public struct UNCreateCardComponentView : SwiftUICore.View {
+  #if compiler(>=5.3) && $NonescapableTypes
+  @_Concurrency.MainActor @preconcurrency public init(accountId: Swift.String? = nil)
+  #endif
+  @_Concurrency.MainActor @preconcurrency public var body: some SwiftUICore.View {
+    get
+  }
+  public typealias Body = @_opaqueReturnTypeOf("$s12UNComponents25UNCreateCardComponentViewV4bodyQrvp", 0) __
+}
+extension UNComponents.UNCreateCardComponentView {
+  @_Concurrency.MainActor @preconcurrency public func additionalSettings(_ additionalSettings: any UNComponents.UNCreateCardViewSettingsProtocol) -> UNComponents.UNCreateCardComponentView
+  #if compiler(>=5.3) && $NonescapableTypes
+  @_Concurrency.MainActor @preconcurrency public func theme(_ theme: UNComponents.UNComponentsTheme?) -> UNComponents.UNCreateCardComponentView
+  #endif
+  #if compiler(>=5.3) && $NonescapableTypes
+  @_Concurrency.MainActor @preconcurrency public func language(_ language: UNComponents.UNComponentsLanguage?) -> UNComponents.UNCreateCardComponentView
+  #endif
+  @_Concurrency.MainActor @preconcurrency public func callbacks(_ callbacks: @escaping UNComponents.UNCreateCardComponentCallbacks) -> UNComponents.UNCreateCardComponentView
+  @_Concurrency.MainActor @preconcurrency public func ref(_ ref: UNComponents.UNComponentRef<any UNComponents.UNCreateCardView>) -> UNComponents.UNCreateCardComponentView
+}
+@_Concurrency.MainActor @preconcurrency public struct UNMultipleCardsComponentView : SwiftUICore.View {
+  @_Concurrency.MainActor @preconcurrency public init()
+  @_Concurrency.MainActor @preconcurrency public var body: some SwiftUICore.View {
+    get
+  }
+  public typealias Body = @_opaqueReturnTypeOf("$s12UNComponents28UNMultipleCardsComponentViewV4bodyQrvp", 0) __
+}
+extension UNComponents.UNMultipleCardsComponentView {
+  @_Concurrency.MainActor @preconcurrency public func additionalSettings(_ additionalSettings: any UNComponents.UNMultipleCardsViewSettingsProtocol) -> UNComponents.UNMultipleCardsComponentView
+  #if compiler(>=5.3) && $NonescapableTypes
+  @_Concurrency.MainActor @preconcurrency public func theme(_ theme: UNComponents.UNComponentsTheme?) -> UNComponents.UNMultipleCardsComponentView
+  #endif
+  #if compiler(>=5.3) && $NonescapableTypes
+  @_Concurrency.MainActor @preconcurrency public func language(_ language: UNComponents.UNComponentsLanguage?) -> UNComponents.UNMultipleCardsComponentView
+  #endif
+  @_Concurrency.MainActor @preconcurrency public func callbacks(_ callbacks: @escaping UNComponents.UNMultipleCardsComponentCallbacks) -> UNComponents.UNMultipleCardsComponentView
+  @_Concurrency.MainActor @preconcurrency public func ref(_ ref: UNComponents.UNComponentRef<any UNComponents.UNMultipleCardsView>) -> UNComponents.UNMultipleCardsComponentView
+}
+@_Concurrency.MainActor @preconcurrency public struct UNWhiteLabelAppComponentView : SwiftUICore.View {
+  @_Concurrency.MainActor @preconcurrency public init(token: UNComponents.UNWhiteLabelAppToken)
+  @_Concurrency.MainActor @preconcurrency public var body: some SwiftUICore.View {
+    get
+  }
+  public typealias Body = @_opaqueReturnTypeOf("$s12UNComponents28UNWhiteLabelAppComponentViewV4bodyQrvp", 0) __
+}
+extension UNComponents.UNWhiteLabelAppComponentView {
+  @_Concurrency.MainActor @preconcurrency public func additionalSettings(_ additionalSettings: any UNComponents.UNWhiteLabelAppViewSettingsProtocol) -> UNComponents.UNWhiteLabelAppComponentView
+  #if compiler(>=5.3) && $NonescapableTypes
+  @_Concurrency.MainActor @preconcurrency public func theme(_ theme: UNComponents.UNComponentsTheme?) -> UNComponents.UNWhiteLabelAppComponentView
+  #endif
+  #if compiler(>=5.3) && $NonescapableTypes
+  @_Concurrency.MainActor @preconcurrency public func language(_ language: UNComponents.UNComponentsLanguage?) -> UNComponents.UNWhiteLabelAppComponentView
+  #endif
+  @_Concurrency.MainActor @preconcurrency public func callbacks(_ callbacks: @escaping UNComponents.UNWhiteLabelAppComponentCallbacks) -> UNComponents.UNWhiteLabelAppComponentView
+  @_Concurrency.MainActor @preconcurrency public func ref(_ ref: UNComponents.UNComponentRef<any UNComponents.UNWhiteLabelAppView>) -> UNComponents.UNWhiteLabelAppComponentView
+}
 extension UNComponents.UNCardComponentMenuItems : Swift.Equatable {}
 extension UNComponents.UNCardComponentMenuItems : Swift.Hashable {}
 extension UNComponents.UNCardComponentMenuItems : Swift.RawRepresentable {}
@@ -5938,10 +6127,6 @@ extension UNComponents.UNPlaidAccountFilter : Swift.RawRepresentable {}
 extension UNComponents.UNCounterpartyVerificationMethod : Swift.Equatable {}
 extension UNComponents.UNCounterpartyVerificationMethod : Swift.Hashable {}
 extension UNComponents.UNCounterpartyVerificationMethod : Swift.RawRepresentable {}
-extension UNComponents.UNVPErrorType : Swift.Equatable {}
-extension UNComponents.UNVPErrorType : Swift.Hashable {}
-extension UNComponents.UNVPProvisionStatus : Swift.Equatable {}
-extension UNComponents.UNVPProvisionStatus : Swift.Hashable {}
 extension UNComponents.UNAccountType : Swift.Equatable {}
 extension UNComponents.UNAccountType : Swift.Hashable {}
 extension UNComponents.UNAccountType : Swift.RawRepresentable {}
@@ -5965,3 +6150,16 @@ extension UNComponents.UNCheckDepositStatus : Swift.RawRepresentable {}
 extension UNComponents.UNCheckDepositVendors : Swift.Equatable {}
 extension UNComponents.UNCheckDepositVendors : Swift.Hashable {}
 extension UNComponents.UNCheckDepositVendors : Swift.RawRepresentable {}
+extension UNComponents.UNCardComponentView : Swift.Sendable {}
+extension UNComponents.UNAccountComponentView : Swift.Sendable {}
+extension UNComponents.UNActivityComponentView : Swift.Sendable {}
+extension UNComponents.UNACHCreditComponentView : Swift.Sendable {}
+extension UNComponents.UNACHDebitComponentView : Swift.Sendable {}
+extension UNComponents.UNWirePaymentComponentView : Swift.Sendable {}
+extension UNComponents.UNCheckPaymentComponentView : Swift.Sendable {}
+extension UNComponents.UNBookPaymentComponentView : Swift.Sendable {}
+extension UNComponents.UNCheckDepositComponentView : Swift.Sendable {}
+extension UNComponents.UNProgramDetailsComponentView : Swift.Sendable {}
+extension UNComponents.UNCreateCardComponentView : Swift.Sendable {}
+extension UNComponents.UNMultipleCardsComponentView : Swift.Sendable {}
+extension UNComponents.UNWhiteLabelAppComponentView : Swift.Sendable {}
