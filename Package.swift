@@ -10,7 +10,7 @@ let package = Package(
         .library(name: "UnitComponents", targets: ["UNComponentsSDKWrapperTarget"])
     ],
     dependencies: [
-        .package(url: "https://github.com/unit-finance/unit-ios-sdk", from: "1.2.0")
+        .package(url: "https://github.com/unit-finance/unit-ios-sdk", .upToNextMinor(from: "1.3.0"))
     ],
     targets: [
         .binaryTarget(
